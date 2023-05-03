@@ -1,0 +1,916 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://example.com/Terminale/cours/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.1">
+    
+    
+      
+        <title>SOC - Site</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e8d9bf0c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#systemes-sur-puce" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Site" class="md-header__button md-logo" aria-label="Site" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Site
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SOC
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Site" class="md-nav__button md-logo" aria-label="Site" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Site
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Première
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Première" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Première
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Premiere/neumann/" class="md-nav__link">
+        Neumann
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Premiere/web_1NSI/" class="md-nav__link">
+        web
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Terminale
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Terminale" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Terminale
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          SOC
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        SOC
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#systemes-sur-puce" class="md-nav__link">
+    Systèmes sur puce
+  </a>
+  
+    <nav class="md-nav" aria-label="Systèmes sur puce">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-loi-de-moore-et-miniaturisation-progressive" class="md-nav__link">
+    1. Loi de Moore et miniaturisation progressive
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Loi de Moore et miniaturisation progressive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-la-loi-de-moore" class="md-nav__link">
+    1.1 La Loi de Moore
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-evolution-de-la-taille-des-ordinateurs" class="md-nav__link">
+    1.2  Évolution de la taille des ordinateurs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-composition-dun-pc-actuel" class="md-nav__link">
+    2. Composition d'un pc actuel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-tout-un-pc-sur-une-seule-puce-les-soc" class="md-nav__link">
+    3. Tout un pc sur une seule puce : les SoC
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Tout un pc sur une seule puce : les SoC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-lintegration-de-composants-differents-au-sein-dune-meme-puce" class="md-nav__link">
+    3.1 L'intégration de composants différents au sein d'une même puce
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-exemple-a15-bionic" class="md-nav__link">
+    3.2 Exemple : A15 Bionic
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-des-puces-dediees-a-des-taches-specifiques" class="md-nav__link">
+    4. Des puces dédiées à des tâches spécifiques
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Des puces dédiées à des tâches spécifiques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-au-sein-dun-telephone" class="md-nav__link">
+    4.1 Au sein d'un téléphone
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-en-electronique-grand-public" class="md-nav__link">
+    4.2 En électronique «grand public»
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-un-principe-general" class="md-nav__link">
+    4.3 Un principe général
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-conclusion" class="md-nav__link">
+    4.4 Conclusion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-exercice" class="md-nav__link">
+    5. Exercice
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recursivite/" class="md-nav__link">
+        Récursivité
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index2.html" class="md-nav__link">
+        index2
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anglais4/" class="md-nav__link">
+        anglais4
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#systemes-sur-puce" class="md-nav__link">
+    Systèmes sur puce
+  </a>
+  
+    <nav class="md-nav" aria-label="Systèmes sur puce">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-loi-de-moore-et-miniaturisation-progressive" class="md-nav__link">
+    1. Loi de Moore et miniaturisation progressive
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Loi de Moore et miniaturisation progressive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-la-loi-de-moore" class="md-nav__link">
+    1.1 La Loi de Moore
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-evolution-de-la-taille-des-ordinateurs" class="md-nav__link">
+    1.2  Évolution de la taille des ordinateurs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-composition-dun-pc-actuel" class="md-nav__link">
+    2. Composition d'un pc actuel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-tout-un-pc-sur-une-seule-puce-les-soc" class="md-nav__link">
+    3. Tout un pc sur une seule puce : les SoC
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Tout un pc sur une seule puce : les SoC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-lintegration-de-composants-differents-au-sein-dune-meme-puce" class="md-nav__link">
+    3.1 L'intégration de composants différents au sein d'une même puce
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-exemple-a15-bionic" class="md-nav__link">
+    3.2 Exemple : A15 Bionic
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-des-puces-dediees-a-des-taches-specifiques" class="md-nav__link">
+    4. Des puces dédiées à des tâches spécifiques
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Des puces dédiées à des tâches spécifiques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-au-sein-dun-telephone" class="md-nav__link">
+    4.1 Au sein d'un téléphone
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-en-electronique-grand-public" class="md-nav__link">
+    4.2 En électronique «grand public»
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-un-principe-general" class="md-nav__link">
+    4.3 Un principe général
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-conclusion" class="md-nav__link">
+    4.4 Conclusion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-exercice" class="md-nav__link">
+    5. Exercice
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+  <h1>SOC</h1>
+
+<h2 id="systemes-sur-puce"><div style="text-align:center">Systèmes sur puce</div><a class="headerlink" href="#systemes-sur-puce" title="Permanent link">&num;</a></h2>
+<h3 id="1-loi-de-moore-et-miniaturisation-progressive">1. Loi de Moore et miniaturisation progressive<a class="headerlink" href="#1-loi-de-moore-et-miniaturisation-progressive" title="Permanent link">&num;</a></h3>
+<h4 id="11-la-loi-de-moore">1.1 La Loi de Moore<a class="headerlink" href="#11-la-loi-de-moore" title="Permanent link">&num;</a></h4>
+<p align="center">
+<img src="data/moore.png" width="30%">
+</p>
+
+<p>En 1965, Gordon Moore postule que le nombre de transistors présents sur une puce de microprocesseur doublera tous les deux ans.</p>
+<p>Cette prédiction s'est révélée étonnamment juste (à quelques approximations près) et les équipements électroniques n'ont depuis jamais cessé de devenir toujours plus performants / miniatures / économes en énergie.</p>
+<p align="center">
+<img src="data/Loi_de_Moore.png" width="60%">
+</p>
+
+<h4 id="12-evolution-de-la-taille-des-ordinateurs">1.2  Évolution de la taille des ordinateurs<a class="headerlink" href="#12-evolution-de-la-taille-des-ordinateurs" title="Permanent link">&num;</a></h4>
+<h5 id="121-ibm-650-le-premier-ordinateur-fabrique-en-serie-1955">1.2.1 IBM 650, le premier ordinateur fabriqué en série (1955)<a class="headerlink" href="#121-ibm-650-le-premier-ordinateur-fabrique-en-serie-1955" title="Permanent link">&num;</a></h5>
+<p align="center">
+<img src="data/ibm650.jpg" width="50%">
+</p>
+
+<p>Cet ordinateur n'a pas encore de transistors mais des tubes à vide.</p>
+<h5 id="122-ibm-7090-le-premier-ordinateur-a-transistors-1959">1.2.2 IBM 7090, le premier ordinateur à transistors (1959)<a class="headerlink" href="#122-ibm-7090-le-premier-ordinateur-a-transistors-1959" title="Permanent link">&num;</a></h5>
+<p align="center">
+<img src="data/ibm7090.webp" width="50%">
+</p>
+
+<div class="language-text highlight"><pre><span></span><code>Le transistor est un composant électronique essentiel : il permet de laisser (ou non) passer un courant électrique.
+</code></pre></div>
+<h5 id="123-le-role-crucial-de-la-taille-des-transistors">1.2.3 Le rôle crucial de la taille des transistors<a class="headerlink" href="#123-le-role-crucial-de-la-taille-des-transistors" title="Permanent link">&num;</a></h5>
+<p>Ainsi que l'avait prédit Moore, c'est la progression du nombre de transistors gravables sur le processeur qui guidera pendant des années l'évolution de l'informatique :</p>
+<p align="center">
+<img src="data/evol_transistors.png" width="70%">
+</p>
+
+<p>Le transistor est un composant électronique essentiel : il permet de laisser (ou non) passer un courant électrique.</p>
+<h3 id="2-composition-dun-pc-actuel">2. Composition d'un pc actuel<a class="headerlink" href="#2-composition-dun-pc-actuel" title="Permanent link">&num;</a></h3>
+<p align="center">
+<img src="data/inside.jpg" width="50%">
+</p>
+
+<p>Chaque composant a un rôle spécifique. Ils communiquent entre eux par des <strong>bus</strong> de différentes vitesses. Chaque composant est remplaçable, et il est possible d'ajouter de nouveaux composants sur la carte mère qui possède des slots d'extension.</p>
+<h3 id="3-tout-un-pc-sur-une-seule-puce-les-soc">3. Tout un pc sur une seule puce : les SoC<a class="headerlink" href="#3-tout-un-pc-sur-une-seule-puce-les-soc" title="Permanent link">&num;</a></h3>
+<h4 id="31-lintegration-de-composants-differents-au-sein-dune-meme-puce">3.1 L'intégration de composants différents au sein d'une même puce<a class="headerlink" href="#31-lintegration-de-composants-differents-au-sein-dune-meme-puce" title="Permanent link">&num;</a></h4>
+<p>Le principe d'un <strong>système sur puce</strong> ou <strong>System On a Chip</strong> (SoC) est d'intégrer au sein d'une puce unique un ensemble de composants habituellement physiquement dissociés dans un ordinateur classique (ordinateur de bureau ou ordinateur portable).</p>
+<p>On peut retrouver ainsi au sein d'une <strong>même puce</strong> :</p>
+<ul>
+<li>le microprocesseur (CPU)</li>
+<li>la carte graphique (GPU)</li>
+<li>la mémoire RAM</li>
+</ul>
+<p>+ éventuellement des composants de communication (WiFi, Bluetooth...)</p>
+<div class="admonition abstract">
+<p class="admonition-title">Avantages et inconvénients d'un SoC :heart:</p>
+<p>:white_check_mark: <strong>Avantages</strong></p>
+<ul>
+<li>moindre consommation électrique</li>
+<li>moindre encombrement</li>
+<li>pas besoin de refroidissement</li>
+<li>meilleure sécurité (vue globale sur la sécurité qui n'est plus dépendante d'une multitude de composants)</li>
+<li>moindre coût (forte automisation du processus, gros volumes de production)</li>
+</ul>
+<p>:name_badge: <strong>Inconvénients</strong></p>
+<ul>
+<li>Impossibilité de choisir indépendamment ses composants</li>
+<li>Pas de mise à jour possible / remplacement / ajout d'un composant</li>
+<li>La panne d'un seul composant entraîne la panne totale du SoC</li>
+</ul>
+</div>
+<h4 id="32-exemple-a15-bionic">3.2 Exemple : A15 Bionic<a class="headerlink" href="#32-exemple-a15-bionic" title="Permanent link">&num;</a></h4>
+<p>Observons par exemple la puce Apple A15 Bionic, qui équipe les iPhone 13. Cette puce est fabriquée par <a href="https://fr.wikipedia.org/wiki/Taiwan_Semiconductor_Manufacturing_Company">TSMC</a>.</p>
+<p align="center">
+<img src="data/Apple_A15.jpg" width="40%">
+</p>
+
+<p align="center">
+<img src="data/A15_inside.webp" width="70%">
+</p>
+
+<p>Cette puce contient :</p>
+<ul>
+<li>15 milliards de transistors (gravés à 5 nm)</li>
+<li>un processeur central à 6 cœurs (2 cœurs hautes performances + 4 cœurs plus économes en énergie)</li>
+<li>un GPU (processeur dédié uniquement au calcul du rendu graphique) de 5 cœurs.</li>
+<li>une puce dédiée au Machine Learning (<em>Neural Engine</em>)</li>
+</ul>
+<h3 id="4-des-puces-dediees-a-des-taches-specifiques">4. Des puces dédiées à des tâches spécifiques<a class="headerlink" href="#4-des-puces-dediees-a-des-taches-specifiques" title="Permanent link">&num;</a></h3>
+<p>L'intégration dans un SoC n'est pas totale : il reste des puces dédiées à des tâches très spécifiques qui ne sont pas forcément intégrées dans le SoC.</p>
+<h4 id="41-au-sein-dun-telephone">4.1 Au sein d'un téléphone<a class="headerlink" href="#41-au-sein-dun-telephone" title="Permanent link">&num;</a></h4>
+<p>Ainsi, d'après le site <a href="https://fr.ifixit.com/Tutoriel/Identification+compl%C3%A8te+des+puces+de+l'iPhone+13+Pro/144993">iFixit</a>, on peut retrouver ceci dans l'iPhone Pro 13, au côté de la puce A15 évoquée plus haut :</p>
+<p align="center">
+<img src="data/ifixit1.png" width="80%">
+</p>
+<p align="center">
+<img src="data/ifixit2.png" width="80%">
+</p>
+<p align="center">
+<img src="data/ifixit3.png" width="80%">
+</p>
+
+<p>On voit que (par exemple) qu'il existe une puce spécifique pour gérer l'audio, une puce spécifique pour le module WiFi, une puce spécifique pour le module Modem 5G...</p>
+<h4 id="42-en-electronique-grand-public">4.2 En électronique «grand public»<a class="headerlink" href="#42-en-electronique-grand-public" title="Permanent link">&num;</a></h4>
+<p align="center">
+<img src="data/crypto.png" width="60%">
+</p>
+
+<p align="center">
+<img src="data/specs.png" width="60%">
+</p>
+
+<p>Ce composant (pouvant être utilisé dans un montage personnel, sur un Arduino par exemple) ne sert qu'à faire des calculs cryptographiques.</p>
+<h4 id="43-un-principe-general">4.3 Un principe général<a class="headerlink" href="#43-un-principe-general" title="Permanent link">&num;</a></h4>
+<p>Il est important de comprendre que certains processeurs sont optimisés pour un certains types de calcul. C'est le cas par exemple d'une carte graphique, qui excelle dans le calcul de rendus de polygones.</p>
+<p>On s'est aperçu que cette aptitude à faire des calculs «bêtes et répétitifs» était parfaite pour faire les calculs mathématiques (inutiles) nécessaires au minage des cryptomonnaies. Les cartes graphiques ont donc été détournées de leur usage originel, à cause de la spécificité de l'implémentation de leur puce.</p>
+<p>De même, les calculs sur les réseaux de neurones (essentiels en IA) nécessitent une grande rapidité dans les multiplications de matrices. Pour cette raison, Apple a intégré directement dans son SoC A15 une puce spécalisée dans ces calculs (voir plus haut).</p>
+<h4 id="44-conclusion">4.4 Conclusion<a class="headerlink" href="#44-conclusion" title="Permanent link">&num;</a></h4>
+<p>L'orientation actuelle de l'électronique est donc à la fois :</p>
+<ul>
+<li>une intégration toujours plus grande dans des SoC multi-tâches.</li>
+<li>des puces toujours plus spécifiques qui excellent dans un domaine particulier.</li>
+</ul>
+<h3 id="5-exercice">5. Exercice<a class="headerlink" href="#5-exercice" title="Permanent link">&num;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">Exercice <em>(Polynésie 2021)</em><p>Un constructeur automobile intègre à ses véhicules des systèmes embarqués, comme par exemple un système de guidage par satellites (GPS), un système de freinage antiblocage (ABS)... </p>
+<p>Ces dispositifs utilisent des systèmes sur puces (SoC : System on a Chip).</p>
+<p>Citer deux avantages à utiliser ces systèmes sur puces plutôt qu'une architecture classique d'ordinateur.</p>
+</p>
+</div>
+<p>"Bibliographie / Sitographie"
+    - Numérique et Sciences Informatiques, Terminale, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
+    - Prépabac NSI, Terminale, G.CONNAN, V.PETROV, G.ROZSAVOLGYI, L.SIGNAC, éditions HATIER.
+    - <a href="https://fr.wikipedia.org/wiki/Loi_de_Moore">https://fr.wikipedia.org/wiki/Loi_de_Moore</a>
+    - <a href="https://blog.iakaa.com/lordinateur-fete-ses-60-ans/">https://blog.iakaa.com/lordinateur-fete-ses-60-ans/</a>
+    - <a href="https://www.thewindowsclub.com/history-of-computers">https://www.thewindowsclub.com/history-of-computers</a>
+    - <a href="https://perso-etis.ensea.fr//lorandel/M2_SoC/s1.pdf">https://perso-etis.ensea.fr//lorandel/M2_SoC/s1.pdf</a>
+    - <a href="https://www.hawkpointtechnologies.com/about/blog/computer-components">https://www.hawkpointtechnologies.com/about/blog/computer-components</a>
+    - <a href="https://www.tremplin-numerique.org/apple-a15-vs-a14-quoi-de-neuf-dans-la-puce-de-liphone-13">https://www.tremplin-numerique.org/apple-a15-vs-a14-quoi-de-neuf-dans-la-puce-de-liphone-13</a>
+    - <a href="https://www.distrelec.be/fr/cryptoprocesseur-breakout-atecc608a-sparkfun-electronics-dev-18077/p/30241877">https://www.distrelec.be/fr/cryptoprocesseur-breakout-atecc608a-sparkfun-electronics-dev-18077/p/30241877</a></p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../Premiere/web_1NSI/" class="md-footer__link md-footer__link--prev" aria-label="Previous: web" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              web
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../recursivite/" class="md-footer__link md-footer__link--next" aria-label="Next: Récursivité" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Récursivité
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.8aa65030.min.js"></script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
