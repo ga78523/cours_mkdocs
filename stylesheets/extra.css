@@ -43,3 +43,7 @@ h4{
     color:rgb(68, 95, 68);
     font-weight: bolder;
 }
+
+.admonition{
+    font-size: 14pt;
+}
