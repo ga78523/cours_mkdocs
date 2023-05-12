@@ -644,12 +644,13 @@
 <h1 id="activite-traitement-de-limage"><div style:"color:green;text-align:center"> Activité : traitement de l'image </div><a class="headerlink" href="#activite-traitement-de-limage" title="Permanent link">&num;</a></h1>
 <h2 id="prealable">Préalable<a class="headerlink" href="#prealable" title="Permanent link">&num;</a></h2>
 <ul>
-<li>
-<p>Sur votre navigateur, aller sur cette <a href="https://capytale2.ac-paris.fr/web/c/e7c9-1645714">page</a>.</p>
-</li>
-<li>
-<p>vous avez ouvert un fichier qui comporte deux images (non visibles ici).</p>
-</li>
+<li>Sur l'ENT, dans la rubrique <em>Ressources</em>, aller sur <em>Capytale</em>  puis <em>Accédez à vos activités</em> puis dans <em>Accéder à une activité</em> (voir ci-dessous), rentrer le code donné.</li>
+</ul>
+<figure>
+<p><img alt="activite" src="../img/activite1.png" width="400px" /></p>
+</figure>
+<ul>
+<li>vous avez ouvert un fichier qui comporte deux images (non visibles ici).</li>
 <li>Pour vérifier qu'il fonctionne, taper le code suivant dans une cellule:</li>
 </ul>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
@@ -712,6 +713,12 @@
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="n">monImage</span><span class="o">.</span><span class="n">putpixel</span><span class="p">(</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">20</span><span class="p">),(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">))</span>
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">monImage</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </span></code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Exercice<p>Créer une image à l'aide de l'instruction :
+<code>monImage = Image.new('RGB',(400,200))</code>
+Puis, remplir cette image de manière à réaliser un drapeau français.</p>
+</p>
+</div>
 <h3 id="modifier-une-image">Modifier une image<a class="headerlink" href="#modifier-une-image" title="Permanent link">&num;</a></h3>
 <h4 id="limage-en-niveau-de-gris">L'image en niveau de gris<a class="headerlink" href="#limage-en-niveau-de-gris" title="Permanent link">&num;</a></h4>
 <p>Exécuter le script suivant :</p>
@@ -727,7 +734,7 @@
 </span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="n">monImage2</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;Buse en Gris.jpg&quot;</span><span class="p">)</span>  <span class="c1">#On enregistre cette image</span>
 </span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="n">monImage2</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </span></code></pre></div>
-<p><strong>Remarques :</strong> on utilise la division entière avec l'opérateur // (Par exemple : 7 //2 renvoie 3) pour calculer les couleurs des pixels de la nouvelle image.</p>
+<p><strong>Remarque :</strong> on utilise la division entière avec l'opérateur // (Par exemple : 7 //2 renvoie 3) pour calculer les couleurs des pixels de la nouvelle image.</p>
 <h4 id="conservation-dune-composante">Conservation d'une composante<a class="headerlink" href="#conservation-dune-composante" title="Permanent link">&num;</a></h4>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">monImage1</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;buse.jpg&quot;</span><span class="p">)</span><span class="c1">#Cette image a une dimension de 400×200 pixels</span>
@@ -745,7 +752,7 @@
 <p>Réaliser un programme qui effectue la conservation de la composante verte de l'image <code>rose.jpg</code>.</p>
 </div>
 <h4 id="seuillage">Seuillage :<a class="headerlink" href="#seuillage" title="Permanent link">&num;</a></h4>
-<p>L’idée est de modifier les lignes 9 et 10 pour que si la moyenne de ses trois composantes est supérieure à 90, le pixel correspondant dans l’image devient blanc, et si cette moyenne est inférieure à 90, le pixel devient noir.</p>
+<p>L’idée est de modifier le programme précédent pour que si la moyenne de ses trois composantes est supérieure à 90, le pixel correspondant dans l’image devient blanc, et si cette moyenne est inférieure à 90, le pixel devient noir.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">monImage1</span><span class="o">=</span><span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;buse.jpg&quot;</span><span class="p">)</span><span class="c1">#Cette image a une dimension de 400×200 pixels</span>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">monImage4</span><span class="o">=</span><span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;RGB&#39;</span><span class="p">,(</span><span class="mi">400</span><span class="p">,</span><span class="mi">200</span><span class="p">))</span><span class="c1">#Crée une seconde a une dimension de 400×200 pixels</span>
@@ -763,6 +770,10 @@
 </span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="n">monImage4</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>   <span class="c1">#On affiche une image composée de Image1 et Image2</span>
 </span></code></pre></div>
 <p><strong>Remarque :</strong> On peut évidemment changer la valeur du seuil pour obtenir d’autres effets.</p>
+<div class="admonition example">
+<p class="admonition-title">Exercice :</p>
+<p>Réaliser un programme qui effectue le sueillage de la rose avec un seuil égal à 125 <code>rose.jpg</code>.</p>
+</div>
 <h4 id="changement-de-dominante">Changement de dominante<a class="headerlink" href="#changement-de-dominante" title="Permanent link">&num;</a></h4>
 <p>On utilise maintenant la photo <i>rose.jpg</i>. On souhaite changer les couleurs des roses dont la dominante est rouge (r &gt; v et r &gt; b). </p>
 <p>On peut par exemple choisir : si un pixel a une dominante rouge, on divise par deux sa composante rouge.</p>
