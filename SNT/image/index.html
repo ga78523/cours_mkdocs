@@ -306,8 +306,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#connaitre-la-largeur-et-la-longueur-longueur-en-pixel-dune-image" class="md-nav__link">
-    Connaître la largeur et la longueur longueur en pixel d'une image
+  <a href="#connaitre-la-largeur-et-la-longueur-en-pixel-dune-image" class="md-nav__link">
+    Connaître la largeur et la longueur en pixel d'une image
   </a>
   
 </li>
@@ -553,8 +553,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#connaitre-la-largeur-et-la-longueur-longueur-en-pixel-dune-image" class="md-nav__link">
-    Connaître la largeur et la longueur longueur en pixel d'une image
+  <a href="#connaitre-la-largeur-et-la-longueur-en-pixel-dune-image" class="md-nav__link">
+    Connaître la largeur et la longueur en pixel d'une image
   </a>
   
 </li>
@@ -661,22 +661,22 @@
 <p>Après avoir importer la bibliothèque PIL (pour Python Imaging Library ),ce code ouvre la photo <code>buse.jpg</code> et la place en mémoire sous le nom de <code>mon_image</code>. Puis on demande au programme de nous l'afficher.</p>
 <p><strong>Remarque :</strong> Pour en connaître plus sur cette bibliothèque de traitement d’image, vous pouvez consulter cette <a href="https://he-arc.github.io/livre-python/pillow/index.html">page</a>.</p>
 <div class="admonition example">
-<p class="admonition-title">Exercice :</p>
+<p class="admonition-title">Exercice 1 :</p>
 <p>Ouvrir l'image <code>rose.jpg</code>.Nommer la variable <code>rose</code> puis l'afficher.</p>
 </div>
-<h2 id="connaitre-la-largeur-et-la-longueur-longueur-en-pixel-dune-image">Connaître la largeur et la longueur longueur en pixel d'une image<a class="headerlink" href="#connaitre-la-largeur-et-la-longueur-longueur-en-pixel-dune-image" title="Permanent link">&num;</a></h2>
+<h2 id="connaitre-la-largeur-et-la-longueur-en-pixel-dune-image">Connaître la largeur et la longueur en pixel d'une image<a class="headerlink" href="#connaitre-la-largeur-et-la-longueur-en-pixel-dune-image" title="Permanent link">&num;</a></h2>
 <p>On peut connaître la largeur et la longueur <strong>en pixel</strong> d'une image à l'aide des instructions <code>with</code> et <code>height</code>.</p>
 <p><strong>Exemple :</strong>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">mon_image</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;buse.jpg&quot;</span><span class="p">)</span> 
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">largeur_image</span> <span class="o">=</span> <span class="n">mon_image</span><span class="o">.</span><span class="n">width</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">longueur_image</span> <span class="o">=</span> <span class="n">mon</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">height</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">longueur_image</span> <span class="o">=</span> <span class="n">mon_image</span><span class="o">.</span><span class="n">height</span>
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La largeur vaut :&quot;</span><span class="p">,</span><span class="n">largeur_image</span><span class="p">,</span> <span class="s2">&quot; px et la longueur vaut :&quot;</span><span class="p">,</span> <span class="n">longueur_image</span><span class="p">,</span><span class="s2">&quot; px&quot;</span><span class="p">)</span>
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">mon_image</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </span></code></pre></div></p>
 <div class="admonition example">
-<p class="admonition-title">Exercice :</p>
+<p class="admonition-title">Exercice 2 :</p>
 <p>Réaliser un programme qui détermine la largeur et la longueur de l'image <code>rose.jpg</code> et qui l'affiche mais qui n'affiche pas l'image.</p>
 </div>
 <h2 id="commandes-de-base">Commandes de base<a class="headerlink" href="#commandes-de-base" title="Permanent link">&num;</a></h2>
@@ -689,7 +689,7 @@
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
 </span></code></pre></div>
 <div class="admonition example">
-<p class="admonition-title">Exercice :</p>
+<p class="admonition-title">Exercice  3 :</p>
 <ol>
 <li>A quoi sert la fonction <code>getpixel(x,y)</code> ?</li>
 <li>A quoi correspondent les trois nombres du triplet r,v,b ?</li>
@@ -699,7 +699,7 @@
 </div>
 <h3 id="parcourir-une-zone">Parcourir une zone :<a class="headerlink" href="#parcourir-une-zone" title="Permanent link">&num;</a></h3>
 <div class="admonition example">
-<p class="admonition-title">Exercice :</p>
+<p class="admonition-title">Exercice 4 :</p>
 <ol>
 <li>A quoi sert la fonction <code>putpixel((x,y),(R,V,B))</code> ?</li>
 <li>Que va faire le code suivant ? </li>
@@ -714,7 +714,7 @@
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">mon_image</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </span></code></pre></div>
 <div class="admonition example">
-<p class="admonition-title">Exercice<p>Créer une image à l'aide de l'instruction :
+<p class="admonition-title">Exercice 5 :<p>Créer une image à l'aide de l'instruction :
 <code>mon_image = Image.new('RGB',(400,200))</code>
 Puis, remplir cette image de manière à réaliser un drapeau français.</p>
 </p>
@@ -748,7 +748,7 @@ Puis, remplir cette image de manière à réaliser un drapeau français.</p>
 </span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="n">mon_image3</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>   
 </span></code></pre></div>
 <div class="admonition example">
-<p class="admonition-title">Exercice :</p>
+<p class="admonition-title">Exercice  6 :</p>
 <p>Réaliser un programme qui effectue la conservation de la composante verte de l'image <code>rose.jpg</code>.</p>
 </div>
 <h4 id="seuillage">Seuillage :<a class="headerlink" href="#seuillage" title="Permanent link">&num;</a></h4>
