@@ -480,6 +480,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#passage-en-programmation-dynamique" class="md-nav__link">
+    Passage en programmation dynamique
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -575,6 +582,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#passage-en-programmation-dynamique" class="md-nav__link">
+    Passage en programmation dynamique
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -625,7 +639,7 @@
 <h3 id="premiers-exemples-sur-la-suite-de-fibonacci">Premiers exemples sur la suite de Fibonacci<a class="headerlink" href="#premiers-exemples-sur-la-suite-de-fibonacci" title="Permanent link">&num;</a></h3>
 <p>En considérant l'algorithme précédant, on comprend bien qu'il est particulièrement inefficace de calculer plusieurs fois le même sous-calcul. Afin d'améliorer le temps de calcul de l'algorithme, nous décidons donc de mémoriser les calculs déjà effectués dans un tableau. Il existe deux méthodes différentes :</p>
 <p>On pourrait donc grandement simplifier le calcul en calculant une fois pour toutes fib(4), en "mémorisant" le résultat et en le réutilisant quand nécessaire.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><code>Bottom-Up</code></label><label for="__tabbed_1_2"><code>Bottom Down</code></label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><code>Bottom-Up</code></label><label for="__tabbed_1_2"><code>Top Down</code></label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>On va calculer les nombres de la suite de Fibonacci jusqu'à <span class="arithmatex">\(F(n)\)</span> en partant de  <span class="arithmatex">\(F(0)\)</span> et <span class="arithmatex">\(F(1)\)</span>. On appelle ce type de méthode une méthode Bottom-Up. Ce n'est pas une méthode récursive.</p>
@@ -672,9 +686,45 @@ On recommence l’opération ci-dessus jusqu’au moment où la somme à rendre 
 </ul>
 <p>L'algorithme se termine en renvoyant 6 (on a dû rendre 6 pièces)</p>
 <div class="admonition example">
-<p class="admonition-title">Exercice :<p>Compléter la fonction suivante pour qu'elle donne le nombre minimal de pièces utilisées pour une somme s donnée :</p>
-</p>
+<p class="admonition-title">Exercice :</p>
+<p>Compléter la fonction suivante pour qu'elle donne le nombre minimal de pièces utilisées pour une somme s donnée :</p>
 </div>
+<p><div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">def</span> <span class="nf">rendu_monnaie_rec</span><span class="p">(</span><span class="n">P</span> <span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">s</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="sd">&quot;&quot;&quot; renvoie le nombre minimal de pièces pour rendre la somme s en utilisant le jeu de pièces P&quot;&quot;&quot;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        <span class="k">return</span> <span class="mi">0</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        <span class="n">mini</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span> <span class="c1"># On fixe le nombre de pièce à l&#39;infini</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">P</span><span class="p">)):</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        <span class="k">if</span> <span class="o">...</span> <span class="o">&lt;=</span> <span class="n">s</span><span class="p">:</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>            <span class="n">nb</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="o">...</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>            <span class="k">if</span> <span class="n">nb</span> <span class="o">&lt;</span> <span class="n">mini</span><span class="p">:</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>                <span class="n">mini</span> <span class="o">=</span> <span class="n">nb</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    <span class="k">return</span> <span class="n">mini</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="n">P</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="nb">print</span><span class="p">(</span><span class="n">rendu_monnaie_rec</span><span class="p">(</span><span class="n">P</span><span class="p">,</span><span class="mi">17</span><span class="p">))</span>
+</span></code></pre></div>
+Le programme devant renvoyer 3.</p>
+<h4 id="passage-en-programmation-dynamique">Passage en programmation dynamique<a class="headerlink" href="#passage-en-programmation-dynamique" title="Permanent link">&num;</a></h4>
+<p>On constate dans la partie précédente que la méthode précédente fait de trop nombreux appels récursifs, qui ralentissent considérablement le temps de calcul, voire plante le programme dès que la taille maximale de la pile est dépassée.</p>
+<p>On va donc utiliser la programmation dynamique pour accélérer la vitesse de traitement du problème. </p>
+<div class="admonition example">
+<p class="admonition-title">Exercice :</p>
+<ol>
+<li>Compléter la fonction suivante afin qu'elle renvoie le nombre minimal de pièce pour rendre la monnaie, ou None s'il est impossible de rendre la monnaie.</li>
+<li>Est-ce une méthode ascendante ou descendante ?</li>
+</ol>
+</div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">def</span> <span class="nf">renduMonnaie1</span><span class="p">(</span><span class="n">P</span> <span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">s</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="p">:</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="n">nb</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">s</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="p">:</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">P</span> <span class="p">:</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>            <span class="k">if</span> <span class="n">p</span> <span class="o">&lt;=</span> <span class="o">...</span> <span class="ow">and</span> <span class="n">nb</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="p">:</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>                <span class="k">if</span> <span class="n">nb</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="ow">is</span> <span class="o">...</span> <span class="ow">or</span> <span class="o">...</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">nb</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="n">p</span><span class="p">]:</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>                    <span class="n">nb</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">nb</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="n">p</span><span class="p">]</span>                                         
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="k">return</span> <span class="o">...</span>
+</span></code></pre></div>
 
               
             </article>
