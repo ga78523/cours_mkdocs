@@ -632,12 +632,12 @@
 en partant de $F(n)$ et $F(0)$ et $F(1)$. On appelle ce type de méthode une méthode Bottom-Up. Ce n&#39;est pas une méthode récursive.
 
 ```python
-def fiboAsc(n : int) -&gt; int :
-F = [0]*(n+1)
-F[1] = 1
-for i in range(2,n+1) :
-    F[i] = F[i-1] + F[i-2]
-return F[n]
+def fibo_asc(n : int) -&gt; int :
+    F = [0]*(n+1)
+    F[1] = 1
+    for i in range(2,n+1) :
+        F[i] = F[i-1] + F[i-2]
+    return F[n]
 ```
 </code></pre></div>
 </div>
@@ -645,14 +645,14 @@ return F[n]
 <div class="language-text highlight"><pre><span></span><code>On va calculer les nombres de Fibonacci récursivement, mais en sauvegardant les calculs déjà effectués dans une liste Python, en profitant de sa mutabilité. On appelle ce type de méthode une approche Top-Down :
 
 ```python
-def fiboDesc(n : int) -&gt; int :
-    memo = [0, 1]+[None]*(n-1)
+def fibo_desc(n : int) -&gt; int :
+    memo = [0, 1] + [None] * (n-1)
 
     def compute(n, memo) :
         if memo[n] is  None :
             memo[n] = compute(n-1, memo) + compute(n-2, memo)
-    return memo[n]
-return compute(n, memo)
+        return memo[n]
+    return compute(n, memo)
 ```
 </code></pre></div>
 </div>
