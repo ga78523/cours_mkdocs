@@ -443,6 +443,53 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#programmation-dynamique_1" class="md-nav__link">
+    Programmation Dynamique
+  </a>
+  
+    <nav class="md-nav" aria-label="Programmation Dynamique">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#premiers-exemples-sur-la-suite-de-fibonacci" class="md-nav__link">
+    Premiers exemples sur la suite de Fibonacci
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principes-de-la-programmation-dynamique" class="md-nav__link">
+    Principes de la programmation dynamique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#application-aux-algos-gloutons" class="md-nav__link">
+    Application aux algos gloutons
+  </a>
+  
+    <nav class="md-nav" aria-label="Application aux algos gloutons">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rappels-pour-la-version-recursive" class="md-nav__link">
+    Rappels pour la version récursive
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -491,6 +538,53 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#programmation-dynamique_1" class="md-nav__link">
+    Programmation Dynamique
+  </a>
+  
+    <nav class="md-nav" aria-label="Programmation Dynamique">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#premiers-exemples-sur-la-suite-de-fibonacci" class="md-nav__link">
+    Premiers exemples sur la suite de Fibonacci
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principes-de-la-programmation-dynamique" class="md-nav__link">
+    Principes de la programmation dynamique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#application-aux-algos-gloutons" class="md-nav__link">
+    Application aux algos gloutons
+  </a>
+  
+    <nav class="md-nav" aria-label="Application aux algos gloutons">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rappels-pour-la-version-recursive" class="md-nav__link">
+    Rappels pour la version récursive
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -523,10 +617,38 @@
 <p>Vous pouvez constater que l'on a une structure arborescente (typique dans les algorithmes récursifs), si on additionne toutes les feuilles de cette structure arborescente (fib(1) = 1 et fib(0) = 0), on retrouve bien 8.</p>
 <p>En observant attentivement le schéma ci-dessus, vous avez remarqué que de nombreux calculs sont inutiles, car effectué 2 fois : par exemple on retrouve le calcul de fib(4) à 2 endroits (en haut à droite et un peu plus bas à gauche) : </p>
 <figure>
-<p><img alt="img2" src="../data/img2.png" width="200px" />
+<p><img alt="img2" src="../data/img2.png" width="500px" />
   </p>
 <figcaption>arbre</figcaption>
 </figure>
+<h2 id="programmation-dynamique_1">Programmation Dynamique<a class="headerlink" href="#programmation-dynamique_1" title="Permanent link">&num;</a></h2>
+<h3 id="premiers-exemples-sur-la-suite-de-fibonacci">Premiers exemples sur la suite de Fibonacci<a class="headerlink" href="#premiers-exemples-sur-la-suite-de-fibonacci" title="Permanent link">&num;</a></h3>
+<p>En considérant l'algorithme précédant, on comprend bien qu'il est particulièrement inefficace de calculer plusieurs fois le même sous-calcul. Afin d'améliorer le temps de calcul de l'algorithme, nous décidons donc de mémoriser les calculs déjà effectués dans un tableau. Il existe deux méthodes différentes :</p>
+<p>On pourrait donc grandement simplifier le calcul en calculant une fois pour toutes fib(4), en "mémorisant" le résultat et en le réutilisant quand nécessaire.</p>
+<h3 id="principes-de-la-programmation-dynamique">Principes de la programmation dynamique<a class="headerlink" href="#principes-de-la-programmation-dynamique" title="Permanent link">&num;</a></h3>
+<p>La programmation dynamique, introduite au début des années 1950 par Richard Bellman, est une méthode pour résoudre des problèmes en combinant des solutions de sous-problèmes, tout comme les méthodes de type diviser pour régner.</p>
+<p>Un algorithme de programmation dynamique résout chaque sous-sous-problème une seule fois et mémorise sa réponse dans un tableau, évitant ainsi le re-calcul de la solution chaque fois qu'il résout chaque sous-sous-problème.</p>
+<p>La programmation dynamique s'applique généralement aux problèmes d'optimisation, comme ceux que nous avons vu l'an passé lorsque nous avons étudié les algorithmes gloutons.</p>
+<h3 id="application-aux-algos-gloutons">Application aux algos gloutons<a class="headerlink" href="#application-aux-algos-gloutons" title="Permanent link">&num;</a></h3>
+<h4 id="rappels-pour-la-version-recursive">Rappels pour la version récursive<a class="headerlink" href="#rappels-pour-la-version-recursive" title="Permanent link">&num;</a></h4>
+<p>Vous avez à votre disposition un nombre illimité de pièces de 2, 5 cts, 10 cts, 50 cts et 1 euro (100 cts). Vous devez rendre une certaine somme (rendu de monnaie). Le problème est le suivant : "Quel est le nombre minimum de pièces qui doivent être utilisées pour rendre la monnaie"</p>
+<p>La résolution "gloutonne" de ce problème peut être la suivante :</p>
+<p>On prend la pièce qui a la plus grande valeur (il faut que la valeur de cette pièce soit inférieure ou égale à la somme restant à rendre).
+On recommence l’opération ci-dessus jusqu’au moment où la somme à rendre est égale à zéro.</p>
+<p><strong>Exemple :</strong> nous avons 1 euro 77 cts à rendre :</p>
+<ul>
+<li>on utilise une pièce de 1 euro (plus grande valeur de pièce inférieure à 1,77 euro), il reste 77 cts à rendre</li>
+<li>on utilise une pièce de 50 cts (plus grande valeur de pièce inférieure à 0,77 euro), il reste 27 cts à rendre</li>
+<li>on utilise une pièce de 10 cts (plus grande valeur de pièce inférieure à 0,27 euro), il reste 17 cts à rendre</li>
+<li>on utilise une pièce de 10 cts (plus grande valeur de pièce inférieure à 0,17 euro), il reste 7 cts à rendre</li>
+<li>on utilise une pièce de 5 cts (plus grande valeur de pièce inférieure à 0,07 euro), il reste 2 cts à rendre</li>
+<li>on utilise une pièce de 2 cts (plus grande valeur de pièce inférieure à 0,02 euro), il reste 0 cts à rendre.</li>
+</ul>
+<p>L'algorithme se termine en renvoyant 6 (on a dû rendre 6 pièces)</p>
+<div class="admonition example">
+<p class="admonition-title">Exercice :<p>Compléter la fonction suivante pour qu'elle donne le nombre minimal de pièces utilisées pour une somme s donnée :</p>
+</p>
+</div>
 
               
             </article>
