@@ -625,6 +625,39 @@
 <h3 id="premiers-exemples-sur-la-suite-de-fibonacci">Premiers exemples sur la suite de Fibonacci<a class="headerlink" href="#premiers-exemples-sur-la-suite-de-fibonacci" title="Permanent link">&num;</a></h3>
 <p>En considérant l'algorithme précédant, on comprend bien qu'il est particulièrement inefficace de calculer plusieurs fois le même sous-calcul. Afin d'améliorer le temps de calcul de l'algorithme, nous décidons donc de mémoriser les calculs déjà effectués dans un tableau. Il existe deux méthodes différentes :</p>
 <p>On pourrait donc grandement simplifier le calcul en calculant une fois pour toutes fib(4), en "mémorisant" le résultat et en le réutilisant quand nécessaire.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><code>Bottom-Up</code></label><label for="__tabbed_1_2"><code>Bottom Down</code></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-text highlight"><pre><span></span><code>On va calculer les nombres de la suite de Fibonacci jusqu&#39;à 
+en partant de $F(n)$ et $F(0)$ et $F(1)$. On appelle ce type de méthode une méthode Bottom-Up. Ce n&#39;est pas une méthode récursive.
+
+```python
+def fiboAsc(n : int) -&gt; int :
+F = [0]*(n+1)
+F[1] = 1
+for i in range(2,n+1) :
+    F[i] = F[i-1] + F[i-2]
+return F[n]
+```
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-text highlight"><pre><span></span><code>On va calculer les nombres de Fibonacci récursivement, mais en sauvegardant les calculs déjà effectués dans une liste Python, en profitant de sa mutabilité. On appelle ce type de méthode une approche Top-Down :
+
+```python
+def fiboDesc(n : int) -&gt; int :
+    memo = [0, 1]+[None]*(n-1)
+
+    def compute(n, memo) :
+        if memo[n] is  None :
+            memo[n] = compute(n-1, memo) + compute(n-2, memo)
+    return memo[n]
+return compute(n, memo)
+```
+</code></pre></div>
+</div>
+</div>
+</div>
 <h3 id="principes-de-la-programmation-dynamique">Principes de la programmation dynamique<a class="headerlink" href="#principes-de-la-programmation-dynamique" title="Permanent link">&num;</a></h3>
 <p>La programmation dynamique, introduite au début des années 1950 par Richard Bellman, est une méthode pour résoudre des problèmes en combinant des solutions de sous-problèmes, tout comme les méthodes de type diviser pour régner.</p>
 <p>Un algorithme de programmation dynamique résout chaque sous-sous-problème une seule fois et mémorise sa réponse dans un tableau, évitant ainsi le re-calcul de la solution chaque fois qu'il résout chaque sous-sous-problème.</p>
