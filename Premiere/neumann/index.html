@@ -1242,10 +1242,6 @@
 </figure>
 <p>Pour obtenir l’adresse du sous-réseau de l’ordinateur, on effectue alors un AND entre les octets de l’adresse IP et les octets du masque. En représentation binaire, cela donne :</p>
 <p>Sur un processeur 32 bits, le AND est une opération primitive du processeur, donc l’opération de déter- mination du sous-masque réseau se fait en une opération.</p>
-<div class="admonition example">
-<p class="admonition-title">Exercice :</p>
-<p>Cherchez l’adresse IP de votre ordinateur et le masque de sous-réseau. Sous Windows, il faut taper <code>ipconfig</code> et sous Linux , la commande est <code>ifconfig</code>. Écrire l’adresse du sous-réseau trouvé.</p>
-</div>
 <h2 id="des-portes-logiques-a-lordinateur">Des portes logiques à l’ordinateur<a class="headerlink" href="#des-portes-logiques-a-lordinateur" title="Permanent link">&num;</a></h2>
 <h3 id="circuit-combinatoire-et-circuit-sequentiel">Circuit combinatoire et circuit séquentiel<a class="headerlink" href="#circuit-combinatoire-et-circuit-sequentiel" title="Permanent link">&num;</a></h3>
 <p>D’une manière générale, les circuits électroniques possèdent plusieurs entrées et plusieurs sorties. Quand les sorties dépendent directement et uniquement des entrées, on parle de cicuits combinatoires. Il existe d’autres types de circuit qui s’appellent circuits séquentiels. Les sorties de ces circuits dépendent d’un état antérieur du circuit. C’est ce type de cicuit qu’on utilise pour réaliser des mémoires (RAM, registres,etc...).</p>
@@ -1343,14 +1339,13 @@
 <p>John Von Neumann (1903-1957) est un ingénieur, mathématicien et physicien américano-hongrois.Il a participé au projet Manhattan (première bombe atomique) et à l'ENIAC. Son nom reste attaché à un modèle qu'il propose en 1944, modèle d'architecture novateur qui sert toujours de base à nos architectures actuelles.</p>
 <p>Le modèle de von Neumann précise les 4 composants essentiels ainsi que les interactions entre ces différents composants. Ces composants sont les suivants :</p>
 <ul>
-<li>l'unité de commande :<ul>
-<li>Lire le programme</li>
-<li>décoder les instructions</li>
-<li>commander leur exécution ;</li>
+<li>l'unité de commande dont le rôle est de :<ul>
+<li>lire le programme ;</li>
+<li>décoder les instructions ;</li>
+<li>commander l'exécution.</li>
 </ul>
 </li>
-<li>l'unité arithmétique et logique(UAL ou ALU en anglais) : son rôle est d’effectuer les
-opérations de base  ;</li>
+<li>l'unité arithmétique et logique (UAL ou ALU en anglais) : son rôle est d’effectuer les opérations de base  ;</li>
 <li>la mémoire : qui contient à la fois les données à traiter et les instructions du programme. Cette idée de stocker au même endroit données et programme est l'idée centrale de l'architecture von Neumann ;</li>
 <li>les dispositifs d’entrée-sortie, qui permettent de communiquer avec le monde extérieur..</li>
 </ul>
@@ -1364,12 +1359,12 @@ opérations de base  ;</li>
 <li>L'horloge est le cadenceur qui organise l'accomplissement des instructions, et dont l'unité est appelé cycle d'horloge (1 cycle = 1 instuction).</li>
 </ul>
 <p>Les deux premières parties sont habituellement rassemblées dans un ensemble de circuits électroniques qu’on appelle Unité Centrale de Traitement ou plus simplement processeur (ou CPU pour Centrale Processing Unit).</p>
-<p>Physiquement,un système informatique est constitué de plusieurs éléments : Une machine, c’est-à-dire un boîtier contenant une carte mère avec un microprocesseur, des barrettes de mémoire vive, une carte graphique une carte réseau, des ports de communication et des périphériques</p>
+<p>Physiquement, un système informatique est constitué de plusieurs éléments : une machine, c’est-à-dire un boîtier contenant une carte mère avec un microprocesseur, des barrettes de mémoire vive, une carte graphique une carte réseau, des ports de communication et des périphériques.</p>
 <h3 id="principaux-composants-du-modele-de-neumann">Principaux composants du modèle de Neumann<a class="headerlink" href="#principaux-composants-du-modele-de-neumann" title="Permanent link">&num;</a></h3>
 <h4 id="unite-de-controle">Unité de contrôle<a class="headerlink" href="#unite-de-controle" title="Permanent link">&num;</a></h4>
 <p>Cette unité joue le rôle de chef d’orchestre de l’ordinateur. C’est ce composant qui est chargé récupérer en mémoire la prochaine instruction à exécuter et les données sur lesquelles elle doit opérer puis les envoie à l’UAL.</p>
 <h4 id="memoires">Mémoires<a class="headerlink" href="#memoires" title="Permanent link">&num;</a></h4>
-<p>La mémoire de l’ordinateur contient à la fois les programmes et les données. On distingue habituellement deux types de données :</p>
+<p>La mémoire de l’ordinateur contient à la fois les programmes et les données. On distingue habituellement deux types de mémoires :</p>
 <ul>
 <li>
 <p>la mémoire vive ou volatile est celle qui perd son contenu dès que l’ordinateur est éteint. Les données stockées dans la mémoire vive peuvent être lues, effacées ou déplacées comme on le souhaite. Le principal avantage de cette mémoire est la rapidité d’accès aux données. On parle souvent de mémoire RAM (pour l’anglais Random Acces Memory ). Les ordinateurs actuels disposent en général de 8 ou 16 Go de RAM.</p>
