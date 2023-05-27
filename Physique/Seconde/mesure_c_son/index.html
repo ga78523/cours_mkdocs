@@ -809,6 +809,9 @@
 <p>Le capteur de distance fonctionne sur le principe de l'écholocalisation : il est équipé d'un émetteur et un récepteur ultrason, ce qui lui permet de détecter des obstacles distants à la manière des chauves-souris ou des cétacés. Il peut être programmé pour émettre un court ultrason et calculer le temps de réception de son écho, qui est fonction de la distance de l'obstacle et de la vitesse du son.</p>
 <h2 id="mise-en-place-du-protocole-experimental">Mise en place du protocole expérimental<a class="headerlink" href="#mise-en-place-du-protocole-experimental" title="Permanent link">&num;</a></h2>
 <h3 id="montage">Montage<a class="headerlink" href="#montage" title="Permanent link">&num;</a></h3>
+<figure>
+<p><img alt="onde_soner" src="../../data/montage.png" width="300px" /></p>
+</figure>
 <p>Vous remarquerez que le câblage est on ne peut plus simple : un Arduino et un capteur de distance !
 Les pins "vcc" et "GND" du capteur de distance seront branchées sur 5V et ground respectivement. La pin "Trig" (émetteur) sera branché sur la prise 13 de l'Arduino, et la pin "Echo" (récepteur) sur la prise 12 de l'Arduino..</p>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">//Calcul de la vitesse du son avec Arduino</span>
@@ -909,12 +912,12 @@ Les pins "vcc" et "GND" du capteur de distance seront branchées sur 5V et groun
 <thead>
 <tr>
 <th align="center">Distance</th>
-<th align="center">temps 1 (<span class="arithmatex">\(\micro\)</span> s)</th>
-<th align="center">temps 2 (<span class="arithmatex">\(\micro\)</span> s)</th>
-<th align="center">temps 3 (<span class="arithmatex">\(\micro\)</span> s)</th>
-<th align="center">temps 4 (<span class="arithmatex">\(\micro\)</span> s)</th>
-<th align="center">temps 5 (<span class="arithmatex">\(\micro\)</span> s)</th>
-<th align="center">moyenne des temps (<span class="arithmatex">\(\micro\)</span> s)</th>
+<th align="center">temps 1 (<span class="arithmatex">\(\mu\)</span> s)</th>
+<th align="center">temps 2 (<span class="arithmatex">\(\mu\)</span> s)</th>
+<th align="center">temps 3 (<span class="arithmatex">\(\mu\)</span> s)</th>
+<th align="center">temps 4 (<span class="arithmatex">\(\mu\)</span> s)</th>
+<th align="center">temps 5 (<span class="arithmatex">\(\mu\)</span> s)</th>
+<th align="center">moyenne des temps (<span class="arithmatex">\(\mu\)</span> s)</th>
 </tr>
 </thead>
 <tbody>
