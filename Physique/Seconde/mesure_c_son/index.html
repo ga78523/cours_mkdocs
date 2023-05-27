@@ -871,10 +871,12 @@ Les pins "vcc" et "GND" du capteur de distance seront branchées sur 5V et groun
 <li>La variable "Delta_t" de type long (entier et grande précision) dans laquelle sera stocké le temps écoulé entre deux réceptions de l'écho.</li>
 </ul>
 <p><strong>Puis vient la partie d'initialisation : le void setup.</strong></p>
-<p>Très simple, il ne comporte que trois lignes :
-* Initialisation de la communication série qui nous permettra de lire la valeur de "Delta_t", c'est à dire le temps mis par l'écho pour parvenir au récepteur.
-* Initialisation de la pin "emetteur" (pin 13) en sortie (afin de produire un signal sonore).
-* Initialisation de la pin "recepteur" (pin 12) en entrée (afin de recevoir un signal sonore).</p>
+<p>Très simple, il ne comporte que trois lignes :</p>
+<ul>
+<li>Initialisation de la communication série qui nous permettra de lire la valeur de "Delta_t", c'est à dire le temps mis par l'écho pour parvenir au récepteur.</li>
+<li>Initialisation de la pin "emetteur" (pin 13) en sortie (afin de produire un signal sonore).</li>
+<li>Initialisation de la pin "recepteur" (pin 12) en entrée (afin de recevoir un signal sonore).</li>
+</ul>
 <p><strong>Et pour finir, la boucle principale : le void loop.</strong></p>
 <ul>
 <li>Les trois premières lignes permettent d'émettre un pulse ultrason :</li>
@@ -900,12 +902,13 @@ Les pins "vcc" et "GND" du capteur de distance seront branchées sur 5V et groun
 <li>Vous verrez alors dans la nouvelle fenêtre une succession de nombre : c'est le temps de réception de l'écho, en microsecondes, rafraîchi toutes les secondes (la variable "Delta_t")</li>
 </ul>
 <figure>
-<p><img alt="assemblage" src="../../data/onde_eau.png" width="300px" /></p>
+<p><img alt="assemblage" src="../../data/assemblage.png" width="300px" /></p>
 </figure>
 <h2 id="mise-en-place-de-lexperience">Mise en place de l'expérience<a class="headerlink" href="#mise-en-place-de-lexperience" title="Permanent link">&num;</a></h2>
 <p>Nous allons mesurer le temps de parcours de l'écho pour plusieurs distances. Il faudra donc positionner un obstacle face au capteur de distance.</p>
 <figure>
-<p><img alt="expérience" src="../../data/onde_eau.png" width="300px" /></p>
+<p><img alt="expérience" src="../data/
+  .png" width="300px" /></p>
 </figure>
 <p>J'ai choisi les distances capteur-obstacle suivantes :
 * 20 cm ;
