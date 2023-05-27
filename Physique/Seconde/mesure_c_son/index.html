@@ -362,6 +362,88 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#explications-du-code" class="md-nav__link">
+    Explications du code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assemblage" class="md-nav__link">
+    Assemblage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mise-en-place-de-lexperience" class="md-nav__link">
+    Mise en place de l'expérience
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resultats" class="md-nav__link">
+    Résultats
+  </a>
+  
+    <nav class="md-nav" aria-label="Résultats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mesure-du-temps-de-parcours-de-differentes-distances-par-londe-sonore" class="md-nav__link">
+    Mesure du temps de parcours de différentes distances par l'onde sonore
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploitation" class="md-nav__link">
+    Exploitation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pour-les-plus-rapides" class="md-nav__link">
+    Pour les plus rapides
+  </a>
+  
+    <nav class="md-nav" aria-label="Pour les plus rapides">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercice" class="md-nav__link">
+    Exercice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capteur-de-distance" class="md-nav__link">
+    Capteur de distance
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -637,6 +719,88 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#explications-du-code" class="md-nav__link">
+    Explications du code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assemblage" class="md-nav__link">
+    Assemblage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mise-en-place-de-lexperience" class="md-nav__link">
+    Mise en place de l'expérience
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resultats" class="md-nav__link">
+    Résultats
+  </a>
+  
+    <nav class="md-nav" aria-label="Résultats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mesure-du-temps-de-parcours-de-differentes-distances-par-londe-sonore" class="md-nav__link">
+    Mesure du temps de parcours de différentes distances par l'onde sonore
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploitation" class="md-nav__link">
+    Exploitation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pour-les-plus-rapides" class="md-nav__link">
+    Pour les plus rapides
+  </a>
+  
+    <nav class="md-nav" aria-label="Pour les plus rapides">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercice" class="md-nav__link">
+    Exercice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capteur-de-distance" class="md-nav__link">
+    Capteur de distance
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -700,6 +864,118 @@ Les pins "vcc" et "GND" du capteur de distance seront branchées sur 5V et groun
 </span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">  </span><span class="n">delay</span><span class="w"> </span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w"></span>
 </span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="p">}</span><span class="w"></span>
 </span></code></pre></div>
+<h3 id="explications-du-code">Explications du code<a class="headerlink" href="#explications-du-code" title="Permanent link">&num;</a></h3>
+<p><strong>Dans un premier temps nous déclarons les variables.</strong></p>
+<ul>
+<li>Les variables "emetteur" et "recepteur" dans lesquelles seront déclarés les numéros de pin utilisées respectivement par "Trig" et "Echo" du capteur HC-SR04.</li>
+<li>La variable "Delta_t" de type long (entier et grande précision) dans laquelle sera stocké le temps écoulé entre deux réceptions de l'écho.</li>
+</ul>
+<p><strong>Puis vient la partie d'initialisation : le void setup.</strong></p>
+<p>Très simple, il ne comporte que trois lignes :
+* Initialisation de la communication série qui nous permettra de lire la valeur de "Delta_t", c'est à dire le temps mis par l'écho pour parvenir au récepteur.
+* Initialisation de la pin "emetteur" (pin 13) en sortie (afin de produire un signal sonore).
+* Initialisation de la pin "recepteur" (pin 12) en entrée (afin de recevoir un signal sonore).</p>
+<p><strong>Et pour finir, la boucle principale : le void loop.</strong></p>
+<ul>
+<li>Les trois premières lignes permettent d'émettre un pulse ultrason :</li>
+<li>La pin "emetteur" est mis à l'état HIGH : l'émetteur du capteur produit un ultrason.</li>
+<li>Pause de 20 microsecondes</li>
+<li>
+<p>La pin "emetteur" est mis à l'état LOW : l'émetteur du capteur ne produit plus d'ultrason.</p>
+<p>En résumé, nous venons d'émettre une onde sonore à très haute fréquence (domaine des ultrasons) durant 20 microsecondes.
+* La variable "Delta_t" prend la valeur de "pulseIn (emetteur, HIGH)".</p>
+</li>
+</ul>
+<p>La fonction pulseIn permet de mesurer une durée d'impulsion.</p>
+<p>En résumé, la pin nommée "recepteur" va se mettre à l'écoute d'un signal (état HIGH). Lorsqu'elle aura atteint l'état demandé (HIGH), le programme va compter le temps écoulé (en microsecondes) jusqu'à ce que la pin perde son état (donc retourne à LOW). Pour plus de détails, consultez ceci.</p>
+<p>La variable "Delta\t"  correspond donc au temps écoulé entre 2 états HIGH de la pin "recepteur", soit 2 réceptions de signal. Ce qui correspond à un aller-retour de l'onde sonore entre l'émetteur et l'obstacle.</p>
+<ul>
+<li>Affichage du "pulseIn" dans le moniteur série.</li>
+<li>Délai d'une seconde (1000ms) entre 2 affichages de mesure.</li>
+</ul>
+<h2 id="assemblage">Assemblage<a class="headerlink" href="#assemblage" title="Permanent link">&num;</a></h2>
+<ul>
+<li>Vous pouvez maintenant brancher votre arduino et téléverser le programme.</li>
+<li>Cliquez sur la loupe en haut à droite de la fenêtre Arduino pour faire apparaître le moniteur série. Par défaut il sera réglé sur le débit de 9600 bauds.</li>
+<li>Vous verrez alors dans la nouvelle fenêtre une succession de nombre : c'est le temps de réception de l'écho, en microsecondes, rafraîchi toutes les secondes (la variable "Delta_t")</li>
+</ul>
+<figure>
+<p><img alt="assemblage" src="../../data/onde_eau.png" width="300px" /></p>
+</figure>
+<h2 id="mise-en-place-de-lexperience">Mise en place de l'expérience<a class="headerlink" href="#mise-en-place-de-lexperience" title="Permanent link">&num;</a></h2>
+<p>Nous allons mesurer le temps de parcours de l'écho pour plusieurs distances. Il faudra donc positionner un obstacle face au capteur de distance.</p>
+<figure>
+<p><img alt="expérience" src="../../data/onde_eau.png" width="300px" /></p>
+</figure>
+<p>J'ai choisi les distances capteur-obstacle suivantes :
+* 20 cm ;
+* 40 cm ;
+* 60 cm.</p>
+<p>Étant donné que nous mesurons le temps mis par l'écho pour parvenir au récepteur, la distance parcourue par l'onde sonore sera le double (un aller-retour), soit :</p>
+<ul>
+<li>40 cm ;</li>
+<li>80 cm ;</li>
+<li>120 cm.</li>
+</ul>
+<p>Positionnez l'obstacle à la distance souhaitée puis démarrez l'expérience en ouvrant la fenêtre du moniteur série (pour rappel, il s'agit d'appuyer sur la loupe en haut à droite de la fenêtre Arduino).</p>
+<p>Vous verrez s'afficher dans cette fenêtre le temps, en microsecondes, mis par l'onde sonore pour faire un aller-retour entre le capteur et l'obstacle.</p>
+<p>Les données devraient être relativement stables, particulièrement pour les plus courtes distances.</p>
+<p>Notez 5 valeurs parmi les données recueillies, dans chaque condition.</p>
+<p>Voici un exemple :</p>
+<figure>
+<p><img alt="screen_expérience" src="../../data/onde_eau.png" width="300px" /></p>
+</figure>
+<p>Ici sont  sélectionnés les valeurs maximales et minimales ainsi que celles qui semblent le plus représentatives. </p>
+<h2 id="resultats">Résultats<a class="headerlink" href="#resultats" title="Permanent link">&num;</a></h2>
+<h3 id="mesure-du-temps-de-parcours-de-differentes-distances-par-londe-sonore">Mesure du temps de parcours de différentes distances par l'onde sonore<a class="headerlink" href="#mesure-du-temps-de-parcours-de-differentes-distances-par-londe-sonore" title="Permanent link">&num;</a></h3>
+<div class="arithmatex">\[
+\begin{center}
+\begin{tabular}{c|c|c|c|c|c|c}
+     &amp; valeur 1 &amp; valeur 2&amp; valeur 3&amp; valeur 4&amp;valeur 5 &amp; moyenne \\ \hline
+ distance  (20 cm)   &amp; &amp; &amp; &amp; &amp; &amp;\\  \hline
+ distance  (40 cm)    &amp; &amp; &amp; &amp; &amp; &amp;\\ \hline
+ distance  (60 cm)    &amp; &amp; &amp; &amp; &amp; &amp;\\  \hline
+\end{tabular}
+\end{center}
+\]</div>
+<p>Le tableau suivant résume les résultats précédents, c'est à dire les distances et les temps de parcours moyens obtenus dans mes conditions :</p>
+<div class="arithmatex">\[
+\begin{center}
+\begin{tabular}{c|c|c|c} 
+ distance (cm)   &amp; 20&amp; 40 &amp; 60 \\ \hline
+Distance parcourue par l'onde sonore (cm)    &amp; &amp; &amp; \\  \hline
+Durée moyenne du parcours ($\micro s$)    &amp; &amp; &amp;\\  \hline
+\end{tabular}
+\end{center}
+\]</div>
+<h2 id="exploitation">Exploitation<a class="headerlink" href="#exploitation" title="Permanent link">&num;</a></h2>
+<ol>
+<li>Déterminer la vitesse du son pour ces trois distances ;</li>
+<li>En faire la moyenne.</li>
+</ol>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&num;</a></h2>
+<h2 id="pour-les-plus-rapides">Pour les plus rapides<a class="headerlink" href="#pour-les-plus-rapides" title="Permanent link">&num;</a></h2>
+<h3 id="exercice">Exercice<a class="headerlink" href="#exercice" title="Permanent link">&num;</a></h3>
+<p>Le sonar est un capteur formé d'une sonde qui contient un émetteur <span class="arithmatex">\(E\)</span> et un récepteur <span class="arithmatex">\(R\)</span> des ultrasons. Il est utilisé dans la navigation maritime pour connaître la profondeur d'eau et permet aux navires de s'approcher de la cote en toute confiance.</p>
+<p>Pour déterminer la profondeur, l'émetteur <span class="arithmatex">\(E\)</span> émet des ultrasons sinusoïdales vers le fond de la mer, une partie de ces ultrasons réfléchissent et sont captées par le récepteur <span class="arithmatex">\(R\)</span>.</p>
+<p>Le graphe ci-dessous représente le signal émis par E et le signal reçu par R.</p>
+<figure>
+<p><img alt="exo1" src="../../data/exo1.png" width="300px" /></p>
+</figure>
+<ol>
+<li>Quelle est la différence entre les ondes sonores et les ondes ultrasonores ?</li>
+<li>Rappeler l'expression (la formule ) de la vitesse (autrement appelée célérité) d'une onde. Vous exprimerez cette vitesse en fonction de la distance <span class="arithmatex">\(d\)</span> (m) et en fonction de la durée de l'aller-retour <span class="arithmatex">\(\Delta t\)</span> (s).</li>
+<li>On utilise des ultrasons de fréquence <span class="arithmatex">\(f\)</span> = 200 kHz qui se propagent dans l'eau de mer avec une célérité <span class="arithmatex">\(v_{eau} = 1500\)</span> m.s\up{-1}
+4.</li>
+<li>À partir du graphe, déterminer la durée <span class="arithmatex">\(\Delta t\)</span> entre l'émission 1 et la réception 2.</li>
+<li>On suppose que les ultrasons suivent une trajectoire verticale. Calculer la valeur de <span class="arithmatex">\(d\)</span>.</li>
+</ol>
+<h3 id="capteur-de-distance">Capteur de distance<a class="headerlink" href="#capteur-de-distance" title="Permanent link">&num;</a></h3>
+<p>Réaliser un capteur de distance. Ce capteur donnera une distance en cm.
+Pour cela, il faut :
+* déclarer une autre variable <span class="arithmatex">\(d\)</span> de type double ;
+* trouver l'expression de la distance <span class="arithmatex">\(d\)</span> en fonction des autres variables du programme ; Attention aux unités
+* l'afficher à l'aide de la fonction <code>Serial.println()</code>.</p>
 
               
             </article>
