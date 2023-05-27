@@ -1,0 +1,55 @@
+# Mesure de la vitesse du son
+
+## Contexte
+
+Le son peut être défini comme la vibration mécanique d’un fluide, qui se propage sous forme d’ondes [...] grâce à la déformation élastique de ce fluide (Wikipédia).
+
+En résumé, tout comme l’onde qui se propage au fil de l’eau lorsque vous y jetez un caillou, l’onde sonore, ou accoustique, se déplace dans l’air (ou tout autre fluide, liquide ou gazeux) sous forme de compressions régulières de ce fluide (voir illustration ci-dessous). Plus les compressions se succèdent rapidement, plus la fréquence du son est élevée, donc le son perçu aigu. Plus elles sont lentes, plus la fréquence est basse et le son grave.
+
+L'onde sonore a une vitesse propre, qui dépend de la densité du fluide dans lequel elle se déplace et sa température (2 paramètres qui influent sur la pression du fluide).
+
+L'objectif de cette activité est d'appliquer une démarche scientifique afin de mesurer expérimentalement la vitesse du son dans l'air à température ambiante.
+
+## Objectif
+L'objectif de cette activité est de vérifier la vitesse du son dans l'air en mesurant de façon précise, avec Arduino, les temps de réception d'un écho d'ultrason se répercutant sur un obstacle situé à différentes distances.
+
+## Principe du capteur à ultra-son
+
+Le capteur de distance fonctionne sur le principe de l'écholocalisation : il est équipé d'un émetteur et un récepteur ultrason, ce qui lui permet de détecter des obstacles distants à la manière des chauves-souris ou des cétacés. Il peut être programmé pour émettre un court ultrason et calculer le temps de réception de son écho, qui est fonction de la distance de l'obstacle et de la vitesse du son.
+
+## Mise en place du protocole expérimental
+### Montage
+
+
+
+Vous remarquerez que le câblage est on ne peut plus simple : un Arduino et un capteur de distance !
+Les pins "vcc" et "GND" du capteur de distance seront branchées sur 5V et ground respectivement. La pin "Trig" (émetteur) sera branché sur la prise 13 de l'Arduino, et la pin "Echo" (récepteur) sur la prise 12 de l'Arduino..
+
+```c
+//Calcul de la vitesse du son avec Arduino
+//Affichage du temps de reception d'un écho
+
+int emetteur = 13;  //branché sur trig du HC-SR04
+int recepteur = 12; //branché sur echo du HC-SR04
+long Delta_t;    //variable type long  
+
+void setup() {
+  Serial.begin (9600);
+  pinMode(emetteur, OUTPUT); 
+  pinMode(recepteur, INPUT);
+}
+
+void loop() {
+  //Émission d'un pulse ultrason sur la pin 13: emetteur allumé pour 10 microsecondes
+  digitalWrite(emetteur, HIGH);
+  delayMicroseconds(10); // Added this line
+  digitalWrite(emetteur, LOW);
+
+  //Mesure du temps entre l'émission et la réception
+  Delta_t = pulseIn(recepteur, HIGH); //en microsecond
+
+  //Affichage du temps, rafraichi toutes les 200ms
+  Serial.println(Delta_t);
+  delay (1000);
+}
+```
