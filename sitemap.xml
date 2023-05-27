@@ -11,6 +11,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://example.com/Physique/mesure_c_son/</loc>
+         <lastmod>2023-05-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://example.com/Premiere/neumann/</loc>
          <lastmod>2023-05-27</lastmod>
          <changefreq>daily</changefreq>
