@@ -41,6 +41,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://example.com/Terminale/imprimantes/</loc>
+         <lastmod>2023-06-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://example.com/Terminale/prog_dyn/</loc>
          <lastmod>2023-06-08</lastmod>
          <changefreq>daily</changefreq>
