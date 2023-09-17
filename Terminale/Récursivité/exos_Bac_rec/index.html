@@ -802,7 +802,7 @@
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>  <span class="n">choice</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span> <span class="n">method</span> <span class="n">of</span> <span class="n">random</span><span class="o">.</span><span class="n">Random</span> <span class="n">instance</span>
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>  <span class="n">Choose</span> <span class="n">a</span> <span class="n">random</span> <span class="n">element</span> <span class="kn">from</span> <span class="nn">a</span> <span class="n">non</span><span class="o">-</span><span class="n">empty</span> <span class="n">sequence</span><span class="o">.</span>
 </span></code></pre></div>
-<p>La fonction A() ci-dessous renvoie une chaîne de caractères construite suivant la règle A, en choisissant aléatoirement entre les deux cas de figure de cette règle.</p>
+<p>La fonction `A()`` ci-dessous renvoie une chaîne de caractères construite suivant la règle A, en choisissant aléatoirement entre les deux cas de figure de cette règle.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">def</span> <span class="nf">A</span><span class="p">():</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="k">if</span> <span class="n">choice</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]):</span>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>        <span class="k">return</span> <span class="s2">&quot;a&quot;</span>
@@ -811,9 +811,9 @@
 </span></code></pre></div>
 <ol>
 <li>a. Cette fonction est-elle récursive ? Justifier.<br />
-   b. La fonction choice([True, False]) peut renvoyer False un très grand nombre de fois consécutives. Expliquer pourquoi ce cas de figure amènerait à une erreur d'exécution.<br />
-   Dans la suite, on considère une deuxième version de la fonction A. À présent, la fonction prend en paramètre un entier n tel que, si la valeur de n est négative ou nulle, la fonction renvoie "a". Si la valeur de n est strictement positive, elle renvoie une chaîne de caractères construite suivant la règle A avec un n décrémenté de 1, en choisissant aléatoirement entre les deux cas de figure de cette règle.</li>
+   b. La fonction `choice([True, False])`` peut renvoyer False un très grand nombre de fois consécutives. Expliquer pourquoi ce cas de figure amènerait à une erreur d'exécution.  </li>
 </ol>
+<p>Dans la suite, on considère une deuxième version de la fonction A. À présent, la fonction prend en paramètre un entier n tel que, si la valeur de n est négative ou nulle, la fonction renvoie "a". Si la valeur de n est strictement positive, elle renvoie une chaîne de caractères construite suivant la règle A avec un n décrémenté de 1, en choisissant aléatoirement entre les deux cas de figure de cette règle.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">def</span> <span class="nf">A</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="k">if</span> <span class="o">...</span> <span class="ow">or</span> <span class="n">choice</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span> <span class="p">:</span>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>        <span class="k">return</span> <span class="s2">&quot;a&quot;</span>
@@ -821,7 +821,7 @@
 </span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>        <span class="k">return</span> <span class="s2">&quot;a&quot;</span> <span class="o">+</span> <span class="o">...</span> <span class="o">+</span> <span class="s2">&quot;a&quot;</span>
 </span></code></pre></div>
 <ol>
-<li>a. Recopier sur la copie et compléter aux emplacements des points de suspension ... le code de cette nouvelle fonction A.
+<li>a. Recopier sur la copie et         compléter aux emplacements des points de suspension ... le code de cette nouvelle fonction A.
    b. Justifier le fait qu'un appel de la forme A(n) avec n un nombre entier positif inférieur à 50, termine toujours.</li>
 </ol>
 <p>On donne ci-après le code de la fonction récursive B qui prend en paramètre un entier n et qui renvoie une chaîne de caractères construite suivant la règle B.</p>
