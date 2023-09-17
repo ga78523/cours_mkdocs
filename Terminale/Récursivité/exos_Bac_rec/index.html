@@ -829,9 +829,9 @@
 </span></code></pre></div>
 <p>On admet que :</p>
 <ul>
-<li>les appels A(-1)et A(0) renvoient la chaîne "a";</li>
-<li>l’appel A(1) renvoie la chaîne "a" ou la chaîne "aaa";</li>
-<li>l’appel A(2) renvoie la chaîne "a", la chaîne "aaa" ou la chaîne "aaaaa".</li>
+<li>les appels <code>A(-1)</code> et <code>A(0)</code> renvoient la chaîne "a";</li>
+<li>l’appel `A(1)`` renvoie la chaîne "a" ou la chaîne "aaa";</li>
+<li>l’appel `A(2)`` renvoie la chaîne "a", la chaîne "aaa" ou la chaîne "aaaaa".</li>
 </ul>
 <p><strong>3.</strong> Donner toutes les chaînes possibles renvoyées par les appels B(0), B(1) et B(2).</p>
 <p>On suppose maintenant qu'on dispose d'une fonction<code>raccourcir</code> qui prend comme paramètre une chaîne de caractères de longueur supérieure ou égale à 2, et renvoie la chaîne de caractères obtenue à partir de la chaîne initiale en lui ôtant le premier et le dernier caractère.</p>
@@ -841,7 +841,7 @@
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">raccourcir</span><span class="p">(</span><span class="s2">&quot;ab&quot;</span><span class="p">)</span>
 </span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="s2">&quot;&quot;</span>
 </span></code></pre></div>
-<p><strong>4.a.</strong>Recopier sur la copie et compléter les points de suspension ... du code de la fonction <code>regleA</code> ci-dessous pour qu'elle renvoie <code>True</code>si la chaîne passée en paramètre est construite suivant la règle A, et <code>False</code> sinon.</p>
+<p><strong>4.a.</strong> Recopier sur la copie et compléter les points de suspension ... du code de la fonction <code>regleA</code> ci-dessous pour qu'elle renvoie <code>True</code>si la chaîne passée en paramètre est construite suivant la règle A, et <code>False</code> sinon.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">def</span> <span class="nf">regleA</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
 </span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">chaine</span><span class="p">)</span>
 </span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
