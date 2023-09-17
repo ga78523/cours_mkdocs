@@ -15,7 +15,7 @@
     
     
       
-        <title>Fiche d'exercices type Bac - Site de cours</title>
+        <title>Correction - Site de cours</title>
       
     
     
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              <div style=text-align:center>Fiche d'exercices type Bac</div>
+              Correction
             
           </span>
         </div>
@@ -454,12 +454,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
@@ -522,12 +524,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" checked>
       
       
       
@@ -567,6 +571,68 @@
       <a href="../exos_Bac_rec/" class="md-nav__link">
         Exercices
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Correction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Correction
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2" class="md-nav__link">
+    Exercice 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2_1" class="md-nav__link">
+    Exercice 2
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -613,6 +679,13 @@
       
         <li class="md-nav__item">
   <a href="#exercice-2" class="md-nav__link">
+    Exercice 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-2_1" class="md-nav__link">
     Exercice 2
   </a>
   
@@ -765,6 +838,147 @@ On peut procéder de deux façons différentes :</p>
 </span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>        <span class="n">echange</span><span class="p">(</span><span class="n">valeurs</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
 </span></code></pre></div>
 </details>
+<h2 id="exercice-2_1">Exercice 2<a class="headerlink" href="#exercice-2_1" title="Permanent link">&num;</a></h2>
+<p>Cet exercice traite du thème «programmation», et principalement de la récursivité.  </p>
+<p>On rappelle qu'une chaîne de caractères peut être représentée en Python par un texte  entre guillemets "" et que :  </p>
+<ul>
+<li>
+<p>la fonction <code>len</code> renvoie la longueur de la chaîne de caractères passée en paramètre ;  </p>
+</li>
+<li>
+<p>si une variable <code>ch</code> désigne une chaîne de caractères, alors <code>ch[0]</code> renvoie son premier caractère, <code>ch[1]</code> le deuxième, etc. ; </p>
+</li>
+<li>
+<p>l'opérateur `+`` permet de concaténer deux chaînes de caractères.  </p>
+</li>
+</ul>
+<p><strong>Exemples :</strong></p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">texte</span> <span class="o">=</span> <span class="s2">&quot;bricot&quot;</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">texte</span><span class="p">)</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="mi">6</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">texte</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="s2">&quot;b&quot;</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">texte</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="s2">&quot;r&quot;</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;a&quot;</span> <span class="o">+</span> <span class="n">texte</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="s2">&quot;abricot&quot;</span>
+</span></code></pre></div>
+<p>On s'intéresse dans cet exercice à la construction de chaînes de caractères suivant  certaines règles de construction.</p>
+<p><strong>Règle A</strong>: une chaîne est construite suivant la règle A dans les deux cas suivants:  </p>
+<ul>
+<li>
+<p>soit elle est égale à "a" ;</p>
+</li>
+<li>
+<p>soit elle est de la forme "a" + chaine + "a", où chaine est une chaîne de  caractères construite suivant la règle A.  </p>
+</li>
+</ul>
+<p><strong>Règle B :</strong> une chaîne est construite suivant la règle B dans les deux cas suivants :  </p>
+<ul>
+<li>
+<p>soit elle est de la forme "b"+chaine+"b", où chaine est une chaîne de caractères construite suivant la règle A ;</p>
+</li>
+<li>
+<p>soit elle est de la forme "b" + chaine+"b", où chaine est une chaîne de caractères construite suivant la règle B.  </p>
+</li>
+</ul>
+<p>On a reproduit ci-dessous l'aide de la fonction choice du module random.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>  <span class="o">&gt;&gt;&gt;</span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>  <span class="o">&gt;&gt;&gt;</span><span class="n">help</span><span class="p">(</span><span class="n">choice</span><span class="p">)</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>  <span class="n">Help</span> <span class="n">on</span> <span class="n">method</span> <span class="n">choice</span> <span class="ow">in</span> <span class="n">module</span> <span class="n">random</span><span class="p">:</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>  <span class="n">choice</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span> <span class="n">method</span> <span class="n">of</span> <span class="n">random</span><span class="o">.</span><span class="n">Random</span> <span class="n">instance</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>  <span class="n">Choose</span> <span class="n">a</span> <span class="n">random</span> <span class="n">element</span> <span class="kn">from</span> <span class="nn">a</span> <span class="n">non</span><span class="o">-</span><span class="n">empty</span> <span class="n">sequence</span><span class="o">.</span>
+</span></code></pre></div>
+<p>La fonction A() ci-dessous renvoie une chaîne de caractères construite suivant la règle A, en choisissant aléatoirement entre les deux cas de figure de cette règle.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">def</span> <span class="nf">A</span><span class="p">():</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    <span class="k">if</span> <span class="n">choice</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]):</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>        <span class="k">return</span> <span class="s2">&quot;a&quot;</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>        <span class="k">return</span> <span class="s2">&quot;a&quot;</span> <span class="o">+</span> <span class="n">A</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;a&quot;</span>
+</span></code></pre></div>
+<p><strong>1.a.</strong> Cette fonction est-elle récursive ? Justifier. </p>
+<details class="done"><summary>Réponse</summary><p>La fonction A s’appelle elle-même, donc A est une fonction récursive.</p>
+</details>
+<p><strong>1.b.</strong> La fonction <code>choice([True, False])</code> peut renvoyer <code>False</code> un très grand nombre de fois consécutives. Expliquer pourquoi ce cas de figure amènerait à une erreur d'exécution.  </p>
+<details class="done"><summary>Réponse</summary><p>Le maximum de la profondeur de récursion en Python est généralement de 997, c’est
+une protection contre un débordement de pile. On obtient alors cette erreur au delà :
+RecursionError : maximum recursion depth exceeded in comparison</p>
+</details>
+<p>Dans la suite, on considère une deuxième version de la fonction A. À présent, la fonction prend en paramètre un entier n tel que, si la valeur de n est négative ou nulle, la fonction renvoie "a". Si la valeur de n est strictement positive, elle renvoie une chaîne de caractères construite suivant la règle A avec un n décrémenté de 1, en choisissant aléatoirement entre les deux cas de figure de cette règle.</p>
+<div class="language-text highlight"><pre><span></span><code>```python
+def A(n):
+    if ... or choice([True, False]) :
+        return &quot;a&quot;
+    else:
+        return &quot;a&quot; + ... + &quot;a&quot;
+```
+</code></pre></div>
+<p><strong>2.a.</strong> Recopier sur la copie et compléter aux emplacements des points de suspension ... le code de cette nouvelle fonction A.</p>
+<details class="done"><summary>Réponse</summary></details>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">def</span> <span class="nf">A</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    <span class="k">if</span> <span class="n">n</span><span class="o">&lt;=</span><span class="mi">0</span> <span class="ow">or</span> <span class="n">choice</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span> <span class="p">:</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>        <span class="k">return</span> <span class="s2">&quot;a&quot;</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>        <span class="k">return</span> <span class="s2">&quot;a&quot;</span> <span class="o">+</span> <span class="n">A</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;a&quot;</span>
+</span></code></pre></div>
+<p><strong>2.b.</strong> Justifier le fait qu'un appel de la forme A(n) avec n un nombre entier positif inférieur à 50, termine toujours.</p>
+<details class="done"><summary>Réponse</summary><p>Pour n &gt; 0, l’appel à A(n) provoque ou bien un arrêt de la fonction si choice([True,
+False]) = True, ou bien un appel récursif A(n −1).
+Un appel à A(50) pourrait provoquer dans le pire des cas 50 appels récursifs pour
+arriver à A(0) qui termine, ou alors terminer avant!</p>
+</details>
+<p>On donne ci-après le code de la fonction récursive B qui prend en paramètre un entier n et qui renvoie une chaîne de caractères construite suivant la règle B.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">def</span> <span class="nf">B</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">choice</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]):</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>        <span class="k">return</span> <span class="s2">&quot;b&quot;</span> <span class="o">+</span> <span class="n">A</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;b&quot;</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>        <span class="k">return</span> <span class="s2">&quot;b&quot;</span> <span class="o">+</span> <span class="n">B</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;b&quot;</span>
+</span></code></pre></div>
+<p>On admet que :
+• les appels A(-1)et A(0) renvoient la chaîne "a";
+• l’appel A(1) renvoie la chaîne "a" ou la chaîne "aaa";
+• l’appel A(2) renvoie la chaîne "a", la chaîne "aaa" ou la chaîne "aaaaa".</p>
+<p><strong>3.</strong> Donner toutes les chaînes possibles renvoyées par les appels B(0), B(1) et B(2).</p>
+<details class="done"><summary>Réponse</summary><ul>
+<li>L’appel B(0) renvoie "bab"</li>
+<li>L’appel B(1) renvoie "bab" ou "bbabb".</li>
+<li>L’appel B(2) renvoie "bab", "baaab", "bbabb" ou "bbbabbb".</li>
+</ul>
+</details>
+<p>On suppose maintenant qu'on dispose d'une fonction<code>raccourcir</code> qui prend comme paramètre une chaîne de caractères de longueur supérieure ou égale à 2, et renvoie la chaîne de caractères obtenue à partir de la chaîne initiale en lui ôtant le premier et le dernier caractère.</p>
+<p>Exemple :</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">raccourcir</span><span class="p">(</span><span class="s2">&quot;abricot&quot;</span><span class="p">)</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="s2">&quot;brico&quot;</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">raccourcir</span><span class="p">(</span><span class="s2">&quot;ab&quot;</span><span class="p">)</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="s2">&quot;&quot;</span>
+</span></code></pre></div>
+<p><strong>4.a.</strong> Recopier sur la copie et compléter les points de suspension ... du code de la fonction <code>regleA</code> ci-dessous pour qu'elle renvoie <code>True</code>si la chaîne passée en paramètre est construite suivant la règle A, et <code>False</code> sinon.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">def</span> <span class="nf">regleA</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a> <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">chaine</span><span class="p">)</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a> <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>     <span class="k">return</span> <span class="n">chaine</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;a&quot;</span> <span class="ow">and</span> <span class="n">chaine</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;a&quot;</span> <span class="ow">and</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>     <span class="n">regleA</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a> <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>     <span class="k">return</span> <span class="n">chaine</span> <span class="o">==</span> <span class="o">...</span>
+</span></code></pre></div>
+<details class="done"><summary>Réponse</summary><p><div class="language-python highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">def</span> <span class="nf">regleA</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">chaine</span><span class="p">)</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>        <span class="k">return</span> <span class="n">chaine</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;a&quot;</span> <span class="ow">and</span> <span class="n">chaine</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;a&quot;</span> <span class="ow">and</span> <span class="n">regle</span> <span class="n">A</span><span class="p">(</span><span class="n">racourcir</span><span class="p">(</span><span class="n">chaine</span><span class="p">))</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>        <span class="k">return</span> <span class="n">chaine</span> <span class="o">==</span> <span class="s2">&quot;a&quot;</span>
+</span></code></pre></div>
+ou regle A(chaine[1 : n −1])</p>
+</details>
+<p><strong>4.b.</strong> Écrire le code d’une fonction <code>regleB</code>, prenant en paramètre une chaîne de caractères et renvoyant<code>True</code> si la chaîne est construite suivant la règle B,et <code>False</code> sinon.</p>
+<details class="done"><summary>Réponse</summary><div class="language-python highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">def</span> <span class="nf">regleB</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">chaine</span><span class="p">)</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>    <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>        <span class="k">return</span> <span class="n">chaine</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;b&quot;</span> <span class="ow">and</span> <span class="n">chaine</span><span class="p">[</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;b&quot;</span><span class="ow">and</span> <span class="p">(</span><span class="n">regleA</span><span class="p">(</span><span class="n">chaine</span><span class="p">[</span><span class="mi">1</span> <span class="p">:</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span> <span class="ow">or</span> <span class="n">regleB</span><span class="p">(</span><span class="n">chaine</span><span class="p">[</span><span class="mi">1</span> <span class="p">:</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]))</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>        <span class="k">return</span> <span class="kc">False</span>
+</span></code></pre></div>
+</details>
 
               
             </article>
@@ -774,6 +988,26 @@ On peut procéder de deux façons différentes :</p>
       </main>
       
         <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../exos_Bac_rec/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Exercices" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Exercices
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
