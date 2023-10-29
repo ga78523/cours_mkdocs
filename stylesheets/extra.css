@@ -1,3 +1,31 @@
+h1 {
+    background-color: rgb(145, 161, 158);
+    color: rgb(229, 15, 15);
+    text-align: center;
+    font: weight 200px;
+}
+
+h2{
+    color:rgb(145, 161, 158);
+    text-decoration: underline;
+    font-weight: bolder;
+    ;
+}
+
+h3{
+    color:rgb(145, 161, 158);
+    font-weight: bolder;
+}
+
+h4{
+    color:rgb(145, 161, 158);
+    font-weight: bolder;
+}
+
+.admonition{
+    font-size: 14pt;
+}
+
 .md-typeset div.arithmatex  {
     overflow: initial;
 }
@@ -19,31 +47,4 @@ main h3::before {
 main h4::before {
     counter-increment: h4counter;
     content: counter(h2counter) "." counter(h3counter)"."counter(h4counter) ") ";
-}
-
-h1{
-    color:rgb(145, 161, 158);
-    text-align: center;
-    font-weight: bolder;
-}
-
-h2{
-    color:rgb(145, 161, 158);
-    text-decoration: underline;
-    font-weight:900;
-    ;
-}
-
-h3{
-    color:rgb(145, 161, 158);
-    font-weight: bolder;
-}
-
-h4{
-    color:rgb(145, 161, 158);
-    font-weight: bolder;
-}
-
-.admonition{
-    font-size: 14pt;
 }
