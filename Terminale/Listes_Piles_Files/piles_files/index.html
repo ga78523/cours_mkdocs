@@ -922,13 +922,13 @@ la notation utilisée (exemple la notation polonaise et la notation polonaise in
 <h3 id="interface-des-piles">Interface des piles<a class="headerlink" href="#interface-des-piles" title="Permanent link">&num;</a></h3>
 <p>Voici les opérations que l’on peut réaliser sur une pile :</p>
 <ul>
-<li>on peut vouloir créer une pile vide `CreerPile``</li>
-<li>on peut savoir si une pile est vide (pileVide) ;</li>
-<li>on peut empiler un nouvel élément sur la pile (empiler)</li>
+<li>on peut vouloir créer une pile vide (<code>CreerPile</code>) ;</li>
+<li>on peut savoir si une pile est vide (<code>est_vide</code>) ;</li>
+<li>on peut empiler un nouvel élément sur la pile (<code>empiler</code>)</li>
 <li>on peut récupérer l’élément au sommet de la pile tout en le supprimant. On dit que l’on dépile
-(depiler)</li>
-<li>on peut accéder à l’élément situé au sommet de la pile sans le supprimer de la pile (sommet)</li>
-<li>on peut connaitre le nombre d’éléments présents dans la pile (taille)</li>
+(<code>depiler</code>) ;</li>
+<li>on peut accéder à l’élément situé au sommet de la pile sans le supprimer de la pile (<code>sommet</code>).</li>
+<li>on peut connaitre le nombre d’éléments présents dans la pile (<code>taille</code>).</li>
 </ul>
 <h3 id="implementation-en-python">Implémentation en python<a class="headerlink" href="#implementation-en-python" title="Permanent link">&num;</a></h3>
 <div class="admonition example">
@@ -941,22 +941,22 @@ la notation utilisée (exemple la notation polonaise et la notation polonaise in
 file on ajoute des éléments à une extrémité de la file et on supprime des éléments à l’autre extrémité.
 On prend souvent l’analogie de la file d’attente devant un magasin pour décrire une file de données.
 Les files sont basées sur le principe FIFO (First In First Out : le premier qui est rentré sera le
-premier à sortir. Ici aussi, on retrouve souvent ce principe FIFO en informatique notamment dans la
+premier à sortir).</p>
+<figure>
+<p><img alt="pile" src="../img/FIFO_PEPS.png" width="500px" /></p>
+</figure>
+<p>Ici aussi, on retrouve souvent ce principe FIFO en informatique notamment dans la
 gestion des processus. On les retrouve également pour un imprimante qui gère une file de documents
 en attente d’impression.</p>
 <h3 id="interface-des-files">Interface des files<a class="headerlink" href="#interface-des-files" title="Permanent link">&num;</a></h3>
 <p>Voici les opérations que l’on peut réaliser sur une file :</p>
 <ul>
-<li>creerFile pour créer un filer vide.</li>
-<li>fileVide pour savoir si une file est vide</li>
-<li>
-<ul>
-<li>ajout pour ajouter un nouvel élément à la file</li>
-</ul>
-</li>
-<li>retire pour récupérer l’élément situé en bout de file tout en le supprimant</li>
-<li>premier pour accéder à l’élément situé en bout de file sans le supprimer de la file</li>
-<li>taille pour connaitre le nombre d’éléments présents dans la file</li>
+<li><code>creer_file</code> pour créer un filer vide.</li>
+<li><code>est_Vide</code> pour savoir si une file est vide</li>
+<li><code>ajout</code> pour ajouter un nouvel élément à la file</li>
+<li><code>retire</code> pour récupérer l’élément situé en bout de file tout en le supprimant</li>
+<li><code>premier</code> pour accéder à l’élément situé en bout de file sans le supprimer de la file</li>
+<li><code>taille</code> pour connaitre le nombre d’éléments présents dans la file</li>
 </ul>
 <h3 id="implementation-en-python_1">Implémentation en python<a class="headerlink" href="#implementation-en-python_1" title="Permanent link">&num;</a></h3>
 <div class="admonition example">
