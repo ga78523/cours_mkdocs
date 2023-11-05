@@ -76,6 +76,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://example.com/Terminale/Listes_Piles_Files/piles_files/</loc>
+         <lastmod>2023-11-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://example.com/Terminale/R%C3%A9cursivit%C3%A9/exos_Bac_rec/</loc>
          <lastmod>2023-11-05</lastmod>
          <changefreq>daily</changefreq>
