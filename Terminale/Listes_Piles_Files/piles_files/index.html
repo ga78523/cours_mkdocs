@@ -635,6 +635,54 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#interface-des-piles" class="md-nav__link">
+    Interface des piles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-en-python" class="md-nav__link">
+    Implémentation en python
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#files" class="md-nav__link">
+    Files
+  </a>
+  
+    <nav class="md-nav" aria-label="Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definitions_1" class="md-nav__link">
+    Définitions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interface-des-files" class="md-nav__link">
+    Interface des files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-en-python_1" class="md-nav__link">
+    Implémentation en python
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -778,6 +826,54 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#interface-des-piles" class="md-nav__link">
+    Interface des piles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-en-python" class="md-nav__link">
+    Implémentation en python
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#files" class="md-nav__link">
+    Files
+  </a>
+  
+    <nav class="md-nav" aria-label="Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definitions_1" class="md-nav__link">
+    Définitions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interface-des-files" class="md-nav__link">
+    Interface des files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-en-python_1" class="md-nav__link">
+    Implémentation en python
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -814,6 +910,54 @@ programmation récursive nécessite l’utilisation d’une pile. Un navigateur 
 mémorise les actions effectuées afin de revenir en arrière pas à pas. Les pages ou les fichiers ouverts
 sont également mémorisés. Une pile peut être nécessaire au calcul d’expression mathématique suivant
 la notation utilisée (exemple la notation polonaise et la notation polonaise inversée)</p>
+<h3 id="interface-des-piles">Interface des piles<a class="headerlink" href="#interface-des-piles" title="Permanent link">&num;</a></h3>
+<p>Voici les opérations que l’on peut réaliser sur une pile :</p>
+<ul>
+<li>on peut vouloir créer une pile vide `CreerPile``</li>
+<li>on peut savoir si une pile est vide (pileVide) ;</li>
+<li>on peut empiler un nouvel élément sur la pile (empiler)</li>
+<li>on peut récupérer l’élément au sommet de la pile tout en le supprimant. On dit que l’on dépile
+(depiler)</li>
+<li>on peut accéder à l’élément situé au sommet de la pile sans le supprimer de la pile (sommet)</li>
+<li>on peut connaitre le nombre d’éléments présents dans la pile (taille)</li>
+</ul>
+<h3 id="implementation-en-python">Implémentation en python<a class="headerlink" href="#implementation-en-python" title="Permanent link">&num;</a></h3>
+<div class="admonition example">
+<p class="admonition-title">Exercice  1 :</p>
+<p>Implémentez en Python ces 5 opérations</p>
+</div>
+<h2 id="files">Files<a class="headerlink" href="#files" title="Permanent link">&num;</a></h2>
+<h3 id="definitions_1">Définitions<a class="headerlink" href="#definitions_1" title="Permanent link">&num;</a></h3>
+<p>Comme les piles, les files ont des points communs avec les listes. Différences majeures : dans une
+file on ajoute des éléments à une extrémité de la file et on supprime des éléments à l’autre extrémité.
+On prend souvent l’analogie de la file d’attente devant un magasin pour décrire une file de données.
+Les files sont basées sur le principe FIFO (First In First Out : le premier qui est rentré sera le
+premier à sortir. Ici aussi, on retrouve souvent ce principe FIFO en informatique notamment dans la
+gestion des processus. On les retrouve également pour un imprimante qui gère une file de documents
+en attente d’impression.</p>
+<h3 id="interface-des-files">Interface des files<a class="headerlink" href="#interface-des-files" title="Permanent link">&num;</a></h3>
+<p>Voici les opérations que l’on peut réaliser sur une file :</p>
+<ul>
+<li>creerFile pour créer un filer vide.</li>
+<li>fileVide pour savoir si une file est vide</li>
+<li>
+<ul>
+<li>ajout pour ajouter un nouvel élément à la file</li>
+</ul>
+</li>
+<li>retire pour récupérer l’élément situé en bout de file tout en le supprimant</li>
+<li>premier pour accéder à l’élément situé en bout de file sans le supprimer de la file</li>
+<li>taille pour connaitre le nombre d’éléments présents dans la file</li>
+</ul>
+<h3 id="implementation-en-python_1">Implémentation en python<a class="headerlink" href="#implementation-en-python_1" title="Permanent link">&num;</a></h3>
+<div class="admonition example">
+<p class="admonition-title">Exercice 2 : </p>
+<p>Implémentez en Python ces 5 opérations.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 3: </p>
+<p>Faire une classe pile et une classe file</p>
+</div>
 
               
             </article>
