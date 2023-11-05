@@ -1071,13 +1071,17 @@ Nous pouvons également implémenter une liste chaînée par une classe <code>Li
 <span class="normal"><a href="#__codelineno-2-4">4</a></span>
 <span class="normal"><a href="#__codelineno-2-5">5</a></span>
 <span class="normal"><a href="#__codelineno-2-6">6</a></span>
-<span class="normal"><a href="#__codelineno-2-7">7</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="n">affichage</span> <span class="o">=</span> <span class="o">..........</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>    <span class="n">maillon</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tete</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>    <span class="k">while</span> <span class="n">maillon</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>    <span class="n">affichage</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">maillon</span><span class="o">.</span><span class="n">val</span><span class="p">))</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a>    <span class="n">maillon</span> <span class="o">=</span> <span class="o">........</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a>    <span class="k">return</span> <span class="s2">&quot;{&quot;</span> <span class="o">+</span> <span class="s2">&quot; ; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">affichage</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;}</span>
+<span class="normal"><a href="#__codelineno-2-7">7</a></span>
+<span class="normal"><a href="#__codelineno-2-8">8</a></span>
+<span class="normal"><a href="#__codelineno-2-9">9</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&quot;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>    <span class="n">affichage</span> <span class="o">=</span> <span class="o">..........</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>    <span class="n">maillon</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tete</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a>    <span class="k">while</span> <span class="n">maillon</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a>        <span class="n">affichage</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">maillon</span><span class="o">.</span><span class="n">val</span><span class="p">))</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a>        <span class="n">maillon</span> <span class="o">=</span> <span class="o">........</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a>    <span class="k">return</span> <span class="s2">&quot;{&quot;</span> <span class="o">+</span> <span class="s2">&quot; ; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">affichage</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;}</span>
 </span></code></pre></div>
 </td></tr></table>
 <div class="admonition example">
@@ -1104,7 +1108,7 @@ et la méthode <code>get_maillon_indice(i)</code> qui retourne la maillon d’in
 <div class="admonition example">
 <p class="admonition-title">Exercice 6 :</p>
 <p>En suivant les schémas des interfaces d’insertion de maillon, implémenter en Python les fonctions
-<code>ajouter_debut(M)``,</code>ajouter_fin(M)<code>et</code>ajouter_apres(i, M)`</p>
+<code>ajouter_debut(M)</code>, <code>ajouter_fin(M)</code> et <code>ajouter_apres(i, M)</code></p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -1122,8 +1126,8 @@ et la méthode <code>get_maillon_indice(i)</code> qui retourne la maillon d’in
 <p>En suivant les schémas des interfaces de suppression de maillon, implémenter les méthodes suivantes :
 <code>supprimer_debut()</code> qui supprime le premier élement de la liste, <code>supprimer_fin()</code> qui supprime le
 dernier élément de la liste et enﬁn <code>supprimer_apres(i)</code> qui supprime le maillon de la liste L situé
-après le maillon d’indice <code>i</code>.
-<strong>Remarque :</strong> Ces dernières méthodes doivent retourner le maillon supprimé.</p>
+après le maillon d’indice <code>i</code>.</p>
+<p><strong>Remarque :</strong> Ces dernières méthodes doivent retourner le maillon supprimé.</p>
 </div>
 <iframe width="420" height="315"
 src="https://www.lumni.fr/video/notion-de-listes-en-informatique-et-application-aux-images-numeriques">
