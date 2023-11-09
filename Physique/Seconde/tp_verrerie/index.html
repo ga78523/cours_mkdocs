@@ -383,6 +383,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#validation-du-choix-de-linstrument-le-mieux-adapte-a-la-mesure-du-volume" class="md-nav__link">
+    Validation du choix de l'instrument le mieux adapté à la mesure du volume.
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -857,6 +864,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#validation-du-choix-de-linstrument-le-mieux-adapte-a-la-mesure-du-volume" class="md-nav__link">
+    Validation du choix de l'instrument le mieux adapté à la mesure du volume.
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -890,19 +904,23 @@ l’indication 100 mL :</p>
 <p>Notre objectif est de déterminer quel élément de verrerie choisir afin de préparer la solution avec un maximum de
 précision.</p>
 <h2 id="partie-pratique">Partie Pratique<a class="headerlink" href="#partie-pratique" title="Permanent link">&num;</a></h2>
+<p>Vous répondrez aux questions sur un document texte.</p>
 <p>Pour répondre à la problématique, nous allons effectuer 3 prélèvements de 100 mL d’eau avec chacun des 3 éléments
 de verrerie. Afin de vérifier si à chaque fois on a bien prélevé le même volume d’eau, nous allons le peser avec une balance
 de précision.</p>
 <h3 id="travail-a-realiser-en-binome">Travail à réaliser en binôme<a class="headerlink" href="#travail-a-realiser-en-binome" title="Permanent link">&num;</a></h3>
+<ul>
+<li>Reproduire sur votre compte-rendu, le tableau ci-dessous.</li>
+</ul>
 <p>Pour chacun des instruments (bêcher, éprouvette graduée, fiole jaugée) :</p>
 <ul>
 <li>Poser l’instrument bien sec sur une balance de précision et effectuer la tare ;</li>
 <li>Le remplir d’eau jusqu’à la graduation 100 mL. Le niveau pourra être affiné très précisément à l’aide d’une pipette
 pasteur ;</li>
-<li>Noter sa masse dans le tableau (mesure n°1) ;</li>
+<li>Noter sur votre compte-rendu cette masse dans le tableau (mesure n°1) ;</li>
 <li>Vider l’instrument et le remplir à nouveau d’eau (ne pas effectuer la tare une nouvelle fois, elle a déjà été réalisée
 avec l’instrument bien sec) ;</li>
-<li>Noter la masse dans le tableau (mesure n°2) ;</li>
+<li>Noter sur votre compte-rendu la masse dans le tableau (mesure n°2) ;</li>
 <li>Recommencer encore une fois la mesure.</li>
 </ul>
 <table>
@@ -989,19 +1007,20 @@ avec l’instrument bien sec) ;</li>
 <li>Mettre en commun les résultats de la classe en complétant les listes nommées <code>masse_becher</code>, <code>masse_eprouvette</code>,
 <code>masse_fiole</code> ;</li>
 <li>Cliquer sur <code>executer</code>.</li>
-<li>Faire une copie d’écran ci-dessous.</li>
+<li>Faire une copie d’écran.</li>
 <li>En déduire visuellement quel type de verrerie est la plus précise.</li>
 </ol>
 <h3 id="estimation-de-lordre-de-grandeur-de-lerreur-sur-la-mesure">Estimation de l’ordre de grandeur de l’erreur sur la mesure<a class="headerlink" href="#estimation-de-lordre-de-grandeur-de-lerreur-sur-la-mesure" title="Permanent link">&num;</a></h3>
-<p>Pour mieux caractériser la dispersion des mesures, on calcule l’écart- type, noté σn−1.
-L’écart-type σn−1 donne une estimation de l’ordre de grandeur de l’erreur sur la mesure. Plus l’écart-type est faible,
-moins les valeurs mesurées sont dispersées, et donc plus précise est la mesure.
-Ces calculs peuvent être effectués avec la calculatrice, mais également avec Python :</p>
+<p>Pour mieux caractériser la dispersion des mesures, on calcule l’écart- type, noté <span class="arithmatex">\(\sigma_{n−1}\)</span>.</p>
+<p>L’écart-type <span class="arithmatex">\(\sigma_{n−1}\)</span> donne une estimation de l’ordre de grandeur de l’erreur sur la mesure. Plus l’écart-type est faible, moins les valeurs mesurées sont dispersées, et donc plus précise est la mesure.</p>
+<p>Ces calculs peuvent être effectués avec la calculatrice, mais également avec Python :</p>
 <ol>
-<li>Importer la bibliothèque numpy qui permet d’effectuer des statistiques avec l’instruction :
-    <table class="language-python highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<li>
+<p>Importer la bibliothèque numpy qui permet d’effectuer des statistiques avec l’instruction :</p>
+<table class="language-python highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </span></code></pre></div>
-</td></tr></table></li>
+</td></tr></table>
+</li>
 <li>
 <p>Pour calculer l’écart-type des valeurs de la liste masse_becher et l’afficher :</p>
 <table class="language-python highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
@@ -1013,7 +1032,25 @@ Ces calculs peuvent être effectués avec la calculatrice, mais également avec 
 L’instrution <code>plt.show()</code> doit se trouver en fin de script (instruction bloquante)</p>
 </li>
 <li>
-<p>Effectuer une capture d’écran de la console dans le fichier word (pour les valeurs des 3 écarts-type)</p>
+<p>Effectuer une capture d’écran de la console dans le compte-rendu (pour les valeurs des 3 écarts-type)</p>
+<p>On peut aussi calculer l’incertitude-type que l’on notera u (vient de uncertainty en anglais) :
+L’incertitude–type u(m) sur la masse est égale à :</p>
+<div class="arithmatex">\[u(m ) = \dfrac{\sigma_{𝒏−𝟏}}{\sqrt{n}}\]</div>
+<p>Où <span class="arithmatex">\(n\)</span> correspond au nombre de mesures effectuées.
+L’incertitude est toujours exprimée avec un seul chiffre significatif arrondi à la valeur supérieure. L'incertitude-type  caractérise la dispersion des valeurs attribuées à la valeur mesurée (mesurande). </p>
+</li>
+<li>
+<p>Pour les 3 instruments utilisés, calculer l'incertitude type.</p>
+</li>
+</ol>
+<h3 id="validation-du-choix-de-linstrument-le-mieux-adapte-a-la-mesure-du-volume">Validation du choix de l'instrument le mieux adapté à la mesure du volume.<a class="headerlink" href="#validation-du-choix-de-linstrument-le-mieux-adapte-a-la-mesure-du-volume" title="Permanent link">&num;</a></h3>
+<p>Les histogrammes et les valeurs des incertitudes-type doivent vous permettre d'effectuer les choix suivants :</p>
+<ol>
+<li>
+<p>Pami les 3 instruments utilisés, lequel ne doit surtout pas être utilisé pour mesurer un volume ?</p>
+</li>
+<li>
+<p>Parmi les 2 instruments restants, lequel est le plus précis ? Quel est alors l'utilité de l'autre ?</p>
 </li>
 </ol>
 
