@@ -949,6 +949,30 @@ la notation utilisée (exemple la notation polonaise et la notation polonaise in
 <p class="admonition-title">Exercice  1 :</p>
 <p>Implémentez en Python une classe <code>Pile</code>  et ces 5 opérations.</p>
 </div>
+<details class="done">
+<summary>Réponse</summary>
+<p>```python linenums=1</p>
+<p>class Pile:
+def <strong>init</strong>(self):
+    self.pile = []</p>
+<p>def is_empty(self) -&gt; bool:
+    return len(self.pile) == 0</p>
+<p>def empiler(self, x: int):
+    self.pile.append(x)</p>
+<p>def depiler(self):
+    if self.is_empty():
+        raise IndexError("Stack underflow: cannot pop from an empty stack")
+    return self.pile.pop()</p>
+<p>def sommet(self) -&gt; int:
+    if self.is_empty():
+        raise IndexError("Stack is empty: cannot retrieve the top element")
+    return self.pile[-1]</p>
+<p>def taille(self) -&gt; int:
+    return len(self.pile)</p>
+<p>def <strong>str</strong>(self):
+    return f"Stack: {self.pile}"
+```</p>
+</details>
 <h2 id="files-queue">Files (Queue)<a class="headerlink" href="#files-queue" title="Permanent link">&num;</a></h2>
 <h3 id="definitions_1">Définitions<a class="headerlink" href="#definitions_1" title="Permanent link">&num;</a></h3>
 <p>Comme les piles, les files ont des points communs avec les listes. Différences majeures : dans une
