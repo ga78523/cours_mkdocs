@@ -41,11 +41,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/SNT/html/</loc>
-         <lastmod>2023-11-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://example.com/SNT/image/</loc>
          <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
