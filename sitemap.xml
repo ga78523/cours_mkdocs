@@ -76,12 +76,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/Terminale/Listes_Piles_Files/listes/</loc>
+         <loc>https://example.com/Terminale/Listes_Piles_Files_Dict/dictionnaires/</loc>
          <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/Terminale/Listes_Piles_Files/piles_files/</loc>
+         <loc>https://example.com/Terminale/Listes_Piles_Files_Dict/listes/</loc>
+         <lastmod>2023-11-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/Terminale/Listes_Piles_Files_Dict/piles_files/</loc>
          <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
