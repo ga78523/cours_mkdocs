@@ -380,6 +380,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SNT/html/" class="md-nav__link">
+        cours_web
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -421,7 +435,7 @@
   
     <li class="md-nav__item">
       <a href="../../../Premiere/neumann/" class="md-nav__link">
-        Neuildumann
+        Neumann
       </a>
     </li>
   
@@ -834,9 +848,7 @@ Expliquer pourquoi le code Python ci-dessous ne réalise pas cet échange et en 
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">valeurs</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">valeurs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">valeurs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">valeurs</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
 </span></code></pre></div>
-<details class="done">
-<summary>Réponse</summary>
-<p>On perd la valeur initiale de <code>list[j]</code> dès la première instruction.
+<details class="done"><summary>Réponse</summary><p>On perd la valeur initiale de <code>list[j]</code> dès la première instruction.
 On peut procéder de deux façons différentes :</p>
 <ul>
 <li>Avec une variable temporaire :</li>
@@ -867,9 +879,7 @@ On peut procéder de deux façons différentes :</p>
 <li><code>10</code></li>
 <li><code>11</code></li>
 </ul>
-<details class="done">
-<summary>Réponse</summary>
-<p>L'appel <code>randint(0, 10)</code> renvoie une valeur entière entre <code>0</code> et <code>10</code> inclus l'un et l'autres.</p>
+<details class="done"><summary>Réponse</summary><p>L'appel <code>randint(0, 10)</code> renvoie une valeur entière entre <code>0</code> et <code>10</code> inclus l'un et l'autres.</p>
 <p>Donc <code>0</code>, <code>1</code>, <code>9</code> et <code>10</code> sont des valeurs possibles.</p>
 </details>
 <p><strong>3.</strong> Le mélange de Fischer-Yates est un algorithme permettant de permuter aléatoirement les éléments d'une liste. On donne ci-dessous une mise en œuvre récursive de cet algorithme en Python.</p>
@@ -891,16 +901,12 @@ On peut procéder de deux façons différentes :</p>
 </span></code></pre></div>
 </td></tr></table>
 <p><strong>3.a.</strong> Expliquer pourquoi la fonction <code>melange</code> se termine toujours.</p>
-<details class="done">
-<summary>Réponse</summary>
-<p>On suppose que <code>i</code> est un entier positif compris entre <code>0</code> et l'indice du dernier élément de la liste (<code class="language-py highlight"><span class="nb">len</span><span class="p">(</span><span class="n">valeurs</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span></code>).</p>
+<details class="done"><summary>Réponse</summary><p>On suppose que <code>i</code> est un entier positif compris entre <code>0</code> et l'indice du dernier élément de la liste (<code class="language-py highlight"><span class="nb">len</span><span class="p">(</span><span class="n">valeurs</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span></code>).</p>
 <p>Lors des appels récursifs, on décrémente la valeur de <code>i</code> et ces appels n'ont lieu que si cette valeur est strictement positive. Donc la fonction s'arrêtera toujours.</p>
 </details>
 <p><strong>3.b.</strong> Lors de l'appel de la fonction <code>melange</code>, la valeur du paramètre <code>i</code> doit être égal au plus grand indice possible de la liste <code>valeurs</code>.</p>
 <p>Pour une liste de longueur <span class="arithmatex">\(n\)</span>, quel est le nombre d'appels récursifs de la fonction <code>melange</code> effectués, sans compter l'appel initial ?</p>
-<details class="done">
-<summary>Réponse</summary>
-<p>Pour une liste de longueur <span class="arithmatex">\(n\)</span>, on appelle tout d'abord <code>melange(valeurs, n - 1)</code>.</p>
+<details class="done"><summary>Réponse</summary><p>Pour une liste de longueur <span class="arithmatex">\(n\)</span>, on appelle tout d'abord <code>melange(valeurs, n - 1)</code>.</p>
 <p>Le premier appel récursif est donc <code>melange(valeurs, i - 2)</code>. Il est suivi d'appels récursifs correspondants aux différents indices de <code>valeurs</code> jusqu'au dernier appel <code>melange(valeurs, 0)</code>. </p>
 <p>Donc il y a <span class="arithmatex">\(n-1\)</span> appels récursifs.</p>
 </details>
@@ -915,9 +921,7 @@ On peut procéder de deux façons différentes :</p>
 <li>Deuxième affichage : <code class="language-py highlight"><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span></code>.</li>
 </ul>
 <p>Donner les affichages suivants produits par la fonction <code>melange</code>.</p>
-<details class="done">
-<summary>Réponse</summary>
-<p>On a les étapes suivantes :</p>
+<details class="done"><summary>Réponse</summary><p>On a les étapes suivantes :</p>
 <table>
 <thead>
 <tr>
@@ -956,9 +960,7 @@ On peut procéder de deux façons différentes :</p>
 </table>
 </details>
 <p><strong>3.d.</strong> Proposer une version itérative du mélange de Fischer-Yates.</p>
-<details class="done">
-<summary>Réponse</summary>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<details class="done"><summary>Réponse</summary><div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">def</span> <span class="nf">melange</span><span class="p">(</span><span class="n">valeurs</span><span class="p">):</span>
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="n">indice_dernier</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">valeurs</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
@@ -1026,14 +1028,10 @@ On peut procéder de deux façons différentes :</p>
 </span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>        <span class="k">return</span> <span class="s2">&quot;a&quot;</span> <span class="o">+</span> <span class="n">A</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;a&quot;</span>
 </span></code></pre></div>
 <p><strong>1.a.</strong> Cette fonction est-elle récursive ? Justifier. </p>
-<details class="done">
-<summary>Réponse</summary>
-<p>La fonction A s’appelle elle-même, donc A est une fonction récursive.</p>
+<details class="done"><summary>Réponse</summary><p>La fonction A s’appelle elle-même, donc A est une fonction récursive.</p>
 </details>
 <p><strong>1.b.</strong> La fonction <code>choice([True, False])</code> peut renvoyer <code>False</code> un très grand nombre de fois consécutives. Expliquer pourquoi ce cas de figure amènerait à une erreur d'exécution.  </p>
-<details class="done">
-<summary>Réponse</summary>
-<p>Le maximum de la profondeur de récursion en Python est généralement de 997, c’est
+<details class="done"><summary>Réponse</summary><p>Le maximum de la profondeur de récursion en Python est généralement de 997, c’est
 une protection contre un débordement de pile. On obtient alors cette erreur au delà :
 RecursionError : maximum recursion depth exceeded in comparison</p>
 </details>
@@ -1045,9 +1043,7 @@ RecursionError : maximum recursion depth exceeded in comparison</p>
 </span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>        <span class="k">return</span> <span class="s2">&quot;a&quot;</span> <span class="o">+</span> <span class="o">...</span> <span class="o">+</span> <span class="s2">&quot;a&quot;</span>
 </span></code></pre></div>
 <p><strong>2.a.</strong> Recopier sur la copie et compléter aux emplacements des points de suspension ... le code de cette nouvelle fonction A.</p>
-<details class="done">
-<summary>Réponse</summary>
-<p>``` python
+<details class="done"><summary>Réponse</summary><p>``` python
 def A(n):
     if n&lt;=0 or choice([True, False]) :
         return "a"
@@ -1056,9 +1052,7 @@ def A(n):
 </details>
 <p>```</p>
 <p><strong>2.b.</strong> Justifier le fait qu'un appel de la forme A(n) avec n un nombre entier positif inférieur à 50, termine toujours.</p>
-<details class="done">
-<summary>Réponse</summary>
-<p>Pour n &gt; 0, l’appel à A(n) provoque ou bien un arrêt de la fonction si choice([True,
+<details class="done"><summary>Réponse</summary><p>Pour n &gt; 0, l’appel à A(n) provoque ou bien un arrêt de la fonction si choice([True,
 False]) = True, ou bien un appel récursif A(n −1).
 Un appel à A(50) pourrait provoquer dans le pire des cas 50 appels récursifs pour
 arriver à A(0) qui termine, ou alors terminer avant!</p>
@@ -1075,9 +1069,7 @@ arriver à A(0) qui termine, ou alors terminer avant!</p>
 • l’appel A(1) renvoie la chaîne "a" ou la chaîne "aaa";
 • l’appel A(2) renvoie la chaîne "a", la chaîne "aaa" ou la chaîne "aaaaa".</p>
 <p><strong>3.</strong> Donner toutes les chaînes possibles renvoyées par les appels B(0), B(1) et B(2).</p>
-<details class="done">
-<summary>Réponse</summary>
-<ul>
+<details class="done"><summary>Réponse</summary><ul>
 <li>L’appel B(0) renvoie "bab"</li>
 <li>L’appel B(1) renvoie "bab" ou "bbabb".</li>
 <li>L’appel B(2) renvoie "bab", "baaab", "bbabb" ou "bbbabbb".</li>
@@ -1099,9 +1091,7 @@ arriver à A(0) qui termine, ou alors terminer avant!</p>
 </span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a> <span class="k">else</span><span class="p">:</span>
 </span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>     <span class="k">return</span> <span class="n">chaine</span> <span class="o">==</span> <span class="o">...</span>
 </span></code></pre></div>
-<details class="done">
-<summary>Réponse</summary>
-<p><div class="language-python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">def</span> <span class="nf">regleA</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
+<details class="done"><summary>Réponse</summary><p><div class="language-python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">def</span> <span class="nf">regleA</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
 </span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">chaine</span><span class="p">)</span>
 </span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
 </span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>        <span class="k">return</span> <span class="n">chaine</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;a&quot;</span> <span class="ow">and</span> <span class="n">chaine</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;a&quot;</span> <span class="ow">and</span> <span class="n">regle</span> <span class="n">A</span><span class="p">(</span><span class="n">racourcir</span><span class="p">(</span><span class="n">chaine</span><span class="p">))</span>
@@ -1111,9 +1101,7 @@ arriver à A(0) qui termine, ou alors terminer avant!</p>
 ou regle A(chaine[1 : n −1])</p>
 </details>
 <p><strong>4.b.</strong> Écrire le code d’une fonction <code>regleB</code>, prenant en paramètre une chaîne de caractères et renvoyant<code>True</code> si la chaîne est construite suivant la règle B,et <code>False</code> sinon.</p>
-<details class="done">
-<summary>Réponse</summary>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">def</span> <span class="nf">regleB</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
+<details class="done"><summary>Réponse</summary><div class="language-python highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">def</span> <span class="nf">regleB</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
 </span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">chaine</span><span class="p">)</span>
 </span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
 </span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>        <span class="k">return</span> <span class="n">chaine</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;b&quot;</span> <span class="ow">and</span> <span class="n">chaine</span><span class="p">[</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;b&quot;</span><span class="ow">and</span> <span class="p">(</span><span class="n">regleA</span><span class="p">(</span><span class="n">chaine</span><span class="p">[</span><span class="mi">1</span> <span class="p">:</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span> <span class="ow">or</span> <span class="n">regleB</span><span class="p">(</span><span class="n">chaine</span><span class="p">[</span><span class="mi">1</span> <span class="p">:</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]))</span>
