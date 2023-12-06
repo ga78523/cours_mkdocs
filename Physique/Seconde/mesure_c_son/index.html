@@ -1022,7 +1022,6 @@
 <p><img alt="onde_soner" src="../../data/onde_eau.png" width="300px" /></p>
 </figure>
 <p>L'onde sonore a une vitesse propre, qui dépend de la densité du fluide dans lequel elle se déplace et sa température (2 paramètres qui influent sur la pression du fluide).</p>
-<p>L'objectif de cette activité est d'appliquer une démarche scientifique afin de mesurer expérimentalement la vitesse du son dans l'air à température ambiante.</p>
 <h2 id="objectif">Objectif<a class="headerlink" href="#objectif" title="Permanent link">&num;</a></h2>
 <p>L'objectif de cette activité est de vérifier la vitesse du son dans l'air en mesurant de façon précise, avec Arduino, les temps de réception d'un écho d'ultrason se répercutant sur un obstacle situé à différentes distances.</p>
 <h2 id="principe-du-capteur-a-ultra-son">Principe du capteur à ultra-son<a class="headerlink" href="#principe-du-capteur-a-ultra-son" title="Permanent link">&num;</a></h2>
@@ -1032,8 +1031,8 @@
 <figure>
 <p><img alt="onde_soner" src="../../data/montage.png" width="600px" /></p>
 </figure>
-<p>Vous remarquerez que le câblage est on ne peut plus simple : un Arduino et un capteur de distance !
-Les pins "vcc" et "GND" du capteur de distance seront branchées sur 5V et ground respectivement. La pin "Trig" (émetteur) sera branché sur la prise 13 de l'Arduino, et la pin "Echo" (récepteur) sur la prise 12 de l'Arduino..</p>
+<p>Vous remarquerez que le câblage est on ne peut plus simple : un Arduino et un capteur de distance !</p>
+<p>Les pins "vcc" et "GND" du capteur de distance seront branchées sur 5V et ground respectivement. La pin "Trig" (émetteur) sera branché sur la prise 13 de l'Arduino, et la pin "Echo" (récepteur) sur la prise 12 de l'Arduino..</p>
 <table class="language-c highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -1075,13 +1074,13 @@ Les pins "vcc" et "GND" du capteur de distance seront branchées sur 5V et groun
 </span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 </span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">  </span><span class="c1">//Émission d&#39;un pulse ultrason sur la pin 13: emetteur allumé pour 10 microsecondes</span>
 </span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">emetteur</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"></span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">  </span><span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// Added this line</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">  </span><span class="n">delayMicroseconds</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span><span class="w"> </span>
 </span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">emetteur</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"></span>
 </span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a>
 </span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">  </span><span class="c1">//Mesure du temps entre l&#39;émission et la réception</span>
 </span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">  </span><span class="n">Delta_t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pulseIn</span><span class="p">(</span><span class="n">recepteur</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">//en microsecond</span>
 </span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">  </span><span class="c1">//Affichage du temps, rafraichi toutes les 200ms</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">  </span><span class="c1">//Affichage du temps, rafraichi toutes les 200 ms</span>
 </span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">Delta_t</span><span class="p">);</span><span class="w"></span>
 </span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">  </span><span class="n">delay</span><span class="w"> </span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w"></span>
 </span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="p">}</span><span class="w"></span>
@@ -1132,10 +1131,12 @@ Les pins "vcc" et "GND" du capteur de distance seront branchées sur 5V et groun
 <figure>
 <p><img alt="expérience" src="../../data/experience.png" width="600px" /></p>
 </figure>
-<p>J'ai choisi les distances capteur-obstacle suivantes :
-* 20 cm ;
-* 40 cm ;
-* 60 cm.</p>
+<p>J'ai choisi les distances capteur-obstacle suivantes :</p>
+<ul>
+<li>20 cm ;</li>
+<li>40 cm ;</li>
+<li>60 cm.</li>
+</ul>
 <p>Étant donné que nous mesurons le temps mis par l'écho pour parvenir au récepteur, la distance parcourue par l'onde sonore sera le double (un aller-retour), soit :</p>
 <ul>
 <li>40 cm ;</li>
@@ -1150,7 +1151,7 @@ Les pins "vcc" et "GND" du capteur de distance seront branchées sur 5V et groun
 <figure>
 <p><img alt="screen_expérience" src="../../data/screen_experience.png" width="600px" /></p>
 </figure>
-<p>Ici sont  sélectionnés les valeurs maximales et minimales ainsi que celles qui semblent le plus représentatives. </p>
+<p>Ici sont  sélectionnés les valeurs maximales et minimales ainsi que celles qui semblent le plus représentatives.</p>
 <h3 id="resultats">Résultats<a class="headerlink" href="#resultats" title="Permanent link">&num;</a></h3>
 <p>Nous allons mesurer du temps de parcours de différentes distances par l'onde sonore.</p>
 <figure>
@@ -1158,7 +1159,7 @@ Les pins "vcc" et "GND" du capteur de distance seront branchées sur 5V et groun
 <thead>
 <tr>
 <th>Distance (cm)</th>
-<th>temp1s</th>
+<th>temps1</th>
 <th>temps2</th>
 <th>temps3</th>
 <th>temps4</th>
