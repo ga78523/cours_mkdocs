@@ -1112,7 +1112,7 @@
 </ul>
 <p>La fonction pulseIn permet de mesurer une durée d'impulsion.</p>
 <p>En résumé, la pin nommée "recepteur" va se mettre à l'écoute d'un signal (état HIGH). Lorsqu'elle aura atteint l'état demandé (HIGH), le programme va compter le temps écoulé (en microsecondes) jusqu'à ce que la pin perde son état (donc retourne à LOW). Pour plus de détails, consultez ceci.</p>
-<p>La variable "Delta\t"  correspond donc au temps écoulé entre 2 états HIGH de la pin "recepteur", soit 2 réceptions de signal. Ce qui correspond à un aller-retour de l'onde sonore entre l'émetteur et l'obstacle.</p>
+<p>La variable <code>Delta_t</code> correspond donc au temps écoulé entre 2 états HIGH de la pin "recepteur", soit 2 réceptions de signal. Ce qui correspond à un aller-retour de l'onde sonore entre l'émetteur et l'obstacle.</p>
 <ul>
 <li>Affichage du "pulseIn" dans le moniteur série.</li>
 <li>Délai d'une seconde (1000ms) entre 2 affichages de mesure.</li>
@@ -1121,7 +1121,7 @@
 <ul>
 <li>Vous pouvez maintenant brancher votre arduino et téléverser le programme.</li>
 <li>Cliquez sur la loupe en haut à droite de la fenêtre Arduino pour faire apparaître le moniteur série. Par défaut il sera réglé sur le débit de 9600 bauds.</li>
-<li>Vous verrez alors dans la nouvelle fenêtre une succession de nombre : c'est le temps de réception de l'écho, en microsecondes, rafraîchi toutes les secondes (la variable "Delta_t")</li>
+<li>Vous verrez alors dans la nouvelle fenêtre une succession de nombre : c'est le temps de réception de l'écho, en microsecondes, rafraîchi toutes les secondes (la variable <code>Delta_t</code>)</li>
 </ul>
 <figure>
 <p><img alt="assemblage" src="../../data/assemblage.png" width="500px" /></p>
