@@ -1089,29 +1089,29 @@
 <h3 id="explications-du-code">Explications du code<a class="headerlink" href="#explications-du-code" title="Permanent link">&num;</a></h3>
 <p><strong>Dans un premier temps nous déclarons les variables.</strong></p>
 <ul>
-<li>Les variables "emetteur" et "recepteur" dans lesquelles seront déclarés les numéros de pin utilisées respectivement par "Trig" et "Echo" du capteur HC-SR04.</li>
-<li>La variable "Delta_t" de type long (entier et grande précision) dans laquelle sera stocké le temps écoulé entre deux réceptions de l'écho.</li>
+<li>Les variables <code>emetteur</code> et <code>recepteur</code> dans lesquelles seront déclarés les numéros de pin utilisées respectivement par "Trig" et "Echo" du capteur HC-SR04.</li>
+<li>La variable <code>Delta_t</code> de type long (entier et grande précision) dans laquelle sera stocké le temps écoulé entre deux réceptions de l'écho.</li>
 </ul>
 <p><strong>Puis vient la partie d'initialisation : le void setup.</strong></p>
 <p>Très simple, il ne comporte que trois lignes :</p>
 <ul>
-<li>Initialisation de la communication série qui nous permettra de lire la valeur de "Delta_t", c'est à dire le temps mis par l'écho pour parvenir au récepteur.</li>
-<li>Initialisation de la pin "emetteur" (pin 13) en sortie (afin de produire un signal sonore).</li>
-<li>Initialisation de la pin "recepteur" (pin 12) en entrée (afin de recevoir un signal sonore).</li>
+<li>Initialisation de la communication série qui nous permettra de lire la valeur de <code>Delta_t</code>, c'est à dire le temps mis par l'écho pour parvenir au récepteur.</li>
+<li>Initialisation de la pin <code>emetteur</code> (pin 13) en sortie (afin de produire un signal sonore).</li>
+<li>Initialisation de la pin <code>recepteur</code> (pin 12) en entrée (afin de recevoir un signal sonore).</li>
 </ul>
 <p><strong>Et pour finir, la boucle principale : le void loop.</strong></p>
 <ul>
 <li>Les trois premières lignes permettent d'émettre un pulse ultrason :</li>
-<li>La pin "emetteur" est mis à l'état HIGH : l'émetteur du capteur produit un ultrason.</li>
+<li>La pin <code>emetteur</code> est mis à l'état HIGH : l'émetteur du capteur produit un ultrason.</li>
 <li>Pause de 20 microsecondes</li>
 <li>
-<p>La pin "emetteur" est mis à l'état LOW : l'émetteur du capteur ne produit plus d'ultrason.</p>
+<p>La pin <code>emetteur</code> est mis à l'état LOW : l'émetteur du capteur ne produit plus d'ultrason.</p>
 <p>En résumé, nous venons d'émettre une onde sonore à très haute fréquence (domaine des ultrasons) durant 20 microsecondes.
-* La variable "Delta_t" prend la valeur de "pulseIn (emetteur, HIGH)".</p>
+* La variable <code>Delta_t</code> prend la valeur de <code>pulseIn (emetteur, HIGH)</code>.</p>
 </li>
 </ul>
 <p>La fonction pulseIn permet de mesurer une durée d'impulsion.</p>
-<p>En résumé, la pin nommée "recepteur" va se mettre à l'écoute d'un signal (état HIGH). Lorsqu'elle aura atteint l'état demandé (HIGH), le programme va compter le temps écoulé (en microsecondes) jusqu'à ce que la pin perde son état (donc retourne à LOW). Pour plus de détails, consultez ceci.</p>
+<p>En résumé, la pin nommée <code>recepteur</code> va se mettre à l'écoute d'un signal (état HIGH). Lorsqu'elle aura atteint l'état demandé (HIGH), le programme va compter le temps écoulé (en microsecondes) jusqu'à ce que la pin perde son état (donc retourne à LOW). Pour plus de détails, consultez ceci.</p>
 <p>La variable <code>Delta_t</code> correspond donc au temps écoulé entre 2 états HIGH de la pin "recepteur", soit 2 réceptions de signal. Ce qui correspond à un aller-retour de l'onde sonore entre l'émetteur et l'obstacle.</p>
 <ul>
 <li>Affichage du "pulseIn" dans le moniteur série.</li>
