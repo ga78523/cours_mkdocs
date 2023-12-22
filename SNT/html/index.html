@@ -498,6 +498,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#le-css-cascading-style-sheets" class="md-nav__link">
+    Le CSS (Cascading Style Sheets)
+  </a>
+  
+    <nav class="md-nav" aria-label="Le CSS (Cascading Style Sheets)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_1" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quelques-explications" class="md-nav__link">
+    Quelques explications
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#pour-en-savoir-plus" class="md-nav__link">
     Pour en savoir plus
   </a>
@@ -952,6 +979,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#le-css-cascading-style-sheets" class="md-nav__link">
+    Le CSS (Cascading Style Sheets)
+  </a>
+  
+    <nav class="md-nav" aria-label="Le CSS (Cascading Style Sheets)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction_1" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quelques-explications" class="md-nav__link">
+    Quelques explications
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#pour-en-savoir-plus" class="md-nav__link">
     Pour en savoir plus
   </a>
@@ -1005,7 +1059,7 @@ il faut se rendre à l’adresse suivante : <a href="https://code.visualstudio.c
 <li>Ouvrir VisualStudioCode et créer un nouveau document. Pour cela, il faut cliquer sur <code>File</code> dans la barre d’outil puis <code>NewFile</code>.</li>
 <li>Enregistrer votre fichier, dans le dossier Site, sous le nom de : <code>index.html</code>
 <strong>Bien vérifier, que l’extension de votre fichier est .html et non .txt</strong></li>
-<li>Puis saisir le code suivant (ou taper ! puis entrée) </li>
+<li>Puis saisir le code suivant (ou taper <code>!</code> puis entrée).</li>
 </ul>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
@@ -1140,6 +1194,23 @@ dans la fenêtre du navigateur Web.</p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 <p>Pour en savoir plus sur les listes, visiter le MDN pour les <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/ol">listes ordonnées</a> et pour les <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/ul">listes non-ordonnées</a></p>
+<h2 id="le-css-cascading-style-sheets">Le CSS (Cascading Style Sheets)<a class="headerlink" href="#le-css-cascading-style-sheets" title="Permanent link">&num;</a></h2>
+<h3 id="introduction_1">Introduction<a class="headerlink" href="#introduction_1" title="Permanent link">&num;</a></h3>
+<p>Vous avez remarqué que si nous voulons donner une unité au site, il est nécessaire, pour chaque page, de définir par exemple une police bleue.</p>
+<p><img alt="CSS" src="https://ga78523.github.io/site_cours/NSI/CoursPremierePdf/web/css1.png" /></p>
+<p>Or, nous pouvons aussi utiliser une page de style écrite dans un autre langage: le CSS. Le Langage CSS, apparu en 1996, est complémentaire du langage HTML et permet de gérer la mise en forme (l'apparence) des différentes pages d’un site Web (couleur du texte, police, taille du texte, bordures, fond...)</p>
+<p>Ainsi, dans l’exemple précédent, il suffit de créer une page style.css (avec Visual StudioCode par exemple) dans laquelle il écrit que les paragraphes sont en bleu. Toutes les pages html créées appelleront <em>style.css</em> dans l’en-tête (head) de la page grâce à l’instruction : </p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;style.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text /css&quot;</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<p><img alt="CSS" src="https://ga78523.github.io/site_cours/NSI/CoursPremierePdf/web/utiliteCSS.png" /></p>
+<h3 id="quelques-explications">Quelques explications<a class="headerlink" href="#quelques-explications" title="Permanent link">&num;</a></h3>
+<p>Ici, on indique que l’élément p (paragraphe) contient du texte aligné des deux côtés (justifié) et de couleur bleue. On indique également que l’élément body (corps de la page HTML) aura un fond d’écran couleur gainsboro c’est-à-dire bleu très clair.</p>
+<p>En CSS:</p>
+<ul>
+<li>Body et p sont nommés selecteur</li>
+<li>color, text-align, background-color sont nommés propriétés CSS</li>
+<li>gainsboro, blue, justify sont nommés valeurs</li>
+</ul>
 <h2 id="pour-en-savoir-plus">Pour en savoir plus<a class="headerlink" href="#pour-en-savoir-plus" title="Permanent link">&num;</a></h2>
 <ul>
 <li><a href="https://developer.mozilla.org/fr/">MDN</a></li>
