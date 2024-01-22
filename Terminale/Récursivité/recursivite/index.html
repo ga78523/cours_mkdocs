@@ -408,6 +408,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SNT/correction_DS4/" class="md-nav__link">
+        correction DS4
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1031,14 +1045,14 @@ Les ordinateurs l'ont utilisé avant que la multiplication  ne soit directement 
 </code></pre></div>
 <ol>
 <li>On admet que cet algorithme repose sur les relations suivantes :
-<span class="arithmatex">\(<span class="arithmatex">\( x*y= \left \{ 
+$$ x<em>y= \left { 
     \begin{array}{l l l}
-  0  &amp; si &amp;x=0 \\
- (x//2)*(y+y)  &amp; si &amp; x\ est\ pair\\
- (x//2)*(y+y)+y  &amp; si &amp; x\ est\ impair\\
+  0  &amp; si &amp;x=0 \
+ (x//2)</em>(y+y)  &amp; si &amp; x\ est\ pair\
+ (x//2)*(y+y)+y  &amp; si &amp; x\ est\ impair\
     \end{array}
 \right .
-\)</span>\)</span></li>
+$$</li>
 </ol>
 <p>Proposer une version récursive de cet algorithme.</p>
 <table class="language-python highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
@@ -1097,7 +1111,7 @@ Les ordinateurs l'ont utilisé avant que la multiplication  ne soit directement 
 </td></tr></table>
 <p>Ce n'est évidemment pas la méthode la plus simple mais elle fonctionne. On aurait pu par exemple tester le reste de la division euclidienne de n par deux.</p>
 <h2 id="recursivite-multiple">Récursivité multiple<a class="headerlink" href="#recursivite-multiple" title="Permanent link">&num;</a></h2>
-<p>Il existe un autre cas particulier où la fonction s'appelle plusieurs fois. On parle alors de récursivité multiple. C'est le cas par exemple dans le cas du calcul des coefficients binomiaux. On peut donner une rappel mathématique de ces coefficients binomiaux qui sont caractérisés par la définition suivante pour toute valeur entière de <span class="arithmatex">\(n\)</span> et <span class="arithmatex">\(k\)</span> telles que <span class="arithmatex">\(0\leq k\leq n \)</span>: </p>
+<p>Il existe un autre cas particulier où la fonction s'appelle plusieurs fois. On parle alors de récursivité multiple. C'est le cas par exemple dans le cas du calcul des coefficients binomiaux. On peut donner une rappel mathématique de ces coefficients binomiaux qui sont caractérisés par la définition suivante pour toute valeur entière de <span class="arithmatex">\(n\)</span> et <span class="arithmatex">\(k\)</span> telles que $0\leq k\leq n $: </p>
 <div class="arithmatex">\[\begin{pmatrix}
    n  \\
    k  
@@ -1259,6 +1273,12 @@ Cette suite est liée au nombre d'or, φ (phi) : ce nombre intervient dans l'exp
       <script src="../../../assets/javascripts/bundle.8aa65030.min.js"></script>
       
         <script src="../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
