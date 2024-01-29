@@ -1,0 +1,1303 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://example.com/Terminale/R%C3%A9cursivit%C3%A9/recursivite/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.1">
+    
+    
+      
+        <title>Cours - Site de cours</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.e8d9bf0c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#recursivite" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Site de cours" class="md-header__button md-logo" aria-label="Site de cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Site de cours
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cours
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Site de cours" class="md-nav__button md-logo" aria-label="Site de cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Site de cours
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Physique
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Physique" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Physique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Seconde
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Seconde" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Seconde
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Physique/Seconde/tp_verrerie/" class="md-nav__link">
+        TP_verrerie
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Physique/Seconde/mesure_c_son/" class="md-nav__link">
+        TP_célérité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Physique/Seconde/tp_mesure_distance/" class="md-nav__link">
+        TP_distance
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          SNT
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="SNT" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          SNT
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SNT/image/" class="md-nav__link">
+        traitement de l'image
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SNT/vscode/" class="md-nav__link">
+        installation de vscode
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SNT/html/" class="md-nav__link">
+        cours_web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SNT/correction_DS4/" class="md-nav__link">
+        correction DS4
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Première
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Première" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Première
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/neumann/" class="md-nav__link">
+        Neumann
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/web_1NSI/" class="md-nav__link">
+        web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/kppv/" class="md-nav__link">
+        kppv
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/bootstrap/" class="md-nav__link">
+        Frameworks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/events_js/" class="md-nav__link">
+        evenements_js
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/formulaire/" class="md-nav__link">
+        Formulaire
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/cours_juin_1NSI/" class="md-nav__link">
+        Rappels
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Terminale
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Terminale" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Terminale
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercices/" class="md-nav__link">
+        exercices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cours/" class="md-nav__link">
+        SOC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prog_dyn/" class="md-nav__link">
+        Prog Dynamique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../imprimantes/" class="md-nav__link">
+        Imprimante
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" type="checkbox" id="__nav_6_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_5">
+          Liste, Piles, Files, Dictionnaires
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Liste, Piles, Files, Dictionnaires" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_5">
+          <span class="md-nav__icon md-icon"></span>
+          Liste, Piles, Files, Dictionnaires
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Listes_Piles_Files_Dict/listes/" class="md-nav__link">
+        listes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Listes_Piles_Files_Dict/piles_files/" class="md-nav__link">
+        piles et files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Listes_Piles_Files_Dict/dictionnaires/" class="md-nav__link">
+        Dictionnaires
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_6" type="checkbox" id="__nav_6_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_6">
+          Récursivité
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Récursivité" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_6">
+          <span class="md-nav__icon md-icon"></span>
+          Récursivité
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Cours
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Cours
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contexte-la-somme-des-premiers-entiers" class="md-nav__link">
+    Contexte : la somme des premiers entiers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursivite_1" class="md-nav__link">
+    Récursivité
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonctionnement-dune-fonction-recursive" class="md-nav__link">
+    Fonctionnement d'une fonction récursive
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursivite-ou-iterativite" class="md-nav__link">
+    Récursivité ou itérativité ?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursivite-croisee" class="md-nav__link">
+    Récursivité croisée
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursivite-multiple" class="md-nav__link">
+    Récursivité multiple
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercices" class="md-nav__link">
+    Exercices
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exos_Bac_rec/" class="md-nav__link">
+        Exercices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exos_correc_Bac_rec/" class="md-nav__link">
+        Correction
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Graphe/graphe/" class="md-nav__link">
+        Graphe
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contexte-la-somme-des-premiers-entiers" class="md-nav__link">
+    Contexte : la somme des premiers entiers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursivite_1" class="md-nav__link">
+    Récursivité
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonctionnement-dune-fonction-recursive" class="md-nav__link">
+    Fonctionnement d'une fonction récursive
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursivite-ou-iterativite" class="md-nav__link">
+    Récursivité ou itérativité ?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursivite-croisee" class="md-nav__link">
+    Récursivité croisée
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursivite-multiple" class="md-nav__link">
+    Récursivité multiple
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercices" class="md-nav__link">
+    Exercices
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="recursivite">Récursivité<a class="headerlink" href="#recursivite" title="Permanent link">&num;</a></h1>
+<h2 id="contexte-la-somme-des-premiers-entiers">Contexte : la somme des premiers entiers<a class="headerlink" href="#contexte-la-somme-des-premiers-entiers" title="Permanent link">&num;</a></h2>
+<p>Pour définir la somme des <span class="arithmatex">\(n\)</span> premiers entiers, on a l'habitude de d'écrire la formule suivante :</p>
+<div class="arithmatex">\[ 0 + 1 + 2 + 3 + .... + n \]</div>
+<p>Cette formulation peut nous apparaître simple et intuitive. </p>
+<div class="admonition example">
+<p class="admonition-title">Exercice :</p>
+<p>Écrire une fonction <code>somme(n)</code> qui retourne la somme des <span class="arithmatex">\(n\)</span> premiers entiers.</p>
+</div>
+<iframe src="https://trinket.io/embed/python/7a2eb53c35?runOption=run&start=result" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+<p>Or ce code n'est pas directement lié à la formule précédente.
+En effet, il n'y a rien dans cette formule qui laisse penser qu'il faille une variable intermédiaire pour calculer cette somme.</p>
+<p>C'est pourquoi, nous allons tenter de définir autrement cette fonction :</p>
+<div class="arithmatex">\[
+somme(n)= \left \{ 
+    \begin{array}{l l l}
+      0  &amp; si &amp;n=0 \\
+     n+somme(n-1)   &amp; si &amp; n&gt;0 
+   \end{array}
+    \right .
+\]</div>
+<p>Cette définition nous indique ce que vaut <code class="language-python3 highlight"><span class="n">somme</span><span class="p">(</span><span class="n">n</span><span class="p">)</span></code> pour un entier <span class="arithmatex">\(n\)</span> quelconque, selon que <span class="arithmatex">\(n\)</span> soit égal à 0 ou strictement positif. Ainsi, pour, pour le cas où <span class="arithmatex">\(n\)</span>=0, la valeur de <code>somme(n)</code> vaut 0, et dans le cas où <span class="arithmatex">\(n\)</span> est strictement positif, la valeur de <code>somme(n)</code> est <span class="arithmatex">\(n+somme(n-1)\)</span>.</p>
+<p>Par exemple, voici ci-dessous les valeurs de 'somme(n)', pour <span class="arithmatex">\(n\)</span> valant 0,1,2 et 3.</p>
+<div class="arithmatex">\[   \begin{array}{l }
+     somme(0)=0 \\
+     somme(1)=1+somme(0)=1+0=1 \\
+     somme(2)=2+somme(1)=2+1=3
+   \end{array}
+\]</div>
+<p>L'intérêt de cette formulation est qu'elle est directement programmable. En python, cela donne le programme ci-dessous.</p>
+<table class="language-py highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">somme_rec.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">def</span> <span class="nf">somme</span><span class="p">(</span><span class="n">n</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span><span class="o">-&gt;</span><span class="nb">int</span><span class="p">:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="k">if</span> <span class="n">n</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>        <span class="k">return</span> <span class="mi">0</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>    <span class="k">else</span> <span class="p">:</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>        <span class="k">return</span> <span class="n">n</span><span class="o">+</span><span class="n">somme</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</span></code></pre></div>
+</td></tr></table>
+<h2 id="recursivite_1">Récursivité<a class="headerlink" href="#recursivite_1" title="Permanent link">&num;</a></h2>
+<div class="admonition success">
+<p class="admonition-title">Définition :</p>
+<p>On dit qu'un sous-programme (procédure ou fonction) est récursif s'il s'appelle lui-même</p>
+</div>
+<p>Il est indispensable de prévoir une condition d'arrêt à la récursion sinon la fonction va s'appeler une infinité de fois. Dans la pratique, la pile qui stocke les appels récursifs est de taille finie. Une fois qu'elle est pleine, le programme ne répondra plus </p>
+<div class="admonition example">
+<p class="admonition-title">Exercice :</p>
+<p>Donner une définition récursive qui correspond au calcul de la fonction factorielle <span class="arithmatex">\(n!\)</span> définie par <span class="arithmatex">\(n!=1\times 2 \times 3 \times ...\times n\)</span> si <span class="arithmatex">\(n&gt;0\)</span> et <span class="arithmatex">\(0!=1\)</span>. Écrire également le code d'une fonction <code>fact(n)</code> qui implémente cette définition. </p>
+</div>
+<p>Pour les plus rapides, écrire la version itérative.}</p>
+<div class="admonition example">
+<p class="admonition-title">Exercice :</p>
+<p>Écrire une fonction récursive <code>boucle(i,k)</code>qui affiche les entiers entre <code>i</code> et <code>k</code>. Par exemple, <code>boucle(0,3)</code> affiche 0,1,2,3. Pour les plus rapides, écrire la version itérative.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice :</p>
+<p>La méthode du paysan russe est un très vieil algorithme de multiplication de deux nombres entiers déjà décrit, sous forme légèrement différente, sur un papyrus égyptien rédigé autour de 1650 avant J.-C. Il s'agissait de la principale méthode de calcul en Europe avant l'introduction des chiffres arabes.
+Les ordinateurs l'ont utilisé avant que la multiplication  ne soit directement intégré dans le processeur sous forme de circuit électronique. Sous une forme moderne, il peut être décrit par le programme 
+1. Appliquer cette fonction pour effectuer la multiplication de 105 par 253. Détailler les étapes dans le tableau suivant :</p>
+<div class="language-text highlight"><pre><span></span><code>|x   |  y |  p   |
+|---–|----|------|
+|105 |253 | .... |
+|... |....|..... |
+</code></pre></div>
+<ol>
+<li>On admet que cet algorithme repose sur les relations suivantes :
+$$ x<em>y= \left { 
+    \begin{array}{l l l}
+  0  &amp; si &amp;x=0 \
+ (x//2)</em>(y+y)  &amp; si &amp; x\ est\ pair\
+ (x//2)*(y+y)+y  &amp; si &amp; x\ est\ impair\
+    \end{array}
+\right .
+$$</li>
+</ol>
+<p>Proposer une version récursive de cet algorithme.</p>
+<table class="language-python highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span></pre></div></td><td class="code"><div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">Fonction</span> <span class="n">multiplication</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">p</span><span class="o">=</span><span class="mi">0</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">TANT</span> <span class="n">QUE</span> <span class="n">x</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a>    <span class="n">Si</span> <span class="n">x</span> <span class="n">est</span> <span class="n">impair</span><span class="p">:</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>        <span class="n">p</span><span class="o">=</span><span class="n">p</span><span class="o">+</span><span class="n">y</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a>    <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="o">//</span><span class="mi">2</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a>    <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="o">+</span><span class="n">y</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="n">Retourner</span> <span class="n">p</span>
+</span></code></pre></div>
+</td></tr></table>
+</div>
+<h2 id="fonctionnement-dune-fonction-recursive">Fonctionnement d'une fonction récursive<a class="headerlink" href="#fonctionnement-dune-fonction-recursive" title="Permanent link">&num;</a></h2>
+<p>Par exemple, l'évaluation de l'appel à <code>somme(3)</code>  du programme <code>somme_rec</code> peut se représenter de la manière suivante :</p>
+<p>où on indique uniquement pour chaque appel à <code>somme(n)</code> l'instruction qui est exécutée après le test <code>n==0</code> de la conditionnelle. Cette manière de représenter l'exécution d'un programme en indiquant les différents appels effectués est appelée un <strong>arbre d'appels</strong></p>
+<p>Ainsi, pour calculer la valeur renvoyée par <code>somme(3)</code>, il faut tout d'abord appeler <code>somme(2)</code>. Cet appel va lui-même déclencher un appel à <code>somme(1)</code>, qui à son tour nécessite un appel à <code>somme(0)</code>. Ce dernier appel se termine en renvoyant la valeur 0. Le calcul de <code>somme(3)</code> se fait donc "à rebours". Une fois que l'appel à <code>somme(0)</code>}` est terminé, c'est-à-dire que la valeur 0 a été renvoyée, l'arbre d'appels a la forme suivante.</p>
+<p>A cet instant, l'appel à <code>somme(1)</code>}` peut alors se terminer et renvoyer le résultat de la  somme 1+0. L'arbre d'appels est alors le suivant :</p>
+<p>Enfin, l'appel à <code>somme(2)</code> peut lui-même renvoyer la valeur 2+1 comme résultat, ce qui permet à <code>somme(3)</code> de se terminer en renvoyant le résultat 3+3.</p>
+<p>On obtient bien au final la valeur 6 attendue.</p>
+<h2 id="recursivite-ou-iterativite">Récursivité ou itérativité ?<a class="headerlink" href="#recursivite-ou-iterativite" title="Permanent link">&num;</a></h2>
+<p>Lorsque l'on programme des fonctions qui ne s'appellent pas, on dit que l'on programme de manière itérative. Il est toujours possible de transformer une fonction itérative en fonction récursive et vice et versa. </p>
+<p>La méthode itérative nous est plus familière et est plus rapide une fois le code implémenté dans un langage de programmation.</p>
+<p>La méthode récursive est plus élégante et lisible et évite d'utiliser de nombreuses structures itératives. Elle est également très utile pour concevoir des structures de données complexes comme les listes, les arbres et les graphes. L'inconvénient le plus important de cette méthode, est qu'une fois implémentée dans un langage de programmation, elle est très gourmande en ressource mémoire. Du fait que l'on empile, tous les appels récursifs, des débordements de capacité peuvent se produire lorsque la pile est pleine.</p>
+<h2 id="recursivite-croisee">Récursivité croisée<a class="headerlink" href="#recursivite-croisee" title="Permanent link">&num;</a></h2>
+<p>Dans cette méthode récursive, il arrive qu'une fonction appelle une autre fonction qui appelle elle-même la première, ce cas est appelée récursivité croisée. Prenons, par exemple deux fonctions ci-dessous permettant de tester si un nombre est pair ou impair comme dans le programme <strong>pair_impair.py</strong>.</p>
+<table class="language-python highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">paire_impaire.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span></pre></div></td><td class="code"><div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">def</span> <span class="nf">Pair</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="k">if</span> <span class="n">n</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>        <span class="k">return</span> <span class="kc">True</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>    <span class="k">else</span> <span class="p">:</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>        <span class="k">return</span> <span class="n">Impair</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="k">def</span> <span class="nf">Impair</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a>    <span class="k">if</span> <span class="n">n</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a>        <span class="k">return</span> <span class="kc">False</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a>    <span class="k">else</span> <span class="p">:</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a>        <span class="k">return</span> <span class="n">Pair</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> 
+</span></code></pre></div>
+</td></tr></table>
+<p>Ce n'est évidemment pas la méthode la plus simple mais elle fonctionne. On aurait pu par exemple tester le reste de la division euclidienne de n par deux.</p>
+<h2 id="recursivite-multiple">Récursivité multiple<a class="headerlink" href="#recursivite-multiple" title="Permanent link">&num;</a></h2>
+<p>Il existe un autre cas particulier où la fonction s'appelle plusieurs fois. On parle alors de récursivité multiple. C'est le cas par exemple dans le cas du calcul des coefficients binomiaux. On peut donner une rappel mathématique de ces coefficients binomiaux qui sont caractérisés par la définition suivante pour toute valeur entière de <span class="arithmatex">\(n\)</span> et <span class="arithmatex">\(k\)</span> telles que $0\leq k\leq n $: </p>
+<div class="arithmatex">\[\begin{pmatrix}
+   n  \\
+   k  
+\end{pmatrix}= \left \{
+   \begin{array}{l l l}
+      1  &amp; si &amp;k=0 \\
+     1   &amp; si &amp; k=n\\
+     \begin{pmatrix}
+   n-1  \\
+   k-1  
+\end{pmatrix}+\begin{pmatrix}
+   n-1 \\
+   k  
+\end{pmatrix}&amp; sinon
+   \end{array}
+   \right .
+\]</div>
+<p>Alors on peut donner la fonction algorithmique de ce programme.</p>
+<table class="language-python highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">bino.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span></pre></div></td><td class="code"><div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">Fonction</span> <span class="n">CoeffBinomial</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">k</span><span class="p">):</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>    <span class="n">Si</span> <span class="n">k</span><span class="o">==</span><span class="mi">0</span> <span class="n">OU</span> <span class="n">k</span><span class="o">==</span><span class="n">n</span><span class="p">:</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>        <span class="n">Retourner</span> <span class="mi">1</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>    <span class="n">Sinon</span> <span class="p">:</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a>        <span class="n">Retourner</span>  <span class="n">CoeffBinomial</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span> <span class="n">CoeffBinomial</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="p">)</span>
+</span></code></pre></div>
+</td></tr></table>
+<h2 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Permanent link">&num;</a></h2>
+<div class="admonition example">
+<p class="admonition-title">Exercice :</p>
+<p>En mathématiques, la suite de Fibonacci est une suite d'entiers dans laquelle chaque terme est la somme des deux termes qui le précèdent. Notée <span class="arithmatex">\(F_{n}\)</span>, elle est définie par <span class="arithmatex">\({\displaystyle F_{0}=0,\quad F_{1}=1}\)</span>, et <span class="arithmatex">\({\displaystyle F_{n}=F_{n-1}+F_{n-2}}\)</span> pour <span class="arithmatex">\({\displaystyle n\geqslant 2}\)</span>. Les termes de cette suite sont appelés nombres de Fibonacci et forment la suite A000045 de l'OEIS :</p>
+<table>
+<thead>
+<tr>
+<th>F0</th>
+<th>F1</th>
+<th>F2</th>
+<th>F3</th>
+<th>F4</th>
+<th>F5</th>
+<th>F6</th>
+<th>F7</th>
+<th>F8</th>
+<th>F9</th>
+<th>F10</th>
+<th>F1</th>
+<th>F12</th>
+<th>F13</th>
+<th>F14</th>
+<th>F15</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>5</td>
+<td>8</td>
+<td>13</td>
+<td>21</td>
+<td>34</td>
+<td>55</td>
+<td>89</td>
+<td>144</td>
+<td>233</td>
+<td>377</td>
+<td>610</td>
+</tr>
+</tbody>
+</table>
+<p>Représentation géométrique de la fraction continue de φ faisant apparaître les nombres de la suite de Fibonacci.
+Cette suite est liée au nombre d'or, φ (phi) : ce nombre intervient dans l'expression du terme général de la suite. Inversement, la suite de Fibonacci intervient dans l'écriture des réduites de l'expression de φ en fraction continue : les quotients de deux termes consécutifs de la suite de Fibonacci sont les meilleures approximations du nombre d'or.</p>
+<p>Le but de cet exercice est de réaliser une fonction qui calcule la valeur de de la suite de Fibonacci pour un rang n.</p>
+<p>L'objectif de cet exercice est de réaliser la fractale de Von Koch à l'aide du module python \textit{turtle}. \textbf{Il faudra lire attentivement la documentation}.  Vous ferez cet exercice dans le cadre du Projet 2.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice :</p>
+<p>Une fractale est une sorte de courbe mathématique un peu complexe riche en détail, et qui possède une propriété intéressante visuellement : lorsque l'on regarde des détails de petite taille, on retrouve des formes correspondant aux détails de plus grande taille (auto-similarité). Cela nous rappelle étrangement la récursivité ! La première courbe à tracer a été imaginée en 1904 par le mathématicien suédois Niels Fabian Helge Von Koch.</p>
+<p>Le principe est simple : on divise un segment initial en trois morceaux, et on construit un triangle équilatéral sans base au-dessus du morceau central. On réitère le processus <span class="arithmatex">\(n\)</span> fois, <span class="arithmatex">\(n\)</span> est appelé l'ordre. Dans la figure suivante, on voit les ordres 0,1,2 et 3 de cette fractale. </p>
+<ol>
+<li>Proposer une fonction récursive permettant de dessiner la fractale de Von Koch en lui donnant comme paramètre l'ordre et la longueur du segment initial.</li>
+<li>Le flocon de Koch s'obtient de la même façon que la fractale précédente, en partant d'un triangle équilatéral au lieu d'un segment de droite, et en effectuant les modifications en orientant les triangles vers l'extérieur.</li>
+</ol>
+<p>Proposer une fonction permettant de faire le flocon de Koch complet à partir de la fonction réalisée précédente.</p>
+</div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../Listes_Piles_Files_Dict/dictionnaires/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Dictionnaires" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Dictionnaires
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../exos_Bac_rec/" class="md-footer__link md-footer__link--next" aria-label="Next: Exercices" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Exercices
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.8aa65030.min.js"></script>
+      
+        <script src="../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
