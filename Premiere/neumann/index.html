@@ -681,13 +681,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#lassembleur-et-le-python" class="md-nav__link">
-    L’assembleur et le python
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1392,13 +1385,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#lassembleur-et-le-python" class="md-nav__link">
-    L’assembleur et le python
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1924,15 +1910,14 @@ et on affiche le contenu de R1 ;</li>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </span></code></pre></div>
-<h4 id="lassembleur-et-le-python">L’assembleur et le python<a class="headerlink" href="#lassembleur-et-le-python" title="Permanent link">&num;</a></h4>
-<p>En python aussi, on peut avoir une idée de ce qui est traduit en langage machine grâce à la bibliothèque dis comme dans l’exemple suivant. Taper l’exemple suivant dans un éditeur Python et observer.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">import</span> <span class="nn">dis</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">dis</span><span class="o">.</span><span class="n">dis</span><span class="p">(</span><span class="err">’</span><span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="err">’</span><span class="p">)</span>
-</span></code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Exercice :</p>
-<p>Traduire en assembleur AQA (celui que nous avons vu) le langage d’assemblage issu du python.</p>
+<p>Traduire le programme python ci-dessous en assembleur</p>
 </div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">x</span><span class="o">=</span><span class="mi">0</span>   
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></code></pre></div>
 <h2 id="bibliographie">Bibliographie<a class="headerlink" href="#bibliographie" title="Permanent link">&num;</a></h2>
 <ul>
 <li><a href="https://pixees.fr/informatiquelycee/n_site/index.html">Le site de David Roche</a></li>
