@@ -1292,27 +1292,84 @@ On recommence l’opération ci-dessus jusqu’au moment où la somme à rendre 
 <div class="admonition example">
 <p class="admonition-title">Exercice :</p>
 <ol>
-<li>Compléter la fonction suivante afin qu'elle renvoie le nombre minimal de pièce pour rendre la monnaie, ou None s'il est impossible de rendre la monnaie.</li>
 <li>Est-ce une méthode ascendante ou descendante ?</li>
 </ol>
 </div>
-<table class="language-python highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span>
-<span class="normal"><a href="#__codelineno-4-3">3</a></span>
-<span class="normal"><a href="#__codelineno-4-4">4</a></span>
-<span class="normal"><a href="#__codelineno-4-5">5</a></span>
-<span class="normal"><a href="#__codelineno-4-6">6</a></span>
-<span class="normal"><a href="#__codelineno-4-7">7</a></span>
-<span class="normal"><a href="#__codelineno-4-8">8</a></span></pre></div></td><td class="code"><div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">def</span> <span class="nf">renduMonnaie1</span><span class="p">(</span><span class="n">P</span> <span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">s</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="p">:</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>    <span class="n">nb</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">s</span><span class="p">)</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">s</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="p">:</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a>        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">P</span> <span class="p">:</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a>            <span class="k">if</span> <span class="n">p</span> <span class="o">&lt;=</span> <span class="o">...</span> <span class="ow">and</span> <span class="n">nb</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="p">:</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a>                <span class="k">if</span> <span class="n">nb</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="ow">is</span> <span class="o">...</span> <span class="ow">or</span> <span class="o">...</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">nb</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="n">p</span><span class="p">]:</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a>                    <span class="n">nb</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">nb</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="n">p</span><span class="p">]</span>                                         
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8"></a>    <span class="k">return</span> <span class="o">...</span>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span>
+<span class="normal"><a href="#__codelineno-4-17">17</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">def</span> <span class="nf">rendu_monnaie</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">pieces</span><span class="p">):</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>    <span class="c1"># ÉTAPE 1 : création et initialisation du tableau</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>    <span class="n">nb</span> <span class="o">=</span> <span class="p">[</span><span class="n">O</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">s</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>    <span class="c1"># nb[0] est ainsi bien initialisé</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a>    <span class="c1"># ÉTAPE 2 : remplissage du reste du tableau par indice croissant</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a>    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">s</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>    
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a>        <span class="n">nb</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">n</span>       <span class="c1"># nb[n] = 1 + 1 + ... + dans le pire des cas</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8"></a>        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">pieces</span><span class="p">:</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9"></a>            <span class="k">if</span> <span class="n">p</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">:</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10"></a>                <span class="n">nb_bis</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">nb</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="n">p</span><span class="p">]</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11"></a>                <span class="n">nb</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">nb</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">nb_bis</span><span class="p">)</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12"></a>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13"></a>    <span class="c1"># ÉTAPE 3 : le résultat est dans la dernière case</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14"></a>    <span class="k">return</span> <span class="n">nb</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15"></a>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="c1"># ESSAI</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="n">rendu_monnaie</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
 </span></code></pre></div>
 </td></tr></table>
+<!-- def rendu_monnaie(s, pieces):
+    # ÉTAPE 1 : création et initialisation du tableau
+    nb = [0] * (s+1)    # nb[0] est ainsi bien initialisé
+
+    # ÉTAPE 2 : remplissage du reste du tableau par indice croissant
+    for n in range(1, s + 1):    
+        nb[n] = n       # nb[n] = 1 + 1 + ... + dans le pire des cas
+        for p in pieces:
+            if p <= n:
+                nb_bis = 1 + nb[n-p]
+                nb[n] = min(nb[n], nb_bis)
+
+    # ÉTAPE 3 : le résultat est dans la dernière case
+    return nb[n]
+
+# ESSAI
+rendu_monnaie(100, [1, 2]) -->
+
+<p><strong>Explication :</strong></p>
+<ul>
+<li>
+<p>Création et initialisation du tableau :
+    On a besoin d'un tableau <code>nb</code> de taille <code>s+1</code> qui va permettre de stocker les valeurs  nb_pieces(0), nb_pieces(1), ..., nb_piec(s) dans cet ordre.</p>
+<p>Pour cela on crée le tableau <code>nb</code> avec <code>n+1</code> zéros initialement</p>
+<p>La valeur connue nb[0] est alors déjà correctement initialisée</p>
+</li>
+<li>
+<p>Utilisation de la formule de récurrence pour remplir le reste du tableau
+    On peut donc remplir le tableau <code>nb</code> en parcourant les indices par ordre croissant (on fait varier <code>n</code> de <code>1</code> à <code>s</code>) en utilisant la formule de récurrence.</p>
+</li>
+</ul>
+<div class="arithmatex">\[\text{nb_pieces}(n) = \left\{
+\begin{array}{l}
+0 \hspace{5cm} \textrm{ si } n = 0\\
+1 + \displaystyle\min_{p\leq n}(\text{nb_pieces}(n-p)) \hspace{0.5cm} \textrm{ sinon }
+\end{array}
+\right.\]</div>
+<ul>
+<li>Le résultat est dans la dernier case du tableau : on la renvoie</li>
+</ul>
 
               
             </article>
