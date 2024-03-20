@@ -1,0 +1,1447 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://example.com/Terminale/Graphe/graphe_parcours/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.1">
+    
+    
+      
+        <title>Graphe Parcours - Site de cours</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.e8d9bf0c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#exercices-graphe" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Site de cours" class="md-header__button md-logo" aria-label="Site de cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Site de cours
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Graphe Parcours
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Site de cours" class="md-nav__button md-logo" aria-label="Site de cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Site de cours
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Physique
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Physique" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Physique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Seconde
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Seconde" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Seconde
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Physique/Seconde/tp_verrerie/" class="md-nav__link">
+        TP_verrerie
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Physique/Seconde/mesure_c_son/" class="md-nav__link">
+        TP_célérité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Physique/Seconde/tp_mesure_distance/" class="md-nav__link">
+        TP_distance
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Physique/Seconde/TP_vecteur_vitesse_point/" class="md-nav__link">
+        TP_vecteur_vitesse
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          SNT
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="SNT" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          SNT
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SNT/image/" class="md-nav__link">
+        traitement de l'image
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SNT/vscode/" class="md-nav__link">
+        installation de vscode
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SNT/html/" class="md-nav__link">
+        cours_web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SNT/correction_DS4/" class="md-nav__link">
+        correction DS4
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Première
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Première" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Première
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/neumann/" class="md-nav__link">
+        Neumann
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/web_1NSI/" class="md-nav__link">
+        web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/kppv/" class="md-nav__link">
+        kppv
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/bootstrap/" class="md-nav__link">
+        Frameworks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/events_js/" class="md-nav__link">
+        evenements_js
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/formulaire/" class="md-nav__link">
+        Formulaire
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/cours_juin_1NSI/" class="md-nav__link">
+        Rappels
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/tris_correction/" class="md-nav__link">
+        tris
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Terminale
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Terminale" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Terminale
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_1">
+          Architecture Matérielle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Architecture Matérielle" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          Architecture Matérielle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ArchitectureMaterielle/SOC/" class="md-nav__link">
+        SOC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ArchitectureMaterielle/commande_linux/" class="md-nav__link">
+        Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ArchitectureMaterielle/processus/" class="md-nav__link">
+        processus
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercices/" class="md-nav__link">
+        exercices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prog_dyn/" class="md-nav__link">
+        Prog Dynamique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../decidabilite_calculabilite/" class="md-nav__link">
+        Calculabilité, décidabilité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../imprimantes/" class="md-nav__link">
+        Imprimante
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_6" type="checkbox" id="__nav_6_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_6">
+          Liste, Piles, Files, Dictionnaires
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Liste, Piles, Files, Dictionnaires" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_6">
+          <span class="md-nav__icon md-icon"></span>
+          Liste, Piles, Files, Dictionnaires
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Listes_Piles_Files_Dict/listes/" class="md-nav__link">
+        listes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Listes_Piles_Files_Dict/piles_files/" class="md-nav__link">
+        piles et files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Listes_Piles_Files_Dict/dictionnaires/" class="md-nav__link">
+        Dictionnaires
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_7" type="checkbox" id="__nav_6_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_7">
+          Récursivité
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Récursivité" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_7">
+          <span class="md-nav__icon md-icon"></span>
+          Récursivité
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../R%C3%A9cursivit%C3%A9/recursivite/" class="md-nav__link">
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../R%C3%A9cursivit%C3%A9/exos_Bac_rec/" class="md-nav__link">
+        Exercices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../R%C3%A9cursivit%C3%A9/exos_correc_Bac_rec/" class="md-nav__link">
+        Correction
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_8" type="checkbox" id="__nav_6_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_8">
+          graphe
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="graphe" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_8">
+          <span class="md-nav__icon md-icon"></span>
+          graphe
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graphe/" class="md-nav__link">
+        Graphe
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Graphe Parcours
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Graphe Parcours
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-1-le-loup-la-chevreun-chou-et-un-passeur" class="md-nav__link">
+    Exercice 1 : Le loup, la chèvre,un chou et un passeur ....
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolution-dun-labyrinthe" class="md-nav__link">
+    Résolution d'un labyrinthe
+  </a>
+  
+    <nav class="md-nav" aria-label="Résolution d'un labyrinthe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-presentation-du-probleme" class="md-nav__link">
+    1. Présentation du problème
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-modelisation-par-un-graphe" class="md-nav__link">
+    2. Modélisation par un graphe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-implementation-du-graphe-en-python" class="md-nav__link">
+    3. Implémentation du graphe en Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-recherche-du-plus-court-chemin" class="md-nav__link">
+    4. Recherche du plus court chemin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-conclusion" class="md-nav__link">
+    5. Conclusion
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-1-le-loup-la-chevreun-chou-et-un-passeur" class="md-nav__link">
+    Exercice 1 : Le loup, la chèvre,un chou et un passeur ....
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolution-dun-labyrinthe" class="md-nav__link">
+    Résolution d'un labyrinthe
+  </a>
+  
+    <nav class="md-nav" aria-label="Résolution d'un labyrinthe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-presentation-du-probleme" class="md-nav__link">
+    1. Présentation du problème
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-modelisation-par-un-graphe" class="md-nav__link">
+    2. Modélisation par un graphe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-implementation-du-graphe-en-python" class="md-nav__link">
+    3. Implémentation du graphe en Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-recherche-du-plus-court-chemin" class="md-nav__link">
+    4. Recherche du plus court chemin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-conclusion" class="md-nav__link">
+    5. Conclusion
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="exercices-graphe">Exercices graphe<a class="headerlink" href="#exercices-graphe" title="Permanent link">&num;</a></h1>
+<h2 id="exercice-1-le-loup-la-chevreun-chou-et-un-passeur">Exercice 1 : Le loup, la chèvre,un chou et un passeur ....<a class="headerlink" href="#exercice-1-le-loup-la-chevreun-chou-et-un-passeur" title="Permanent link">&num;</a></h2>
+<p>Sur la rive d'un fleuve se trouvent un loup, une chèvre, un chou et un passeur. Le problème consiste à tous les faire passer sur l'autre rive à l'aide d'une barque, menée par le passeur,en respectant les règles suivantes :</p>
+<ul>
+<li>la chèvre et le chou ne peuvent pas rester sur la même rive sans le passeur;</li>
+<li>la chèvre et le loup ne peuvent pas rester sur la même rive sans le passeur;</li>
+<li>le passeur ne peut mettre qu'un seul "passager" avec lui.</li>
+</ul>
+<p>On décide de représenter le passeur par la lettre P,la chèvre par la lettre C, le loup par L et le chou par X.</p>
+<figure>
+<p><img alt="activite" src="../data/Loup_chevre_chou_passeur.jpg" width="300px" /></p>
+</figure>
+<p><strong>1)</strong> Représenter ce problème à l'aide d'un graphe où les sommets sont tous les états possibles sur la rive de départ (par exemple,"PLCX" est un sommet représentant le fait que tous sont sur la rive de départ.)</p>
+<p><strong>2)</strong> Trouver une solution au problème en indiquant chacun des déplacements (si possible une solution avec le moins de déplacements possibles).</p>
+<p>Exercice : Labyrinthe</p>
+<h2 id="resolution-dun-labyrinthe">Résolution d'un labyrinthe<a class="headerlink" href="#resolution-dun-labyrinthe" title="Permanent link">&num;</a></h2>
+<h3 id="1-presentation-du-probleme">1. Présentation du problème<a class="headerlink" href="#1-presentation-du-probleme" title="Permanent link">&num;</a></h3>
+<p>Considérons le labyrinthe suivant :</p>
+<figure>
+<p><img alt="activite" src="../data/laby1.png" width="200px" /></p>
+</figure>
+<p>Affectons une lettre à chaque case de ce labyrinthe.</p>
+<figure>
+<p><img alt="image" src="../data/laby2.png" width="200px" /></p>
+</figure>
+<p>Notre objectif est de trouver comment aller <strong>de A en P</strong>.</p>
+<h3 id="2-modelisation-par-un-graphe">2. Modélisation par un graphe<a class="headerlink" href="#2-modelisation-par-un-graphe" title="Permanent link">&num;</a></h3>
+<p>Dessiner le graphe (dont les noeuds seront des lettres) qui modélise ce labyrinthe.</p>
+<p>Proposer deux «formes» possibles pour ce graphe.</p>
+<!-- ??? tip "Correction"
+    <figure markdown>   
+    ![image](data/laby3.png){width=35%}
+    </figure>
+
+    <figure markdown>
+    ![image](data/laby4.png){width=35%}
+    </figure>
+ -->
+<h3 id="3-implementation-du-graphe-en-python">3. Implémentation du graphe en Python<a class="headerlink" href="#3-implementation-du-graphe-en-python" title="Permanent link">&num;</a></h3>
+<p>En utilisant un dictionnaire, implémenter le graphe de ce labyrinthe.</p>
+<!-- 
+??? tip "Correction"
+    <table class="language-python highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span>
+<span class="normal"><a href="#__codelineno-0-29">29</a></span>
+<span class="normal"><a href="#__codelineno-0-30">30</a></span>
+<span class="normal"><a href="#__codelineno-0-31">31</a></span>
+<span class="normal"><a href="#__codelineno-0-32">32</a></span></pre></div></td><td class="code"><div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">class</span> <span class="nc">Graphe</span><span class="p">:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">liste_sommets</span><span class="p">):</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">liste_sommets</span> <span class="o">=</span> <span class="n">liste_sommets</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span> <span class="o">=</span> <span class="p">{</span><span class="n">sommet</span> <span class="p">:</span> <span class="p">[]</span> <span class="k">for</span> <span class="n">sommet</span> <span class="ow">in</span> <span class="n">liste_sommets</span><span class="p">}</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>    <span class="k">def</span> <span class="nf">ajoute_arete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommetA</span><span class="p">,</span> <span class="n">sommetB</span><span class="p">):</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommetA</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sommetB</span><span class="p">)</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommetB</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sommetA</span><span class="p">)</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a>    <span class="k">def</span> <span class="nf">voisins</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommet</span><span class="p">):</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommet</span><span class="p">]</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a>    <span class="k">def</span> <span class="nf">sont_voisins</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sommetA</span><span class="p">,</span> <span class="n">sommetB</span><span class="p">):</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a>        <span class="k">return</span> <span class="n">sommetB</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">adjacents</span><span class="p">[</span><span class="n">sommetA</span><span class="p">]</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="n">g</span> <span class="o">=</span> <span class="n">Graphe</span><span class="p">([</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">])</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">)</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">)</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">)</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">)</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">)</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">)</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">)</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;K&#39;</span><span class="p">)</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;J&#39;</span><span class="p">)</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">)</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">)</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;N&#39;</span><span class="p">)</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="s1">&#39;O&#39;</span><span class="p">)</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39;K&#39;</span><span class="p">)</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">)</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="n">g</span><span class="o">.</span><span class="n">ajoute_arete</span><span class="p">(</span><span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">)</span>
+</span></code></pre></div>
+</td></tr></table>
+
+ -->
+<h3 id="4-recherche-du-plus-court-chemin">4. Recherche du plus court chemin<a class="headerlink" href="#4-recherche-du-plus-court-chemin" title="Permanent link">&num;</a></h3>
+<p>En utilisant la fonction <code>recherche_chemin</code> du cours, établir le plus court chemin pour aller de A vers P dans ce labyrinthe.</p>
+<!-- 
+??? tip "Correction"
+    <table class="language-python highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span>
+<span class="normal"><a href="#__codelineno-1-20">20</a></span>
+<span class="normal"><a href="#__codelineno-1-21">21</a></span>
+<span class="normal"><a href="#__codelineno-1-22">22</a></span>
+<span class="normal"><a href="#__codelineno-1-23">23</a></span>
+<span class="normal"><a href="#__codelineno-1-24">24</a></span>
+<span class="normal"><a href="#__codelineno-1-25">25</a></span>
+<span class="normal"><a href="#__codelineno-1-26">26</a></span>
+<span class="normal"><a href="#__codelineno-1-27">27</a></span>
+<span class="normal"><a href="#__codelineno-1-28">28</a></span>
+<span class="normal"><a href="#__codelineno-1-29">29</a></span>
+<span class="normal"><a href="#__codelineno-1-30">30</a></span>
+<span class="normal"><a href="#__codelineno-1-31">31</a></span></pre></div></td><td class="code"><div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">def</span> <span class="nf">recherche_chemin</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">):</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="sd">    Parcours en largeur du graphe g en partant du sommet depart,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="sd">    qui s&#39;arrête dès que le sommet arrivee est atteint.</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="sd">    Renvoie alors le chemin du depart vers arrivee.</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="sd">    &#39;&#39;&#39;</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a>    <span class="n">traites</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a>    <span class="n">decouverts</span> <span class="o">=</span> <span class="p">[</span><span class="n">depart</span><span class="p">]</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a>    <span class="n">en_attente</span> <span class="o">=</span> <span class="p">[</span><span class="n">depart</span><span class="p">]</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a>    <span class="n">parent</span> <span class="o">=</span> <span class="p">{}</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a>    <span class="k">while</span> <span class="n">en_attente</span> <span class="o">!=</span> <span class="p">[]</span> <span class="p">:</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a>        <span class="n">sommet</span> <span class="o">=</span> <span class="n">en_attente</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a>        <span class="n">voisins</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">voisins</span><span class="p">(</span><span class="n">sommet</span><span class="p">)</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a>        <span class="k">for</span> <span class="n">voisin</span> <span class="ow">in</span> <span class="n">voisins</span><span class="p">:</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15"></a>            <span class="k">if</span> <span class="n">voisin</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">decouverts</span><span class="p">:</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16"></a>                <span class="n">decouverts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">voisin</span><span class="p">)</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17"></a>                <span class="n">en_attente</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">voisin</span><span class="p">)</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18"></a>                <span class="n">parent</span><span class="p">[</span><span class="n">voisin</span><span class="p">]</span> <span class="o">=</span> <span class="n">sommet</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19"></a>                <span class="k">if</span> <span class="n">voisin</span> <span class="o">==</span> <span class="n">arrivee</span><span class="p">:</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20"></a>                    <span class="k">return</span> <span class="n">remonte_chemin</span><span class="p">(</span><span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">,</span> <span class="n">parent</span><span class="p">)</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21"></a>        <span class="n">traites</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sommet</span><span class="p">)</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22"></a>    <span class="k">return</span> <span class="s2">&quot;non trouvé&quot;</span>  
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23"></a>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24"></a>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="k">def</span> <span class="nf">remonte_chemin</span><span class="p">(</span><span class="n">depart</span><span class="p">,</span> <span class="n">arrivee</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26"></a>    <span class="n">sommet</span> <span class="o">=</span> <span class="n">arrivee</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27"></a>    <span class="n">chemin</span> <span class="o">=</span> <span class="n">arrivee</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28"></a>    <span class="k">while</span> <span class="n">sommet</span> <span class="o">!=</span> <span class="n">depart</span><span class="p">:</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29"></a>        <span class="n">sommet</span> <span class="o">=</span> <span class="n">parent</span><span class="p">[</span><span class="n">sommet</span><span class="p">]</span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30"></a>        <span class="n">chemin</span> <span class="o">=</span> <span class="n">sommet</span> <span class="o">+</span> <span class="n">chemin</span>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31"></a>    <span class="k">return</span> <span class="n">chemin</span>
+</span></code></pre></div>
+</td></tr></table>
+
+    <div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">recherche_chemin</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">)</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="s1">&#39;AEFBCGKLP&#39;</span>
+</span></code></pre></div>
+
+ -->
+<h2 id="5-conclusion">5. Conclusion<a class="headerlink" href="#5-conclusion" title="Permanent link">&num;</a></h2>
+<p>Sur un labyrinthe un peu plus imposant, voici l'illustration de notre méthode de résolution :</p>
+<figure>
+<p><img alt="activite" src="../data/sol_laby.gif" width="500px" /></p>
+</figure>
+<ul>
+<li>le parcours en largeur part découvrir les cases dans toutes les directions.</li>
+<li>lorsque la case cherchée (ici, la rouge) est trouvée, on remonte à chaque case précédente grâce au dictionnaire <code>parent</code>, et ainsi le chemin de sortie du labyrinthe est généré. </li>
+</ul>
+<p><a class="" href="data/anim_laby.py" target="_blank">Code de cette animation</a> (en Pygame)</p>
+<!-- ## 6. Annexe : et pourquoi pas en DFS ?
+
+Les parcours BFS et DFS ont tous deux la propriété de parcourir **la totalité** du graphe (ils sont même conçus pour cela). Cela a permis au parcours BFS de nous fournir une solution au labyrinthe (dont on a démontré qu'elle était la plus courte).
+
+Que penser de solution qui sera donnée par le DFS ?
+
+### 6.1 Dans un labyrinthe parfait
+
+Voici un code où la solution est d'abord recherchée par BFS (cases explorées en bleu clair, chemin trouvé marqué en bleu), puis en DFS (cases explorées en rose, chemin trouvé marqué en rouge).
+
+[anim_laby_DFSvsBFS_laby_parfait.py](data/anim_laby_DFSvsBFS_laby_parfait.py) :arrow_down:
+
+Que remarquez-vous ???
+
+
+### 6.2 Dans un labyrinthe non parfait
+
+Changeons de code pour un labyrinthe *dégénéré* :
+
+[anim_laby_DFSvsBFS_laby_degenere.py](data/anim_laby_DFSvsBFS_laby_degenere.py) :arrow_down:
+
+Que remarquez-vous ???
+
+
+??? tip "Explications"
+    Notre labyrinthe conçu de manière aléatoire possède une propriété remarquable (dû son algorithme de construction) : chaque case peut être reliée à une autre par **un chemin unique**. On dit de ces labyrinthes qu'ils sont **parfaits**.
+
+    Donc, dans notre code du 6.1 (labyrinthe parfait), le DFS va lui aussi trouver le chemin le plus court... puisqu'il y en a qu'un seul ! De plus, la méthode d'exploration en profondeur va de plus rendre le DFS plus rapide que le BFS, quasiment tout le temps. Ce qui fait que pour un labyrinthe parfait, le DFS est plus intéressant que le BFS.
+
+
+    Mais si le labyrinthe n'est plus parfait (code du 6.2), le DFS va trouver une solution qui ne sera pas obligatoirement la meilleure... S'il y a plusieurs solutions possibles, absolument rien ne garantit que la première solution trouvée par le DFS (sur laquelle il s'arrêtera) sera la meilleure ! -->
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../graphe/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Graphe" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Graphe
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.8aa65030.min.js"></script>
+      
+        <script src="../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

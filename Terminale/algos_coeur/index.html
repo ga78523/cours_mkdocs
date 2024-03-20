@@ -937,6 +937,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Graphe/graphe_parcours/" class="md-nav__link">
+        Graphe Parcours
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1247,53 +1261,36 @@
 <h3 id="tri-par-insertion">Tri par insertion<a class="headerlink" href="#tri-par-insertion" title="Permanent link">&num;</a></h3>
 <p>Pour toutes les valeurs, en commençant par la deuxième :</p>
 <p>Tant qu'on trouve à gauche une valeur supérieure et qu'on n'est pas revenu à la première valeur, on échange ces deux valeurs.</p>
-<table class="language-python highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Tri insertion</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<h3 id="tri-par-selection">Tri par sélection<a class="headerlink" href="#tri-par-selection" title="Permanent link">&num;</a></h3>
+<table class="language-python highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
 <span class="normal"><a href="#__codelineno-8-2">2</a></span>
 <span class="normal"><a href="#__codelineno-8-3">3</a></span>
 <span class="normal"><a href="#__codelineno-8-4">4</a></span>
 <span class="normal"><a href="#__codelineno-8-5">5</a></span>
 <span class="normal"><a href="#__codelineno-8-6">6</a></span>
-<span class="normal"><a href="#__codelineno-8-7">7</a></span>
-<span class="normal"><a href="#__codelineno-8-8">8</a></span></pre></div></td><td class="code"><div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">def</span> <span class="nf">tri_insertion</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a>    <span class="sd">&#39;&#39;&#39;trie en place la liste lst donnée en paramètre&#39;&#39;&#39;</span>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)):</span>                 
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4"></a>        <span class="n">k</span> <span class="o">=</span> <span class="n">i</span>                                    
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5"></a>        <span class="k">while</span> <span class="n">k</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="p">:</span>      
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6"></a>            <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>      
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7"></a>            <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">-</span> <span class="mi">1</span>
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8"></a>    <span class="k">return</span> <span class="n">lst</span>                               
-</span></code></pre></div>
-</td></tr></table>
-<h3 id="tri-par-selection">Tri par sélection<a class="headerlink" href="#tri-par-selection" title="Permanent link">&num;</a></h3>
-<table class="language-python highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
-<span class="normal"><a href="#__codelineno-9-2">2</a></span>
-<span class="normal"><a href="#__codelineno-9-3">3</a></span>
-<span class="normal"><a href="#__codelineno-9-4">4</a></span>
-<span class="normal"><a href="#__codelineno-9-5">5</a></span>
-<span class="normal"><a href="#__codelineno-9-6">6</a></span>
-<span class="normal"><a href="#__codelineno-9-7">7</a></span></pre></div></td><td class="code"><div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="k">def</span> <span class="nf">tri_selection</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="p">:</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3"></a>        <span class="n">indice_min</span> <span class="o">=</span> <span class="n">i</span>
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4"></a>        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">))</span> <span class="p">:</span>
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5"></a>            <span class="k">if</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">lst</span><span class="p">[</span><span class="n">indice_min</span><span class="p">]:</span>
-</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6"></a>                <span class="n">indice_min</span> <span class="o">=</span> <span class="n">k</span>
-</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7"></a>        <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="n">indice_min</span><span class="p">]</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="n">indice_min</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="normal"><a href="#__codelineno-8-7">7</a></span></pre></div></td><td class="code"><div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">def</span> <span class="nf">tri_selection</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="p">:</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a>        <span class="n">indice_min</span> <span class="o">=</span> <span class="n">i</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4"></a>        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">))</span> <span class="p">:</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5"></a>            <span class="k">if</span> <span class="n">lst</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">lst</span><span class="p">[</span><span class="n">indice_min</span><span class="p">]:</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6"></a>                <span class="n">indice_min</span> <span class="o">=</span> <span class="n">k</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7"></a>        <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="n">indice_min</span><span class="p">]</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="n">indice_min</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
 </span></code></pre></div>
 </td></tr></table>
 <h2 id="recherche-par-dichotomie">Recherche par dichotomie<a class="headerlink" href="#recherche-par-dichotomie" title="Permanent link">&num;</a></h2>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">def</span> <span class="nf">recherche_dichotomique</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span> <span class="p">:</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    <span class="n">indice_debut</span> <span class="o">=</span> <span class="mi">0</span>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    <span class="n">indice_fin</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="k">while</span> <span class="n">indice_debut</span> <span class="o">&lt;=</span> <span class="n">indice_fin</span> <span class="p">:</span>
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>        <span class="n">indice_centre</span> <span class="o">=</span> <span class="p">(</span><span class="n">indice_debut</span> <span class="o">+</span> <span class="n">indice_fin</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>     
-</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>        <span class="n">valeur_centrale</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="n">indice_centre</span><span class="p">]</span>            
-</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>        <span class="k">if</span> <span class="n">valeur_centrale</span> <span class="o">==</span> <span class="n">val</span> <span class="p">:</span>          
-</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>            <span class="k">return</span> <span class="n">indice_centre</span>
-</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>        <span class="k">if</span> <span class="n">valeur_centrale</span> <span class="o">&lt;</span> <span class="n">val</span> <span class="p">:</span>             
-</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>            <span class="n">indice_debut</span> <span class="o">=</span> <span class="n">indice_centre</span> <span class="o">+</span> <span class="mi">1</span>
-</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>        <span class="k">else</span> <span class="p">:</span>
-</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>            <span class="n">indice_fin</span> <span class="o">=</span> <span class="n">indice_centre</span> <span class="o">-</span> <span class="mi">1</span>
-</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>    <span class="k">return</span> <span class="kc">None</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">def</span> <span class="nf">recherche_dichotomique</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span> <span class="p">:</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="n">indice_debut</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    <span class="n">indice_fin</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="k">while</span> <span class="n">indice_debut</span> <span class="o">&lt;=</span> <span class="n">indice_fin</span> <span class="p">:</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>        <span class="n">indice_centre</span> <span class="o">=</span> <span class="p">(</span><span class="n">indice_debut</span> <span class="o">+</span> <span class="n">indice_fin</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>     
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>        <span class="n">valeur_centrale</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="n">indice_centre</span><span class="p">]</span>            
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>        <span class="k">if</span> <span class="n">valeur_centrale</span> <span class="o">==</span> <span class="n">val</span> <span class="p">:</span>          
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>            <span class="k">return</span> <span class="n">indice_centre</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>        <span class="k">if</span> <span class="n">valeur_centrale</span> <span class="o">&lt;</span> <span class="n">val</span> <span class="p">:</span>             
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>            <span class="n">indice_debut</span> <span class="o">=</span> <span class="n">indice_centre</span> <span class="o">+</span> <span class="mi">1</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>        <span class="k">else</span> <span class="p">:</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>            <span class="n">indice_fin</span> <span class="o">=</span> <span class="n">indice_centre</span> <span class="o">-</span> <span class="mi">1</span>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>    <span class="k">return</span> <span class="kc">None</span>
 </span></code></pre></div>
 
               
