@@ -668,45 +668,25 @@
     Droits et groupes
   </a>
   
-    <nav class="md-nav" aria-label="Droits et groupes">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#les-utilisateurs-selon-unix" class="md-nav__link">
-    Les utilisateurs selon UNIX
+  <a href="#les-droits" class="md-nav__link">
+    Les droits
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#exemple-de-lecture-de-droits" class="md-nav__link">
-    Exemple de lecture de droits
+  <a href="#modification-des-droits" class="md-nav__link">
+    Modification des Droits
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#les-droits-dun-repertoire" class="md-nav__link">
-    Les droits d’un répertoire
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#changer-des-droits" class="md-nav__link">
-    Changer des droits
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#droits-symboliques-et-numeriques" class="md-nav__link">
-    Droits symboliques et numériques
+  <a href="#notation-octale" class="md-nav__link">
+    Notation octale
   </a>
   
 </li>
@@ -1440,45 +1420,25 @@
     Droits et groupes
   </a>
   
-    <nav class="md-nav" aria-label="Droits et groupes">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#les-utilisateurs-selon-unix" class="md-nav__link">
-    Les utilisateurs selon UNIX
+  <a href="#les-droits" class="md-nav__link">
+    Les droits
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#exemple-de-lecture-de-droits" class="md-nav__link">
-    Exemple de lecture de droits
+  <a href="#modification-des-droits" class="md-nav__link">
+    Modification des Droits
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#les-droits-dun-repertoire" class="md-nav__link">
-    Les droits d’un répertoire
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#changer-des-droits" class="md-nav__link">
-    Changer des droits
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#droits-symboliques-et-numeriques" class="md-nav__link">
-    Droits symboliques et numériques
+  <a href="#notation-octale" class="md-nav__link">
+    Notation octale
   </a>
   
 </li>
@@ -1569,10 +1529,12 @@
 <p>La couche logicielle GNU qu’on trouve dans tous les systèmes UNIX.</p>
 </li>
 </ul>
-<p>Ainsi, bien qu’il existe des centaines de distributions Linux, on retrouve les mêmes outils dans chacune et il n’est pas nécessaire de les connaître spécifiquement.</p>
 <figure>
 <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/8PtLsftCC70?si=_0Vk_IgDDT21eNOD" title="YouTube video player" width="560"></iframe>
 </figure>
+<p><strong>définitions :</strong></p>
+<p>Un logiciel libre est un logiciel dont l'utilisation, l'étude, la modification et la duplication en vue de sa diffusion sont permises, techniquement et légalement.</p>
+<p>Les logiciels libres constituent une alternative à ceux qui ne le sont pas, qualifiés de « propriétaires » ou de « privateurs ».</p>
 <h3 id="exercice-decouverte-des-commandes-linux">Exercice : découverte des commandes linux<a class="headerlink" href="#exercice-decouverte-des-commandes-linux" title="Permanent link">&num;</a></h3>
 <p>Ce TP a été conçu par Charles Poulmaire.</p>
 <p>Rendez-vous à l'adresse  : <a href="http://luffah.xyz/bidules/Terminus/">http://luffah.xyz/bidules/Terminus/</a></p>
@@ -1648,6 +1610,11 @@ En effet, il distingue les majuscules des minuscules. Ainsi, pour créer un rép
 <li><code>cat</code> : lire le contenu d'un fichier texte.</li>
 </ul>
 <h3 id="arborescence-unix">Arborescence UNIX<a class="headerlink" href="#arborescence-unix" title="Permanent link">&num;</a></h3>
+<p>Sur un système Linux, tout est un fichier, y compris un dossier. Mais pour rester compatible avec l'arborescence classique de windows, nous parlerons donc de :</p>
+<ul>
+<li>fichier lorsqu'il s'agit d'une feuille de l'arborescence ;</li>
+<li>dossier lorsqu'on parle d'un noeud ayant des enfants.</li>
+</ul>
 <p>L’arborescence d’un système GNU/Linux se présente sous la forme représentée ci-dessous.</p>
 <figure>
 <p><img alt="memoire" src="../img_OS/arse2_arbo.png" width="400px" /></p>
@@ -1684,46 +1651,67 @@ En effet, il distingue les majuscules des minuscules. Ainsi, pour créer un rép
 <h2 id="droits-et-permissions-sous-unix">Droits et permissions sous UNIX<a class="headerlink" href="#droits-et-permissions-sous-unix" title="Permanent link">&num;</a></h2>
 <p>Le système de droits et de permissions sous UNIX est aspects fondamentaux de la gestion de la sécurité du système.</p>
 <h3 id="droits-et-groupes">Droits et groupes<a class="headerlink" href="#droits-et-groupes" title="Permanent link">&num;</a></h3>
-<h4 id="les-utilisateurs-selon-unix">Les utilisateurs selon UNIX<a class="headerlink" href="#les-utilisateurs-selon-unix" title="Permanent link">&num;</a></h4>
-<p>Unix sépare les utilisateurs en trois catégories du point de vue des droits :</p>
-<ul>
-<li>L’utilisateur (user) ;</li>
-<li>Le groupe (group) ;</li>
-<li>Le reste du monde (others).</li>
-</ul>
-<h4 id="exemple-de-lecture-de-droits">Exemple de lecture de droits<a class="headerlink" href="#exemple-de-lecture-de-droits" title="Permanent link">&num;</a></h4>
-<p>En utilisant la commande <code>ls -l monfic.sh</code> par exemple, on obtient :</p>
-<p><code>-rwxr--r-- 1 roza   staff   0   6 mai 11:56 monfic.sh</code></p>
-<p>La partie <code>-rwxr--r--</code>, indiquant les droits du fichier, se lit en omettant le tiret du début, puis en décomposant en trois parties :</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>rwx (utilsateur) ;
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>r-- (groupe) ;
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>r-- (autres).
+<p>En Linux, tout fichier, et par extension dossier, appartient à un propriétaire ainsi qu'à un groupe et un utilisateur quelconque ne pourra pas forcément avoir tous les droits sur un fichier qui ne lui appartient pas.</p>
+<p>Par exemple, étudions la sortie donnée par la commande <code>ls -l</code> suivante :</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>drwxr-xr-x 2 eric eric 4096 Apr. 8 23:09 Images
 </span></code></pre></div>
-<p>Chaque partie est elle-même composée de trois lettres :</p>
 <ul>
-<li>droit de lecture <code>r</code> ;</li>
-<li>droit d’écriteure <code>w</code> ;</li>
-<li>droit d’exécution <code>x</code> : on peut exécuter le fichier en l’invoquant par son nom. dans cet exemple ./monfic.sh.</li>
+<li><code>d</code> indique qu'il s'agit d'un dossier ;</li>
+<li>les 9 lettres suivantes indiquent les droits dont disposent les utilisateurs sur ce fichier ;</li>
+<li>le 2 est pour nous sans intérêt (il s'agit d'un compteur de liaison) ;</li>
+<li>le groupe de lettre suivant est le nom de l'utilisateur propriétaire du fichier ;</li>
+<li>le groupe de lettre suivant est le nom du groupe propriétaire du fichier ;</li>
+<li>4096 représente la taille en octet du dossier ;</li>
+<li>on trouve ensuite la date et l'heure de la dernière modication ;</li>
+<li>le nom du dossier.</li>
 </ul>
-<p>On sait donc que <code>monfic.sh</code> est accessible en lecture au groupe “Staff” et aux autres.</p>
-<p>On sait en outre que le fichier appartient à l’utilisateur “roza”.</p>
-<h4 id="les-droits-dun-repertoire">Les droits d’un répertoire<a class="headerlink" href="#les-droits-dun-repertoire" title="Permanent link">&num;</a></h4>
-<p>Créeons un répertoire www dans notre HOME et lisons les droits correspondants avec la commance ls -l www, on obtient par exemple :</p>
-<p><code>drwxr-xr-x  2 roza  staff   64 6 mai 14:17 www</code>
-Le <code>d</code> initial signifie qu’il s’agit d’un répertoire.</p>
-<p>Remarque : le droit x pour un répertoire est le droit de traverser ce répertoire.</p>
-<h3 id="changer-des-droits">Changer des droits<a class="headerlink" href="#changer-des-droits" title="Permanent link">&num;</a></h3>
-<p>Seul le propriétaire d’un fichier (ou l’utilisateur “root”) peut changer ses permissions d’accès. Il le fait avec la commande <code>chmod</code> dont voici quelques exemples d’utilisation.</p>
-<p>Droits  Syntaxe
-Donner les droits de lecteure au groupe g   chmod g+r monfic.sh
-Donner les droits d’écriture au propriétaire u  chmod u+w monfic.sh
-Retirer les droits d’exécution aux autres (others) o    chmod o-x monfich.sh
-Donner les droits d’exécution à tous    chmod ugo+x monfic.sh
-Remarque : On peut aussi utiliser a (all) à la place de ugo.</p>
-<h3 id="droits-symboliques-et-numeriques">Droits symboliques et numériques<a class="headerlink" href="#droits-symboliques-et-numeriques" title="Permanent link">&num;</a></h3>
-<p>Il est également possible d’utiliser un codage octal (base 8) pour les droits.</p>
-<p>L’écriture symbolique : <code>rwc r-x r-w</code> correspond à l’écriture binaire 111 101 101 soit 755 en octal.</p>
-<p>Par exemple <code>chmod 755 monfic.sh</code> donne les droits <code>-rwxr-xr-x</code> au fichier <code>monfic.sh</code>.</p>
+<p>Pour un fichier, on distinguera trois types d'utilisateurs :</p>
+<ul>
+<li><code>u</code> pour user, c'est-à-dire le propriétaire du fichier ;</li>
+<li><code>g</code> pour group, le groupe auquel appartient le fichier ;</li>
+<li><code>o</code> pour other, tous les autres utilisateurs.</li>
+</ul>
+<p><strong>Root</strong></p>
+<p>Par défaut, il existe un super-utilisateur nommé root qui possède tous les droits sur un os Linux. Pour modier des attributs au niveau système, il faut prendre les droits de super-utilisateur, grâce à la commande sudo (super-user do). Cette commande demande systématiquement à l'utilisateur faisant partie du groupe des super-utilisateurs (sudoers)de confirmer avec son mot de passe (celui choisi à l'installation du système) toute action de modication effectuée au niveau du sytème.</p>
+<figure>
+<p><img alt="root" src="../img_OS/images.png" width="400px" /></p>
+</figure>
+<h3 id="les-droits">Les droits<a class="headerlink" href="#les-droits" title="Permanent link">&num;</a></h3>
+<p>Pour un fichier donné, on distinguera 4 permissions :</p>
+<ul>
+<li><code>r</code> (read) : droit de lire le fichier ;</li>
+<li><code>w</code> (write) : droit de modifier le fichier ;</li>
+<li><code>x</code> (execute) : droit d'exécution du fichier ;</li>
+<li><code>-</code> : aucun droit sur le fichier.</li>
+</ul>
+<h3 id="modification-des-droits">Modification des Droits<a class="headerlink" href="#modification-des-droits" title="Permanent link">&num;</a></h3>
+<p>Pour donner ou supprimer des permissions sur un fichier <code>mon_texte.txt</code>, on utilise la commande <code>chmod</code> de la manière suivante :</p>
+<ul>
+<li>pour donner les droits en lecture et écriture à l'utilisateur</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>chmod u+rw mon_texte.txt
+</span></code></pre></div>
+<ul>
+<li>pour supprimer les droits en modication au groupe :</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>chmod g-w mon_texte.txt
+</span></code></pre></div>
+<ul>
+<li>pour supprimer tous les droits aux autres utilisateurs :</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>chmod o-rwx mon_texte.txt
+</span></code></pre></div>
+<h3 id="notation-octale">Notation octale<a class="headerlink" href="#notation-octale" title="Permanent link">&num;</a></h3>
+<p>Il est aussi possible d'utiliser la <mark>notation octale</mark> pour gérer ces droits. Par exemple, la commande suivante :</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>chmod 640 mon_texte.txt
+</span></code></pre></div>
+<p>en sachant que <code>r = 4</code>, <code>w = 2</code>, <code>x = 1</code> , et que le premier chiffre correspond à l'utilisateur, le second au groupe, et le troisième aux autres. Ainsi dans l'exemple proposé :</p>
+<ul>
+<li>l'utilisateur à les droits de lecture et d'écriture (4+2 = 6) ;</li>
+<li>le groupe à le droit de lecture (4) ;</li>
+<li>les autres n'ont aucun droit (0).</li>
+</ul>
+<p>Une commande telle que <code>chmod 777 mon_texte.txt</code> donne tous les droits de lecture, écriture et exécution à tous les utilisateurs du système pour le fichier <code>mon_texte.txt</code>.</p>
 <h2 id="bibliographie">Bibliographie<a class="headerlink" href="#bibliographie" title="Permanent link">&num;</a></h2>
 <ul>
 <li><a href="https://frederic-junier.gitlab.io/parc-nsi/chapitre9/">site du Lycée du Parc</a></li>
