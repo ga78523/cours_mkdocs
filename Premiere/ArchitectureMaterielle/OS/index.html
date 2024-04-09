@@ -614,6 +614,14 @@
     Utilisation du shell
   </a>
   
+    <nav class="md-nav" aria-label="Utilisation du shell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#root" class="md-nav__link">
+    Root
+  </a>
+  
 </li>
         
           <li class="md-nav__item">
@@ -627,6 +635,11 @@
   <a href="#modification-des-droits" class="md-nav__link">
     Modification des Droits
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1312,6 +1325,14 @@
     Utilisation du shell
   </a>
   
+    <nav class="md-nav" aria-label="Utilisation du shell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#root" class="md-nav__link">
+    Root
+  </a>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1325,6 +1346,11 @@
   <a href="#modification-des-droits" class="md-nav__link">
     Modification des Droits
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1570,11 +1596,11 @@
 </span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
 </span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>`../marc/adresses.txt` et `documents/cours/si1.pdf` (sans / au début !) sont des exemples de chemins relatifs.
 </span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>## Droits et permissions sous UNIX
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>### Droits et permissions sous UNIX
 </span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
 </span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>Le système de droits et de permissions sous UNIX est aspects fondamentaux de la gestion de la sécurité du système.
 </span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>### Droits et groupes
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>#### Droits et groupes
 </span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>
 </span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>En Linux, tout fichier, et par extension dossier, appartient à un propriétaire ainsi qu&#39;à un groupe et un utilisateur quelconque ne pourra pas forcément avoir tous les droits sur un fichier qui ne lui appartient pas.
 </span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>
@@ -1599,12 +1625,12 @@
 <li><code>g</code> pour group, le groupe auquel appartient le fichier ;</li>
 <li><code>o</code> pour other, tous les autres utilisateurs.</li>
 </ul>
-<p><strong>Root</strong></p>
+<h4 id="root">Root<a class="headerlink" href="#root" title="Permanent link">&num;</a></h4>
 <p>Par défaut, il existe un super-utilisateur nommé root qui possède tous les droits sur un os Linux. Pour modier des attributs au niveau système, il faut prendre les droits de super-utilisateur, grâce à la commande sudo (super-user do). Cette commande demande systématiquement à l'utilisateur faisant partie du groupe des super-utilisateurs (sudoers)de confirmer avec son mot de passe (celui choisi à l'installation du système) toute action de modication effectuée au niveau du sytème.</p>
 <figure>
 <p><img alt="root" src="../img_OS/images.png" width="400px" /></p>
 </figure>
-<h3 id="les-droits">Les droits<a class="headerlink" href="#les-droits" title="Permanent link">&num;</a></h3>
+<h4 id="les-droits">Les droits<a class="headerlink" href="#les-droits" title="Permanent link">&num;</a></h4>
 <p>Pour un fichier donné, on distinguera 4 permissions :</p>
 <ul>
 <li><code>r</code> (read) : droit de lire le fichier ;</li>
@@ -1612,7 +1638,7 @@
 <li><code>x</code> (execute) : droit d'exécution du fichier ;</li>
 <li><code>-</code> : aucun droit sur le fichier.</li>
 </ul>
-<h3 id="modification-des-droits">Modification des Droits<a class="headerlink" href="#modification-des-droits" title="Permanent link">&num;</a></h3>
+<h4 id="modification-des-droits">Modification des Droits<a class="headerlink" href="#modification-des-droits" title="Permanent link">&num;</a></h4>
 <p>Pour donner ou supprimer des permissions sur un fichier <code>mon_texte.txt</code>, on utilise la commande <code>chmod</code> de la manière suivante :</p>
 <ul>
 <li>pour donner les droits en lecture et écriture à l'utilisateur</li>
