@@ -862,6 +862,81 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#droits-et-permissions-sous-unix" class="md-nav__link">
+    Droits et permissions sous UNIX
+  </a>
+  
+    <nav class="md-nav" aria-label="Droits et permissions sous UNIX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#droits-et-groupes" class="md-nav__link">
+    Droits et groupes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root" class="md-nav__link">
+    Root
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-droits" class="md-nav__link">
+    Les droits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modification-des-droits" class="md-nav__link">
+    Modification des Droits
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notation-octale" class="md-nav__link">
+    Notation octale
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercices" class="md-nav__link">
+    Exercices
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation-de-wsl" class="md-nav__link">
+    Installation de WSL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partie-pratique" class="md-nav__link">
+    Partie pratique
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1232,6 +1307,81 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#droits-et-permissions-sous-unix" class="md-nav__link">
+    Droits et permissions sous UNIX
+  </a>
+  
+    <nav class="md-nav" aria-label="Droits et permissions sous UNIX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#droits-et-groupes" class="md-nav__link">
+    Droits et groupes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root" class="md-nav__link">
+    Root
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-droits" class="md-nav__link">
+    Les droits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modification-des-droits" class="md-nav__link">
+    Modification des Droits
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notation-octale" class="md-nav__link">
+    Notation octale
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercices" class="md-nav__link">
+    Exercices
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation-de-wsl" class="md-nav__link">
+    Installation de WSL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partie-pratique" class="md-nav__link">
+    Partie pratique
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1341,6 +1491,114 @@ si vous tapez : rm </em>.tmp, le shell transformera cette ligne de commande en :
 <li><mark>ps</mark> </li>
 <li><mark>top</mark> </li>
 </ul>
+<h3 id="droits-et-permissions-sous-unix">Droits et permissions sous UNIX<a class="headerlink" href="#droits-et-permissions-sous-unix" title="Permanent link">&num;</a></h3>
+<p>Le système de droits et de permissions sous UNIX est aspects fondamentaux de la gestion de la sécurité du système.</p>
+<h4 id="droits-et-groupes">Droits et groupes<a class="headerlink" href="#droits-et-groupes" title="Permanent link">&num;</a></h4>
+<p>En Linux, tout fichier, et par extension dossier, appartient à un propriétaire ainsi qu'à un groupe et un utilisateur quelconque ne pourra pas forcément avoir tous les droits sur un fichier qui ne lui appartient pas.</p>
+<p>Par exemple, étudions la sortie donnée par la commande <code>ls -l</code> suivante :</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>drwxr-xr-x 2 eric eric 4096 Apr. 8 23:09 Images
+</span></code></pre></div>
+<ul>
+<li><code>d</code> indique qu'il s'agit d'un dossier ;</li>
+<li>les 9 lettres suivantes indiquent les droits dont disposent les utilisateurs sur ce fichier ;</li>
+<li>le 2 est pour nous sans intérêt (il s'agit d'un compteur de liaison) ;</li>
+<li>le groupe de lettre suivant est le nom de l'utilisateur propriétaire du fichier ;</li>
+<li>le groupe de lettre suivant est le nom du groupe propriétaire du fichier ;</li>
+<li>4096 représente la taille en octet du dossier ;</li>
+<li>on trouve ensuite la date et l'heure de la dernière modication ;</li>
+<li>le nom du dossier.</li>
+</ul>
+<p>Pour un fichier, on distinguera trois types d'utilisateurs :</p>
+<ul>
+<li><code>u</code> pour user, c'est-à-dire le propriétaire du fichier ;</li>
+<li><code>g</code> pour group, le groupe auquel appartient le fichier ;</li>
+<li><code>o</code> pour other, tous les autres utilisateurs.</li>
+</ul>
+<h4 id="root">Root<a class="headerlink" href="#root" title="Permanent link">&num;</a></h4>
+<p>Par défaut, il existe un super-utilisateur nommé root qui possède tous les droits sur un os Linux. Pour modier des attributs au niveau système, il faut prendre les droits de super-utilisateur, grâce à la commande sudo (super-user do). Cette commande demande systématiquement à l'utilisateur faisant partie du groupe des super-utilisateurs (sudoers)de confirmer avec son mot de passe (celui choisi à l'installation du système) toute action de modication effectuée au niveau du sytème.</p>
+<figure>
+<p><img alt="root" src="../img_linux/images.png" width="400px" /></p>
+</figure>
+<h4 id="les-droits">Les droits<a class="headerlink" href="#les-droits" title="Permanent link">&num;</a></h4>
+<p>Pour un fichier donné, on distinguera 4 permissions :</p>
+<ul>
+<li><code>r</code> (read) : droit de lire le fichier ;</li>
+<li><code>w</code> (write) : droit de modifier le fichier ;</li>
+<li><code>x</code> (execute) : droit d'exécution du fichier ;</li>
+<li><code>-</code> : aucun droit sur le fichier.</li>
+</ul>
+<h4 id="modification-des-droits">Modification des Droits<a class="headerlink" href="#modification-des-droits" title="Permanent link">&num;</a></h4>
+<p>Pour donner ou supprimer des permissions sur un fichier <code>mon_texte.txt</code>, on utilise la commande <code>chmod</code> de la manière suivante :</p>
+<ul>
+<li>pour donner les droits en lecture et écriture à l'utilisateur</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>chmod u+rw mon_texte.txt
+</span></code></pre></div>
+<ul>
+<li>pour supprimer les droits en modication au groupe :</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>chmod g-w mon_texte.txt
+</span></code></pre></div>
+<ul>
+<li>pour supprimer tous les droits aux autres utilisateurs :</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>chmod o-rwx mon_texte.txt
+</span></code></pre></div>
+<h3 id="notation-octale">Notation octale<a class="headerlink" href="#notation-octale" title="Permanent link">&num;</a></h3>
+<p>Il est aussi possible d'utiliser la <mark>notation octale</mark> pour gérer ces droits. Par exemple, la commande suivante :</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>chmod 640 mon_texte.txt
+</span></code></pre></div>
+<p>en sachant que <code>r = 4</code>, <code>w = 2</code>, <code>x = 1</code> , et que le premier chiffre correspond à l'utilisateur, le second au groupe, et le troisième aux autres. Ainsi dans l'exemple proposé :</p>
+<ul>
+<li>l'utilisateur à les droits de lecture et d'écriture (4+2 = 6) ;</li>
+<li>le groupe à le droit de lecture (4) ;</li>
+<li>les autres n'ont aucun droit (0).</li>
+</ul>
+<p>Une commande telle que <code>chmod 777 mon_texte.txt</code> donne tous les droits de lecture, écriture et exécution à tous les utilisateurs du système pour le fichier <code>mon_texte.txt</code>.</p>
+<h2 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Permanent link">&num;</a></h2>
+<h3 id="installation-de-wsl">Installation de WSL<a class="headerlink" href="#installation-de-wsl" title="Permanent link">&num;</a></h3>
+<p>Windows Subsystem for Linux (WSL) est une couche de compatibilité permettant d'exécuter des exécutables binaires Linux de manière native sur les dernières versions de Windows (à partir de windows 10). La version WSL 2, sortie en mai 2019, introduit la présence d'un véritable noyau Linux.</p>
+<p>Pour installer la distribution Ubuntu, lancer l'invite de commande windows (<code>cmd</code> depuis la barre de recherche), puis :</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>wsl -install -d Ubuntu
+</span></code></pre></div>
+<p><strong>Utilisation de WSL :</strong>
+Une fois installé, vous avez accès à la distribution depuis l'invite de commande windows  par l'intermédiaire de la commande :</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>wsl 
+</span></code></pre></div>
+<p>Vous accédez alors à un terminal Linux tout ce qui est des plus classique.</p>
+<p>Le prompt est de la forme <code>nom_utilisateur@nom_machine : chemin_dossier_courant $</code>.</p>
+<p>Normalement, votre répertoire courant est symbolisé par <code>~</code>, ce qui est un raccourci pour symboliser le répertoire personnel de l'utilisateur.</p>
+<h3 id="partie-pratique">Partie pratique<a class="headerlink" href="#partie-pratique" title="Permanent link">&num;</a></h3>
+<div class="admonition example">
+<p class="admonition-title">Répertoire courant et chemin absolu</p>
+<p>Par défaut le terminal s’ouvre dans le répertoire utilisateur. Utilisez la commande <code>pwd</code> pour déterminer le nom du répertoire courant et son chemin absolu.</p>
+</div>
+<!-- ??? done "Réponse"
+    Dans mon cas :
+
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>/home/galand
+</span></code></pre></div>
+ -->
+<div class="admonition example">
+<p class="admonition-title">Lister les fichiers d’un répertoire</p>
+<p>Utilisez la commande <code>man ls</code> pour ouvrir le manuel de la commande <code>ls</code>  (le <a href="https://www.man-linux-magique.net/man1/ls.html">site</a> permet d'avoir une traduction). Tester plusieurs options puis répondre aux questions suivantes.</p>
+<p><strong>1)</strong> Quelle option permet de lister les fichiers et répertoires en donnant leur descriptif complet ?</p>
+<p><strong>2)</strong> Quelle option permet d’afficher les fichiers et répertoires commençant par <code>.</code>?</p>
+<p><strong>3)</strong> Tapez <code>ls /var</code> et lister les fichiers et répertoires du répertoires <code>var</code> se situant à la racine du système de fichier.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Construction d’une arborescence</p>
+<p>On envisage de construire l’arborescence suivante :</p>
+<p><figure Markdown>
+<img alt="root" src="../img_linux/arbo_exo.png" width="500px" />
+</figure></p>
+<p><strong>1)</strong> A quel répertoire se réfère <code>~</code> ?</p>
+<p><strong>2)</strong> Créer les répertoires et les fichiers représentés par l'arborescence ci-dessus.</p>
+</div>
+<!-- 
+??? done "Réponse"
+    **1)** `~` se réfère à votre répertoire personnel.
+ -->
 
               
             </article>
