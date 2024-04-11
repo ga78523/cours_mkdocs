@@ -11,22 +11,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://example.com/Physique/Seconde/TP_loi_Descartes/</loc>
+         <lastmod>2024-04-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/Physique/Seconde/TP_mesure_c_son/</loc>
+         <lastmod>2024-04-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/Physique/Seconde/TP_mesure_distance/</loc>
+         <lastmod>2024-04-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://example.com/Physique/Seconde/TP_vecteur_vitesse_point/</loc>
          <lastmod>2024-04-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/Physique/Seconde/mesure_c_son/</loc>
-         <lastmod>2024-04-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://example.com/Physique/Seconde/tp_mesure_distance/</loc>
-         <lastmod>2024-04-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://example.com/Physique/Seconde/tp_verrerie/</loc>
+         <loc>https://example.com/Physique/Seconde/TP_verrerie/</loc>
          <lastmod>2024-04-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
