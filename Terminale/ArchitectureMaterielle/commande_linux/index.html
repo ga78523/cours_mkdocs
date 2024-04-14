@@ -970,6 +970,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#exercices-sans-ordinateur" class="md-nav__link">
+    Exercices sans ordinateur
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercices sans ordinateur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercice-1" class="md-nav__link">
+    Exercice 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-2" class="md-nav__link">
+    Exercice 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1415,6 +1442,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#exercices-sans-ordinateur" class="md-nav__link">
+    Exercices sans ordinateur
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercices sans ordinateur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercice-1" class="md-nav__link">
+    Exercice 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-2" class="md-nav__link">
+    Exercice 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1593,6 +1647,7 @@ si vous tapez : rm </em>.tmp, le shell transformera cette ligne de commande en :
 Une fois installé, vous avez accès à la distribution depuis l'invite de commande windows  par l'intermédiaire de la commande :</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>wsl 
 </span></code></pre></div>
+<p><strong>Remarque :</strong>  Si wsl ne fonctionne pas, un simulateur existe sur la page web suivante : <a href="https://www.offidocs.com/index.php/desktop-online-utilities-apps/xlinux-online-linux">xlinux</a></p>
 <p>Vous accédez alors à un terminal Linux tout ce qui est des plus classique.</p>
 <p>Le prompt est de la forme <code>nom_utilisateur@nom_machine : chemin_dossier_courant $</code>.</p>
 <p>Normalement, votre répertoire courant est symbolisé par <code>~</code>, ce qui est un raccourci pour symboliser le répertoire personnel de l'utilisateur.</p>
@@ -1628,7 +1683,8 @@ Une fois installé, vous avez accès à la distribution depuis l'invite de comma
     **1)** `~` se réfère à votre répertoire personnel.
  -->
 
-<p>## Exercices sans ordinateur</p>
+<h2 id="exercices-sans-ordinateur">Exercices sans ordinateur<a class="headerlink" href="#exercices-sans-ordinateur" title="Permanent link">&num;</a></h2>
+<h3 id="exercice-1">Exercice 1<a class="headerlink" href="#exercice-1" title="Permanent link">&num;</a></h3>
 <div class="admonition example">
 <p class="admonition-title">Exercice 1 type bac</p>
 <p>L’entreprise <strong>capNSI</strong> gère les contrats de ses clients en créant pour chacun
@@ -1637,12 +1693,12 @@ système d’exploitation de cet ordinateur est une distribution linux.
 Dans la console représentée sur la figure ci-dessous, on peut visualiser les
 répertoires (ou dossiers) à la racine de l’ordinateur central avec l’instruction <code>ls</code> : </p>
 <p><figure Markdown>
-<img alt="root" src="img_OS/exo_OS_bac1.png" width="400px" />
+<img alt="root" src="../img_linux/exo_OS_bac1.png" width="400px" />
 </figure></p>
 <p><strong>1)</strong> Donner le nom de l’utilisateur et le nom de l’ordinateur correspondant à la capture d’écran précédente.</p>
 <p><strong>2)</strong> Écrire les instructions permettant d’afficher la liste des dossiers clients du répertoire <code>Contrats</code> en partant de la situation ci-dessous : </p>
 <p><figure Markdown>
-<img alt="root" src="img_OS/exo_OS_bac2.png" width="400px" />
+<img alt="root" src="../img_linux/exo_OS_bac2.png" width="400px" />
 </figure></p>
 <p>Après une campagne de démarchage, l’entreprise a gagné un nouveau
 client, Monsieur Alan Turing. Elle souhaite lui créer un sous-dossier nommé
@@ -1660,6 +1716,32 @@ les droits à l’utilisateur et au groupe et seulement la permission en lecture
     **3)** `mkdir Contrats/TURING_Alan`
 
     **4)** `chmod 774 Contrats/TURING_Alan` (l’exemple dans l’annexe ne fonctionne pas) -->
+
+<h3 id="exercice-2">Exercice 2<a class="headerlink" href="#exercice-2" title="Permanent link">&num;</a></h3>
+<p><strong>1)</strong> Sur une machine équipée du système d’exploitation GNU/Linux, les informations
+sont enregistrées dans un fichier du répertoire collections.</p>
+<p>Dans le schéma ci-dessous, on trouve des répertoires (encadrés par un rectangle,
+exemple : <code>travail</code>) et des fichiers (les noms non encadrés, comme
+<code>rapport.odt</code>).</p>
+<figure>
+<p><img alt="arbo_exo2" src="../img_linux/arbo_exo2.png" width="700px" /></p>
+</figure>
+<p>Sachant que le répertoire courant est le répertoire fiches, indiquer sur la copie les numéros de toutes les commandes parmi celles proposées cidessous qui permettent de se positionner dans le répertoire timbres :</p>
+<ul>
+<li>Commande 1 : <code>cd /home/documents/collections/timbres</code></li>
+<li>Commande 2 : <code>cd ./collections/timbres</code></li>
+<li>Commande 3 : <code>cd /timbres</code></li>
+<li>Commande 4 : <code>cd documents/collections/timbres</code></li>
+<li>Commande 5 : <code>cd ../collections/timbres</code></li>
+<li>Commande 6 : <code>cd timbres</code></li>
+</ul>
+<p><strong>2)</strong> Donner une commande qui permet d’accéder au répertoire <code>timbres</code> à
+partir de la racine.</p>
+<!-- ??? done "Réponse"
+    **1)** Commande 1 ; Commande 5
+
+    **2)** `cd /home/documents/collections/timbres`
+ -->
 
               
             </article>
