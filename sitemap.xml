@@ -16,6 +16,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://example.com/Logiciels/vscode/</loc>
+         <lastmod>2024-04-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://example.com/Physique/Seconde/TP_loi_Descartes/</loc>
          <lastmod>2024-04-15</lastmod>
          <changefreq>daily</changefreq>
@@ -122,11 +127,6 @@
     </url>
     <url>
          <loc>https://example.com/SNT/installation_filius/</loc>
-         <lastmod>2024-04-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://example.com/SNT/vscode/</loc>
          <lastmod>2024-04-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
