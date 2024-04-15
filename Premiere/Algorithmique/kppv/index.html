@@ -1257,12 +1257,25 @@
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&num;</a></h2>
 <p>Dans ce chapitre, nous allons travailler avec un algorithme d'apprentissage automatique, souvent appelé un algorithme de  machine  learning. Le  principe de ces algorithmes est  d'utiliser  un  grand  nombre  de  données  afin  "d'apprendre  à  la machine" à résoudre des problèmes.</p>
 <p>Bien  que  cette  idée  d'apprentissage  automatique  date de  la  fin  des  années  1950,  le  machine  learning a  pris  toute  son importance avec la montée  en puissance du Big Data, offrant  des  quantités  de données à analyser sur d'innombrables sujets. À  noter  aussi  l'importance  des  stratégies  mises  en  place  par  les  GAFAM  (Google,  Apple,  Facebook,  Amazon  et Microsoft)  afin  de  récupérer  un  grand  nombre  de  données  concernant  leurs  clients.  Ces  données  sont  très  souvent utilisées pour alimenter des algorithmes de machine learning (ce qui permet par exemple à Amazon de proposer à ces clients des "suggestions d'achats" souvent très pertinentes).</p>
+<div class="admonition exemple">
+<p class="admonition-title">Historique</p>
+<p>Recopier et compléter la frise ci-dessous avec ces événements marquants de l'histoire de <strong>l'intelligence artificielle</strong>  qui sont donnés dans le désordre :</p>
+<ul>
+<li>test de Turing</li>
+<li>victoire d'Alpha-Go sur le meilleur joueur humain de jeu de Go</li>
+<li>premier neurone artificiel imaginé par Mc Culloch et Pitts</li>
+<li>victoire de Watson (IBM) sur les meilleurs joueurs humains au jeu Jeopardy</li>
+<li>victoire de Deep Blue (IBM) sur le champion du monde d'échec Gary Kasparov</li>
+<li>invention du perceptron par Frank Rosenblatt</li>
+<li>conférence de Darmouth</li>
+<li>prix Turing décerné à Yann Le Cun pour ses travaux sur le Deep Learning</li>
+</ul>
+<p><img alt="frise" src="../img_kppv/timeline_knn_timeline.png" width="100%" /></p>
+</div>
 <h2 id="les-donnees-dedgar-anderson-relatives-aux-differentes-especes-diris">Les données d'Edgar Anderson relatives aux différentes espèces d'iris<a class="headerlink" href="#les-donnees-dedgar-anderson-relatives-aux-differentes-especes-diris" title="Permanent link">&num;</a></h2>
 <p>En 1936, Edgar Anderson a collecté des données sur 3 espèces d'iris : "iris setosa", "iris virginica" et "iris versicolor". Pour chaque iris étudié, Anderson a mesuré la largeur et la longueur des sépales, la largeur et la longueur des pétales. Par souci de simplification,  nous  nous intéresserons  uniquement  à  la  largeur  et  à  la  longueur  des  pétales. 50  de  ces  mesures se trouvent  dans le  fichier iris.csv téléchargeable  depuis le  groupe  de  travail sur l'ENT.  Ce  jeu  de  données présente aujourd'hui  un  intérêt essentiellement pédagogique.  En  effet,  il  est  exclusivement  utilisé  par  des  personnes  désirant s'initier aux algorithmes de machine learning.</p>
 <figure>
-<p><img alt="iris" src="../img_kppv/iris.png" width="300px" />
-  </p>
-<figcaption>transistor</figcaption>
+<p><img alt="iris" src="../img_kppv/iris.png" width="300px" /></p>
 </figure>
 <p>Les valeurs du champ "species"("espèces")sont 0 pour l'espèce "setosa", 1 pour "virginica" et 2 pour"versicolor".</p>
 <p>Nous allons dans un premier temps réaliser une représentation graphique des données contenues dans le fichier à l'aide du script python suivant :</p>
@@ -1329,7 +1342,7 @@
 <figure>
 <p><img alt="kppv3" src="../img_kppv/kppv3.png" width="600px" /></p>
 </figure>
-<p>Afin de déterminer si l'iris appartient à l'espèce "sétosa" ou  à  l'espèce  "virginica",  nous  allons  devoir  utiliser l'algorithme des k plus proches voisins. </p>
+<p>Afin de déterminer si l'iris appartient à l'espèce "sétosa" ou  à  l'espèce  "virginica",  nous  allons  devoir  utiliser l'algorithme des k plus proches voisins.</p>
 <div class="admonition example">
 <p class="admonition-title">Exercice 2 :</p>
 <p>Réaliser sur cette activité capytale le code pour insérer l'iris inconnu.</p>
