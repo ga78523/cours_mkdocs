@@ -739,16 +739,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#les-donnees-dedgar-anderson-relatives-aux-differentes-especes-diris" class="md-nav__link">
-    Les données d'Edgar Anderson relatives aux différentes espèces d'iris
+  <a href="#exemple" class="md-nav__link">
+    Exemple
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemple">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#probleme" class="md-nav__link">
+    Problème
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#comment-apprendre-a-reconnaitre-une-espece-diris" class="md-nav__link">
     Comment apprendre à reconnaître une espèce d'iris
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -768,8 +781,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#algorithme" class="md-nav__link">
-    Algorithme
+  <a href="#exemple-avec-les-iris-danderson" class="md-nav__link">
+    Exemple avec les iris d'ANderson
   </a>
   
 </li>
@@ -1301,16 +1314,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#les-donnees-dedgar-anderson-relatives-aux-differentes-especes-diris" class="md-nav__link">
-    Les données d'Edgar Anderson relatives aux différentes espèces d'iris
+  <a href="#exemple" class="md-nav__link">
+    Exemple
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemple">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#probleme" class="md-nav__link">
+    Problème
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#comment-apprendre-a-reconnaitre-une-espece-diris" class="md-nav__link">
     Comment apprendre à reconnaître une espèce d'iris
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1330,8 +1356,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#algorithme" class="md-nav__link">
-    Algorithme
+  <a href="#exemple-avec-les-iris-danderson" class="md-nav__link">
+    Exemple avec les iris d'ANderson
   </a>
   
 </li>
@@ -1374,7 +1400,9 @@
 </ul>
 <p><img alt="frise" src="../img_kppv/timeline_knn_timeline.png" width="100%" /></p>
 </div>
-<h2 id="les-donnees-dedgar-anderson-relatives-aux-differentes-especes-diris">Les données d'Edgar Anderson relatives aux différentes espèces d'iris<a class="headerlink" href="#les-donnees-dedgar-anderson-relatives-aux-differentes-especes-diris" title="Permanent link">&num;</a></h2>
+<h2 id="exemple">Exemple<a class="headerlink" href="#exemple" title="Permanent link">&num;</a></h2>
+<h3 id="probleme">Problème<a class="headerlink" href="#probleme" title="Permanent link">&num;</a></h3>
+<p>Les données d'Edgar Anderson relatives aux différentes espèces d'iris</p>
 <p>En 1936, Edgar Anderson a collecté des données sur 3 espèces d'iris : "iris setosa", "iris virginica" et "iris versicolor". Pour chaque iris étudié, Anderson a mesuré la largeur et la longueur des sépales, la largeur et la longueur des pétales. Par souci de simplification,  nous  nous intéresserons  uniquement  à  la  largeur  et  à  la  longueur  des  pétales. 50  de  ces  mesures se trouvent  dans le  fichier iris.csv téléchargeable  depuis le  groupe  de  travail sur l'ENT. Il est inclus également dans le fichier Capytale de l'activité.  Ce  jeu  de  données présente aujourd'hui  un  intérêt essentiellement pédagogique.  En  effet,  il  est  exclusivement  utilisé  par  des  personnes  désirant s'initier aux algorithmes de machine learning.</p>
 <figure>
 <p><img alt="iris" src="../img_kppv/iris.png" width="300px" /></p>
@@ -1430,7 +1458,7 @@
 <li>Modifier ce code et observer.</li>
 </ol>
 </div>
-<h2 id="comment-apprendre-a-reconnaitre-une-espece-diris">Comment apprendre à reconnaître une espèce d'iris<a class="headerlink" href="#comment-apprendre-a-reconnaitre-une-espece-diris" title="Permanent link">&num;</a></h2>
+<h3 id="comment-apprendre-a-reconnaitre-une-espece-diris">Comment apprendre à reconnaître une espèce d'iris<a class="headerlink" href="#comment-apprendre-a-reconnaitre-une-espece-diris" title="Permanent link">&num;</a></h3>
 <p>Considérons maintenant une iris dont les pétales mesurent 0,5 cm de large et 2 cm de long.</p>
 <p>Comment déterminer l'espèce à laquelle cette iris appartient ? Afin de répondre à cette problématique, nous allons placer cette nouvelle donnée sur le graphique:</p>
 <table class="language-python highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">)</span>
@@ -1461,7 +1489,7 @@
 <p><img alt="kppv4" src="../img_kppv/img_kppv5.png" width="500px" /></p>
 </figure>
 <p>Les  3  plus  proches voisins  sont  deux "setosa" et  un "virginica". D'après  l'algorithme  des  "k  plus  proches  voisins", notre iris inconnue appartient à l'espèce "setosa".</p>
-<h3 id="algorithme">Algorithme<a class="headerlink" href="#algorithme" title="Permanent link">&num;</a></h3>
+<h3 id="exemple-avec-les-iris-danderson">Exemple avec les iris d'ANderson<a class="headerlink" href="#exemple-avec-les-iris-danderson" title="Permanent link">&num;</a></h3>
 <p>La  bibliothèque  <a href="https://scikit-learn.org/stable/">Python Scikit Learn</a>  propose  un  grand  nombre  d'algorithmes  lié  au  machine  learning  (c'est  sans  aucun doute la bibliothèque la plus utilisée en machine learning). Parmi tous ces  algorithmes, Scikit Learn propose l'algorithme des k plus proches voisins. </p>
 <p><strong>Première étape</strong></p>
 <p>Importer la bibliothèque:</p>
