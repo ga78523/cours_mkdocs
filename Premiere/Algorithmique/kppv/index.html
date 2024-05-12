@@ -757,12 +757,46 @@
     Algorithme des k plus proches voisins
   </a>
   
+    <nav class="md-nav" aria-label="Algorithme des k plus proches voisins">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principe" class="md-nav__link">
+    Principe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithme" class="md-nav__link">
+    Algorithme
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gloutons/" class="md-nav__link">
+        Algorithmes gloutons
+      </a>
     </li>
   
 
@@ -1285,6 +1319,26 @@
     Algorithme des k plus proches voisins
   </a>
   
+    <nav class="md-nav" aria-label="Algorithme des k plus proches voisins">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principe" class="md-nav__link">
+    Principe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithme" class="md-nav__link">
+    Algorithme
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1304,7 +1358,7 @@
 <h1 id="algorithme-des-plus-proches-voisins">Algorithme des plus proches voisins<a class="headerlink" href="#algorithme-des-plus-proches-voisins" title="Permanent link">&num;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&num;</a></h2>
 <p>Dans ce chapitre, nous allons travailler avec un algorithme d'apprentissage automatique, souvent appelé un algorithme de  machine  learning. Le  principe de ces algorithmes est  d'utiliser  un  grand  nombre  de  données  afin  "d'apprendre  à  la machine" à résoudre des problèmes.</p>
-<p>Bien  que  cette  idée  d'apprentissage  automatique  date de  la  fin  des  années  1950,  le  machine  learning a  pris  toute  son importance avec la montée  en puissance du Big Data, offrant  des  quantités  de données à analyser sur d'innombrables sujets. À  noter  aussi  l'importance  des  stratégies  mises  en  place  par  les  GAFAM  (Google,  Apple,  Facebook,  Amazon  et Microsoft)  afin  de  récupérer  un  grand  nombre  de  données  concernant  leurs  clients.  Ces  données  sont  très  souvent utilisées pour alimenter des algorithmes de machine learning (ce qui permet par exemple à Amazon de proposer à ces clients des "suggestions d'achats" souvent très pertinentes).</p>
+<p>Bien  que  cette  idée  d'apprentissage  automatique  date de  la  fin  des  années  1950,  le  machine  learning a  pris  toute  son importance avec la montée  en puissance du Big Data, offrant  des  quantités  de données à analyser sur d'innombrables sujets. À  noter  aussi  l'importance  des  stratégies  mises  en  place  par  les  GAFAM  (Google,  Apple,  Facebook,  Amazon  et Microsoft)  afin  de  récupérer  un  grand  nombre  de  données  concernant  leurs  clients.  Ces  données  sont  très  souvent utilisées pour alimenter des algorithmes de machine learning.</p>
 <div class="admonition exemple">
 <p class="admonition-title">Historique</p>
 <p>Recopier et compléter la frise ci-dessous avec ces événements marquants de l'histoire de <strong>l'intelligence artificielle</strong>  qui sont donnés dans le désordre :</p>
@@ -1321,13 +1375,13 @@
 <p><img alt="frise" src="../img_kppv/timeline_knn_timeline.png" width="100%" /></p>
 </div>
 <h2 id="les-donnees-dedgar-anderson-relatives-aux-differentes-especes-diris">Les données d'Edgar Anderson relatives aux différentes espèces d'iris<a class="headerlink" href="#les-donnees-dedgar-anderson-relatives-aux-differentes-especes-diris" title="Permanent link">&num;</a></h2>
-<p>En 1936, Edgar Anderson a collecté des données sur 3 espèces d'iris : "iris setosa", "iris virginica" et "iris versicolor". Pour chaque iris étudié, Anderson a mesuré la largeur et la longueur des sépales, la largeur et la longueur des pétales. Par souci de simplification,  nous  nous intéresserons  uniquement  à  la  largeur  et  à  la  longueur  des  pétales. 50  de  ces  mesures se trouvent  dans le  fichier iris.csv téléchargeable  depuis le  groupe  de  travail sur l'ENT.  Ce  jeu  de  données présente aujourd'hui  un  intérêt essentiellement pédagogique.  En  effet,  il  est  exclusivement  utilisé  par  des  personnes  désirant s'initier aux algorithmes de machine learning.</p>
+<p>En 1936, Edgar Anderson a collecté des données sur 3 espèces d'iris : "iris setosa", "iris virginica" et "iris versicolor". Pour chaque iris étudié, Anderson a mesuré la largeur et la longueur des sépales, la largeur et la longueur des pétales. Par souci de simplification,  nous  nous intéresserons  uniquement  à  la  largeur  et  à  la  longueur  des  pétales. 50  de  ces  mesures se trouvent  dans le  fichier iris.csv téléchargeable  depuis le  groupe  de  travail sur l'ENT. Il est inclus également dans le fichier Capytale de l'activité.  Ce  jeu  de  données présente aujourd'hui  un  intérêt essentiellement pédagogique.  En  effet,  il  est  exclusivement  utilisé  par  des  personnes  désirant s'initier aux algorithmes de machine learning.</p>
 <figure>
 <p><img alt="iris" src="../img_kppv/iris.png" width="300px" /></p>
 </figure>
 <p>Les valeurs du champ "species"("espèces")sont 0 pour l'espèce "setosa", 1 pour "virginica" et 2 pour"versicolor".</p>
 <p>Nous allons dans un premier temps réaliser une représentation graphique des données contenues dans le fichier à l'aide du script python suivant :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<table class="language-py highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">programme 1</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
@@ -1365,7 +1419,7 @@
 </span></code></pre></div>
 </td></tr></table>
 <figure>
-<p><img alt="kppv1" src="../img_kppv/kppv1.png" width="600px" /></p>
+<p><img alt="kppv1" src="../img_kppv/kppv1.png" width="500px" /></p>
 </figure>
 <p>On   constate   que   ces   points   sont   regroupés   par espèces d'iris.</p>
 <div class="admonition example">
@@ -1382,38 +1436,43 @@
 <table class="language-python highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 </td></tr></table>
+<div class="admonition example">
+<p class="admonition-title">Exercice 2 :</p>
+<p>Réaliser sur cette activité capytale le code pour insérer l'iris inconnu.</p>
+</div>
 <figure>
 <p><img alt="kppv2" src="../img_kppv/kppv2.png" width="600px" /></p>
 </figure>
 <p>Dans  ce  cas,  on  voit  clairement  qu'il  y  a  de  fortes chances pour que l'iris soit de l'espèce "setosa".</p>
 <p>Cependant,  il  existe  des  cas  où  il  est  beaucoup  plus  difficile  de  répondre,  par  exemple  pour  une  iris  dont  les  pétales mesurent 0,75 cm de large et 2,5 cm de long.</p>
 <figure>
-<p><img alt="kppv3" src="../img_kppv/kppv3.png" width="600px" /></p>
+<p><img alt="kppv3" src="../img_kppv/kppv3.png" width="500px" /></p>
 </figure>
 <p>Afin de déterminer si l'iris appartient à l'espèce "sétosa" ou  à  l'espèce  "virginica",  nous  allons  devoir  utiliser l'algorithme des k plus proches voisins.</p>
-<div class="admonition example">
-<p class="admonition-title">Exercice 2 :</p>
-<p>Réaliser sur cette activité capytale le code pour insérer l'iris inconnu.</p>
-</div>
 <h2 id="algorithme-des-k-plus-proches-voisins">Algorithme des k plus proches voisins<a class="headerlink" href="#algorithme-des-k-plus-proches-voisins" title="Permanent link">&num;</a></h2>
-<p>Quel est le principe de cet algorithme ?</p>
+<h3 id="principe">Principe<a class="headerlink" href="#principe" title="Permanent link">&num;</a></h3>
 <ul>
 <li>On calcule la distance entre le point correspondant à l'iris inconnu et chaque point issu du jeu de données "iris" ;</li>
-<li>On sélectionne les k distances les plus petites (les k plus proches voisins) ;</li>
+<li>On sélectionne les <span class="arithmatex">\(k\)</span> distances les plus petites (les <span class="arithmatex">\(k\)</span> plus proches voisins) ;</li>
 <li>Parmi les k plus proches voisins, on détermine quelle est l'espèce majoritaire, et on attribue à notre iris inconnu cette espèce majoritaire.</li>
 </ul>
-<p>Prenons k = 3 :</p>
+<p>Prenons <span class="arithmatex">\(k = 3\)</span> :</p>
 <figure>
-<p><img alt="kppv4" src="../img_kppv/img_kppv5.png" width="600px" /></p>
+<p><img alt="kppv4" src="../img_kppv/img_kppv5.png" width="500px" /></p>
 </figure>
 <p>Les  3  plus  proches voisins  sont  deux "setosa" et  un "virginica". D'après  l'algorithme  des  "k  plus  proches  voisins", notre iris inconnue appartient à l'espèce "setosa".</p>
+<h3 id="algorithme">Algorithme<a class="headerlink" href="#algorithme" title="Permanent link">&num;</a></h3>
 <p>La  bibliothèque  <a href="https://scikit-learn.org/stable/">Python Scikit Learn</a>  propose  un  grand  nombre  d'algorithmes  lié  au  machine  learning  (c'est  sans  aucun doute la bibliothèque la plus utilisée en machine learning). Parmi tous ces  algorithmes, Scikit Learn propose l'algorithme des k plus proches voisins. </p>
-<p>Importer la bibliothèque:
+<p><strong>Première étape</strong></p>
+<p>Importer la bibliothèque:</p>
 <table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
 </span></code></pre></div>
-</td></tr></table></p>
-<p>Compléter le programme précédent (la fonction <code>plt.show()</code> devra être placée en fin de script):</p>
-<table class="language-python highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+</td></tr></table>
+<p><strong>Deuxième étape</strong></p>
+<p>Recopier le programme 1</p>
+<p><strong>Troisième étape</strong></p>
+<p>Insérer le programme 2 à la ligne 14 du programme 1 :</p>
+<table class="language-python highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">programme 2</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
@@ -1508,13 +1567,13 @@ Que constatez-vous ? </p>
       
       
         
-        <a href="../../cours_juin_1NSI/" class="md-footer__link md-footer__link--next" aria-label="Next: Rappels" rel="next">
+        <a href="../gloutons/" class="md-footer__link md-footer__link--next" aria-label="Next: Algorithmes gloutons" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Rappels
+              Algorithmes gloutons
             </div>
           </div>
           <div class="md-footer__button md-icon">
