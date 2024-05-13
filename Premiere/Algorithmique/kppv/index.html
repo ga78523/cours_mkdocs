@@ -739,29 +739,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exemple" class="md-nav__link">
-    Exemple
+  <a href="#probleme-de-classification-des-iris" class="md-nav__link">
+    Problème de classification des iris
   </a>
-  
-    <nav class="md-nav" aria-label="Exemple">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#probleme" class="md-nav__link">
-    Problème
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#comment-apprendre-a-reconnaitre-une-espece-diris" class="md-nav__link">
-    Comment apprendre à reconnaître une espèce d'iris
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1321,29 +1301,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exemple" class="md-nav__link">
-    Exemple
+  <a href="#probleme-de-classification-des-iris" class="md-nav__link">
+    Problème de classification des iris
   </a>
-  
-    <nav class="md-nav" aria-label="Exemple">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#probleme" class="md-nav__link">
-    Problème
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#comment-apprendre-a-reconnaitre-une-espece-diris" class="md-nav__link">
-    Comment apprendre à reconnaître une espèce d'iris
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1401,9 +1361,9 @@
 <p>Bien  que  cette  idée  d'apprentissage  automatique  date de  la  fin  des  années  1950,  le  machine  learning a  pris  toute  son importance avec la montée  en puissance du Big Data, offrant  des  quantités  de données à analyser sur d'innombrables sujets. À  noter  aussi  l'importance  des  stratégies  mises  en  place  par  les  GAFAM  (Google,  Apple,  Facebook,  Amazon  et Microsoft)  afin  de  récupérer  un  grand  nombre  de  données  concernant  leurs  clients.  Ces  données  sont  très  souvent utilisées pour alimenter des algorithmes de machine learning.</p>
 <div class="admonition exemple">
 <p class="admonition-title">Historique</p>
-<p>Recopier et compléter la frise ci-dessous avec ces événements marquants de l'histoire de <strong>l'intelligence artificielle</strong>  qui sont donnés dans le désordre :</p>
+<p>Trouver sur le web les dates des événements marquants de l'histoire de <strong>l'intelligence artificielle</strong>  qui sont donnés ci-dessous dans le désordre :</p>
 <ul>
-<li>test de Turing</li>
+<li>test de Turing </li>
 <li>victoire d'Alpha-Go sur le meilleur joueur humain de jeu de Go</li>
 <li>premier neurone artificiel imaginé par Mc Culloch et Pitts</li>
 <li>victoire de Watson (IBM) sur les meilleurs joueurs humains au jeu Jeopardy</li>
@@ -1412,10 +1372,22 @@
 <li>conférence de Darmouth</li>
 <li>prix Turing décerné à Yann Le Cun pour ses travaux sur le Deep Learning</li>
 </ul>
-<p><img alt="frise" src="../img_kppv/timeline_knn_timeline.png" width="100%" /></p>
 </div>
-<h2 id="exemple">Exemple<a class="headerlink" href="#exemple" title="Permanent link">&num;</a></h2>
-<h3 id="probleme">Problème<a class="headerlink" href="#probleme" title="Permanent link">&num;</a></h3>
+<!-- 
+??? done "Réponse"
+
+    * test de Turing : 1950
+    * victoire d'Alpha-Go sur le meilleur joueur humain de jeu de Go : 2015
+    * premier neurone artificiel imaginé par Mc Culloch et Pitts : 1943
+    * victoire de Watson (IBM) sur les meilleurs joueurs humains au jeu Jeopardy : 2011  (Watson  :)
+    * victoire de Deep Blue (IBM) sur le champion du monde d'échec Gary Kasparov : 1996
+    * invention du perceptron par Frank Rosenblatt : 1957
+    * conférence de Darmouth : 1956
+    * prix Turing décerné à Yann Le Cun pour ses travaux sur le Deep Learning :2019
+
+ -->
+
+<h2 id="probleme-de-classification-des-iris">Problème de classification des iris<a class="headerlink" href="#probleme-de-classification-des-iris" title="Permanent link">&num;</a></h2>
 <p>Les données d'Edgar Anderson relatives aux différentes espèces d'iris</p>
 <p>En 1936, Edgar Anderson a collecté des données sur 3 espèces d'iris : "iris setosa", "iris virginica" et "iris versicolor". Pour chaque iris étudié, Anderson a mesuré la largeur et la longueur des sépales, la largeur et la longueur des pétales. Par souci de simplification,  nous  nous intéresserons  uniquement  à  la  largeur  et  à  la  longueur  des  pétales. 50  de  ces  mesures se trouvent  dans le  fichier iris.csv téléchargeable  depuis le  groupe  de  travail sur l'ENT. Il est inclus également dans le fichier Capytale de l'activité.  Ce  jeu  de  données présente aujourd'hui  un  intérêt essentiellement pédagogique.  En  effet,  il  est  exclusivement  utilisé  par  des  personnes  désirant s'initier aux algorithmes de machine learning.</p>
 <figure>
@@ -1423,7 +1395,7 @@
 </figure>
 <p>Les valeurs du champ "species"("espèces")sont 0 pour l'espèce "setosa", 1 pour "virginica" et 2 pour"versicolor".</p>
 <p>Nous allons dans un premier temps réaliser une représentation graphique des données contenues dans le fichier à l'aide du script python suivant :</p>
-<table class="language-py highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">programme 1</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<table class="language-py highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Programme 1</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
@@ -1472,7 +1444,6 @@
 <li>Modifier ce code et observer.</li>
 </ol>
 </div>
-<h3 id="comment-apprendre-a-reconnaitre-une-espece-diris">Comment apprendre à reconnaître une espèce d'iris<a class="headerlink" href="#comment-apprendre-a-reconnaitre-une-espece-diris" title="Permanent link">&num;</a></h3>
 <p>Considérons maintenant une iris dont les pétales mesurent 0,5 cm de large et 2 cm de long.</p>
 <p>Comment déterminer l'espèce à laquelle cette iris appartient ? Afin de répondre à cette problématique, nous allons placer cette nouvelle donnée sur le graphique:</p>
 <table class="language-python highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">)</span>
@@ -1494,7 +1465,7 @@
 <h2 id="algorithme-des-k-plus-proches-voisins">Algorithme des k plus proches voisins<a class="headerlink" href="#algorithme-des-k-plus-proches-voisins" title="Permanent link">&num;</a></h2>
 <h3 id="principe">Principe<a class="headerlink" href="#principe" title="Permanent link">&num;</a></h3>
 <ul>
-<li>On calcule la distance entre le point correspondant à l'iris inconnu et chaque point issu du jeu de données "iris" ;</li>
+<li>On calcule la <strong>distance</strong> entre le point correspondant à l'iris d'espèce inconnue et chaque point correspondant à chaque "iris" ;</li>
 <li>On sélectionne les <span class="arithmatex">\(k\)</span> distances les plus petites (les <span class="arithmatex">\(k\)</span> plus proches voisins) ;</li>
 <li>Parmi les k plus proches voisins, on détermine quelle est l'espèce majoritaire, et on attribue à notre iris inconnu cette espèce majoritaire.</li>
 </ul>
@@ -1565,11 +1536,11 @@
 </span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="c1">#Affichage résultats</span>
 </span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="n">txt</span> <span class="o">=</span> <span class="s2">&quot;Résultat : &quot;</span>
 </span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="k">if</span> <span class="n">prediction</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24"></a>    <span class="n">txt</span> <span class="o">=</span> <span class="n">txt</span><span class="o">+</span><span class="s2">&quot;setosa&quot;</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24"></a>    <span class="n">txt</span> <span class="o">=</span> <span class="n">txt</span> <span class="o">+</span> <span class="s2">&quot;setosa&quot;</span>
 </span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="k">if</span> <span class="n">prediction</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
-</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26"></a>    <span class="n">txt</span> <span class="o">=</span> <span class="n">txt</span><span class="o">+</span><span class="s2">&quot;virginica&quot;</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26"></a>    <span class="n">txt</span> <span class="o">=</span> <span class="n">txt</span> <span class="o">+</span> <span class="s2">&quot;virginica&quot;</span>
 </span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="k">if</span> <span class="n">prediction</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28"></a>    <span class="n">txt</span><span class="o">=</span><span class="n">txt</span><span class="o">+</span><span class="s2">&quot;versicolor&quot;</span>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28"></a>    <span class="n">txt</span> <span class="o">=</span> <span class="n">txt</span> <span class="o">+</span> <span class="s2">&quot;versicolor&quot;</span>
 </span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29"></a><span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">txt</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
 </span></code></pre></div>
 </td></tr></table>
@@ -1577,11 +1548,143 @@
 <p class="admonition-title">Exercice 3 :</p>
 <p>Sur cette activité Capytale, réaliser le script afin de déterminer l'espèce de l'iris inconnu.</p>
 </div>
+<!-- ??? done "Réponse"
+    ``` py linenums='1'
+    import pandas
+    import matplotlib.pyplot as plt
+    from sklearn.neighbors import KNeighborsClassifier
+
+    iris = pandas.read_csv("iris.csv") #lecture du fichier iris.csc
+
+    plt.figure()
+    x = iris.loc[:,"petal_length"] #extraction de la longueur du pétale
+    y = iris.loc[:,"petal_width"]  #extraction de la largeur du pétale
+    espece = iris.loc[:,"species"] 
+
+    plt.scatter(x[espece == 0], y[espece == 0], color='g', label='setosa') #tracé pour la setosa
+    plt.scatter(x[espece == 1], y[espece == 1], color='r', label='versicolor')
+    plt.scatter(x[espece == 2], y[espece == 2], color='b', label='virginica')
+
+    k = 3 #nbre de plus proches voisins
+
+    #données concernant l'iris inconnu
+    longueur = 2.5
+    largeur = 0.75
+
+    plt.scatter(longueur, largeur, color = "black")
+
+
+    #algo knn
+    d=list(zip(x,y)) #permet de passer des 2 listes x et y (x = [1.4, 1.4, 1.3, 1.5, 1.4, 1.7, 1.4, ...]
+    #y = [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.4,....] à une liste de tuples
+    #d = [(1.4, 0.2), (1.4, 0.2), (1.3, 0.2) (1.5, 0.2), (1.4, 0.2), (1.7, 0.2), (1.4, 0.4), ...]
+    model = KNeighborsClassifier(n_neighbors=k) #"KNeighborsClassifier" est une méthode issue
+
+
+    #de la bibliothèque scikit-learn
+    model.fit(d,espece)
+    prediction= model.predict([[longueur,largeur]])
+    #fin algo knn
+
+    #Affichage résultats
+    txt = "Résultat : "
+    if prediction[0] == 0:
+      txt = txt+"setosa"
+    if prediction[0] == 2:
+      txt = txt+"virginica"
+    if prediction[0] == 1:
+      txt=txt+"versicolor"
+    plt.text(4,0.5, txt, fontsize=12)
+
+
+    plt.legend() #affichage de la légende
+    plt.show() # affichage du graphique
+    ``` -->
+
 <div class="admonition example">
 <p class="admonition-title">Exercice 4 :</p>
 <p>Le résultat dépend-t-il du nombre de voisins ? Pour  répondre  à  cette  question,  relancer  le  script  en prenant  toujours  le  même  iris  inconnu  mais  en  faisant  varier  le nombre de voisins.
-Que constatez-vous ? </p>
+Que constatez-vous ?</p>
+</div>
+<!-- ??? done "Réponse"
+    Le résultat dépend aussi du nombre de voisin.
+
+ -->
 <h2 id="comment-peut-on-calculer-une-distance-en-informatique">Comment peut-on calculer une distance en informatique ?<a class="headerlink" href="#comment-peut-on-calculer-une-distance-en-informatique" title="Permanent link">&num;</a></h2>
+<p>Soit deux points : A (58,65) et B (80,58).</p>
+<p>On peut calculer la distance AB de plusieurs façons, comme par exemple :</p>
+<ul>
+<li>La <strong>distance euclidienne</strong> qui correspond à celle de la règle graduée :</li>
+</ul>
+<p><span class="arithmatex">\(AB = \sqrt{(x_B - x_A)^2 + (y_B-y_A)^2} = \sqrt{(80-58)^2 + (58-65)^2}\approx 23,087\)</span></p>
+<figure>
+<p><img alt="distance euclidienne" src="../img_kppv/dist_euclidienne.png" width="300px" /></p>
+</figure>
+<ul>
+<li>
+<p>La <strong>distance de Manhattan</strong> qui correspond à la longueur du chemin parcouru pour aller de A à B en se déplaçant le long des arêtes d'un quadrillage généré par un repère orthonormé du plan, comme dans le plan d'une ville où les rues se coupent à angle droit : </p>
+<p><span class="arithmatex">\(AB = |x_B - x_A| + |y_B - y_A| = |80-58| +|58-69|\)</span></p>
+</li>
+</ul>
+<figure>
+<p><img alt="distance manhattan" src="../img_kppv/dist_manhattan.png" width="300px" /></p>
+</figure>
+<p><strong>Remarque</strong> : nous pouvons généraliser à 3, 4 ou <span class="arithmatex">\(n\)</span> dimensions.</p>
+<div class="admonition example">
+<p class="admonition-title">Exercice 4</p>
+<p>On souhaite programmer une fonction donnant la distance la plus courte entre un point de départ et une liste de points. Les points sont tous à coordonnées entières.
+Les points sont donnés sous la forme d'un tuple de deux entiers.
+La liste des points à traiter est donc un tableau de tuples.</p>
+<p>On rappelle que la distance entre deux points du plan de coordonnées <span class="arithmatex">\((x;y)\)</span> et <span class="arithmatex">\((x';y')\)</span> vérifie la formule :</p>
+<p><span class="arithmatex">\(d^2=(x-x')^2+(y-y')^2\)</span></p>
+<p>Compléter le code des fonctions <code>distance_carre</code> et <code>point_le_plus_proche</code> fournies ci-dessous pour qu’elles répondent à leurs spécifications.</p>
+<p><table class="language-python highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span></pre></div></td><td class="code"><div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">def</span> <span class="nf">distance_carre</span><span class="p">(</span><span class="n">point1</span><span class="p">,</span> <span class="n">point2</span><span class="p">):</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>  <span class="sd">&quot;&quot;&quot; Calcule et renvoie la distance au carre entre </span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="sd">  deux points.&quot;&quot;&quot;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a>  <span class="k">return</span> <span class="p">(</span><span class="o">...</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="o">...</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> 
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="k">def</span> <span class="nf">point_le_plus_proche</span><span class="p">(</span><span class="n">depart</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="sd">&quot;&quot;&quot; Renvoie les coordonnées du premier point du tableau tab se trouvant à la plus courte distance du point depart.&quot;&quot;&quot;</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="n">min_point</span> <span class="o">=</span> <span class="n">tab</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="n">min_dist</span> <span class="o">=</span> <span class="o">...</span> 
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)):</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11"></a>    <span class="k">if</span> <span class="n">distance_carre</span><span class="p">(</span><span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">depart</span><span class="p">)</span> <span class="o">&lt;</span> <span class="o">...</span><span class="p">:</span> 
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12"></a>        <span class="n">min_point</span> <span class="o">=</span> <span class="o">...</span> 
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13"></a>        <span class="n">min_dist</span> <span class="o">=</span> <span class="o">...</span> 
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="k">return</span> <span class="n">min_point</span>
+</span></code></pre></div>
+</td></tr></table>
+Exemple :</p>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span>
+<span class="normal"><a href="#__codelineno-5-7">7</a></span>
+<span class="normal"><a href="#__codelineno-5-8">8</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">distance_carre</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="mi">25</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">distance_carre</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="mi">2</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">point_le_plus_proche</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">[(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">)])</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">point_le_plus_proche</span><span class="p">((</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">[(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">)])</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</span></code></pre></div>
+</td></tr></table>
 </div>
 
               
