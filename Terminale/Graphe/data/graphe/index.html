@@ -1340,7 +1340,7 @@ une méthode de résolution automatique via un programme informatique.</p>
 <p>Il existe un moyen plus "visuel" pour représenter ce réseau social : on peut représenter chaque abonné par un cercle (avec le nom de l’abonné situé dans le cercle) et chaque relation "X est ami avec Y" par un segment de droite reliant X et Y ("X est ami avec Y" et "Y est ami avec X" étant représenté par le même segment de droite).</p>
 <p>En modélisant ces prénoms par A,B,C,D,E et F, on obtient avec le réseau social décrit ci-dessus :</p>
 <figure>
-<p><img alt="activite" src="data/graphe1.png" width="200px" /></p>
+<p><img alt="activite" src="../graphe1.png" width="200px" /></p>
 </figure>
 <p>Ce genre de figure s’appelle un graphe non orientés. Les graphes sont des objets mathématiques très
 utilisés, notamment en informatique. Les cercles sont appelés des sommets et les segments de droites qui
@@ -1372,7 +1372,7 @@ extrémité.</li>
 <li>un graphe non-orienté est dit connexe lorsqu’il existe une chaîne pour toute paire de sommet.</li>
 </ul>
 <figure>
-<p><img alt="activite" src="data/graphe2.png" width="600px" /></p>
+<p><img alt="activite" src="../graphe2.png" width="600px" /></p>
 </figure>
 <h2 id="les-graphes-orientes">Les graphes orientés<a class="headerlink" href="#les-graphes-orientes" title="Permanent link">&num;</a></h2>
 <h3 id="un-premier-exemple_1">Un premier exemple<a class="headerlink" href="#un-premier-exemple_1" title="Permanent link">&num;</a></h3>
@@ -1408,7 +1408,7 @@ Les différents lieux sont reliés par les routes suivantes :</p>
 </ul>
 <p>Pour tenir compte de ces nouvelles contraintes, on utilisera un graphe orienté :</p>
 <figure>
-<p><img alt="activite" src="data/graphe4.png" width="300px" /></p>
+<p><img alt="activite" src="../graphe4.png" width="300px" /></p>
 </figure>
 <p>Dans un graphe orienté, les arêtes possèdent une orientation. Ces "arêtes orientées" sont souvent appelées "arcs". On dira qu’un graphe orienté G est un couple G = (V,A) avec V un ensemble de sommets et A un ensemble d’arcs.</p>
 <h3 id="vocabulaire">Vocabulaire<a class="headerlink" href="#vocabulaire" title="Permanent link">&num;</a></h3>
@@ -1427,11 +1427,11 @@ finale. y est le successeur de x et x est le prédécesseur de y.</li>
 <p>Parfois il est intéressant d’associer aux arrêtes ou aux arcs, des valeurs, on parle alors de graphes pondérés.</p>
 <p>Si nous revenons à notre "graphe cartographie", il est possible d’associer à chaque arête la distance en Km entre les 2 lieux :</p>
 <figure>
-<p><img alt="activite" src="data/graphe5.png" width="300px" /></p>
+<p><img alt="activite" src="../graphe5.png" width="300px" /></p>
 </figure>
 <p>Il est aussi possible d’associer à chaque arête la durée du trajet entre 2 points :</p>
 <figure>
-<p><img alt="activite" src="data/graphe6.png" width="300px" /></p>
+<p><img alt="activite" src="../graphe6.png" width="300px" /></p>
 </figure>
 <p>En fonction du choix fait par le conducteur (trajet le plus court "en distance" ou trajet le plus court "en temps"), l’algorithme permettant de déterminer le "chemin le plus court entre 2 points" travaillera sur le graphe "graphe pondéré (Km) cartographie" ou sur le graphe "graphe pondéré (minutes) cartographie". À noter que le "graphe pondéré (minutes) cartographie" peut évoluer au cours du temps en fonction du trafic
 routier : une application comme Waze utilise les données en en provenance des utilisateurs de l’application afin de mettre à jour en temps réél leur "graphe pondéré (minutes) cartographie".</p>

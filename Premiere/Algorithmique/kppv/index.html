@@ -1630,15 +1630,21 @@ Que constatez-vous ?</p>
 <p><img alt="distance manhattan" src="../img_kppv/dist_manhattan.png" width="300px" /></p>
 </figure>
 <p><strong>Remarque</strong> : nous pouvons généraliser à 3, 4 ou <span class="arithmatex">\(n\)</span> dimensions.</p>
-<div class="admonition example">
-<p class="admonition-title">Exercice 4</p>
-<p>On souhaite programmer une fonction donnant la distance la plus courte entre un point de départ et une liste de points. Les points sont tous à coordonnées entières.
-Les points sont donnés sous la forme d'un tuple de deux entiers.
-La liste des points à traiter est donc un tableau de tuples.</p>
-<p>On rappelle que la distance entre deux points du plan de coordonnées <span class="arithmatex">\((x;y)\)</span> et <span class="arithmatex">\((x';y')\)</span> vérifie la formule :</p>
-<p><span class="arithmatex">\(d^2=(x-x')^2+(y-y')^2\)</span></p>
-<p>Compléter le code des fonctions <code>distance_carre</code> et <code>point_le_plus_proche</code> fournies ci-dessous pour qu’elles répondent à leurs spécifications.</p>
-<p><table class="language-python highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<!-- 
+!!! example "Exercice 4"
+    On souhaite programmer une fonction donnant la distance la plus courte entre un point de départ et une liste de points. Les points sont tous à coordonnées entières.
+    Les points sont donnés sous la forme d'un tuple de deux entiers.
+    La liste des points à traiter est donc un tableau de tuples.
+
+    On rappelle que la distance entre deux points du plan de coordonnées $(x;y)$ et $(x';y')$ vérifie la formule :
+
+    $d^2=(x-x')^2+(y-y')^2$
+
+
+
+    Compléter le code des fonctions `distance_carre` et `point_le_plus_proche` fournies ci-dessous pour qu’elles répondent à leurs spécifications.
+
+    <table class="language-python highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
@@ -1667,25 +1673,18 @@ La liste des points à traiter est donc un tableau de tuples.</p>
 </span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="k">return</span> <span class="n">min_point</span>
 </span></code></pre></div>
 </td></tr></table>
-Exemple :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
-<span class="normal"><a href="#__codelineno-5-2">2</a></span>
-<span class="normal"><a href="#__codelineno-5-3">3</a></span>
-<span class="normal"><a href="#__codelineno-5-4">4</a></span>
-<span class="normal"><a href="#__codelineno-5-5">5</a></span>
-<span class="normal"><a href="#__codelineno-5-6">6</a></span>
-<span class="normal"><a href="#__codelineno-5-7">7</a></span>
-<span class="normal"><a href="#__codelineno-5-8">8</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">distance_carre</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="mi">25</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">distance_carre</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="mi">2</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">point_le_plus_proche</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">[(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">)])</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">point_le_plus_proche</span><span class="p">((</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">[(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">)])</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
-</div>
+    Exemple :
+
+    ```py linenums='1'
+    >>> distance_carre((1, 0), (5, 3))
+    25
+    >>> distance_carre((1, 0), (0, 1))
+    2
+    >>> point_le_plus_proche((0, 0), [(7, 9), (2, 5), (5, 2)])
+    (2, 5)
+    >>> point_le_plus_proche((5, 2), [(7, 9), (2, 5), (5, 2)])
+    (5, 2)
+    ``` -->
 
               
             </article>
