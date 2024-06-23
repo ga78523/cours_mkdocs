@@ -186,6 +186,21 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://example.com/Terminale/BDD/BDD_SQLITE_python/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/Terminale/BDD/sql_sqlite/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/Terminale/BDD/voc_bdd/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://example.com/Terminale/Programmation/decidabilite_calculabilite/</loc>
          <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
