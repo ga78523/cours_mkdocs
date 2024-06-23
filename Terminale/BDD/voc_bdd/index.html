@@ -1182,6 +1182,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sql_sqlite/" class="md-nav__link">
+        SQL avec SQLITE
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1923,10 +1937,13 @@ tant que valeur de clé primaire dans une autre table.</p>
 <li>les clés étrangères (précédées d’un #)</li>
 </ul>
 <p>Pour notre exemple cela donne :</p>
-<div class="language-SQL highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">LIVRES</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">entiers</span><span class="w"> </span><span class="n">positifs</span><span class="p">,</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="o">#</span><span class="n">id_auteur</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">entiers</span><span class="w"> </span><span class="n">positifs</span><span class="p">,</span><span class="w"> </span><span class="n">ann_publi</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">entiers</span><span class="w"> </span><span class="n">positifs</span><span class="p">,</span><span class="w"> </span><span class="n">note</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">entiers</span><span class="w"> </span><span class="n">positifs</span><span class="p">)</span><span class="w"></span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">AUTEURS</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">entiers</span><span class="w"> </span><span class="n">positifs</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="n">ann_naissance</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">entiers</span><span class="w"> </span><span class="n">positifs</span><span class="p">,</span><span class="w"> </span><span class="n">langue_ecriture</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<table class="language-sql highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div class="language-sql highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">LIVRES</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">entiers</span><span class="w"> </span><span class="n">positifs</span><span class="p">,</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="o">#</span><span class="n">id_auteur</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">entiers</span><span class="w"> </span><span class="n">positifs</span><span class="p">,</span><span class="w"> </span><span class="n">ann_publi</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">entiers</span><span class="w"> </span><span class="n">positifs</span><span class="p">,</span><span class="w"> </span><span class="n">note</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">entiers</span><span class="w"> </span><span class="n">positifs</span><span class="p">)</span><span class="w"></span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">AUTEURS</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">entiers</span><span class="w"> </span><span class="n">positifs</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="n">ann_naissance</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">entiers</span><span class="w"> </span><span class="n">positifs</span><span class="p">,</span><span class="w"> </span><span class="n">langue_ecriture</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
 </span></code></pre></div>
+</td></tr></table>
 <p>On peut aussi représenter ce schéma relationnel par :</p>
 <figure>
 <p><img alt="schema" src="../data_voc/schem.png" width="300px" /></p>
@@ -1940,7 +1957,8 @@ tant que valeur de clé primaire dans une autre table.</p>
 <th>Nom</th>
 <th>Prénom</th>
 <th>Date de naissance</th>
-<th>Spé 1 &amp; Spé 2</th>
+<th>Spé 1</th>
+<th>Spé 2</th>
 </tr>
 </thead>
 <tbody>
@@ -1948,19 +1966,22 @@ tant que valeur de clé primaire dans une autre table.</p>
 <td>Garcin</td>
 <td>Catherine</td>
 <td>13/01/2002</td>
-<td>Maths &amp; PC</td>
+<td>Maths</td>
+<td>PC</td>
 </tr>
 <tr>
 <td>Thy</td>
 <td>jean</td>
 <td>11/08/2001</td>
-<td>Maths&amp;NSI</td>
+<td>Maths</td>
+<td>NSI</td>
 </tr>
 <tr>
 <td>Thonnin</td>
 <td>Jean</td>
 <td>11/08/2001</td>
-<td>NSI &amp; Maths</td>
+<td>NSI</td>
+<td>Maths</td>
 </tr>
 </tbody>
 </table>
@@ -1994,13 +2015,13 @@ tant que valeur de clé primaire dans une autre table.</p>
       
       
         
-        <a href="../../Programmation/Recursivite/recursivite/" class="md-footer__link md-footer__link--next" aria-label="Next: Cours" rel="next">
+        <a href="../sql_sqlite/" class="md-footer__link md-footer__link--next" aria-label="Next: SQL avec SQLITE" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Cours
+              SQL avec SQLITE
             </div>
           </div>
           <div class="md-footer__button md-icon">
