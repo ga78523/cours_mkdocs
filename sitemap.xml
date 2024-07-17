@@ -2,262 +2,267 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://example.com/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/about/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Logiciels/git/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Logiciels/installation_filius/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Logiciels/vscode/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Physique/Seconde/TP_loi_Descartes/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Physique/Seconde/TP_vecteur_vitesse_point/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Physique/Seconde/mesure_c_son/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Physique/Seconde/tp_mesure_distance/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Physique/Seconde/tp_verrerie/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/cours_juin_1NSI/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/Algorithmique/gloutons/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/Algorithmique/kppv/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/Algorithmique/outil_algo/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/Algorithmique/tris/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/Algorithmique/tris_correction/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/ArchitectureMaterielle/OS/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/ArchitectureMaterielle/com_Linux_detail/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/ArchitectureMaterielle/neumann/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/ArchitectureMaterielle/img_OS/Tri_Pascal/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/Donnees/codage_entier/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/Donnees/codage_entier_rel/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/IHM/bootstrap/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/IHM/events_js/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/IHM/formulaire/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/IHM/web_1NSI/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/Langage/Bases_Python/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/Langage/ControleFlux_Python/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/Premiere/Langage/fonction_python/</loc>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/SNT/correction_DS4/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/SNT/html/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/SNT/image/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/algos_coeur/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/exercices/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/imprimantes/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/ArchitectureMaterielle/SOC/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/ArchitectureMaterielle/commande_linux/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/ArchitectureMaterielle/processus/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/BDD/BDD_SQLITE_python/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/BDD/sql_sqlite/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/BDD/voc_bdd/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/Programmation/decidabilite_calculabilite/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/Programmation/objet/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/Programmation/prog_dyn/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/Programmation/Recursivite/exos_Bac_rec/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/Programmation/Recursivite/exos_correc_Bac_rec/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/Programmation/Recursivite/recursivite/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/Struct_donnees/dictionnaires/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/Struct_donnees/graphe/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/Struct_donnees/graphe_parcours/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/Struct_donnees/listes/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/Struct_donnees/piles_files/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/Struct_donnees/data/graphe/</loc>
-         <lastmod>2024-07-02</lastmod>
+         <lastmod>2024-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
