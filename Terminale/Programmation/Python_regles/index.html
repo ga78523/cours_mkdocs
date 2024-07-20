@@ -1070,6 +1070,14 @@
     Espaces, indentations, lignes blanches
   </a>
   
+    <nav class="md-nav" aria-label="Espaces, indentations, lignes blanches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#indentation" class="md-nav__link">
+    Indentation
+  </a>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1083,6 +1091,11 @@
   <a href="#lignes-blanches" class="md-nav__link">
     Lignes blanches
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1815,6 +1828,14 @@
     Espaces, indentations, lignes blanches
   </a>
   
+    <nav class="md-nav" aria-label="Espaces, indentations, lignes blanches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#indentation" class="md-nav__link">
+    Indentation
+  </a>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1828,6 +1849,11 @@
   <a href="#lignes-blanches" class="md-nav__link">
     Lignes blanches
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1951,7 +1977,7 @@
 </span></code></pre></div>
 </td></tr></table>
 <ul>
-<li>On importe uniquement la fonction \mintinline{python}{randint} du module \mintinline{python}{random}. Plus de préfixe mais uniquement la fonction \mintinline{python}{randint} est disponible. </li>
+<li>On importe uniquement la fonction \mintinline{python}{randint} du module \mintinline{python}{random}. Plus de préfixe mais uniquement la fonction \mintinline{python}{randint} est disponible.</li>
 </ul>
 <table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
@@ -2027,7 +2053,7 @@
 <li>parenthèse, crochet ou guillemet mal fermé (\textbf{SyntaxError}) ;</li>
 <li>mauvaise indentation (\textbf{IndentationError})</li>
 </ul>
-<p><strong>Exemple :</strong>
+<p><strong>Exemple :</strong></p>
 <table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">2</a></span>
 <span class="normal"><a href="#__codelineno-5-3">3</a></span>
@@ -2046,7 +2072,7 @@
 </span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8"></a>        <span class="o">^</span>
 </span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">syntax</span>
 </span></code></pre></div>
-</td></tr></table></p>
+</td></tr></table>
 <p>L'erreur signalée ligne 3, est en fait ligne 2 : il manque une parenthèse fermante. Comme les instructions peuvent courir plusieurs lignes, elle n'est détectée que ligne 3.</p>
 <h3 id="erreur-a-lexecution">Erreur à l'exécution<a class="headerlink" href="#erreur-a-lexecution" title="Permanent link">&num;</a></h3>
 <p>Les exceptions levées à l'exécution sont plus difficiles à trouver, car elles nécessitent de comprendre (à différents degrés) l'exécution du code. Elles sont également plus variées :</p>
@@ -2071,8 +2097,8 @@
 </span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7"></a>        <span class="n">a</span><span class="o">=</span><span class="n">a</span><span class="o">/</span><span class="p">(</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="p">)</span>
 </span></code></pre></div>
 </td></tr></table>
-<p>Lors de l'exécution du fichier <code>error.py</code>, une erreur de type <code>ZeroDivisionError</code> a été levée, ligne 3 (a=a/(b+c)), dans la fonction f1(). La fonction en question a été exécutée suite à un appel sur la ligne 7, dans la fonction principale f2, qui elle même a été appelée par la ligne 10 du programme principal. </p>
-<p><strong>Remarque : </strong>Grace Hopper rapporte en 1947 un cas de bug devenu célèbre : il s'agissait d'un insecte (Bug en anglais) ayant provoqué des erreurs de calcul dans un  ordinateur Mark II</p>
+<p>Lors de l'exécution du fichier <code>error.py</code>, une erreur de type <code>ZeroDivisionError</code> a été levée, ligne 3 (a=a/(b+c)), dans la fonction f1(). La fonction en question a été exécutée suite à un appel sur la ligne 7, dans la fonction principale f2, qui elle même a été appelée par la ligne 10 du programme principal.</p>
+<p><strong>Remarque :</strong>Grace Hopper rapporte en 1947 un cas de bug devenu célèbre : il s'agissait d'un insecte (Bug en anglais) ayant provoqué des erreurs de calcul dans un  ordinateur Mark II</p>
 <h3 id="traitement-des-exceptions">Traitement des exceptions<a class="headerlink" href="#traitement-des-exceptions" title="Permanent link">&num;</a></h3>
 <p>Soit le programme suivant :</p>
 <table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
@@ -2100,7 +2126,7 @@
 </span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="ne">ZeroDivisionError</span><span class="p">:</span> <span class="nb">float</span> <span class="n">division</span> <span class="n">by</span> <span class="n">zero</span>
 </span></code></pre></div>
 </td></tr></table>
-<p>La dernière ligne du message d'erreur indique ce qui s'est passé. Dans notre exemple, 
+<p>La dernière ligne du message d'erreur indique ce qui s'est passé. Dans notre exemple,
 le type de l'exception est ZeroDivisionError. On peut détecter les exceptions et réagir quand elle surviennent grâce aux instructions <code>try/except</code> :</p>
 <table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
@@ -2185,7 +2211,7 @@ le type de l'exception est ZeroDivisionError. On peut détecter les exceptions e
 <p>Dans ce cas, lever une exception n'est pas forcement  la meilleure solution, on aurait pu utiliser un <code>assert</code>.</p>
 <h3 id="debogueur">Débogueur<a class="headerlink" href="#debogueur" title="Permanent link">&num;</a></h3>
 <p>Le débogueur permet de dérouler un programme pas à pas et de vérifier l'état de chaque variable. C'est un outil parfois indispensable pour comprendre les bugs complexes.</p>
-<p>%Le débugeur post-mortem permet d'inspecter l'état du programme (contenu des variables par exemple) à partir du lieu où l'exception a été levée. C'est souvent suffisant pour comprendre une erreur. </p>
+<p>%Le débugeur post-mortem permet d'inspecter l'état du programme (contenu des variables par exemple) à partir du lieu où l'exception a été levée. C'est souvent suffisant pour comprendre une erreur.</p>
 <p>La plupart des environnements de développement proposent un débogueur.</p>
 <h2 id="mise-en-forme">Mise en forme<a class="headerlink" href="#mise-en-forme" title="Permanent link">&num;</a></h2>
 <p>On oublie souvent qu'un programme sera relu et modifié par quelqu'un d'autre : son auteur ou par un autre développeur. Adopter un style d'écriture standard facilite cette relecture.</p>
@@ -2193,7 +2219,7 @@ le type de l'exception est ZeroDivisionError. On peut détecter les exceptions e
 <p>Syntaxiquement, les noms de variables, de fonctions , de classes, de méthodes,
 d'attributs, peuvent comporter des lettres, des chiffres, des caractères "_" et ne doivent pas commencer par un chiffre.</p>
 <p>Quelque soit le langage, on choisira un nom d'autant plus évocateur qu'il est utilisé dans une grande portion de code.</p>
-<p>La PEP 8 ( guide de style Python accessible sur \url{https://www.python.org/dev/peps/peps-008/} ajoute les conventions suivantes :</p>
+<p>La PEP 8 ( guide de style Python accessible sur \url{<a href="https://www.python.org/dev/peps/peps-008/}">https://www.python.org/dev/peps/peps-008/}</a> ajoute les conventions suivantes :</p>
 <ul>
 <li>nom de modules courts, en minuscules et de préférence sans "_". Exemple : <code>crypto}</code>.</li>
 <li>nom de classes ou de types en CamelCase, c'est-à-dire en minuscules, sans "_"  avec un majuscule en début de chaque mot. Exemple : <code>Class NombrePremier</code>.</li>
@@ -2202,8 +2228,8 @@ d'attributs, peuvent comporter des lettres, des chiffres, des caractères "_" et
 <li>les variables utilisés comme constantes sont en majuscules, les mots séparés par des "_". Exemple : <code>TOTAL_MAX=10</code></li>
 </ul>
 <h3 id="espaces-indentations-lignes-blanches">Espaces, indentations, lignes blanches<a class="headerlink" href="#espaces-indentations-lignes-blanches" title="Permanent link">&num;</a></h3>
-<p>\subsubsection{Indentation}
-Les blocs Python sont délimités par l'indentation. La PEP 8 propose d'indenter les blocs à l'aide de 4 espaces (la plupart des éditeurs Python utilisent ce réglage).</p>
+<h4 id="indentation">Indentation<a class="headerlink" href="#indentation" title="Permanent link">&num;</a></h4>
+<p>Les blocs Python sont délimités par l'indentation. La PEP 8 propose d'indenter les blocs à l'aide de 4 espaces (la plupart des éditeurs Python utilisent ce réglage).</p>
 <p>Une ligne ne devrait pas excéder 79 caractères (cette règle est parfois transgressée). Lorsqu'une instruction court sur plusieurs lignes, on facilite la lecture en indentant. Exemple tiré de la PEP 8 :</p>
 <table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
 <span class="normal"><a href="#__codelineno-14-2">2</a></span>
@@ -2213,14 +2239,14 @@ Les blocs Python sont délimités par l'indentation. La PEP 8 propose d'indenter
 </span></code></pre></div>
 </td></tr></table>
 <p>Enfin, on écrit une seule instruction par ligne.</p>
-<h3 id="espaces">Espaces<a class="headerlink" href="#espaces" title="Permanent link">&num;</a></h3>
+<h4 id="espaces">Espaces<a class="headerlink" href="#espaces" title="Permanent link">&num;</a></h4>
 <p>Les règles suivantes permettent de bien distribuer les espaces :</p>
 <ul>
 <li>pas d'espace avant le ":" ;</li>
 <li>espace après (mais pas avant) les "," dans les appels ou dans les définitions de fonctions ;</li>
 <li>espaces autour de "=" (pour l'affectation) et des opérateurs arithmétiques, sauf si il y en a beaucoup sur la ligne (dans ce cas, ne pas mettre d'espaces autour des plus prioritaires) ;</li>
 <li>pas d'espaces après "({[", ni avant le ")]}" ;</li>
-<li>pas d'espaces autour de ":" dans les \textit{slices}. </li>
+<li>pas d'espaces autour de ":" dans les \textit{slices}.</li>
 </ul>
 <p><strong>Exemples</strong></p>
 <table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
@@ -2242,7 +2268,7 @@ Les blocs Python sont délimités par l'indentation. La PEP 8 propose d'indenter
 </span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="n">dico</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;6&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="s2">&quot;7&quot;</span><span class="p">:</span> <span class="mi">13</span><span class="p">,</span> <span class="s2">&quot;8&quot;</span><span class="p">:</span> <span class="mi">21</span><span class="p">}</span>
 </span></code></pre></div>
 </td></tr></table>
-<h3 id="lignes-blanches">Lignes blanches<a class="headerlink" href="#lignes-blanches" title="Permanent link">&num;</a></h3>
+<h4 id="lignes-blanches">Lignes blanches<a class="headerlink" href="#lignes-blanches" title="Permanent link">&num;</a></h4>
 <p>On laisse deux lignes vides entre les différentes fonctions ou classes à l'intérieur d'un module;</p>
 <p>Au sein d'une classe, les méthodes sont séparées par une seule ligne blanche.</p>
 <h3 id="outil-de-validation">Outil de validation<a class="headerlink" href="#outil-de-validation" title="Permanent link">&num;</a></h3>
