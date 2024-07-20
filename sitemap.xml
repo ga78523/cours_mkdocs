@@ -206,6 +206,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://example.com/Terminale/Programmation/Python_regles/</loc>
+         <lastmod>2024-07-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://example.com/Terminale/Programmation/decidabilite_calculabilite/</loc>
          <lastmod>2024-07-20</lastmod>
          <changefreq>daily</changefreq>
