@@ -1763,31 +1763,34 @@ Pour la ville de départ, le voyageur a   __ choix possibles ;</p>
 <p>Pour le choix de la <span class="arithmatex">\(4^{ème}\)</span> ville, il lui reste __ possibilités ;</p>
 <p>Pour le choix de la <span class="arithmatex">\(5^{ème}\)</span> ville, il lui reste __ possibilités ;</p>
 </div>
-<details class="done">
-<summary>Réponse</summary>
-<p>Pour la ville de départ, le voyageur a   5 choix possibles ;</p>
-<p>Pour le choix de la <span class="arithmatex">\(2^{nde}\)</span> ville, il lui reste 4 possibilités ;</p>
-<p>Pour le choix de la <span class="arithmatex">\(3^{ème}\)</span> ville, il lui reste 3 possibilités ;</p>
-<p>Pour le choix de la <span class="arithmatex">\(4^{ème}\)</span> ville, il lui reste 2 possibilités ;</p>
-<p>Pour le choix de la <span class="arithmatex">\(5^{ème}\)</span> ville, il lui reste 1 possibilité.</p>
-</details>
+<!-- ??? done "Réponse"
+    Pour la ville de départ, le voyageur a   5 choix possibles ;
+
+    Pour le choix de la $2^{nde}$ ville, il lui reste 4 possibilités ;
+
+    Pour le choix de la $3^{ème}$ ville, il lui reste 3 possibilités ;
+
+    Pour le choix de la $4^{ème}$ ville, il lui reste 2 possibilités ;
+
+    Pour le choix de la $5^{ème}$ ville, il lui reste 1 possibilité. -->
+
 <div class="admonition example">
 <p class="admonition-title">Exercice 2 :</p>
 <p>Au final, déterminer le nombre de trajets possibles pour 5 villes puis pour <span class="arithmatex">\(n\)</span> villes.</p>
 </div>
-<details class="done">
-<summary>Réponse</summary>
-<p>Pour 5 villes, on aura donc : 5×4×3×2×1 = 120 possibilités mathématiquement cela correspond à la factorielle 5, notée 5 !
-Pour n villes, on aura n ! = n×(n-1) ×(n-2) ×… 3 ×2 ×1</p>
-</details>
+<!-- ??? done "Réponse"
+    Pour 5 villes, on aura donc : 5×4×3×2×1 = 120 possibilités mathématiquement cela correspond à la factorielle 5, notée 5 !
+    Pour n villes, on aura n ! = n×(n-1) ×(n-2) ×… 3 ×2 ×1
+ -->
+
 <div class="admonition example">
 <p class="admonition-title">Exercice 3 :</p>
 <p>Parmi les différents trajets possibles, y en aura-t-il qui auront systématiquement la même distance ? En déduire le nombre de distances possibles pour n villes. Calculer ce nombre pour 10 villes, 20 villes...</p>
 </div>
-<details class="done">
-<summary>Réponse</summary>
-<p>Oui le trajet dans un sens puis le même trajet dans le sens contraire auront la même distance. Cela divise donc le nombre de distances possibles par 2, à savoir 𝑛!/2.  Pour 10 villes : 10!/ 2 = 1 814 400 possibilités et pour 20 villes : 20 ! / 2 = <span class="arithmatex">\(1,2.10^{18}\)</span> possibilités</p>
-</details>
+<!-- ??? done "Réponse"
+    Oui le trajet dans un sens puis le même trajet dans le sens contraire auront la même distance. Cela divise donc le nombre de distances possibles par 2, à savoir 𝑛!/2.  Pour 10 villes : 10!/ 2 = 1 814 400 possibilités et pour 20 villes : 20 ! / 2 = $1,2.10^{18}$ possibilités
+ -->
+
 <h3 id="necessite-dalgorithmes-gloutons">Nécessité d'algorithmes gloutons<a class="headerlink" href="#necessite-dalgorithmes-gloutons" title="Permanent link">&num;</a></h3>
 <p>Les algorithmiciens qui se sont penchés sur ce problème ont de solides raisons de penser qu'il n'existe aucun algorithme qui donnera une solution optimale en un temps optimal lorsque <span class="arithmatex">\(n\)</span> est grand. Cependant, certains algorithmes, dit gloutons, sont capables de donner rapidement une solution acceptable.</p>
 <p><strong>Résolution approchée :</strong></p>
@@ -1826,160 +1829,106 @@ Pour n villes, on aura n ! = n×(n-1) ×(n-2) ×… 3 ×2 ×1</p>
 <li>La distance Paris-Metz, instruction :</li>
 </ul>
 </div>
-<details class="done">
-<summary>Réponse</summary>
-<ul>
-<li>Paris" instruction : <code>villes[2]</code></li>
-<li>"Nancy" instruction : <code>villes[3]</code></li>
-<li>La distance Paris-Nancy instruction : <code>distance[0][2]</code> ou <code>distance[2][0]</code></li>
-<li>La distance Paris-Metz instruction : <code>distance[1][2]</code> ou <code>distance[2][1]</code></li>
-</ul>
-</details>
+<!-- ??? done "Réponse"
+
+    * Paris" instruction : `villes[2]`
+    * "Nancy" instruction : `villes[3]`
+    * La distance Paris-Nancy instruction : `distance[0][2]` ou `distance[2][0]`
+    * La distance Paris-Metz instruction : `distance[1][2]` ou `distance[2][1]`
+ -->
 <div class="admonition example">
 <p class="admonition-title">Exercice 7 :</p>
 <p>Existe-t-il un lien entre la liste villes et la liste de listes distance (dans la liste villes, peut on inverser 2 éléments sans retoucher la liste distance ?)</p>
 </div>
-<details class="done">
-<summary>Réponse</summary>
-<p>Oui, les 2 listes sont intimement liées. Si l’on en modifie une, il faut modifier l’autre.</p>
-</details>
+<!-- ??? done "Réponse"
+    Oui, les 2 listes sont intimement liées. Si l’on en modifie une, il faut modifier l’autre.
+ -->
 <div class="admonition example">
 <p class="admonition-title">Exercice 8 :</p>
 <p>Créer un tableau de booléen nommé visitees qui indiquera si la ville a été visitée (True) ou non (False). Au départ, comment faut-il initialiser les éléments de la liste ?</p>
 </div>
-<details class="done">
-<summary>Réponse</summary>
-<p>Au départ, aucune ville n’a été visitée, on rempli donc le tableau <span class="arithmatex">\(n\)</span> fois avec <code>False</code>.</p>
-<table class="language-python highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<!-- ??? done "Réponse"
+    Au départ, aucune ville n’a été visitée, on rempli donc le tableau $n$ fois avec `False`.
+
+    <table class="language-python highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">villes</span><span class="p">)</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">visitees</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span>
 </span></code></pre></div>
 </td></tr></table>
-</details>
+ -->
+
 <div class="admonition example">
 <p class="admonition-title">Exercice 9 :</p>
 <p>Écrire une fonction nommée plusProche, qui prend en arguments l'indice de la ville, la liste visitees et le tableau distance et qui va retourner l'indice de la ville la plus proche. Attention à bien initialiser le tableau visitees pour tester la fonction, la ville choisie est supposée avoir été visitée. On utilisera une variable locale nommée pp, initialement initialisée avec la valeur None, et à qui l'on assignera ensuite l'indice de la ville la plus proche.</p>
 </div>
-<details class="done">
-<summary>Réponse</summary>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-3-10">10</a></span>
-<span class="normal"><a href="#__codelineno-3-11">11</a></span>
-<span class="normal"><a href="#__codelineno-3-12">12</a></span>
-<span class="normal"><a href="#__codelineno-3-13">13</a></span>
-<span class="normal"><a href="#__codelineno-3-14">14</a></span>
-<span class="normal"><a href="#__codelineno-3-15">15</a></span>
-<span class="normal"><a href="#__codelineno-3-16">16</a></span>
-<span class="normal"><a href="#__codelineno-3-17">17</a></span>
-<span class="normal"><a href="#__codelineno-3-18">18</a></span>
-<span class="normal"><a href="#__codelineno-3-19">19</a></span>
-<span class="normal"><a href="#__codelineno-3-20">20</a></span>
-<span class="normal"><a href="#__codelineno-3-21">21</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">villes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Nancy&quot;</span><span class="p">,</span> <span class="s2">&quot;Metz&quot;</span><span class="p">,</span> <span class="s2">&quot;Paris&quot;</span><span class="p">,</span> <span class="s2">&quot;Reims&quot;</span><span class="p">,</span> <span class="s2">&quot;Troyes&quot;</span><span class="p">]</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">distance</span> <span class="o">=</span><span class="p">[</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">55</span><span class="p">,</span><span class="mi">303</span><span class="p">,</span><span class="mi">188</span><span class="p">,</span><span class="mi">183</span><span class="p">],</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="p">[</span><span class="mi">55</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">306</span><span class="p">,</span><span class="mi">176</span><span class="p">,</span><span class="mi">203</span><span class="p">],</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="p">[</span><span class="mi">303</span><span class="p">,</span><span class="mi">306</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">142</span><span class="p">,</span><span class="mi">153</span><span class="p">],</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="p">[</span><span class="mi">188</span><span class="p">,</span><span class="mi">176</span><span class="p">,</span><span class="mi">142</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">123</span><span class="p">],</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="p">[</span><span class="mi">183</span><span class="p">,</span><span class="mi">203</span><span class="p">,</span><span class="mi">153</span><span class="p">,</span><span class="mi">123</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="p">]</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="k">def</span> <span class="nf">plus_proche</span><span class="p">(</span><span class="n">ville</span><span class="p">:</span><span class="nb">int</span><span class="p">,</span> <span class="n">distance</span><span class="p">:</span><span class="nb">list</span><span class="p">,</span> <span class="n">visitees</span><span class="p">:</span><span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span> <span class="p">:</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a>    <span class="n">pp</span> <span class="o">=</span> <span class="kc">None</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">visitees</span><span class="p">))</span> <span class="p">:</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a>        <span class="k">if</span> <span class="n">visitees</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="kc">False</span> <span class="p">:</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a>            <span class="k">if</span> <span class="n">pp</span> <span class="o">==</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">distance</span> <span class="p">[</span><span class="n">ville</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">distance</span><span class="p">[</span><span class="n">ville</span><span class="p">][</span><span class="n">pp</span><span class="p">]</span> <span class="p">:</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13"></a>                <span class="n">pp</span> <span class="o">=</span> <span class="n">i</span>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14"></a>    <span class="k">return</span> <span class="n">pp</span>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15"></a>
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="c1"># programme principal</span>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="n">visitees</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">villes</span><span class="p">)</span>
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18"></a>
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="c1"># recherche de la ville la plus proche de Paris (indice 2)</span>
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="n">visitees</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1"># Paris est considérée comme visitée</span>
-</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="nb">print</span><span class="p">(</span><span class="n">plus_proche</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">distance</span><span class="p">,</span> <span class="n">visitees</span><span class="p">))</span>
-</span></code></pre></div>
-</td></tr></table>
-</details>
+<!-- ??? done "Réponse"
+
+    ``` py linenums='1'
+    villes = ["Nancy", "Metz", "Paris", "Reims", "Troyes"]
+    distance =[ [0,55,303,188,183],
+    [55,0,306,176,203],
+    [303,306,0,142,153],
+    [188,176,142,0,123],
+    [183,203,153,123,0] ]
+
+    def plus_proche(ville:int, distance:list, visitees:list) -> int :
+        pp = None
+        for i in range (len(visitees)) :
+            if visitees[i] == False :
+                if pp == None or distance [ville][i] < distance[ville][pp] :
+                    pp = i
+        return pp
+
+    # programme principal
+    visitees = [False] * len(villes)
+
+    # recherche de la ville la plus proche de Paris (indice 2)
+    visitees[2] = True # Paris est considérée comme visitée
+    print(plus_proche(2, distance, visitees))
+    ``` -->
+
 <div class="admonition example">
 <p class="admonition-title">Exercice 10 :</p>
 <p>Écrire maintenant une fonction nommée voyage, qui prend en arguments l'indice de la ville de départ, le tableau distance et la liste villes), affiche les distances parcourues entre chaque ville et retourne la distance totale parcourue. On utilisera 2 variables locales courante et suivante à qui l'on assignera l'indice de la ville en cours de visite et de la ville suivante. </p>
 </div>
-<details class="done">
-<summary>Réponse</summary>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-4-10">10</a></span>
-<span class="normal"><a href="#__codelineno-4-11">11</a></span>
-<span class="normal"><a href="#__codelineno-4-12">12</a></span>
-<span class="normal"><a href="#__codelineno-4-13">13</a></span>
-<span class="normal"><a href="#__codelineno-4-14">14</a></span>
-<span class="normal"><a href="#__codelineno-4-15">15</a></span>
-<span class="normal"><a href="#__codelineno-4-16">16</a></span>
-<span class="normal"><a href="#__codelineno-4-17">17</a></span>
-<span class="normal"><a href="#__codelineno-4-18">18</a></span>
-<span class="normal"><a href="#__codelineno-4-19">19</a></span>
-<span class="normal"><a href="#__codelineno-4-20">20</a></span>
-<span class="normal"><a href="#__codelineno-4-21">21</a></span>
-<span class="normal"><a href="#__codelineno-4-22">22</a></span>
-<span class="normal"><a href="#__codelineno-4-23">23</a></span>
-<span class="normal"><a href="#__codelineno-4-24">24</a></span>
-<span class="normal"><a href="#__codelineno-4-25">25</a></span>
-<span class="normal"><a href="#__codelineno-4-26">26</a></span>
-<span class="normal"><a href="#__codelineno-4-27">27</a></span>
-<span class="normal"><a href="#__codelineno-4-28">28</a></span>
-<span class="normal"><a href="#__codelineno-4-29">29</a></span>
-<span class="normal"><a href="#__codelineno-4-30">30</a></span>
-<span class="normal"><a href="#__codelineno-4-31">31</a></span>
-<span class="normal"><a href="#__codelineno-4-32">32</a></span>
-<span class="normal"><a href="#__codelineno-4-33">33</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">villes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Nancy&quot;</span><span class="p">,</span> <span class="s2">&quot;Metz&quot;</span><span class="p">,</span> <span class="s2">&quot;Paris&quot;</span><span class="p">,</span> <span class="s2">&quot;Reims&quot;</span><span class="p">,</span> <span class="s2">&quot;Troyes&quot;</span><span class="p">]</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">distance</span> <span class="o">=</span><span class="p">[</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">55</span><span class="p">,</span><span class="mi">303</span><span class="p">,</span><span class="mi">188</span><span class="p">,</span><span class="mi">183</span><span class="p">],</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>            <span class="p">[</span><span class="mi">55</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">306</span><span class="p">,</span><span class="mi">176</span><span class="p">,</span><span class="mi">203</span><span class="p">],</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a>            <span class="p">[</span><span class="mi">303</span><span class="p">,</span><span class="mi">306</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">142</span><span class="p">,</span><span class="mi">153</span><span class="p">],</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a>            <span class="p">[</span><span class="mi">188</span><span class="p">,</span><span class="mi">176</span><span class="p">,</span><span class="mi">142</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">123</span><span class="p">],</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a>            <span class="p">[</span><span class="mi">183</span><span class="p">,</span><span class="mi">203</span><span class="p">,</span><span class="mi">153</span><span class="p">,</span><span class="mi">123</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="p">]</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="k">def</span> <span class="nf">plus_proche</span><span class="p">(</span><span class="n">ville</span><span class="p">:</span><span class="nb">int</span><span class="p">,</span> <span class="n">distance</span><span class="p">:</span><span class="nb">list</span><span class="p">,</span> <span class="n">visitees</span><span class="p">:</span><span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span> <span class="p">:</span>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9"></a>    <span class="n">pp</span> <span class="o">=</span> <span class="kc">None</span>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">visitees</span><span class="p">))</span> <span class="p">:</span>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11"></a>        <span class="k">if</span> <span class="n">visitees</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="kc">False</span> <span class="p">:</span>
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12"></a>            <span class="k">if</span> <span class="n">pp</span> <span class="o">==</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">distance</span> <span class="p">[</span><span class="n">ville</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">distance</span><span class="p">[</span><span class="n">ville</span><span class="p">][</span><span class="n">pp</span><span class="p">]</span> <span class="p">:</span>
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13"></a>                <span class="n">pp</span> <span class="o">=</span> <span class="n">i</span>
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14"></a>    <span class="k">return</span> <span class="n">pp</span>
-</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15"></a>
-</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="k">def</span> <span class="nf">voyage</span><span class="p">(</span><span class="n">depart</span><span class="p">,</span> <span class="n">distance</span><span class="p">,</span> <span class="n">villes</span><span class="p">)</span> <span class="p">:</span>
-</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17"></a>    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">villes</span><span class="p">)</span>
-</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18"></a>    <span class="n">distanceParcourue</span> <span class="o">=</span> <span class="mi">0</span>
-</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19"></a>    <span class="n">visitees</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span>
-</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20"></a>    <span class="n">courante</span> <span class="o">=</span> <span class="n">depart</span>
-</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22"></a>        <span class="n">visitees</span><span class="p">[</span><span class="n">courante</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
-</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23"></a>        <span class="n">suivante</span> <span class="o">=</span> <span class="n">plusProche</span><span class="p">(</span><span class="n">courante</span><span class="p">,</span> <span class="n">distance</span><span class="p">,</span> <span class="n">visitees</span><span class="p">)</span>
-</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24"></a>        <span class="nb">print</span> <span class="p">(</span><span class="n">villes</span><span class="p">[</span><span class="n">courante</span><span class="p">],</span> <span class="s2">&quot; - &quot;</span><span class="p">,</span> <span class="n">villes</span><span class="p">[</span><span class="n">suivante</span><span class="p">],</span> <span class="s2">&quot; : &quot;</span><span class="p">,</span>
-</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25"></a>        <span class="n">distance</span><span class="p">[</span><span class="n">courante</span><span class="p">][</span><span class="n">suivante</span><span class="p">],</span> <span class="s2">&quot; km&quot;</span><span class="p">)</span>
-</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26"></a>        <span class="n">distanceParcourue</span> <span class="o">+=</span> <span class="n">distance</span><span class="p">[</span><span class="n">courante</span><span class="p">][</span><span class="n">suivante</span><span class="p">]</span>
-</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27"></a>        <span class="n">courante</span> <span class="o">=</span> <span class="n">suivante</span>
-</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28"></a>        <span class="nb">print</span> <span class="p">(</span><span class="n">villes</span><span class="p">[</span><span class="n">courante</span><span class="p">],</span> <span class="s2">&quot; - &quot;</span><span class="p">,</span> <span class="n">villes</span><span class="p">[</span><span class="n">depart</span><span class="p">],</span> <span class="s2">&quot; : &quot;</span><span class="p">,</span> <span class="n">distance</span><span class="p">[</span><span class="n">courante</span><span class="p">][</span><span class="n">depart</span><span class="p">],</span> <span class="s2">&quot;km&quot;</span><span class="p">)</span>
-</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29"></a>        <span class="n">distanceParcourue</span> <span class="o">+=</span> <span class="n">distance</span><span class="p">[</span><span class="n">courante</span><span class="p">][</span><span class="n">depart</span><span class="p">]</span>
-</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30"></a>    <span class="k">return</span> <span class="n">distanceParcourue</span>
-</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31"></a>
-</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32"></a><span class="c1"># programme principal</span>
-</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;distance totale parcourue = &quot;</span><span class="p">,</span> <span class="n">voyage</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">distance</span><span class="p">,</span> <span class="n">villes</span><span class="p">),</span> <span class="s2">&quot; km&quot;</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
-</details>
+<!-- ??? done "Réponse"
+
+    ``` py linenums='1'
+    villes = ["Nancy", "Metz", "Paris", "Reims", "Troyes"]
+    distance =[ [0,55,303,188,183],
+                [55,0,306,176,203],
+                [303,306,0,142,153],
+                [188,176,142,0,123],
+                [183,203,153,123,0] ]
+
+    def plus_proche(ville:int, distance:list, visitees:list) -> int :
+        pp = None
+        for i in range (len(visitees)) :
+            if visitees[i] == False :
+                if pp == None or distance [ville][i] < distance[ville][pp] :
+                    pp = i
+        return pp
+
+    def voyage(depart, distance, villes) :
+        n = len(villes)
+        distanceParcourue = 0
+        visitees = [False] * n
+        courante = depart
+        for i in range (n-1):
+            visitees[courante] = True
+            suivante = plusProche(courante, distance, visitees)
+            print (villes[courante], " - ", villes[suivante], " : ",
+            distance[courante][suivante], " km")
+            distanceParcourue += distance[courante][suivante]
+            courante = suivante
+            print (villes[courante], " - ", villes[depart], " : ", distance[courante][depart], "km")
+            distanceParcourue += distance[courante][depart]
+        return distanceParcourue
+
+    # programme principal
+    print("distance totale parcourue = ", voyage(0, distance, villes), " km")
+    ``` -->
+
 <div class="admonition example">
 <p class="admonition-title">Exercice 11 :</p>
 <p>Tester maintenant la globalité du programme en prenant comme ville de départ Nancy.</p>
@@ -2037,95 +1986,64 @@ Pour n villes, on aura n ! = n×(n-1) ×(n-2) ×… 3 ×2 ×1</p>
 <p class="admonition-title">Exercice 11 :</p>
 <p>Proposer 3 stratégies gloutonnes pour résoudre cette problématique.</p>
 </div>
-<details class="done">
-<summary>Réponse</summary>
-<ul>
-<li>Soit on sélectionne les objets du plus léger au plus lourd (on aura alors un maximum d’objets) sans dépasser la masse maximale.</li>
-<li>Soit on sélectionne les objets de celui de plus grande valeur à celui de plus faible valeur sans dépasser la masse maximale.</li>
-<li>Soit on calcul le rapport valeur/masse et on sélectionne les objets de rapport le plus grand au rapport le plus petit sans dépasser la masse maximale.</li>
-</ul>
-<p>La stratégie la plus intéressante est sans doute la dernière. </p>
-</details>
+<!-- ??? done "Réponse"
+
+    *  Soit on sélectionne les objets du plus léger au plus lourd (on aura alors un maximum d’objets) sans dépasser la masse maximale.
+    * Soit on sélectionne les objets de celui de plus grande valeur à celui de plus faible valeur sans dépasser la masse maximale.
+    * Soit on calcul le rapport valeur/masse et on sélectionne les objets de rapport le plus grand au rapport le plus petit sans dépasser la masse maximale.
+
+    La stratégie la plus intéressante est sans doute la dernière.  -->
+
 <h3 id="algorithme-glouton">Algorithme glouton<a class="headerlink" href="#algorithme-glouton" title="Permanent link">&num;</a></h3>
 <p>Suivant la stratégie gloutonne adoptée, il sera sans doute nécessaire de rajouter une colonne au tableau et de trier le tableau suivant un ordre croissant ou décroissant d'une des colonnes. Afin de trier le tableau, on utilisera la fonction sorted() déjà utilisée dans le chapitre précédent.</p>
 <div class="admonition example">
 <p class="admonition-title">Exercice 12 :</p>
 <p>Écrire une fonction nommée <code>sac_dos_glouton</code> qui prend en argument le tableau d'objets, la masse maximale supportée par le sac à dos, l'indice de la colonne à trier, un booléen qui prend la valeur <code>True</code> pour un tri décroissant sinon la valeur False pour un tri croissant, et qui retourne un tableau dont le 1 éléments et le tableau des objets choisis, le 2nd élément la masse totale des objets emportés et le 3ème élément la valeur totale des objets emportés.</p>
 </div>
-<details class="done">
-<summary>Réponse</summary>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-5-10">10</a></span>
-<span class="normal"><a href="#__codelineno-5-11">11</a></span>
-<span class="normal"><a href="#__codelineno-5-12">12</a></span>
-<span class="normal"><a href="#__codelineno-5-13">13</a></span>
-<span class="normal"><a href="#__codelineno-5-14">14</a></span>
-<span class="normal"><a href="#__codelineno-5-15">15</a></span>
-<span class="normal"><a href="#__codelineno-5-16">16</a></span>
-<span class="normal"><a href="#__codelineno-5-17">17</a></span>
-<span class="normal"><a href="#__codelineno-5-18">18</a></span>
-<span class="normal"><a href="#__codelineno-5-19">19</a></span>
-<span class="normal"><a href="#__codelineno-5-20">20</a></span>
-<span class="normal"><a href="#__codelineno-5-21">21</a></span>
-<span class="normal"><a href="#__codelineno-5-22">22</a></span>
-<span class="normal"><a href="#__codelineno-5-23">23</a></span>
-<span class="normal"><a href="#__codelineno-5-24">24</a></span>
-<span class="normal"><a href="#__codelineno-5-25">25</a></span>
-<span class="normal"><a href="#__codelineno-5-26">26</a></span>
-<span class="normal"><a href="#__codelineno-5-27">27</a></span>
-<span class="normal"><a href="#__codelineno-5-28">28</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">def</span> <span class="nf">sac_dos_glouton</span><span class="p">(</span><span class="n">objets</span><span class="p">,</span> <span class="n">masse_max</span><span class="p">,</span> <span class="n">indice</span><span class="p">,</span> <span class="n">boolean</span><span class="p">)</span> <span class="p">:</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>    <span class="n">objets</span> <span class="o">=</span> <span class="nb">sorted</span> <span class="p">(</span><span class="n">objets</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">colonne</span><span class="p">:</span> <span class="n">colonne</span> <span class="p">[</span><span class="n">indice</span><span class="p">],</span> <span class="n">reverse</span> <span class="o">=</span> <span class="n">boolean</span><span class="p">)</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a>    <span class="n">valeur_totale</span> <span class="o">=</span> <span class="mi">0</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a>    <span class="n">masse_totale</span> <span class="o">=</span> <span class="mi">0</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a>    <span class="n">reponse</span> <span class="o">=</span> <span class="p">[]</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6"></a>    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7"></a>    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">objets</span><span class="p">)</span> <span class="ow">and</span> <span class="n">masse_totale</span> <span class="o">&lt;</span> <span class="n">masse_max</span> <span class="p">:</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8"></a>        <span class="n">nom</span><span class="p">,</span> <span class="n">valeur</span><span class="p">,</span> <span class="n">masse</span><span class="p">,</span> <span class="n">rapport</span> <span class="o">=</span> <span class="n">objets</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9"></a>        <span class="k">if</span> <span class="n">masse_totale</span> <span class="o">+</span> <span class="n">masse</span> <span class="o">&lt;=</span> <span class="n">masse_max</span> <span class="p">:</span>
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10"></a>            <span class="n">reponse</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nom</span><span class="p">)</span>
-</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11"></a>            <span class="n">masse_totale</span> <span class="o">+=</span> <span class="n">masse</span>
-</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12"></a>            <span class="n">valeur_totale</span> <span class="o">+=</span> <span class="n">valeur</span>
-</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13"></a>            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14"></a>    <span class="k">return</span> <span class="n">reponse</span><span class="p">,</span> <span class="n">masse_totale</span><span class="p">,</span> <span class="n">valeur_totale</span>
-</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15"></a>
-</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="c1">#PROGRAMME PRINCIPAL</span>
-</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="n">objets</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="s2">&quot;objet1&quot;</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">15</span><span class="p">],</span>
-</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18"></a>            <span class="p">[</span><span class="s2">&quot;objet2&quot;</span><span class="p">,</span> <span class="mi">320</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
-</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19"></a>            <span class="p">[</span><span class="s2">&quot;objet3&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
-</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20"></a>            <span class="p">[</span><span class="s2">&quot;objet4&quot;</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
-</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21"></a>            <span class="p">[</span><span class="s2">&quot;objet5&quot;</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
-</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22"></a>            <span class="p">[</span><span class="s2">&quot;objet6&quot;</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span> <span class="p">]</span>
-</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">objets</span> <span class="p">:</span>
-</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24"></a>    <span class="n">i</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="n">i</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
-</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25"></a>
-</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26"></a><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;stratégie 1&quot;</span><span class="p">,</span> <span class="n">SacDosGlouton</span><span class="p">(</span><span class="n">objets</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="kc">False</span><span class="p">))</span>
-</span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27"></a><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;stratégie 2&quot;</span><span class="p">,</span> <span class="n">SacDosGlouton</span><span class="p">(</span><span class="n">objets</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="kc">True</span><span class="p">))</span>
-</span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28"></a><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;stratégie 3&quot;</span><span class="p">,</span> <span class="n">SacDosGlouton</span><span class="p">(</span><span class="n">objets</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="kc">True</span><span class="p">))</span>
-</span></code></pre></div>
-</td></tr></table>
-</details>
+<!-- 
+??? done "Réponse"
+    ```py linenums='1'
+    def sac_dos_glouton(objets, masse_max, indice, boolean) :
+        objets = sorted (objets, key=lambda colonne: colonne [indice], reverse = boolean)
+        valeur_totale = 0
+        masse_totale = 0
+        reponse = []
+        i = 0
+        while i < len(objets) and masse_totale < masse_max :
+            nom, valeur, masse, rapport = objets[i]
+            if masse_totale + masse <= masse_max :
+                reponse.append(nom)
+                masse_totale += masse
+                valeur_totale += valeur
+                i += 1
+        return reponse, masse_totale, valeur_totale
+
+    #PROGRAMME PRINCIPAL
+    objets = [ ["objet1", 500, 15],
+                ["objet2", 320, 2],
+                ["objet3", 20, 5],
+                ["objet4", 500, 7],
+                ["objet5", 180, 6],
+                ["objet6", 80, 8] ]
+    for i in objets :
+        i.append(i[1]/i[2])
+
+    print ("stratégie 1", SacDosGlouton(objets, 15, 2, False))
+    print ("stratégie 2", SacDosGlouton(objets, 15, 1, True))
+    print ("stratégie 3", SacDosGlouton(objets, 15, 3, True))
+    ``` -->
+
 <div class="admonition example">
 <p class="admonition-title">Exercice 13 :</p>
 <p>Appliquer vos différentes stratégies et vérifier la cohérence des réponses. </p>
 </div>
-<details class="done">
-<summary>Réponse</summary>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
-<span class="normal"><a href="#__codelineno-6-2">2</a></span>
-<span class="normal"><a href="#__codelineno-6-3">3</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">stratégie</span> <span class="mi">1</span> <span class="p">([</span><span class="s1">&#39;objet2&#39;</span><span class="p">,</span><span class="s1">&#39;objet3&#39;</span><span class="p">,</span><span class="s1">&#39;objet5&#39;</span><span class="p">],</span><span class="mi">13</span><span class="p">,</span> <span class="mi">520</span><span class="p">)</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="n">stratégie</span> <span class="mi">2</span> <span class="p">([</span><span class="s1">&#39;objet1&#39;</span><span class="p">],</span><span class="mi">15</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="n">stratégie</span> <span class="mi">3</span> <span class="p">([</span><span class="s1">&#39;objet2&#39;</span><span class="p">,</span><span class="s1">&#39;objet4&#39;</span><span class="p">,</span><span class="s1">&#39;objet5&#39;</span><span class="p">],</span><span class="mi">15</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
-</details>
+<!-- ??? done "Réponse"
+    ```py linenums='1'
+    stratégie 1 (['objet2','objet3','objet5'],13, 520)
+    stratégie 2 (['objet1'],15, 500)
+    stratégie 3 (['objet2','objet4','objet5'],15, 1000)
+    ``` -->
+
 <h2 id="probleme-du-rendu-de-monnaie">Problème du rendu de monnaie<a class="headerlink" href="#probleme-du-rendu-de-monnaie" title="Permanent link">&num;</a></h2>
 <h3 id="algorithme-glouton_1">Algorithme glouton<a class="headerlink" href="#algorithme-glouton_1" title="Permanent link">&num;</a></h3>
 <p>Considérons le problème d'un commerçant devant rendre de la monnaie à l'un de ses clients. Il souhaite le faire en utilisant le moins de pièces et de billets possibles. On suppose que l'on manipule les pièces et coupures habituelles des euros (1€, 2€, 5€, 10 €, 20€, 50€, 100€ et 200€, oublions les centimes) et que le commerçant dispose d'une réserve suffisamment importante de chaque espèce.</p>
@@ -2133,64 +2051,49 @@ Pour n villes, on aura n ! = n×(n-1) ×(n-2) ×… 3 ×2 ×1</p>
 <p class="admonition-title">Exercice 14 :</p>
 <p>Donner les combinaisons possibles de rendu de monnaie sur 9 €. Établir un tableau.</p>
 </div>
-<details class="done">
-<summary>Réponse</summary>
-<p><figure markdown>
-    <img alt="" src="../img_gloutons/rendu_monnaie.png" width="400px" />
-</figure></p>
-</details>
+<!-- ??? done "Réponse"
+    <figure markdown>
+        ![](img_gloutons/rendu_monnaie.png){width=400px}
+    </figure> -->
+
 <div class="admonition example">
 <p class="admonition-title">Exercice 15 :</p>
 <p>A l'aide du tableau précédent, proposer une stratégie gloutonne pour rendre la monnaie.</p>
 </div>
-<details class="done">
-<summary>Réponse</summary>
-<p>On rend les pièces en commençant systématiquement par les plus grosse.</p>
-</details>
+<!-- ??? done "Réponse"
+    On rend les pièces en commençant systématiquement par les plus grosse.
+ -->
+
 <div class="admonition example">
 <p class="admonition-title">Exercice 16 :</p>
 <p>Écrire une fonction qui prend en argument la somme à rendre (nombre entier) et retourne le tableau des pièces ou coupures. </p>
 </div>
-<details class="done">
-<summary>Réponse</summary>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-7-10">10</a></span>
-<span class="normal"><a href="#__codelineno-7-11">11</a></span>
-<span class="normal"><a href="#__codelineno-7-12">12</a></span>
-<span class="normal"><a href="#__codelineno-7-13">13</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">def</span> <span class="nf">rendu_monnaie</span><span class="p">(</span><span class="n">somme</span><span class="p">)</span> <span class="p">:</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a>    <span class="n">euros</span> <span class="o">=</span> <span class="p">[</span><span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a>    <span class="n">rendu</span> <span class="o">=</span> <span class="p">[]</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4"></a>    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5"></a>    <span class="k">while</span> <span class="p">(</span><span class="n">somme</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">8</span><span class="p">)</span> <span class="p">:</span>
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">somme</span> <span class="o">-</span> <span class="n">euros</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="p">:</span>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7"></a>        <span class="n">somme</span> <span class="o">-=</span> <span class="n">euros</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8"></a>        <span class="n">rendu</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">euros</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9"></a>    <span class="k">else</span> <span class="p">:</span>
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10"></a>        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11"></a>    <span class="k">return</span> <span class="n">rendu</span>
-</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12"></a>
-</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="nb">print</span><span class="p">(</span><span class="n">rendu_monnaie</span><span class="p">(</span><span class="mi">9</span><span class="p">))</span>
-</span></code></pre></div>
-</td></tr></table>
-</details>
+<!-- ??? done "Réponse"
+    ```py linenums='1'
+    def rendu_monnaie(somme) :
+        euros = [200, 100, 50, 20, 10, 5, 2, 1]
+        rendu = []
+        i = 0
+        while (somme > 0 and i < 8) :
+        if (somme - euros[i]) >= 0 :
+            somme -= euros[i]
+            rendu.append(euros[i])
+        else :
+            i += 1
+        return rendu
+
+    print(rendu_monnaie(9))
+    ``` -->
+
 <h3 id="systemes-canoniques">Systèmes canoniques<a class="headerlink" href="#systemes-canoniques" title="Permanent link">&num;</a></h3>
 <p>On appelle système canonique un système où un algorithme glouton donne toujours le rendu optimal.</p>
 <div class="admonition example">
 <p class="admonition-title">Exercice 17 :</p>
 <p>En observant les réponses fournies par votre algorithme, pensez-vous que le système en euros soit canonique ?</p>
 </div>
-<details class="done">
-<summary>Réponse</summary>
-<p>Il semblerait que oui.</p>
-</details>
+<!-- ??? done "Réponse"
+    Il semblerait que oui. -->
+
 <p><strong>Montrons de manière théorique que le système euro est canonique :</strong></p>
 <div class="admonition example">
 <p class="admonition-title">Exercice 18 :</p>
@@ -2204,37 +2107,31 @@ Pour n villes, on aura n ! = n×(n-1) ×(n-2) ×… 3 ×2 ×1</p>
 <li>On peut poursuivre ce raisonnement avec les autres coupures…</li>
 </ul>
 </div>
-<details class="done">
-<summary>Réponse</summary>
-<ul>
-<li>Les pièces ou coupures de 1, 5, 10, 50 et 100 € ne peuvent être utilisées qu'une seule fois ;<ul>
-<li>Si 2 pièces de 1€, alors on en utilise une de 2€</li>
-<li>Si 2 pièces de 5€, alors on en utilise un billet de 10€</li>
-<li>Si 2 billets de 10€, alors on en utilise un de 20€</li>
-<li>Si 2 billets de 50€, alors on en utilise un de 100€</li>
-<li>Si 2 billets de 100€, alors on en utilise un de 200€</li>
-</ul>
-</li>
-<li>Les pièces ou coupures de 2 et 20 € ne peuvent être chacun utilisés que deux fois ;<ul>
-<li>Si 3 pièces de 2€, alors on utilise 1 pièces de 1€ et 1 billet de 5€</li>
-<li>Si 3 billets de 20€, alors on utilise 1 de 10€ et 1 de 50€</li>
-</ul>
-</li>
-<li>On ne peut rendre à la fois 2 pièces de 2 € et 1 pièce de 1 € (ou 2 billets de 20 € et 1 billet de 10 €) ;</li>
-<li>La somme totale des billets ou coupures de moins de 200 € ne peut dépasser la somme de 199 € (au-delà de cette somme, un billet de 200 € sera alors choisi par l'algorithme glouton) ;</li>
-<li>La somme totale des billets ou coupures de moins de 100 € ne peuvent dépasser la somme de 99 € (au-delà de cette somme, un billet de 100 € sera alors choisi par l'algorithme glouton) ;</li>
-<li>On peut poursuivre ce raisonnement avec les autres coupures…</li>
-</ul>
-</details>
+<!-- ??? done "Réponse"
+
+    * Les pièces ou coupures de 1, 5, 10, 50 et 100 € ne peuvent être utilisées qu'une seule fois ;
+        * Si 2 pièces de 1€, alors on en utilise une de 2€
+        * Si 2 pièces de 5€, alors on en utilise un billet de 10€
+        * Si 2 billets de 10€, alors on en utilise un de 20€
+        * Si 2 billets de 50€, alors on en utilise un de 100€
+        * Si 2 billets de 100€, alors on en utilise un de 200€
+    * Les pièces ou coupures de 2 et 20 € ne peuvent être chacun utilisés que deux fois ;
+        * Si 3 pièces de 2€, alors on utilise 1 pièces de 1€ et 1 billet de 5€
+        * Si 3 billets de 20€, alors on utilise 1 de 10€ et 1 de 50€
+    * On ne peut rendre à la fois 2 pièces de 2 € et 1 pièce de 1 € (ou 2 billets de 20 € et 1 billet de 10 €) ;
+    * La somme totale des billets ou coupures de moins de 200 € ne peut dépasser la somme de 199 € (au-delà de cette somme, un billet de 200 € sera alors choisi par l'algorithme glouton) ;
+    * La somme totale des billets ou coupures de moins de 100 € ne peuvent dépasser la somme de 99 € (au-delà de cette somme, un billet de 100 € sera alors choisi par l'algorithme glouton) ;
+    * On peut poursuivre ce raisonnement avec les autres coupures… -->
+
 <div class="admonition example">
 <p class="admonition-title">Exercice 19 :</p>
 <p>Appliquer votre algorithme glouton à un système monétaire dans lequel les pièces ou coupures auraient les valeurs suivantes : 1, 6, 10 et 22 €. Montrer sur un exemple que le rendu de monnaie n'est pas optimal et donc que ce système n'est pas canonique.  </p>
 </div>
-<details class="done">
-<summary>Réponse</summary>
-<p>Sur 18€ l’algorithme va rendre 10€, 6€ et 2 × 1€ (4 pièces). Or il y a plus simple : 3 pièces de 6€</p>
-<p>Sur 12€ l’algorithme va rendre 10€, 2 × 1€ (3 pièces). Or il y a plus simple : 2 pièces de 6€</p>
-</details>
+<!-- ??? done "Réponse"
+    Sur 18€ l’algorithme va rendre 10€, 6€ et 2 × 1€ (4 pièces). Or il y a plus simple : 3 pièces de 6€
+
+    Sur 12€ l’algorithme va rendre 10€, 2 × 1€ (3 pièces). Or il y a plus simple : 2 pièces de 6€
+ -->
 
               
             </article>
