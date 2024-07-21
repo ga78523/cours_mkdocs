@@ -289,7 +289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Physique/Seconde/TP_verrerie.md" class="md-nav__link">
+      <a href="../../../../Physique/Seconde/TP_verrerie/" class="md-nav__link">
         TP_verrerie
       </a>
     </li>
@@ -317,7 +317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Physique/Seconde/TP_mesure_distance.md" class="md-nav__link">
+      <a href="../../../../Physique/Seconde/TP_mesure_distance/" class="md-nav__link">
         TP_distance
       </a>
     </li>
@@ -416,20 +416,6 @@
     <li class="md-nav__item">
       <a href="../../../../SNT/html/" class="md-nav__link">
         cours_web
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../SNT/correction_DS4/" class="md-nav__link">
-        correction DS4
       </a>
     </li>
   
@@ -788,8 +774,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Premiere/Algorithmique/tris_correction/" class="md-nav__link">
-        Algo de tri
+      <a href="../../../../Premiere/Algorithmique/tris/" class="md-nav__link">
+        tris
       </a>
     </li>
   
@@ -1039,38 +1025,37 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#exercices-type-bac" class="md-nav__link">
+    Exercices Type Bac
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercices Type Bac">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercice-1" class="md-nav__link">
+    Exercice 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-2" class="md-nav__link">
+    Exercice 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../exos_Bac_rec/" class="md-nav__link">
-        Exercices
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../exos_correc_Bac_rec/" class="md-nav__link">
-        Correction
-      </a>
     </li>
   
 
@@ -1589,6 +1574,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#exercices-type-bac" class="md-nav__link">
+    Exercices Type Bac
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercices Type Bac">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercice-1" class="md-nav__link">
+    Exercice 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-2" class="md-nav__link">
+    Exercice 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1606,30 +1618,29 @@
 <h1 id="recursivite">Récursivité<a class="headerlink" href="#recursivite" title="Permanent link">&num;</a></h1>
 <h2 id="contexte-la-somme-des-premiers-entiers">Contexte : la somme des premiers entiers<a class="headerlink" href="#contexte-la-somme-des-premiers-entiers" title="Permanent link">&num;</a></h2>
 <p>Pour définir la somme des <span class="arithmatex">\(n\)</span> premiers entiers, on a l'habitude de d'écrire la formule suivante :</p>
-<div class="arithmatex">\[ 0 + 1 + 2 + 3 + .... + n \]</div>
+<div class="arithmatex">\[ 0 + 1 + 2 + 3 + ... + n \]</div>
 <p>Cette formulation peut nous apparaître simple et intuitive. </p>
 <div class="admonition example">
 <p class="admonition-title">Exercice :</p>
 <p>Écrire une fonction <code>somme(n)</code> qui retourne la somme des <span class="arithmatex">\(n\)</span> premiers entiers.</p>
 </div>
-<p>Or ce code n'est pas directement lié à la formule précédente.
-En effet, il n'y a rien dans cette formule qui laisse penser qu'il faille une variable intermédiaire pour calculer cette somme.</p>
+<p>Le code de l'exercice précédent n'est pas directement lié à la formule précédente. Il n'y a rien dans cette formule qui laisse penser qu'il faille une variable intermédiaire pour calculer cette somme.</p>
 <p>C'est pourquoi, nous allons tenter de définir autrement cette fonction :</p>
 <div class="arithmatex">\[
-somme(n)= \left \{ 
-    \begin{array}{l l l}
+somme(n)=
+    \begin{cases}
       0  &amp; si &amp;n=0 \\
      n+somme(n-1)   &amp; si &amp; n&gt;0 
-   \end{array}
-    \right .
+   \end{cases}
 \]</div>
-<p>Cette définition nous indique ce que vaut <code class="language-python3 highlight"><span class="n">somme</span><span class="p">(</span><span class="n">n</span><span class="p">)</span></code> pour un entier <span class="arithmatex">\(n\)</span> quelconque, selon que <span class="arithmatex">\(n\)</span> soit égal à 0 ou strictement positif. Ainsi, pour, pour le cas où <span class="arithmatex">\(n\)</span>=0, la valeur de <code>somme(n)</code> vaut 0, et dans le cas où <span class="arithmatex">\(n\)</span> est strictement positif, la valeur de <code>somme(n)</code> est <span class="arithmatex">\(n+somme(n-1)\)</span>.</p>
+<p>Cette définition nous indique ce que vaut  <code>somme(n)</code> pour un entier <code>n</code> quelconque, selon que <span class="arithmatex">\(n\)</span> soit égal à 0 ou strictement positif. Ainsi, pour, pour le cas où <span class="arithmatex">\(n\)</span>=0, la valeur de <code>somme(n)</code> vaut 0, et dans le cas où <span class="arithmatex">\(n\)</span> est strictement positif, la valeur de <code>somme(n)</code> est <span class="arithmatex">\(n + somme(n-1)\)</span>.</p>
 <p>Par exemple, voici ci-dessous les valeurs de 'somme(n)', pour <span class="arithmatex">\(n\)</span> valant 0,1,2 et 3.</p>
-<div class="arithmatex">\[   \begin{array}{l }
-     somme(0)=0 \\
-     somme(1)=1+somme(0)=1+0=1 \\
-     somme(2)=2+somme(1)=2+1=3
-   \end{array}
+<div class="arithmatex">\[
+\begin{cases}
+    somme(0) = 0 \\
+    somme(1) = 1 + somme(0) = 1 + 0 = 1 \\
+    somme(2) = 2 + somme(1) = 2 + 1 = 3
+\end{cases}
 \]</div>
 <p>L'intérêt de cette formulation est qu'elle est directement programmable. En python, cela donne le programme ci-dessous.</p>
 <table class="language-py highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">somme_rec.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
@@ -1637,10 +1648,10 @@ somme(n)= \left \{
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
 <span class="normal"><a href="#__codelineno-0-4">4</a></span>
 <span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">def</span> <span class="nf">somme</span><span class="p">(</span><span class="n">n</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span><span class="o">-&gt;</span><span class="nb">int</span><span class="p">:</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="k">if</span> <span class="n">n</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>        <span class="k">return</span> <span class="mi">0</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>    <span class="k">else</span> <span class="p">:</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>        <span class="k">return</span> <span class="n">n</span><span class="o">+</span><span class="n">somme</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>        <span class="k">return</span> <span class="n">n</span> <span class="o">+</span> <span class="n">somme</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
 </span></code></pre></div>
 </td></tr></table>
 <h2 id="recursivite_1">Récursivité<a class="headerlink" href="#recursivite_1" title="Permanent link">&num;</a></h2>
@@ -1648,67 +1659,106 @@ somme(n)= \left \{
 <p class="admonition-title">Définition :</p>
 <p>On dit qu'un sous-programme (procédure ou fonction) est récursif s'il s'appelle lui-même</p>
 </div>
-<p>Il est indispensable de prévoir une condition d'arrêt à la récursion sinon la fonction va s'appeler une infinité de fois. Dans la pratique, la pile qui stocke les appels récursifs est de taille finie. Une fois qu'elle est pleine, le programme ne répondra plus </p>
+<p>Il est indispensable de prévoir une condition d'arrêt à la récursion sinon la fonction va s'appeler une infinité de fois. Dans la pratique, la pile qui stocke les appels récursifs est de taille finie. Une fois qu'elle est pleine, le programme ne répondra plus.</p>
 <div class="admonition example">
 <p class="admonition-title">Exercice :</p>
-<p>Donner une définition récursive qui correspond au calcul de la fonction factorielle <span class="arithmatex">\(n!\)</span> définie par <span class="arithmatex">\(n!=1\times 2 \times 3 \times ...\times n\)</span> si <span class="arithmatex">\(n&gt;0\)</span> et <span class="arithmatex">\(0!=1\)</span>. Écrire également le code d'une fonction <code>fact(n)</code> qui implémente cette définition. </p>
+<p>Donner une définition récursive qui correspond au calcul de la fonction factorielle <span class="arithmatex">\(n!\)</span> définie par <span class="arithmatex">\(n! = 1 \times 2 \times 3 \times ...\times n\)</span> si <span class="arithmatex">\(n&gt;0\)</span> et <span class="arithmatex">\(0!=1\)</span>. Écrire également le code d'une fonction <code>fact(n)</code> qui implémente cette définition.
+Pour les plus rapides, écrire la version itérative.</p>
 </div>
-<p>Pour les plus rapides, écrire la version itérative.}</p>
 <div class="admonition example">
 <p class="admonition-title">Exercice :</p>
-<p>Écrire une fonction récursive <code>boucle(i,k)</code>qui affiche les entiers entre <code>i</code> et <code>k</code>. Par exemple, <code>boucle(0,3)</code> affiche 0,1,2,3. Pour les plus rapides, écrire la version itérative.</p>
+<p>Écrire une fonction récursive <code>boucle(i, k)</code> qui affiche les entiers entre <code>i</code> et <code>k</code>. Par exemple, <code>boucle(0, 3)</code> affiche 0,1,2,3. Pour les plus rapides, écrire la version itérative.</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice :</p>
 <p>La méthode du paysan russe est un très vieil algorithme de multiplication de deux nombres entiers déjà décrit, sous forme légèrement différente, sur un papyrus égyptien rédigé autour de 1650 avant J.-C. Il s'agissait de la principale méthode de calcul en Europe avant l'introduction des chiffres arabes.
-Les ordinateurs l'ont utilisé avant que la multiplication  ne soit directement intégré dans le processeur sous forme de circuit électronique. Sous une forme moderne, il peut être décrit par le programme 
-1. Appliquer cette fonction pour effectuer la multiplication de 105 par 253. Détailler les étapes dans le tableau suivant :</p>
-<div class="language-text highlight"><pre><span></span><code>|x   |  y |  p   |
-|---–|----|------|
-|105 |253 | .... |
-|... |....|..... |
-</code></pre></div>
-<ol>
-<li>On admet que cet algorithme repose sur les relations suivantes :
-$$ x<em>y= \left { 
-    \begin{array}{l l l}
-  0  &amp; si &amp;x=0 \
- (x//2)</em>(y+y)  &amp; si &amp; x\ est\ pair\
- (x//2)*(y+y)+y  &amp; si &amp; x\ est\ impair\
-    \end{array}
-\right .
-$$</li>
-</ol>
-<p>Proposer une version récursive de cet algorithme.</p>
-<table class="language-python highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+Les ordinateurs l'ont utilisé avant que la multiplication  ne soit directement intégré dans le processeur sous forme de circuit électronique. Sous une forme moderne, il peut être décrit par le programme :</p>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
 <span class="normal"><a href="#__codelineno-1-4">4</a></span>
 <span class="normal"><a href="#__codelineno-1-5">5</a></span>
 <span class="normal"><a href="#__codelineno-1-6">6</a></span>
 <span class="normal"><a href="#__codelineno-1-7">7</a></span>
-<span class="normal"><a href="#__codelineno-1-8">8</a></span></pre></div></td><td class="code"><div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">Fonction</span> <span class="n">multiplication</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">p</span><span class="o">=</span><span class="mi">0</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">TANT</span> <span class="n">QUE</span> <span class="n">x</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a>    <span class="n">Si</span> <span class="n">x</span> <span class="n">est</span> <span class="n">impair</span><span class="p">:</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>        <span class="n">p</span><span class="o">=</span><span class="n">p</span><span class="o">+</span><span class="n">y</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a>    <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="o">//</span><span class="mi">2</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a>    <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="o">+</span><span class="n">y</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="n">Retourner</span> <span class="n">p</span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">Fonction</span> <span class="n">multiplication</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="n">p</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>    <span class="n">TANT</span> <span class="n">QUE</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a>        <span class="n">Si</span> <span class="n">x</span> <span class="n">est</span> <span class="n">impair</span><span class="p">:</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>            <span class="n">p</span> <span class="o">=</span> <span class="n">p</span> <span class="o">+</span> <span class="n">y</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a>        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">//</span> <span class="mi">2</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a>        <span class="n">y</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">y</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a>    <span class="n">Retourner</span> <span class="n">p</span>
 </span></code></pre></div>
 </td></tr></table>
+<p><strong>1</strong> Appliquer cette fonction pour effectuer la multiplication de 105 par 253. Détailler les étapes dans le tableau suivant :</p>
+<figure markdown>
+<table>
+<thead>
+<tr>
+<th>x</th>
+<th>y</th>
+<th>p</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>105</td>
+<td>253</td>
+<td>....</td>
+</tr>
+<tr>
+<td>...</td>
+<td>....</td>
+<td>.....</td>
+</tr>
+</tbody>
+</table>
+</figure>
+<p><strong>2</strong> On admet que cet algorithme repose sur les relations suivantes :</p>
+<div class="arithmatex">\[
+x * y =
+\begin{cases}
+  0  &amp; si &amp;x=0 \\
+ (x//2)*(y+y)  &amp; si &amp; x\ est\ pair\\
+ (x//2)*(y+y)+y  &amp; si &amp; x\ est\ impair\\
+\end{cases}
+\]</div>
+<p>Proposer une version récursive de cet algorithme.</p>
 </div>
 <h2 id="fonctionnement-dune-fonction-recursive">Fonctionnement d'une fonction récursive<a class="headerlink" href="#fonctionnement-dune-fonction-recursive" title="Permanent link">&num;</a></h2>
-<p>Par exemple, l'évaluation de l'appel à <code>somme(3)</code>  du programme <code>somme_rec</code> peut se représenter de la manière suivante :</p>
-<p>où on indique uniquement pour chaque appel à <code>somme(n)</code> l'instruction qui est exécutée après le test <code>n==0</code> de la conditionnelle. Cette manière de représenter l'exécution d'un programme en indiquant les différents appels effectués est appelée un <strong>arbre d'appels</strong></p>
+<p>Par exemple, l'évaluation de l'appel à <code>somme(3)</code>  du programme <code>somme_rec</code> peut se représenter de la manière suivante : </p>
+<figure>
+<p><img alt="appel1" src="../data_recursivite/arbre_appels1.png" width="400px" /></p>
+</figure>
+<p>Cette manière de représenter l'exécution d'un programme en indiquant les différents appels effectués est appelée un <strong>arbre d'appels</strong></p>
 <p>Ainsi, pour calculer la valeur renvoyée par <code>somme(3)</code>, il faut tout d'abord appeler <code>somme(2)</code>. Cet appel va lui-même déclencher un appel à <code>somme(1)</code>, qui à son tour nécessite un appel à <code>somme(0)</code>. Ce dernier appel se termine en renvoyant la valeur 0. Le calcul de <code>somme(3)</code> se fait donc "à rebours". Une fois que l'appel à <code>somme(0)</code>}` est terminé, c'est-à-dire que la valeur 0 a été renvoyée, l'arbre d'appels a la forme suivante.</p>
+<figure>
+<p><img alt="appel2" src="../data_recursivite/arbre_appels2.png" width="400px" /></p>
+</figure>
 <p>A cet instant, l'appel à <code>somme(1)</code>}` peut alors se terminer et renvoyer le résultat de la  somme 1+0. L'arbre d'appels est alors le suivant :</p>
+<figure>
+<p><img alt="appel3" src="../data_recursivite/arbre_appels3.png" width="400px" /></p>
+</figure>
 <p>Enfin, l'appel à <code>somme(2)</code> peut lui-même renvoyer la valeur 2+1 comme résultat, ce qui permet à <code>somme(3)</code> de se terminer en renvoyant le résultat 3+3.</p>
+<figure>
+<p><img alt="appel4" src="../data_recursivite/arbre_appels4.png" width="300px" /></p>
+</figure>
 <p>On obtient bien au final la valeur 6 attendue.</p>
 <h2 id="recursivite-ou-iterativite">Récursivité ou itérativité ?<a class="headerlink" href="#recursivite-ou-iterativite" title="Permanent link">&num;</a></h2>
-<p>Lorsque l'on programme des fonctions qui ne s'appellent pas, on dit que l'on programme de manière itérative. Il est toujours possible de transformer une fonction itérative en fonction récursive et vice et versa. </p>
-<p>La méthode itérative nous est plus familière et est plus rapide une fois le code implémenté dans un langage de programmation.</p>
-<p>La méthode récursive est plus élégante et lisible et évite d'utiliser de nombreuses structures itératives. Elle est également très utile pour concevoir des structures de données complexes comme les listes, les arbres et les graphes. L'inconvénient le plus important de cette méthode, est qu'une fois implémentée dans un langage de programmation, elle est très gourmande en ressource mémoire. Du fait que l'on empile, tous les appels récursifs, des débordements de capacité peuvent se produire lorsque la pile est pleine.</p>
+<p>Lorsque l'on programme des fonctions qui ne s'appellent pas, on dit que l'on programme de manière itérative. Il est toujours possible de transformer une fonction itérative en fonction récursive et vice et versa.</p>
+<p><strong>La méthode itérative :</strong></p>
+<ul>
+<li>nous est plus familière ;</li>
+<li>est plus rapide une fois le code implémenté dans un langage de programmation.</li>
+</ul>
+<p><strong>La méthode récursive :</strong></p>
+<ul>
+<li>est plus élégante ;</li>
+<li>est plus lisible ;</li>
+<li>évite d'utiliser de nombreuses structures itératives ;</li>
+<li>est très utile pour concevoir des structures de données complexes comme les listes, les arbres et les graphes ;</li>
+<li>est très gourmande en ressource mémoire. Du fait que l'on empile, tous les appels récursifs, des débordements de capacité peuvent se produire lorsque la pile est pleine.</li>
+</ul>
 <h2 id="recursivite-croisee">Récursivité croisée<a class="headerlink" href="#recursivite-croisee" title="Permanent link">&num;</a></h2>
 <p>Dans cette méthode récursive, il arrive qu'une fonction appelle une autre fonction qui appelle elle-même la première, ce cas est appelée récursivité croisée. Prenons, par exemple deux fonctions ci-dessous permettant de tester si un nombre est pair ou impair comme dans le programme <strong>pair_impair.py</strong>.</p>
 <table class="language-python highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">paire_impaire.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
@@ -1722,37 +1772,36 @@ $$</li>
 <span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-2-10">10</a></span>
 <span class="normal"><a href="#__codelineno-2-11">11</a></span></pre></div></td><td class="code"><div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">def</span> <span class="nf">Pair</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="k">if</span> <span class="n">n</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>        <span class="k">return</span> <span class="kc">True</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>    <span class="k">else</span> <span class="p">:</span>
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>        <span class="k">return</span> <span class="n">Impair</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 </span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a>
 </span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="k">def</span> <span class="nf">Impair</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a>    <span class="k">if</span> <span class="n">n</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a>    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
 </span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a>        <span class="k">return</span> <span class="kc">False</span>
 </span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a>    <span class="k">else</span> <span class="p">:</span>
 </span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a>        <span class="k">return</span> <span class="n">Pair</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> 
 </span></code></pre></div>
 </td></tr></table>
-<p>Ce n'est évidemment pas la méthode la plus simple mais elle fonctionne. On aurait pu par exemple tester le reste de la division euclidienne de n par deux.</p>
+<p>Ce n'est évidemment pas la méthode la plus simple mais elle fonctionne. On aurait pu par exemple tester le reste de la division euclidienne de <span class="arithmatex">\(n\)</span> par deux.</p>
 <h2 id="recursivite-multiple">Récursivité multiple<a class="headerlink" href="#recursivite-multiple" title="Permanent link">&num;</a></h2>
-<p>Il existe un autre cas particulier où la fonction s'appelle plusieurs fois. On parle alors de récursivité multiple. C'est le cas par exemple dans le cas du calcul des coefficients binomiaux. On peut donner une rappel mathématique de ces coefficients binomiaux qui sont caractérisés par la définition suivante pour toute valeur entière de <span class="arithmatex">\(n\)</span> et <span class="arithmatex">\(k\)</span> telles que $0\leq k\leq n $: </p>
+<p>Il existe un autre cas particulier où la fonction s'appelle plusieurs fois. On parle alors de récursivité multiple. C'est le cas par exemple dans le cas du calcul des coefficients binomiaux. On peut donner une rappel mathématique de ces coefficients binomiaux qui sont caractérisés par la définition suivante pour toute valeur entière de <span class="arithmatex">\(n\)</span> et <span class="arithmatex">\(k\)</span> telles que <span class="arithmatex">\(0 \leq k \leq n\)</span>:</p>
 <div class="arithmatex">\[\begin{pmatrix}
    n  \\
    k  
-\end{pmatrix}= \left \{
-   \begin{array}{l l l}
+\end{pmatrix}=
+   \begin{cases}
       1  &amp; si &amp;k=0 \\
      1   &amp; si &amp; k=n\\
-     \begin{pmatrix}
+      \begin{pmatrix}
    n-1  \\
    k-1  
 \end{pmatrix}+\begin{pmatrix}
    n-1 \\
    k  
 \end{pmatrix}&amp; sinon
-   \end{array}
-   \right .
+   \end{cases}
 \]</div>
 <p>Alors on peut donner la fonction algorithmique de ce programme.</p>
 <table class="language-python highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">bino.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
@@ -1769,7 +1818,7 @@ $$</li>
 <h2 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Permanent link">&num;</a></h2>
 <div class="admonition example">
 <p class="admonition-title">Exercice :</p>
-<p>En mathématiques, la suite de Fibonacci est une suite d'entiers dans laquelle chaque terme est la somme des deux termes qui le précèdent. Notée <span class="arithmatex">\(F_{n}\)</span>, elle est définie par <span class="arithmatex">\({\displaystyle F_{0}=0,\quad F_{1}=1}\)</span>, et <span class="arithmatex">\({\displaystyle F_{n}=F_{n-1}+F_{n-2}}\)</span> pour <span class="arithmatex">\({\displaystyle n\geqslant 2}\)</span>. Les termes de cette suite sont appelés nombres de Fibonacci et forment la suite A000045 de l'OEIS :</p>
+<p>En mathématiques, la suite de Fibonacci est une suite d'entiers dans laquelle chaque terme est la somme des deux termes qui le précèdent. Notée <span class="arithmatex">\(F_{n}\)</span>, elle est définie par <span class="arithmatex">\(F_{0}=0\)</span>, <span class="arithmatex">\(F_{1}=1\)</span>, et <span class="arithmatex">\(F_{n}=F_{n-1}+F_{n-2}\)</span> pour <span class="arithmatex">\(n &gt; 1\)</span>. Les termes de cette suite sont appelés nombres de Fibonacci et forment la suite A000045 de l'OEIS :</p>
 <table>
 <thead>
 <tr>
@@ -1819,14 +1868,183 @@ Cette suite est liée au nombre d'or, φ (phi) : ce nombre intervient dans l'exp
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice :</p>
-<p>Une fractale est une sorte de courbe mathématique un peu complexe riche en détail, et qui possède une propriété intéressante visuellement : lorsque l'on regarde des détails de petite taille, on retrouve des formes correspondant aux détails de plus grande taille (auto-similarité). Cela nous rappelle étrangement la récursivité ! La première courbe à tracer a été imaginée en 1904 par le mathématicien suédois Niels Fabian Helge Von Koch.</p>
-<p>Le principe est simple : on divise un segment initial en trois morceaux, et on construit un triangle équilatéral sans base au-dessus du morceau central. On réitère le processus <span class="arithmatex">\(n\)</span> fois, <span class="arithmatex">\(n\)</span> est appelé l'ordre. Dans la figure suivante, on voit les ordres 0,1,2 et 3 de cette fractale. </p>
+<p>Une fractale est une sorte de courbe mathématique un peu complexe riche en détail, et qui possède une propriété intéressante visuellement : lorsque l'on regarde des détails de petite taille, on retrouve des formes correspondant aux détails de plus grande taille (auto-similarité). Cela nous rappelle étrangement la récursivité ! La première courbe à tracer a été imaginée en 1904 par le mathématicien suédois Niels Fabian Helge Von Koch.
+Le principe est simple : on divise un segment initial en trois morceaux, et on construit un triangle équilatéral sans base au-dessus du morceau central. On réitère le processus <span class="arithmatex">\(n\)</span> fois, <span class="arithmatex">\(n\)</span> est appelé l'ordre. Dans la figure suivante, on voit les ordres 0,1,2 et 3 de cette fractale. </p>
+<p><figure markdown>
+ <img alt="VonKoch1" src="../data_recursivite/courbe_VonKoch.png" width="100px" />
+</figure></p>
 <ol>
-<li>Proposer une fonction récursive permettant de dessiner la fractale de Von Koch en lui donnant comme paramètre l'ordre et la longueur du segment initial.</li>
-<li>Le flocon de Koch s'obtient de la même façon que la fractale précédente, en partant d'un triangle équilatéral au lieu d'un segment de droite, et en effectuant les modifications en orientant les triangles vers l'extérieur.</li>
+<li>
+<p>Proposer une fonction récursive permettant de dessiner la fractale de Von Koch en lui donnant comme paramètre l'ordre et la longueur du segment initial.</p>
+</li>
+<li>
+<p>Le flocon de Koch s'obtient de la même façon que la fractale précédente, en partant d'un triangle équilatéral au lieu d'un segment de droite, et en effectuant les modifications en orientant les triangles vers l'extérieur.</p>
+</li>
 </ol>
+<p><figure markdown>
+ <img alt="VonKoch1" src="../data_recursivite/flocon_Koch.png" width="100px" />
+</figure></p>
 <p>Proposer une fonction permettant de faire le flocon de Koch complet à partir de la fonction réalisée précédente.</p>
 </div>
+<h2 id="exercices-type-bac">Exercices Type Bac<a class="headerlink" href="#exercices-type-bac" title="Permanent link">&num;</a></h2>
+<h3 id="exercice-1">Exercice 1<a class="headerlink" href="#exercice-1" title="Permanent link">&num;</a></h3>
+<p><strong>D'après 2021, Métropole, Candidats libres, J2, Ex. 4</strong></p>
+<blockquote>
+<p>D'après 2021, Métropole, Candidats libres, J2, Ex. 4</p>
+</blockquote>
+<p>On s'intéresse dans cet exercice à un algorithme de mélange des éléments d'une liste.</p>
+<p><strong>1.</strong> Pour la suite, il sera utile de disposer d'une fonction <code>echange</code> qui permet d'échanger dans une liste <code>valeurs</code> les éléments d'indice <code>i</code> et <code>j</code>.</p>
+<p>Expliquer pourquoi le code Python ci-dessous ne réalise pas cet échange et en proposer une modification.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">def</span> <span class="nf">echange</span><span class="p">(</span><span class="n">valeurs</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="n">valeurs</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">valeurs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="n">valeurs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">valeurs</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+</span></code></pre></div>
+<p><strong>2.</strong> La documentation du module <code>random</code> de Python fournit les informations ci-dessous concernant la fonction <code>randint</code> :</p>
+<div class="admonition tip">
+<p class="admonition-title"><code>randint(a, b)</code></p>
+<p>Renvoie un entier aléatoire <code>N</code> tel que <code>a &lt;= N &lt;= b</code>. Alias pour <code>randrange(a, b + 1)</code>.</p>
+</div>
+<p>Parmi les valeurs ci-dessous, quelles sont celles qui peuvent être renvoyées par l'appel <code>randint(0, 10)</code> ?</p>
+<ul>
+<li><code>0</code></li>
+<li><code>1</code></li>
+<li><code>3.5</code></li>
+<li><code>9</code></li>
+<li><code>10</code></li>
+<li><code>11</code></li>
+</ul>
+<p><strong>3.</strong> Le mélange de Fischer-Yates est un algorithme permettant de permuter aléatoirement les éléments d'une liste. On donne ci-dessous une mise en œuvre récursive de cet algorithme en Python.</p>
+<table class="language-python highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span>
+<span class="normal"><a href="#__codelineno-5-7">7</a></span>
+<span class="normal"><a href="#__codelineno-5-8">8</a></span></pre></div></td><td class="code"><div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="k">def</span> <span class="nf">melange</span><span class="p">(</span><span class="n">valeurs</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">valeurs</span><span class="p">)</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a>    <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6"></a>        <span class="n">j</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7"></a>        <span class="n">echange</span><span class="p">(</span><span class="n">valeurs</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8"></a>        <span class="n">melange</span><span class="p">(</span><span class="n">valeurs</span><span class="p">,</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+</span></code></pre></div>
+</td></tr></table>
+<p><strong>3.a.</strong> Expliquer pourquoi la fonction <code>melange</code> se termine toujours.</p>
+<p><strong>3.b.</strong> Lors de l'appel de la fonction <code>melange</code>, la valeur du paramètre <code>i</code> doit être égal au plus grand indice possible de la liste <code>valeurs</code>.</p>
+<p>Pour une liste de longueur <span class="arithmatex">\(n\)</span>, quel est le nombre d'appels récursifs de la fonction <code>melange</code> effectués, sans compter l'appel initial ?</p>
+<p><strong>3.c.</strong> On considère le script ci-dessous :</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">valeurs</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">melange</span><span class="p">(</span><span class="n">valeurs</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</span></code></pre></div>
+<p>On suppose que les valeurs successivement renvoyées par la fonction <code>randint</code> sont <code>2</code>, <code>1</code>, <code>2</code> et <code>0</code>.</p>
+<p>Les deux premiers affichages produits par l'instruction <code class="language-py highlight"><span class="nb">print</span><span class="p">(</span><span class="n">valeurs</span><span class="p">)</span></code> de la fonction <code>melange</code> sont :</p>
+<ul>
+<li>Premier affichage : <code class="language-py highlight"><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span></code>,</li>
+<li>Deuxième affichage : <code class="language-py highlight"><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span></code>.</li>
+</ul>
+<p>Donner les affichages suivants produits par la fonction <code>melange</code> ?</p>
+<p><strong>3.d.</strong> Proposer une version itérative du mélange de Fischer-Yates.</p>
+<h3 id="exercice-2">Exercice 2<a class="headerlink" href="#exercice-2" title="Permanent link">&num;</a></h3>
+<p>Cet exercice traite du thème «programmation», et principalement de la récursivité.  </p>
+<p>On rappelle qu'une chaîne de caractères peut être représentée en Python par un texte  entre guillemets "" et que :  </p>
+<ul>
+<li>
+<p>la fonction `len`` renvoie la longueur de la chaîne de caractères passée en paramètre ;  </p>
+</li>
+<li>
+<p>si une variable <code>ch</code> désigne une chaîne de caractères, alors <code>ch[0]`` renvoie son premier caractère,</code>ch[1]`` le deuxième, etc. ; </p>
+</li>
+<li>
+<p>l'opérateur `+`` permet de concaténer deux chaînes de caractères.  </p>
+</li>
+</ul>
+<p><strong>Exemples :</strong></p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">texte</span> <span class="o">=</span> <span class="s2">&quot;bricot&quot;</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">texte</span><span class="p">)</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="mi">6</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">texte</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="s2">&quot;b&quot;</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">texte</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="s2">&quot;r&quot;</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;a&quot;</span> <span class="o">+</span> <span class="n">texte</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="s2">&quot;abricot&quot;</span>
+</span></code></pre></div>
+<p>On s'intéresse dans cet exercice à la construction de chaînes de caractères suivant  certaines règles de construction.</p>
+<p><strong>Règle A</strong>: une chaîne est construite suivant la règle A dans les deux cas suivants:  </p>
+<ul>
+<li>
+<p>soit elle est égale à "a" ;</p>
+</li>
+<li>
+<p>soit elle est de la forme "a" + chaine + "a", où chaine est une chaîne de  caractères construite suivant la règle A.  </p>
+</li>
+</ul>
+<p><strong>Règle B :</strong> une chaîne est construite suivant la règle B dans les deux cas suivants :  </p>
+<ul>
+<li>
+<p>soit elle est de la forme "b"+chaine+"b", où chaine est une chaîne de caractères construite suivant la règle A ;</p>
+</li>
+<li>
+<p>soit elle est de la forme "b" + chaine+"b", où chaine est une chaîne de caractères construite suivant la règle B.  </p>
+</li>
+</ul>
+<p>On a reproduit ci-dessous l'aide de la fonction choice du module random.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>  <span class="o">&gt;&gt;&gt;</span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>  <span class="o">&gt;&gt;&gt;</span><span class="n">help</span><span class="p">(</span><span class="n">choice</span><span class="p">)</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>  <span class="n">Help</span> <span class="n">on</span> <span class="n">method</span> <span class="n">choice</span> <span class="ow">in</span> <span class="n">module</span> <span class="n">random</span><span class="p">:</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>  <span class="n">choice</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span> <span class="n">method</span> <span class="n">of</span> <span class="n">random</span><span class="o">.</span><span class="n">Random</span> <span class="n">instance</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>  <span class="n">Choose</span> <span class="n">a</span> <span class="n">random</span> <span class="n">element</span> <span class="kn">from</span> <span class="nn">a</span> <span class="n">non</span><span class="o">-</span><span class="n">empty</span> <span class="n">sequence</span><span class="o">.</span>
+</span></code></pre></div>
+<p>La fonction <code>A()</code> ci-dessous renvoie une chaîne de caractères construite suivant la règle A, en choisissant aléatoirement entre les deux cas de figure de cette règle.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">def</span> <span class="nf">A</span><span class="p">():</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="k">if</span> <span class="n">choice</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]):</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>        <span class="k">return</span> <span class="s2">&quot;a&quot;</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>        <span class="k">return</span> <span class="s2">&quot;a&quot;</span> <span class="o">+</span> <span class="n">A</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;a&quot;</span>
+</span></code></pre></div>
+<p><strong>1.a</strong> Cette fonction est-elle récursive ? Justifier.<br />
+<strong>1.b</strong> La fonction `choice([True, False])`` peut renvoyer False un très grand nombre de fois consécutives. Expliquer pourquoi ce cas de figure amènerait à une erreur d'exécution.  </p>
+<p>Dans la suite, on considère une deuxième version de la fonction A. À présent, la fonction prend en paramètre un entier n tel que, si la valeur de n est négative ou nulle, la fonction renvoie "a". Si la valeur de n est strictement positive, elle renvoie une chaîne de caractères construite suivant la règle A avec un n décrémenté de 1, en choisissant aléatoirement entre les deux cas de figure de cette règle.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">def</span> <span class="nf">A</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    <span class="k">if</span> <span class="o">...</span> <span class="ow">or</span> <span class="n">choice</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span> <span class="p">:</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>        <span class="k">return</span> <span class="s2">&quot;a&quot;</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>        <span class="k">return</span> <span class="s2">&quot;a&quot;</span> <span class="o">+</span> <span class="o">...</span> <span class="o">+</span> <span class="s2">&quot;a&quot;</span>
+</span></code></pre></div>
+<p><strong>2.a.</strong>Recopier sur code la copie et compléter aux emplacements des points de suspension ... le code de cette nouvelle fonction A.</p>
+<p><strong>2.b.</strong> Justifier le fait qu'un appel de la forme <code>A(n)</code> avec n un nombre entier positif inférieur à 50, termine toujours.</p>
+<p>On donne ci-après le code de la fonction récursive B qui prend en paramètre un entier <span class="arithmatex">\(n\)</span> et qui renvoie une chaîne de caractères construite suivant la règle B.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">def</span> <span class="nf">B</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">choice</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]):</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>        <span class="k">return</span> <span class="s2">&quot;b&quot;</span> <span class="o">+</span> <span class="n">A</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;b&quot;</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>        <span class="k">return</span> <span class="s2">&quot;b&quot;</span> <span class="o">+</span> <span class="n">B</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;b&quot;</span>
+</span></code></pre></div>
+<p>On admet que :</p>
+<ul>
+<li>les appels <code>A(-1)</code> et <code>A(0)</code> renvoient la chaîne "a";</li>
+<li>l’appel <code>A(1)</code> renvoie la chaîne "a" ou la chaîne "aaa";</li>
+<li>l’appel <code>A(2)</code> renvoie la chaîne "a", la chaîne "aaa" ou la chaîne "aaaaa".</li>
+</ul>
+<p><strong>3.</strong> Donner toutes les chaînes possibles renvoyées par les appels B(0), B(1) et B(2).</p>
+<p>On suppose maintenant qu'on dispose d'une fonction<code>raccourcir</code> qui prend comme paramètre une chaîne de caractères de longueur supérieure ou égale à 2, et renvoie la chaîne de caractères obtenue à partir de la chaîne initiale en lui ôtant le premier et le dernier caractère.</p>
+<p><strong>Exemple :</strong></p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">raccourcir</span><span class="p">(</span><span class="s2">&quot;abricot&quot;</span><span class="p">)</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="s2">&quot;brico&quot;</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">raccourcir</span><span class="p">(</span><span class="s2">&quot;ab&quot;</span><span class="p">)</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="s2">&quot;&quot;</span>
+</span></code></pre></div>
+<p><strong>4.a.</strong> Recopier sur la copie et compléter les points de suspension ... du code de la fonction <code>regleA</code> ci-dessous pour qu'elle renvoie <code>True</code>si la chaîne passée en paramètre est construite suivant la règle A, et <code>False</code> sinon.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">def</span> <span class="nf">regleA</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">chaine</span><span class="p">)</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>        <span class="k">return</span> <span class="n">chaine</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;a&quot;</span> <span class="ow">and</span> <span class="n">chaine</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;a&quot;</span> <span class="ow">and</span> <span class="n">regleA</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>        <span class="k">return</span> <span class="n">chaine</span> <span class="o">==</span> <span class="o">...</span>
+</span></code></pre></div>
+<p><strong>4.b.</strong> Écrire le code d’une fonction <code>regleB</code>, prenant en paramètre une chaîne de caractères et renvoyant <code>True</code> si la chaîne est construite suivant la règle B,et <code>False</code> sinon.</p>
 
               
             </article>
@@ -1856,13 +2074,13 @@ Cette suite est liée au nombre d'or, φ (phi) : ce nombre intervient dans l'exp
       
       
         
-        <a href="../exos_Bac_rec/" class="md-footer__link md-footer__link--next" aria-label="Next: Exercices" rel="next">
+        <a href="../../objet/" class="md-footer__link md-footer__link--next" aria-label="Next: POO" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Exercices
+              POO
             </div>
           </div>
           <div class="md-footer__button md-icon">
