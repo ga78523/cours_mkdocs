@@ -5,10 +5,11 @@ class Chrono:
         self.heures = h
         self.minutes = m
         self.secondes = s
+
     def display(self):
         """ affiche les heures, minutes, secondes"""
         return (str(self.heures) + "h" + str(self.minutes) + "m" + str(self.secondes) + "s") 
-    
+
     def __str__(self):
         return (str(self.heures) + "h" + str(self.minutes) + "m" + str(self.secondes) + "s")
 
