@@ -1955,13 +1955,13 @@ Le principe est simple : on divise un segment initial en trois morceaux, et on c
 <p>On rappelle qu'une chaîne de caractères peut être représentée en Python par un texte  entre guillemets "" et que :  </p>
 <ul>
 <li>
-<p>la fonction `len`` renvoie la longueur de la chaîne de caractères passée en paramètre ;  </p>
+<p>la fonction <code>len</code> renvoie la longueur de la chaîne de caractères passée en paramètre ;  </p>
 </li>
 <li>
-<p>si une variable <code>ch</code> désigne une chaîne de caractères, alors <code>ch[0]`` renvoie son premier caractère,</code>ch[1]`` le deuxième, etc. ; </p>
+<p>si une variable <code>ch</code> désigne une chaîne de caractères, alors <code>ch[0]</code> renvoie son premier caractère, <code>ch[1]</code> le deuxième, etc. ;</p>
 </li>
 <li>
-<p>l'opérateur `+`` permet de concaténer deux chaînes de caractères.  </p>
+<p>l'opérateur <code>+</code> permet de concaténer deux chaînes de caractères.  </p>
 </li>
 </ul>
 <p><strong>Exemples :</strong></p>
@@ -2009,7 +2009,7 @@ Le principe est simple : on divise un segment initial en trois morceaux, et on c
 </span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>        <span class="k">return</span> <span class="s2">&quot;a&quot;</span> <span class="o">+</span> <span class="n">A</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;a&quot;</span>
 </span></code></pre></div>
 <p><strong>1.a</strong> Cette fonction est-elle récursive ? Justifier.<br />
-<strong>1.b</strong> La fonction `choice([True, False])`` peut renvoyer False un très grand nombre de fois consécutives. Expliquer pourquoi ce cas de figure amènerait à une erreur d'exécution.  </p>
+<strong>1.b</strong> La fonction <code>choice([True, False])</code> peut renvoyer False un très grand nombre de fois consécutives. Expliquer pourquoi ce cas de figure amènerait à une erreur d'exécution.  </p>
 <p>Dans la suite, on considère une deuxième version de la fonction A. À présent, la fonction prend en paramètre un entier n tel que, si la valeur de n est négative ou nulle, la fonction renvoie "a". Si la valeur de n est strictement positive, elle renvoie une chaîne de caractères construite suivant la règle A avec un n décrémenté de 1, en choisissant aléatoirement entre les deux cas de figure de cette règle.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">def</span> <span class="nf">A</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    <span class="k">if</span> <span class="o">...</span> <span class="ow">or</span> <span class="n">choice</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span> <span class="p">:</span>
