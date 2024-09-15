@@ -1598,7 +1598,7 @@
 <p>Par exemple, un point de l'espace à deux dimensions peut-être représenté par un objet avec deux attributs <span class="arithmatex">\(x\)</span> et <span class="arithmatex">\(y\)</span>.  Si <code>p</code>est un tel objet, on peut accéder à ses attributs par <code>p.x</code>et <code>p.y</code>.</p>
 <p>Pour créer un objet, on a besoin de définir une <strong>classe</strong>. La définition la plus simple est la suivante :</p>
 <table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">class</span> <span class="nc">Point</span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">class</span> <span class="nc">Point</span> <span class="p">:</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="k">pass</span>
 </span></code></pre></div>
 </td></tr></table>
@@ -1665,7 +1665,7 @@
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="n">p1</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="n">p2</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">15</span>
 </span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="n">p1</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">p2</span><span class="o">.</span><span class="n">x</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="n">p2</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">p1</span><span class="o">.</span><span class="n">x</span>
 </span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="n">p1</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">p2</span><span class="o">.</span><span class="n">y</span>
 </span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9"></a>
 </span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="n">p1</span> <span class="o">==</span> <span class="n">p2</span> <span class="c1"># False</span>
@@ -1673,8 +1673,8 @@
 </td></tr></table>
 <h2 id="classes-et-methodes">Classes et méthodes<a class="headerlink" href="#classes-et-methodes" title="Permanent link">&num;</a></h2>
 <h3 id="definition-des-methodes">Définition des méthodes<a class="headerlink" href="#definition-des-methodes" title="Permanent link">&num;</a></h3>
-<p>Le but d'une classe est de pouvoir créer et manipuler des objets qui ont des caractéristiques communes : les instances de la classe <code>Point</code>, par exemple, représentent des points du planet s'attend à pouvoir faire des opérations telles que translater un point ou calculer sa distance à un autre point.</p>
-<p>La classe permet de regrouper ces opérations en définissant des <strong>méthodes</strong>, c'est-à-dire des fonctions propres à cette classe, définies à l'intérieur de celle-ci. </p>
+<p>Le but d'une classe est de pouvoir créer et manipuler des objets qui ont des caractéristiques communes : les instances de la classe <code>Point</code>, par exemple, représentent des points du plan et on s'attend à pouvoir faire des opérations telles que translater un point ou calculer sa distance à un autre point.</p>
+<p>La classe permet de regrouper ces opérations en définissant des <strong>méthodes</strong>, c'est-à-dire des fonctions propres à cette classe, définies à l'intérieur de celle-ci.</p>
 <p>Par exemple, la classe <code>Point</code> pourrait avoir trois méthodes :</p>
 <ul>
 <li><code>init(p,x,y)</code> pour initialiser le point <code>p</code> aux coordonnées <span class="arithmatex">\((x, y)\)</span> ;</li>
@@ -1816,7 +1816,8 @@ mesurait 13 m de longueur, pesait 8 t environ, 6 m de haut et devait courir à 2
 </div>
 <h2 id="encapsulation">Encapsulation<a class="headerlink" href="#encapsulation" title="Permanent link">&num;</a></h2>
 <h3 id="le-probleme-des-acces-aux-donnees">Le problème des accès aux données<a class="headerlink" href="#le-probleme-des-acces-aux-donnees" title="Permanent link">&num;</a></h3>
-<p>On peut accéder aux attributs d’un objet <code>p</code> de la classe <code>Point</code> avec la notation p.x où a désigne le nom de l’attribut x visé.  </p>
+<p>L’encapsulation est l’un des quatre concepts fondamentaux de la programmation orientée objet, qui sont l’abstraction, l’encapsulation, l’héritage et le polymorphisme. L’encapsulation est le regroupement de données et de méthodes dans une classe afin que vous puissiez masquer les informations et restreindre l’accès de l’extérieur. Ce concept permet à une classe de protéger son état interne de l’extérieur.</p>
+<p>L’encapsulation agit comme une couche de protection qui empêche l’accès aux données encapsulées par un code défini en dehors de la classe dans laquelle les données encapsulées sont définies. Donc, l’encapsulation assure la sécurité en cachant les données du monde extérieur.</p>
 <p>Pour rendre privé les attributs d’une classe, il faut les faire précéder de 2 tirets. Exemple, dans le constructeur de la classe <code>Point</code>, <code>self.__x = 4</code>.</p>
 <p><strong>Remarque :</strong> on peut rendre privé aussi les méthodes en les faisant précéder de deux tirets.</p>
 <h3 id="les-accesseurs-ou-getters">Les accesseurs ou "getters"<a class="headerlink" href="#les-accesseurs-ou-getters" title="Permanent link">&num;</a></h3>
@@ -1858,16 +1859,13 @@ généralement : set_nom_attribut().</p>
 <h2 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Permanent link">&num;</a></h2>
 <div class="admonition example">
 <p class="admonition-title">Exercice : classe Personnage</p>
-<p>On considère une classe <code>Personnage</code> représentant un personnage de Jeu.</p>
-<p>Le plateau de jeu est représenté par un repère orthonormé à trois axes. 
-La position du joueur dans le plateau est repérée par ses attributs <code>x</code>, <code>y</code>, <code>z</code>.</p>
+<p>On considère une classe <code>Personnage</code> représentant un personnage de Jeu. Le plateau de jeu est représenté par un repère orthonormé à trois axes. La position du joueur dans le plateau est repérée par ses attributs <code>x</code>, <code>y</code>, <code>z</code>.</p>
 <ol>
 <li>Écrire un constructeur initialisant les mesures.</li>
 <li>Écrire les méthodes avance, droite et saute permettant respectivement de faire avancer, aller à droite et sauter le personnage, c’est-à-dire d’augmenter de 1 respectivement x, y et z.</li>
 <li>Implémenter une autre méthode coord renvoyant les coordonnées sous forme d’un triplet.</li>
 </ol>
-<p>Tester avec :
-Laura = Personnage(0, 0, 0)</p>
+<p>Tester avec : <code>Laura = Personnage(0, 0, 0)</code></p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice : classe Carre</p>
