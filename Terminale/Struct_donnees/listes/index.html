@@ -1621,7 +1621,8 @@
 <h1 id="les-listes">Les listes<a class="headerlink" href="#les-listes" title="Permanent link">&num;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&num;</a></h2>
 <h3 id="les-structures-lineaires">Les structures linéaires<a class="headerlink" href="#les-structures-lineaires" title="Permanent link">&num;</a></h3>
-<p>De nombreux algorithmes "classiques" manipulent des structures de données plus complexes que des simples nombres. Nous allons ici voir quelques-unes de ces structures de données. Nous allons commencer par les listes, et deux formes restreintes : les piles et les files. Ces trois types de structures sont qualifiés de linéaires.</p>
+<p>Les structures linéaires sont des données qui ne comportent pas de hiérarchie : toutes les données sont de la même nature et ont le même rôle. Par exemple, un relevé mensuel de températures, la liste des élèves d'une classe, un historique d'opérations bancaires...</p>
+<p>Ces données sont «plates», n'ont pas de sous-domaines : la structure de liste paraît parfaitement adaptée.</p>
 <h3 id="les-autres-types-de-structures">Les autres types de structures<a class="headerlink" href="#les-autres-types-de-structures" title="Permanent link">&num;</a></h3>
 <p>On distingue :</p>
 <ul>
@@ -1642,39 +1643,39 @@ d’eﬀacer, d’accéder aux données. Cet ensemble de routines est appelé in
 <p>Derrière les opérations de lecture, de modiﬁcation, ou de suppression d’une donnée se cache une autre routine tout aussi importante : la recherche d’une donnée.</p>
 <h2 id="le-type-abstrait-liste">Le type abstrait : liste<a class="headerlink" href="#le-type-abstrait-liste" title="Permanent link">&num;</a></h2>
 <h3 id="definition">Déﬁnition<a class="headerlink" href="#definition" title="Permanent link">&num;</a></h3>
-<p>Une liste est une structure de données permettant de regrouper des données. Le langage de programmation Lisp (inventé par John McCarthy en 1958) a été un des premiers langages de programmation à introduire
-cette notion de liste (Lisp signiﬁe "list processing").</p>
-<p>On prendra des listes indicées à partir de 0.
-Exemple de liste : L={Buzz ; x ; 1012 ; f9 ; Alan}</p>
+<p>Le langage de programmation <strong>Lisp</strong> (inventé par John McCarthy en 1958) a été un des premiers langages de programmation à introduire cette notion de liste (Lisp signiﬁe "list processing").</p>
+<p>Une liste est un ensemble ordonné d'objets. Généralement, ces données seront de même type, mais ce n'est pas structurellement obligatoire.</p>
+<p>On prendra des listes indicées à partir de 0.</p>
+<p>Exemple de liste : <code>L = {Buzz ; x ; 1012 ; f9 ; Alan}</code></p>
 <p>Dans cette liste, l’élément 2 est 1012. Cette liste comporte 5 éléments.</p>
 <h3 id="interface-des-listes">Interface des listes<a class="headerlink" href="#interface-des-listes" title="Permanent link">&num;</a></h3>
 <p>Voici l’interface d’une liste :</p>
 <ul>
-<li><strong>liste_vide</strong> : créer une liste vide.</li>
-<li><strong>inserer(L, e, i)</strong> : ajoute l’élément e à l’index i dans la nouvelle liste L.</li>
-<li><strong>supprimer(L, i)</strong> : l’élément situé à la position i est supprimé de la liste L</li>
-<li><strong>modifier(L, e, i)</strong>  : l’élément situé à la position i dans la liste L est écrasé par le nouvel élément e</li>
-<li><strong>longueur(L)</strong> : renvoie le nombre d’éléments dans L.</li>
-<li><strong>lire(L, i)</strong> : renvoie l’élément d’indice i de L.</li>
+<li><strong><code>liste_vide</code></strong> : créer une liste vide.</li>
+<li><strong><code>inserer(L, e, i)</code></strong> : ajoute l’élément <code>e</code> à l’index <code>i</code> dans la nouvelle liste <code>L</code>.</li>
+<li><strong><code>supprimer(L, i)</code></strong> : l’élément situé à la position <code>i</code> est supprimé de la liste <code>L</code></li>
+<li><strong><code>modifier(L, e, i)</code></strong>  : l’élément situé à la position <code>i</code> dans la liste <code>L</code> est écrasé par le nouvel élément <code>e</code></li>
+<li><strong><code>longueur(L)</code></strong> : renvoie le nombre d’éléments dans <code>L</code>.</li>
+<li><strong><code>lire(L, i)</code></strong> : renvoie l’élément d’indice <code>i</code> de <code>L</code>.</li>
 </ul>
 <p><strong>Exemple d’utilisation de liste :</strong> L={ Buzz ; x ; 1012 ; f9 ; Alan }</p>
 <ul>
-<li>inserer(L, 25, 0)  nous donne L={ 25 ; Buzz ; x ; 1012 ; f9 ; Alan }</li>
-<li>supprimer(L, 3) nous donne L={ 25 ; Buzz ; x ; f9 ; Alan }.</li>
-<li>modifier(L, 59, 2) nous donne L={ 25 ; Buzz ; 59 ; f9 ; Alan }.</li>
-<li>longueur(L) nous donne 5</li>
-<li>lire(L, 4) nous donne Alan</li>
+<li><code>inserer(L, 25, 0)</code>  nous donne L = { 25 ; Buzz ; x ; 1012 ; f9 ; Alan }</li>
+<li><code>supprimer(L, 3)</code> nous donne L = { 25 ; Buzz ; x ; f9 ; Alan }.</li>
+<li><code>modifier(L, 59, 2)</code> nous donne L = { 25 ; Buzz ; 59 ; f9 ; Alan }.</li>
+<li><code>longueur(L)</code>nous donne 5</li>
+<li><code>lire(L, 4)</code> nous donne Alan</li>
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Exercice 1 :</p>
 <p>On donne On donne <code>L = {NSI ; plaisir ; jeux ; livres ; π ; E0F1}</code>.</p>
 <p>Expliciter ce que font chacune des commandes suivantes :</p>
 <ol>
-<li>inserer(L, 33, 2)</li>
-<li>supprimer(L, 4)</li>
-<li>modif ier(L, programmation, 0)</li>
-<li>longueur(L)</li>
-<li>lire(L, 2)</li>
+<li><code>inserer(L, 33, 2)</code></li>
+<li><code>supprimer(L, 4)</code></li>
+<li><code>modif ier(L,    programmation, 0)</code></li>
+<li><code>longueur(L)</code></li>
+<li><code>lire(L, 2)</code></li>
 </ol>
 </div>
 <h3 id="implementation-des-listes">Implémentation des listes<a class="headerlink" href="#implementation-des-listes" title="Permanent link">&num;</a></h3>
@@ -1700,12 +1701,145 @@ type ou d’agrandir la taille du tableau.</li>
 dynamiques. Les tableaux dynamiques ont une taille qui peut varier. Il est donc relativement simple d’insérer
 des éléments dans le tableau. Ce type de tableaux permet d’implémenter facilement le type abstrait liste (de même pour les piles et les ﬁles).</p>
 <p>À noter que les "listes Python" (listes Python) sont des tableaux dynamiques.</p>
-<p><strong>Attention</strong> à ne pas confondre avec le type abstrait liste déﬁni ci-dessus, ce sont de "faux amis".</p>
 <p><strong>Problème</strong> Si on a besoin d’ajouter un élément à un tableau, on crée un nouveau tableau plus grand, on
 copie les éléments de l’ancien tableau dans le nouveau, on ajoute le nouvel élément à la ﬁn, on remplace l’ancien tableau par le nouveau, et enﬁn on supprime l’ancien tableau. Ce qui est extrèmement coûteux en nombre d’opération.</p>
+<div class="admonition example">
+<p class="admonition-title">Exercice 2 : complexité <span class="arithmatex">\(O(N)\)</span> de la recherche dans une liste </p>
+<p><strong>1. </strong>Écrire le prédicat <code>est_dans</code> de spécification :</p>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">def</span> <span class="nf">est_dans</span><span class="p">(</span><span class="n">tab</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="sd">    Recherche si la valeur n est présente au moins une fois</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="sd">    dans le tableau tab.</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="sd">    Algorithme itératif.</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="sd">&quot;&quot;&quot;</span>
+</span></code></pre></div>
+</td></tr></table>
+<p><strong>2. </strong>Écrire un jeu de tests.</p>
+<p><strong>3. </strong>(Facultatif) Écrire le prédicat <code>est_dans_rec</code> de spécification :</p>
+<p><table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">def</span> <span class="nf">est_dans_rec</span><span class="p">(</span><span class="n">tab</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">i</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="sd">    Recherche si la valeur n est présente au moins une fois</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="sd">    dans le tableau tab.</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="sd">    Algorithme récursif, i est l&#39;indice de recherche.</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="sd">    &quot;&quot;&quot;</span>
+</span></code></pre></div>
+</td></tr></table>
+<em>4. </em>Quelle est la complexité des algorithmes précédents en fonction de <span class="arithmatex">\(N\)</span>, la taille du tableau ?</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 3 : complexité en <span class="arithmatex">\(O(N)\)</span> de l'insertion dans une liste</p>
+<p>Dans cette partie, on imagine que le tableau a cette allure :</p>
+<table>
+<thead>
+<tr>
+<th align="center">1</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+<th align="center">5</th>
+<th align="center">vide</th>
+<th align="center">vide</th>
+<th align="center">vide</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Si on introduit, en position 1, la valeur 7. Le tableau est alors :</p>
+<table>
+<thead>
+<tr>
+<th align="center">7</th>
+<th align="center">1</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+<th align="center">5</th>
+<th align="center">vide</th>
+<th align="center">vide</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Attention : Cette opération n’est possible, sans crainte de perdre des données, que si toutes les cellules du tableau ne contiennent pas des données. Toute fonction permettant l’insertion de valeurs doit donc avertir un utilisateur dans le cas contraire.</strong></p>
+<p>Remarque : Dans le code ci-dessous, les cellules seront considérées vides si elles contiennent la valeur None.</p>
+<ol>
+<li>Écrire la fonction <code>insere</code> dont la spécification est :</li>
+</ol>
+<p><table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">def</span> <span class="nf">insere</span><span class="p">(</span><span class="n">tab</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">i</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="sd">    Insère la valeur n à l&#39;indice i du tableau tab.</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="sd">    Algorithm itératif et en place.</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="sd">    Lève une exception si le tableau est déjà plein.</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="sd">    HYPOTHÈSE : la gestion des &quot;trous&quot; n&#39;est pas assurée,</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="sd">    l&#39;algorithme se contente de décaler les valeurs vers </span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="sd">    la droite.</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="sd">    &quot;&quot;&quot;</span>
+</span></code></pre></div>
+</td></tr></table>
+2. Quelle est la complexité des algorithmes précédents en fonction de <span class="arithmatex">\(N\)</span>, la taille du tableau ?</p>
+</div>
 <h4 id="les-listes-chainees">Les listes chaînées<a class="headerlink" href="#les-listes-chainees" title="Permanent link">&num;</a></h4>
-<p>Une liste chaînée (ou liste liée) est une structure de données composées d’une séquence d’éléments de
-liste.</p>
+<p>Les listes chaînées constituent une structure de données :</p>
+<ul>
+<li>de longueur modifiable ;</li>
+<li>plus efficace que les tableaux lorsqu’il s’agit d’ajouter ou de retirer un élément (il n’est pas nécessaire de faire de la place en déplaçant les éléments) ;</li>
+<li>qui servira de brique à l’élaboration d’autres structures de données.</li>
+</ul>
+<p>Une liste chaînée permet de représenter une liste ; chaque élément de cette liste est une cellule contenant :</p>
+<ul>
+<li>la valeur de l’élément à stocker ;</li>
+<li>l’adresse mémoire de la cellule représentant l’élément suivant.</li>
+<li>Une liste chaînée (ou liste liée) est une structure de données composées d’une séquence d’éléments de
+liste.</li>
+</ul>
 <p>Chaque enregistrement d’une liste chaînée est souvent appelé élément, nœud ou maillon.</p>
 <figure>
 <p><img alt="tlinked list" src="../img/linked%20list.png" width="500px" /></p>
@@ -1722,60 +1856,59 @@ Le dernier élément de la liste possède un pointeur M.suiv vide.</li>
 </ul>
 <p>Une liste chaînée L est entièrement déﬁnie par son maillon de tête L.tete, c’est à dire l’adresse de son
 premier maillon.</p>
-<p><strong>Remarque :</strong> on peut également lui ajouter un attribut L.cur pour mémoriser l’adresse d’un maillon "courant"</p>
 <p>On peut implémenter un maillon de liste chaînée en Python à l’aide d’une classe <code>Maillon</code>.</p>
-<p><table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">class</span> <span class="nc">Maillon</span><span class="p">:</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">valeur</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">val</span> <span class="o">=</span> <span class="n">valeur</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">suiv</span> <span class="o">=</span> <span class="kc">None</span> <span class="c1"># Pas de maillon suivant</span>
+<p><table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">class</span> <span class="nc">Maillon</span><span class="p">:</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">valeur</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">val</span> <span class="o">=</span> <span class="n">valeur</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">suiv</span> <span class="o">=</span> <span class="kc">None</span> <span class="c1"># Pas de maillon suivant</span>
 </span></code></pre></div>
 </td></tr></table>
 Son attribut <code>suiv</code> est de type Maillon , ou bien vaut None si le maillon est le dernier de la liste.
 Nous pouvons également implémenter une liste chaînée par une classe <code>Liste_chainee</code> :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">class</span> <span class="nc">Liste_chainee</span><span class="p">:</span>    
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">tete</span> <span class="o">=</span> <span class="kc">None</span> <span class="c1"># Liste vide</span>
-</span></code></pre></div>
-</td></tr></table>
-<div class="admonition example">
-<p class="admonition-title">Exercice 2 :</p>
-<p>Implémenter en python la méthode <code>est_vide</code> de la classe <code>Liste_chainee</code></p>
-</div>
-<div class="admonition example">
-<p class="admonition-title">Exercice 3 :</p>
-<p>Compléter la méthode <code>__str__(self)</code> de la classe <code>Liste_chainee</code> suivante :</p>
-</div>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span>
-<span class="normal"><a href="#__codelineno-2-4">4</a></span>
-<span class="normal"><a href="#__codelineno-2-5">5</a></span>
-<span class="normal"><a href="#__codelineno-2-6">6</a></span>
-<span class="normal"><a href="#__codelineno-2-7">7</a></span>
-<span class="normal"><a href="#__codelineno-2-8">8</a></span>
-<span class="normal"><a href="#__codelineno-2-9">9</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&quot;</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>    <span class="n">affichage</span> <span class="o">=</span> <span class="o">..........</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>    <span class="n">maillon</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tete</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a>    <span class="k">while</span> <span class="n">maillon</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a>        <span class="n">affichage</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">maillon</span><span class="o">.</span><span class="n">val</span><span class="p">))</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a>        <span class="n">maillon</span> <span class="o">=</span> <span class="o">........</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a>    <span class="k">return</span> <span class="s2">&quot;{&quot;</span> <span class="o">+</span> <span class="s2">&quot; ; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">affichage</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;}</span>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">class</span> <span class="nc">Liste_chainee</span><span class="p">:</span>    
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">tete</span> <span class="o">=</span> <span class="kc">None</span> <span class="c1"># Liste vide</span>
 </span></code></pre></div>
 </td></tr></table>
 <div class="admonition example">
 <p class="admonition-title">Exercice 4 :</p>
+<p>Implémenter en python la méthode <code>est_vide</code> de la classe <code>Liste_chainee</code></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 5 :</p>
+<p>Compléter la méthode <code>__str__(self)</code> de la classe <code>Liste_chainee</code> suivante :</p>
+</div>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span>
+<span class="normal"><a href="#__codelineno-5-7">7</a></span>
+<span class="normal"><a href="#__codelineno-5-8">8</a></span>
+<span class="normal"><a href="#__codelineno-5-9">9</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">est_vide</span><span class="p">():</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a>        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&quot;</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a>    <span class="n">affichage</span> <span class="o">=</span> <span class="o">..........</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a>    <span class="n">maillon</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tete</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6"></a>    <span class="k">while</span> <span class="n">maillon</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7"></a>        <span class="n">affichage</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">maillon</span><span class="o">.</span><span class="n">val</span><span class="p">))</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8"></a>        <span class="n">maillon</span> <span class="o">=</span> <span class="o">........</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9"></a>    <span class="k">return</span> <span class="s2">&quot;{&quot;</span> <span class="o">+</span> <span class="s2">&quot; ; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">affichage</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;}</span>
+</span></code></pre></div>
+</td></tr></table>
+<div class="admonition example">
+<p class="admonition-title">Exercice 6 :</p>
 <p>Sur le modèle du code précédent, écrire la méthode <code>taille(self)</code> qui retourne la taille de la liste
 chaînée.</p>
 </div>
 <div class="admonition example">
-<p class="admonition-title">Exercice 5 :</p>
+<p class="admonition-title">Exercice 7 :</p>
 <p>De même, écrire les méthodes <code>get_dernier_maillon()</code> qui retourne le dernier maillon de la chaîne,
 et la méthode <code>get_maillon_indice(i)</code> qui retourne la maillon d’indice <code>i</code>.</p>
 </div>
@@ -1791,7 +1924,7 @@ et la méthode <code>get_maillon_indice(i)</code> qui retourne la maillon d’in
 </ul>
 </div>
 <div class="admonition example">
-<p class="admonition-title">Exercice 6 :</p>
+<p class="admonition-title">Exercice 8 :</p>
 <p>En suivant les schémas des interfaces d’insertion de maillon, implémenter en Python les fonctions
 <code>ajouter_debut(M)</code>, <code>ajouter_fin(M)</code> et <code>ajouter_apres(i, M)</code></p>
 </div>
@@ -1807,7 +1940,7 @@ et la méthode <code>get_maillon_indice(i)</code> qui retourne la maillon d’in
 </ul>
 </div>
 <div class="admonition example">
-<p class="admonition-title">Exercice 7 : </p>
+<p class="admonition-title">Exercice 9 : </p>
 <p>En suivant les schémas des interfaces de suppression de maillon, implémenter les méthodes suivantes :
 <code>supprimer_debut()</code> qui supprime le premier élement de la liste, <code>supprimer_fin()</code> qui supprime le
 dernier élément de la liste et enﬁn <code>supprimer_apres(i)</code> qui supprime le maillon de la liste L situé
