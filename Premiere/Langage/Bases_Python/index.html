@@ -722,6 +722,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#trace-dun-programme" class="md-nav__link">
+    Trace d'un programme
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercices" class="md-nav__link">
     Exercices
   </a>
@@ -1720,6 +1727,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#trace-dun-programme" class="md-nav__link">
+    Trace d'un programme
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercices" class="md-nav__link">
     Exercices
   </a>
@@ -2140,29 +2154,104 @@ Votre programme devra afficher le contenu de la variable <code>resultat</code>.<
 </span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot; L’entier a vaut &quot;</span> <span class="p">,</span> <span class="n">a</span> <span class="p">,</span><span class="s2">&quot; et le réel x vaut &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
 </span></code></pre></div>
 </td></tr></table>
-<h2 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Permanent link">&num;</a></h2>
+<h2 id="trace-dun-programme">Trace d'un programme<a class="headerlink" href="#trace-dun-programme" title="Permanent link">&num;</a></h2>
+<p>Pour représenter l'évolution d'un programme dans en fonction, nous utilisons ce qui s'appelle la trace d'un programme.
+Celle-ci se présente sous la forme d'un tableau avec dans la première ligne :</p>
+<ul>
+<li>le numéro de ligne ;</li>
+<li>les différentes variables ;</li>
+<li>les commentaires.</li>
+</ul>
+<p><strong><em>Exemple :</em></strong></p>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span>
+<span class="normal"><a href="#__codelineno-13-3">3</a></span>
+<span class="normal"><a href="#__codelineno-13-4">4</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="n">b</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="n">a</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="n">c</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">b</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</span></code></pre></div>
+</td></tr></table>
+<p>On peut donner la trace de ce programme.</p>
+<figure>
+<table>
+<thead>
+<tr>
+<th align="center">N°ligne</th>
+<th align="left">a</th>
+<th align="center">b</th>
+<th align="center">c</th>
+<th align="center">Commentaires</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="left">5</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">On affecte la valeur 5 à la variable <code>a</code></td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="left">5</td>
+<td align="center">8</td>
+<td align="center"></td>
+<td align="center">a + 3 = 5 + 3 = 8 -&gt; b</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="left">5</td>
+<td align="center">8</td>
+<td align="center">16</td>
+<td align="center">2 * b = 2 * 8 = 16 -&gt; c</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="left">5</td>
+<td align="center">8</td>
+<td align="center">16</td>
+<td align="center">On affiche la valeur contenue dans c</td>
+</tr>
+</tbody>
+</table>
+</figure>
 <div class="admonition example">
 <p class="admonition-title">Exercice 5</p>
+<p>Effectuer la trace du programme suivant :</p>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span>
+<span class="normal"><a href="#__codelineno-14-4">4</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="n">x</span> <span class="o">=</span> <span class="mi">20</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="n">x</span> <span class="o">+=</span> <span class="mi">5</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="n">y</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">)</span> 
+</span></code></pre></div>
+</td></tr></table>
+</div>
+<h2 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Permanent link">&num;</a></h2>
+<div class="admonition example">
+<p class="admonition-title">Exercice 6</p>
 <p>Faire un programme qui demande un nombre et qui affiche sa racine carrée et son carré.</p>
 </div>
 <div class="admonition example">
-<p class="admonition-title">Exercice 6</p>
+<p class="admonition-title">Exercice 7</p>
 <p>L'octogone est un polygone comportant huit côtés, et donc huit angles. L'octogone régulier isométrique s'inscrit dans un cercle.
 Sa surface lorsqu'il a un côté <span class="arithmatex">\(c\)</span> vaut : <span class="arithmatex">\(A= 2\times c \times 2(1+\sqrt{2})\)</span>.
 Faire un programme demandant à l’utilisateur le côté puis afficher la surface de l'octogone.</p>
 </div>
 <div class="admonition example">
-<p class="admonition-title">Exercice 7</p>
+<p class="admonition-title">Exercice 8</p>
 <p>Écrire un programme qui vous demande votre nom, votre prénom, votre classe, une discipline et les 5 notes obtenues dans cette discipline. Il calculera la moyenne dans cette discipline, arrondie à l’entier supérieur et affichera le résultat sous la forme :
 PEREAU Vincent – classe de 2GT7 : moyenne en MATHÉMATIQUES = 13</p>
 </div>
 <div class="admonition example">
-<p class="admonition-title">Exercice 8</p>
+<p class="admonition-title">Exercice 9</p>
 <p>Écrire un programme qui calcul l’angle de réfraction <span class="arithmatex">\(i_2\)</span> (exprimé en degrés et avec 1 chiffre après la virgule) d’un faisceau lumineux, après avoir demandé l’angle d’incidence <span class="arithmatex">\(i_1\)</span> (en degrés) ainsi que les indices de réfractions <span class="arithmatex">\(n_1\)</span> et <span class="arithmatex">\(n_2\)</span> des milieux 1 et 2.
 Donnée : Loi de Descartes relative à la réfraction : <span class="arithmatex">\(n_1 \times sin(i_1) = n_2 \times sin(i_2)\)</span></p>
 </div>
 <div class="admonition example">
-<p class="admonition-title">Exercice 9</p>
+<p class="admonition-title">Exercice 10</p>
 <p>Écrire un programme qui calcule combien de bonbons recevra chaque élève de la classe ainsi que le nombre de bonbons restants, après avoir demandé le nombre total de bonbons et le nombre d’élèves de la classe. Le résultat
 sera affiché sous la forme : "chaque élève recevra 5 bonbons et il en restera 3"</p>
 </div>
