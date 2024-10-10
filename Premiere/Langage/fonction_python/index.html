@@ -1764,7 +1764,7 @@ En Python, une fonction se crée avec le mot-clé <code>def</code>.</p>
 <span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-3-10">10</a></span>
 <span class="normal"><a href="#__codelineno-3-11">11</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># Définition  de la fonction plus_Petit</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="k">def</span> <span class="nf">plus_petit</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="k">def</span> <span class="nf">plus_petit</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="nb">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span><span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>    <span class="k">if</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">:</span>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>        <span class="k">return</span> <span class="n">a</span>
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a>    <span class="k">else</span><span class="p">:</span>
@@ -1790,7 +1790,7 @@ En Python, une fonction se crée avec le mot-clé <code>def</code>.</p>
 <span class="normal"><a href="#__codelineno-4-11">11</a></span>
 <span class="normal"><a href="#__codelineno-4-12">12</a></span>
 <span class="normal"><a href="#__codelineno-4-13">13</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># Définition  de la fonction</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="k">def</span> <span class="nf">plus_petit</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="k">def</span> <span class="nf">plus_petit</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="nb">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span><span class="o">-&gt;</span><span class="nb">int</span><span class="p">:</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>    <span class="k">if</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">:</span>
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a>        <span class="k">return</span> <span class="n">a</span>
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a>    <span class="k">else</span><span class="p">:</span>
@@ -1807,27 +1807,27 @@ En Python, une fonction se crée avec le mot-clé <code>def</code>.</p>
 <p>Ici les paramètres <code>a</code> et <code>b</code> reçoivent respectivement les valeurs des arguments <code>nb1</code> et <code>nb2</code>.</p>
 <p><strong>Remarque :</strong> les arguments peuvent être de différents types : booléen, entier, flottant, chaîne de caractère, listes ... tout comme les valeurs retournées.</p>
 <div class="admonition example">
-<p class="admonition-title">Exercice</p>
+<p class="admonition-title">Exercice 1</p>
 <p>Réaliser une fonction <code>addition</code>qui prend en paramètre deux entiers <code>a</code> et <code>b</code> et qui réalise la somme de <code>a</code> et de <code>b</code>. Utiliser cette fonction dans un programme.</p>
 </div>
 <div class="admonition example">
-<p class="admonition-title">Exercice</p>
+<p class="admonition-title">Exercice 2</p>
 <p>Réaliser une fonction <code>multiplication</code>qui prend en paramètre deux entiers <code>a</code> et <code>b</code> et qui réalise la produit de <code>a</code> et de <code>b</code>. Utiliser cette fonction dans un programme.</p>
 </div>
 <div class="admonition example">
-<p class="admonition-title">Exercice</p>
+<p class="admonition-title">Exercice 3</p>
 <p>Écrire une fonction qui calcule la volume d’un cylindre à partir du rayon <span class="arithmatex">\(r\)</span> et de la hauteur <span class="arithmatex">\(h\)</span> donnés en argument et qui renvoie le résultat. Utiliser cette fonction dans un programme.</p>
 </div>
 <div class="admonition example">
-<p class="admonition-title">Exercice</p>
+<p class="admonition-title">Exercice 4</p>
 <p>Écrire une fonction qui réalise la table de multiplication d’un nombre <span class="arithmatex">\(n\)</span> donné en argument et qui l’affiche.</p>
 </div>
 <div class="admonition example">
-<p class="admonition-title">Exercice</p>
-<p>Écrire une fonction qui prend en argument un flottant <span class="arithmatex">\(x\)</span> non nul et un entier naturel <span class="arithmatex">\(n\)</span> et qui renvoie <span class="arithmatex">\(x^n\)</span>.Vous devrez utiliser une boucle.</p>
+<p class="admonition-title">Exercice 5</p>
+<p>Écrire une fonction qui prend en argument un flottant <span class="arithmatex">\(x\)</span> non nul et un entier naturel <span class="arithmatex">\(n\)</span> et qui renvoie <span class="arithmatex">\(x^n\)</span>. Vous devrez utiliser une boucle.</p>
 </div>
 <div class="admonition example">
-<p class="admonition-title">Exercice</p>
+<p class="admonition-title">Exercice 6</p>
 <p>On souhaite écrire une fonction célèbre en mathématiques, à savoir la fonction factorielle. On rappelle
 que la factorielle de l’entier <span class="arithmatex">\(n\)</span> est donnée par : <span class="arithmatex">\(n! = \prod_{i=1}^{n}= 1\times2 \times 3 \times ... \times (n-1) \times n\)</span>.</p>
 </div>
@@ -1839,20 +1839,17 @@ que la factorielle de l’entier <span class="arithmatex">\(n\)</span> est donn�
 <span class="normal"><a href="#__codelineno-5-4">4</a></span>
 <span class="normal"><a href="#__codelineno-5-5">5</a></span>
 <span class="normal"><a href="#__codelineno-5-6">6</a></span>
-<span class="normal"><a href="#__codelineno-5-7">7</a></span>
-<span class="normal"><a href="#__codelineno-5-8">8</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1"># Définition de la fonction</span>
+<span class="normal"><a href="#__codelineno-5-7">7</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1"># Définition de la fonction</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="k">def</span> <span class="nf">affiche</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;aucun argument donné, voici le texte par défaut&quot;</span><span class="p">):</span>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="c1"># Programme principal</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="n">affiche</span><span class="p">()</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="n">affiche</span><span class="p">(</span><span class="s2">&quot;coucou&quot;</span><span class="p">)</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="c1"># Programme principal</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="n">affiche</span><span class="p">()</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="n">affiche</span><span class="p">(</span><span class="s2">&quot;coucou&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 </td></tr></table>
 <h3 id="procedures">Procédures<a class="headerlink" href="#procedures" title="Permanent link">&num;</a></h3>
-<p>Si une fonction ne retourne rien, dans ce cas et en toute rigueur, on ne parle plus de fonction mais de procédure. 
-La procédure se termine par <code>return None</code> (None (rien) représente l'absence de valeur).</p>
+<p>Si une fonction ne retourne rien, dans ce cas et en toute rigueur, on ne parle plus de fonction mais de procédure. La procédure se termine par <code>return None</code> (None (rien) représente l'absence de valeur).</p>
 <p><strong>Remarque :</strong>  <code>return None</code> n'est pas obligatoire mais vivement conseillé.</p>
 <p><strong>Exemple de procédure:</strong></p>
 <table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
@@ -1862,21 +1859,23 @@ La procédure se termine par <code>return None</code> (None (rien) représente l
 <span class="normal"><a href="#__codelineno-6-5">5</a></span>
 <span class="normal"><a href="#__codelineno-6-6">6</a></span>
 <span class="normal"><a href="#__codelineno-6-7">7</a></span>
-<span class="normal"><a href="#__codelineno-6-8">8</a></span>
-<span class="normal"><a href="#__codelineno-6-9">9</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c1"># Définition de la fonction</span>
+<span class="normal"><a href="#__codelineno-6-8">8</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c1"># Définition de la fonction</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="k">def</span> <span class="nf">bonjour</span><span class="p">(</span><span class="n">nom</span><span class="p">):</span> 
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bonjour &quot;</span><span class="p">,</span> <span class="n">nom</span><span class="p">)</span>
 </span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4"></a>    <span class="k">return</span> <span class="kc">None</span>
 </span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5"></a>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6"></a>
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="c1"># Programme principal</span>
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="n">nom</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Quel est ton nom ? &quot;</span><span class="p">)</span>
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="n">bonjour</span><span class="p">(</span><span class="n">nom</span><span class="p">)</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="c1"># Programme principal</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="n">nom</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Quel est ton nom ? &quot;</span><span class="p">)</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="n">bonjour</span><span class="p">(</span><span class="n">nom</span><span class="p">)</span>
 </span></code></pre></div>
 </td></tr></table>
 <div class="admonition example">
-<p class="admonition-title">Exercice</p>
+<p class="admonition-title">Exercice 7</p>
 <p>A l'aide du module Turtle, écrire une procédure <code>rect</code> qui trace un rectangle. Cette procédure prend en argument la position <span class="arithmatex">\(x\)</span> et <span class="arithmatex">\(y\)</span> du coin supérieur gauche, les dimensions <span class="arithmatex">\(h\)</span> et <span class="arithmatex">\(l\)</span> du rectangle ainsi que la couleur choisie.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 8</p>
+<p>A l'aide du module Turtle et de la fonction précédente, écrire un fonction qui dessine une maison. Cette fonction prendra en paramètre la position (x et y) de la maison et sa couleur.</p>
 </div>
 <h2 id="la-portee-des-variables-variable-locale-et-variable-globale">La portée des variables : variable locale et variable globale<a class="headerlink" href="#la-portee-des-variables-variable-locale-et-variable-globale" title="Permanent link">&num;</a></h2>
 <h3 id="variable-locale">Variable locale<a class="headerlink" href="#variable-locale" title="Permanent link">&num;</a></h3>
@@ -1967,7 +1966,7 @@ Considérons maintenant le programme suivant :</p>
 <p><strong>Définition :</strong> Une variable globale lorsqu'elle est définie dans le programme principal. Elles sont accessibles pour toutes les fonctions du programme.</p>
 <p>Tout ceci peut paraître bien compliqué au premier abord. Vous comprendrez cependant très vite qu'il est utile que les variables locales restent confinées à l'intérieur du corps des fonctions. Cela signifie que vous pouvez utiliser n'importe quelle fonction sans vous préoccuper le moins du monde du nom des variables utilisées. Ces variables ne pourront pas interférer avec celles que vous avez définies dans le corps de votre script. </p>
 <div class="admonition example">
-<p class="admonition-title">Exercice</p>
+<p class="admonition-title">Exercice 9</p>
 <p>Repérer dans le programme suivant toutes les variables.
 Indiquer ensuite si ce sont des variables locales ou globales.</p>
 </div>
@@ -1993,7 +1992,7 @@ Indiquer ensuite si ce sont des variables locales ou globales.</p>
 <li>l'utilisation du mot-clé <code>global</code> en dehors d'une fonction n'a aucun effet.</li>
 </ul>
 <div class="admonition example">
-<p class="admonition-title">Example</p>
+<p class="admonition-title">Exercice 10</p>
 <p>Taper et comparer les deux programmes suivants :</p>
 </div>
 <table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
@@ -2077,7 +2076,7 @@ Indiquer ensuite si ce sont des variables locales ou globales.</p>
 </span></code></pre></div>
 </td></tr></table>
 <h3 id="documenter">Documenter<a class="headerlink" href="#documenter" title="Permanent link">&num;</a></h3>
-<p>L'entête de définition de la fonction peut être suivi d'un commentaire, appelé docstring, placé entre des guillemets, voir entre des triples guillemets si le commentaire comporte plusieurs lignes.  Ce dernier n'a aucun rôle fonctionnel dans le script, mais il est mémorisé dans un système de documentation interne automatique, lequel pourra être exploité par certains éditeurs "évolués" comme Spyder. </p>
+<p>L'entête de définition de la fonction peut être suivi d'un commentaire, appelé docstring, placé entre des guillemets, voir entre des triples guillemets si le commentaire comporte plusieurs lignes.  </p>
 <table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-16-3"> 3</a></span>
@@ -2185,19 +2184,19 @@ Indiquer ensuite si ce sont des variables locales ou globales.</p>
 </td></tr></table>
 <h2 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Permanent link">&num;</a></h2>
 <div class="admonition example">
-<p class="admonition-title">Exercice</p>
+<p class="admonition-title">Exercice 11</p>
 <p>Écrire une fonction nommée <code>est_pair</code> qui prend en argument un nombre entier strictement positif et retourne <code>True</code> si ce nombre est pair, False sinon.</p>
 </div>
 <div class="admonition example">
-<p class="admonition-title">Exercice</p>
+<p class="admonition-title">Exercice 12</p>
 <p>Écrire une fonction nommée <code>divisible</code> qui prend en argument deux nombres entiers et retourne <code>True</code> si le plus grand des 2 nombres est divisible par le plus petit, <code>False</code> sinon.</p>
 </div>
 <div class="admonition example">
-<p class="admonition-title">Exercice</p>
+<p class="admonition-title">Exercice 13</p>
 <p>Écrire une fonction nommée <code>nb_caract</code> qui prend en premier argument une chaîne de caractères, en deuxième argument un caractère et retourne le nombre de fois que le caractère apparaît dans la chaîne. Le second argument est facultatif. S'il n'est pas indiqué, il sera considéré par la fonction comme un espace. Si le caractère n'est pas présent dans la chaîne, la fonction retourne 0.</p>
 </div>
 <div class="admonition example">
-<p class="admonition-title">Exercice</p>
+<p class="admonition-title">Exercice 14</p>
 <p>Écrire une fonction  nommée <code>inverse</code>  qui prend en argument une chaîne de caractères et retourne la<br />
 chaîne de  caractères inversée.</p>
 </div>
